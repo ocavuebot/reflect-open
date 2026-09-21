@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { call } from '../ipc/invoke'
+import { call } from '../ipc/invoke.ts'
 
 /**
  * Typed bindings for the OS-keychain commands (Plan 10, shared by Plan 12).

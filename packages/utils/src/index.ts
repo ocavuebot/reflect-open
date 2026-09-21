@@ -10,4 +10,4 @@ export {
   isoFromParts,
   parseIsoUtc,
   weekdayIso,
-} from './dates'
+} from './dates.ts'

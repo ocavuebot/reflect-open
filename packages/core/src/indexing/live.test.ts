@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import type { FileChange } from './file-changes'
-import { subscribeIndexApplied } from './index-applied'
-import { applyIndexChanges, subscribeIndexChanges } from './live'
+import { setBridge } from '../ipc/bridge.ts'
+import type { FileChange } from './file-changes.ts'
+import { subscribeIndexApplied } from './index-applied.ts'
+import { applyIndexChanges, subscribeIndexChanges } from './live.ts'
 
 afterEach(() => {
   setBridge(null)

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { appendXPost } from './bookmark-capture'
-import type { XPostEnvelope } from './bookmark-envelope'
-import { inboxEnvelopeSchema } from './capture-envelope'
-import { parseNote } from '../markdown/extract'
+import { appendXPost } from './bookmark-capture.ts'
+import type { XPostEnvelope } from './bookmark-envelope.ts'
+import { inboxEnvelopeSchema } from './capture-envelope.ts'
+import { parseNote } from '../markdown/extract.ts'
 
 const capture: XPostEnvelope = {
   version: 2,

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { canonicalEmail, canonicalEmails, extractEmailFields, foldEmail } from './email-fields'
+import { canonicalEmail, canonicalEmails, extractEmailFields, foldEmail } from './email-fields.ts'
 
 describe('foldEmail', () => {
   it('trims and lowercases', () => {

@@ -1,12 +1,12 @@
 import type { Database } from '@reflect/db'
 import { sql, type RawBuilder, type Selectable } from 'kysely'
-import { db } from './db'
-import { literalSearchQuery, type ParsedSearchQuery } from './filter-query'
-import { resolveWikiTarget } from './queries'
-import { HIGHLIGHT_END, HIGHLIGHT_START } from './search'
-import { buildFtsMatch, buildTitleMatchSql } from './search-query'
-import { displayNoteTitle } from '../markdown/note-title'
-import { highlightTitle } from './title-highlight'
+import { db } from './db.ts'
+import { literalSearchQuery, type ParsedSearchQuery } from './filter-query.ts'
+import { resolveWikiTarget } from './queries.ts'
+import { HIGHLIGHT_END, HIGHLIGHT_START } from './search.ts'
+import { buildFtsMatch, buildTitleMatchSql } from './search-query.ts'
+import { displayNoteTitle } from '../markdown/note-title.ts'
+import { highlightTitle } from './title-highlight.ts'
 
 /**
  * The one palette search (Plan 08): parsed filter tokens become composable

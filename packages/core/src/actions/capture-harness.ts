@@ -1,6 +1,6 @@
 import { vi } from 'vitest'
-import { describePage } from '../ai/describe-page'
-import type { AiProvidersState } from '../ai/provider-config'
+import { describePage } from '../ai/describe-page.ts'
+import type { AiProvidersState } from '../ai/provider-config.ts'
 import {
   captureInboxList,
   captureInboxRead,
@@ -13,16 +13,16 @@ import {
   readNote,
   writeAsset,
   writeNote,
-} from '../graph/commands'
-import { getSecret } from '../secrets/keychain'
+} from '../graph/commands.ts'
+import { getSecret } from '../secrets/keychain.ts'
 import {
   captureIdentity,
   drainCaptureInbox,
   reconcileCaptureEnrichment,
   type ReconcileCaptureEnrichmentInput,
-} from './capture'
-import type { CaptureEnvelope } from './capture-envelope'
-import { scrapePageMeta } from './meta-scrape'
+} from './capture.ts'
+import type { CaptureEnvelope } from './capture-envelope.ts'
+import { scrapePageMeta } from './meta-scrape.ts'
 
 /**
  * Shared in-memory harness for the capture test files (`capture-drain.test.ts`,

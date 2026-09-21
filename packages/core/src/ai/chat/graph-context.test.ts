@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import type { GraphStatsOptions } from '../../indexing/graph-stats'
-import { loadChatGraphContext, MAX_CONTEXT_TAGS } from './graph-context'
+import type { GraphStatsOptions } from '../../indexing/graph-stats.ts'
+import { loadChatGraphContext, MAX_CONTEXT_TAGS } from './graph-context.ts'
 
 describe('loadChatGraphContext', () => {
   it('loads stats at the prompt tag cap and stamps the graph name on them', async () => {

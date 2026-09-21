@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { ModelMessage } from '@reflect/modules/ai'
-import { estimateTokens, fitToContextWindow } from './context-window'
+import { estimateTokens, fitToContextWindow } from './context-window.ts'
 
 /**
  * Budget math under test (empty system prompt): the usable budget is

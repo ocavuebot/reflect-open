@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { captureFromPath, captureIdentity, isCaptureSpoolPath } from './capture-identity'
+import { captureFromPath, captureIdentity, isCaptureSpoolPath } from './capture-identity.ts'
 
 /** 2026-06-11 15:30:22.845 local — every derived name is asserted from it. */
 const CAPTURED_AT = new Date(2026, 5, 11, 15, 30, 22, 845)

@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { availableTemplatePath, slugPathForTitle, templateSlugPathForTitle } from './note-paths'
+import { availableTemplatePath, slugPathForTitle, templateSlugPathForTitle } from './note-paths.ts'
 
 describe('availableTemplatePath', () => {
   it('probes under templates/ with the same collision suffix', async () => {

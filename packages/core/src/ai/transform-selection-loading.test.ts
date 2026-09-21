@@ -1,8 +1,8 @@
 import { MockLanguageModelV3 } from '@reflect/modules/ai/test'
 import { describe, expect, it, vi } from 'vitest'
-import { cloudSafeSelection } from '../privacy/checkers'
-import { languageModel } from './language-model'
-import { transformSelection, type TransformSelectionOptions } from './transform-selection'
+import { cloudSafeSelection } from '../privacy/checkers.ts'
+import { languageModel } from './language-model.ts'
+import { transformSelection, type TransformSelectionOptions } from './transform-selection.ts'
 
 vi.mock('./language-model', () => ({ languageModel: vi.fn() }))
 

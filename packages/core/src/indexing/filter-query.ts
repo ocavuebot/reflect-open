@@ -18,7 +18,7 @@
  * never makes results vanish behind a filter the user didn't form yet.
  */
 import { isCalendarDate } from '@reflect/utils'
-import { foldTag } from '../markdown'
+import { foldTag } from '../markdown/index.ts'
 
 export interface SearchFilters {
   /** Folded tag keys ({@link foldTag} — tags match case-insensitively). */

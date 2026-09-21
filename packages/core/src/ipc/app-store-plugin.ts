@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { definePluginCommand, ignoredResult } from './plugin'
+import { definePluginCommand, ignoredResult } from './plugin.ts'
 
 /**
  * Typed bindings for `plugins/tauri-plugin-app-store`, the install-channel

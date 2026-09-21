@@ -1,4 +1,4 @@
-import { emitFileChanges, type FileChange } from './file-changes'
+import { emitFileChanges, type FileChange } from './file-changes.ts'
 
 /**
  * The mobile stand-in for the file watcher's echo (Plan 19, decision 5).

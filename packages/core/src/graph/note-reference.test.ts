@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { markdownNoteReference, noteBasenameKey, wikiNoteReference } from './note-reference'
+import { markdownNoteReference, noteBasenameKey, wikiNoteReference } from './note-reference.ts'
 
 describe('wikiNoteReference', () => {
   it('reads a bare target as a folded name key', () => {

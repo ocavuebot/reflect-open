@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { deleteNote, writeNote } from '../graph/commands'
-import { subscribeFileChanges, type FileChange } from './file-changes'
-import { setLocalWriteEcho } from './local-write-echo'
+import { setBridge } from '../ipc/bridge.ts'
+import { deleteNote, writeNote } from '../graph/commands.ts'
+import { subscribeFileChanges, type FileChange } from './file-changes.ts'
+import { setLocalWriteEcho } from './local-write-echo.ts'
 
 afterEach(() => {
   setLocalWriteEcho(false)

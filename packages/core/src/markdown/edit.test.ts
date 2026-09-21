@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parseNote } from './extract'
+import { parseNote } from './extract.ts'
 import {
   appendBlock,
   appendListItemUnderBacklinkedHeading,
@@ -13,7 +13,7 @@ import {
   taskLineToBullet,
   TaskStaleError,
   toggleTaskMarker,
-} from './edit'
+} from './edit.ts'
 
 describe('appendListItemUnderHeading', () => {
   it("extends the section's bullet list and stays before later prose and lists", () => {

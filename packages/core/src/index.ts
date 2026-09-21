@@ -9,7 +9,7 @@
  * the surface apps build on. The smaller export barrels below preserve this
  * public surface while keeping each file reviewable.
  */
-export * from './exports/platform'
-export * from './exports/ai-actions'
-export * from './exports/link-preview'
-export * from './exports/sync-markdown-indexing'
+export * from './exports/platform.ts'
+export * from './exports/ai-actions.ts'
+export * from './exports/link-preview.ts'
+export * from './exports/sync-markdown-indexing.ts'

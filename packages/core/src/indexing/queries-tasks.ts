@@ -1,6 +1,6 @@
-import type { TaskMarker } from '../markdown'
-import { db } from './db'
-import { decodeTaskBreadcrumbs } from './indexed-note'
+import type { TaskMarker } from '../markdown/index.ts'
+import { db } from './db.ts'
+import { decodeTaskBreadcrumbs } from './indexed-note.ts'
 
 /**
  * One open task plus the note context the Tasks view (Plan 18) groups and

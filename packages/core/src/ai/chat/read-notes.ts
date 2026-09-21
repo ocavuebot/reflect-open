@@ -1,13 +1,13 @@
 import { z } from 'zod'
-import { isAppError } from '../../errors'
-import { parseNote } from '../../markdown/extract'
-import { splitFrontmatter } from '../../markdown/frontmatter'
+import { isAppError } from '../../errors.ts'
+import { parseNote } from '../../markdown/extract.ts'
+import { splitFrontmatter } from '../../markdown/frontmatter.ts'
 import {
   cloudSafeNoteContent,
   isPrivateNoteError,
   type CloudNoteContent,
   type CloudSafe,
-} from '../../privacy/checkers'
+} from '../../privacy/checkers.ts'
 
 /**
  * The read_notes tool's executor (Plan 10): resolve a graph-relative note

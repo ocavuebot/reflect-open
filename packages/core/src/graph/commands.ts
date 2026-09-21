@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { echoLocalWrite } from '../indexing/local-write-echo'
-import { getBridge, type Unlisten } from '../ipc/bridge'
-import { call } from '../ipc/invoke'
+import { echoLocalWrite } from '../indexing/local-write-echo.ts'
+import { getBridge, type Unlisten } from '../ipc/bridge.ts'
+import { call } from '../ipc/invoke.ts'
 import {
   fileMetaSchema,
   graphImportProgressSchema,
@@ -17,7 +17,7 @@ import {
   type NoteCreateOutcome,
   type RecentGraph,
   type WindowBootstrap,
-} from './schemas'
+} from './schemas.ts'
 
 /** Commands that return `()` from Rust serialize as `null` over IPC. */
 const voidSchema = z.null()

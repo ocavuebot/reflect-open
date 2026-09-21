@@ -16,8 +16,8 @@
  */
 
 import { addDaysIso, addMonthsIso, isCalendarDate, isoFromParts, weekdayIso } from '@reflect/utils'
-import { weekStartDow, type DateFormat, type WeekStartDay } from '../settings/schema'
-import { monthNameSuggestions } from './date-suggestions-months'
+import { weekStartDow, type DateFormat, type WeekStartDay } from '../settings/schema.ts'
+import { monthNameSuggestions } from './date-suggestions-months.ts'
 
 /** One synthesised daily-note target: the resolved day plus its menu label. */
 export interface DateSuggestion {

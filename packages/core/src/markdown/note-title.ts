@@ -1,6 +1,6 @@
-import { wikiLinkSafe } from './edit'
-import { scanInlineSegments } from './scan'
-import { subjectAliases } from './subject-aliases'
+import { wikiLinkSafe } from './edit.ts'
+import { scanInlineSegments } from './scan.ts'
+import { subjectAliases } from './subject-aliases.ts'
 
 /**
  * Rich-title derivations: a note may legally embed markup in its title

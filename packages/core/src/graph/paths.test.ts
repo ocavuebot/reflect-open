@@ -17,7 +17,7 @@ import {
   mayContainNotes,
   notePath,
   templatePath,
-} from './paths'
+} from './paths.ts'
 
 const fixtureSchema = z.array(
   z.object({

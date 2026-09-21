@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { ReflectError } from '../errors'
-import type { TranscriptionProvider } from './provider-config'
+import { ReflectError } from '../errors.ts'
+import type { TranscriptionProvider } from './provider-config.ts'
 
 /**
  * The HTTP substrate under audio transcription: one guarded `send`, one

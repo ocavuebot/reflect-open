@@ -1,7 +1,7 @@
 import { z, type ZodType } from 'zod'
-import type { AppError } from '../errors'
-import { getBridge, type IpcBridge, type Unlisten } from './bridge'
-import { call } from './invoke'
+import type { AppError } from '../errors.ts'
+import { getBridge, type IpcBridge, type Unlisten } from './bridge.ts'
+import { call } from './invoke.ts'
 
 /**
  * Typed bindings for the first-party plugins (`plugins/tauri-plugin-*`).

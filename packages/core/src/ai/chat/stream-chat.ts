@@ -1,11 +1,11 @@
 import type { LanguageModel, ModelMessage } from '@reflect/modules/ai'
-import { errorMessage } from '../../errors'
-import { languageModel } from '../language-model'
-import { modelContextWindow } from '../provider-catalog'
-import type { AiProviderConfig } from '../../settings/schema'
-import type { CloudGraphContext, CloudSafe } from '../../privacy/checkers'
-import { fitToContextWindow } from './context-window'
-import { chatSystemPrompt } from './system-prompt'
+import { errorMessage } from '../../errors.ts'
+import { languageModel } from '../language-model.ts'
+import { modelContextWindow } from '../provider-catalog.ts'
+import type { AiProviderConfig } from '../../settings/schema.ts'
+import type { CloudGraphContext, CloudSafe } from '../../privacy/checkers.ts'
+import { fitToContextWindow } from './context-window.ts'
+import { chatSystemPrompt } from './system-prompt.ts'
 import {
   buildNoteTools,
   noteToolCall,
@@ -13,7 +13,7 @@ import {
   type NoteToolCall,
   type NoteToolDeps,
   type NoteToolResult,
-} from './tools'
+} from './tools.ts'
 
 /**
  * The streaming chat engine (Plan 10, read-only first wave): one BYOK call

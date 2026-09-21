@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import type { FileChange } from './file-changes'
-import { emitIndexApplied, subscribeIndexApplied } from './index-applied'
+import type { FileChange } from './file-changes.ts'
+import { emitIndexApplied, subscribeIndexApplied } from './index-applied.ts'
 
 const batch: FileChange[] = [{ path: 'assets/a.png', kind: 'upsert', modifiedMs: 1 }]
 

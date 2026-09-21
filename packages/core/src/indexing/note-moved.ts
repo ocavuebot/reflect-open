@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { getBridge, type Unlisten } from '../ipc/bridge'
+import { getBridge, type Unlisten } from '../ipc/bridge.ts'
 
 /**
  * The Rust-side "note rows moved" broadcast (`note:moved`), emitted after a

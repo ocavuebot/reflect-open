@@ -1,4 +1,4 @@
-import { isAppError } from '../errors'
+import { isAppError } from '../errors.ts'
 import {
   gitCommitAll,
   gitFetch,
@@ -6,7 +6,7 @@ import {
   gitPush,
   type ChangedFile,
   type SkippedFile,
-} from './commands'
+} from './commands.ts'
 
 /**
  * The sync engine (Plan 12): debounced commit→push on edit, pull/merge/retry

@@ -1,6 +1,6 @@
-import { saveArchivedPost, createArchivedPost } from '../x-archive'
-import type { XPostEnvelope } from './bookmark-envelope'
-import { errorMessage, isAppError, toAppError } from '../errors'
+import { saveArchivedPost, createArchivedPost } from '../x-archive.ts'
+import type { XPostEnvelope } from './bookmark-envelope.ts'
+import { errorMessage, isAppError, toAppError } from '../errors.ts'
 import {
   captureInboxList,
   captureInboxRead,
@@ -9,33 +9,33 @@ import {
   promoteCaptureScreenshot,
   readNote,
   writeNote,
-} from '../graph/commands'
-import { dailyPath, notePath } from '../graph/paths'
-import { hashContent } from '../indexing/hash'
+} from '../graph/commands.ts'
+import { dailyPath, notePath } from '../graph/paths.ts'
+import { hashContent } from '../indexing/hash.ts'
 import {
   appendListItem,
   appendListItemUnderBacklinkedHeading,
   headingMatchesBacklinkedTitle,
   upgradeSectionHeadingBacklink,
   type ListItemKind,
-} from '../markdown/edit'
-import { parseNote } from '../markdown/extract'
-import { sectionEnd, topLevelHeadings } from '../markdown/heading-blocks'
-import { parseFrontmatter, splitFrontmatter } from '../markdown/frontmatter'
-import type { ReconcileStop } from './audio-memo'
-import { ensureBacklinkTarget } from './backlink-target'
+} from '../markdown/edit.ts'
+import { parseNote } from '../markdown/extract.ts'
+import { sectionEnd, topLevelHeadings } from '../markdown/heading-blocks.ts'
+import { parseFrontmatter, splitFrontmatter } from '../markdown/frontmatter.ts'
+import type { ReconcileStop } from './audio-memo.ts'
+import { ensureBacklinkTarget } from './backlink-target.ts'
 import {
   captureFromPath,
   captureIdentity,
   captureLocalDate,
   captureSpoolName,
   type CaptureIdentity,
-} from './capture-identity'
+} from './capture-identity.ts'
 import {
   inboxEnvelopeSchema,
   type InboxEnvelope,
   type TextCaptureEnvelope,
-} from './capture-envelope'
+} from './capture-envelope.ts'
 import {
   captureNoteMeta,
   captureNoteSource,
@@ -44,7 +44,7 @@ import {
   noteSource,
   retitleDailyEntry,
   type CaptureStatus,
-} from './capture-note'
+} from './capture-note.ts'
 
 /** The category note every captured-link section backlinks. */
 const LINKS_NOTE_TITLE = 'Links'

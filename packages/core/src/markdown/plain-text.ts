@@ -1,4 +1,4 @@
-import type { Span } from './model'
+import type { Span } from './model.ts'
 
 /**
  * Plain-text rendering (Plan 03): turn a slice of markdown body into the text a

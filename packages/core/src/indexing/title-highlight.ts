@@ -1,6 +1,6 @@
-import { foldKey } from '../markdown'
-import { HIGHLIGHT_END, HIGHLIGHT_START, parseHighlights } from './search'
-import { titleRecallTerms } from './search-query'
+import { foldKey } from '../markdown/index.ts'
+import { HIGHLIGHT_END, HIGHLIGHT_START, parseHighlights } from './search.ts'
+import { titleRecallTerms } from './search-query.ts'
 
 interface TextRange {
   readonly start: number

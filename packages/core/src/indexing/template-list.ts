@@ -1,4 +1,4 @@
-import { db } from './db'
+import { db } from './db.ts'
 
 /**
  * The graph's note templates (`templates/*.md`), as the insert picker and the

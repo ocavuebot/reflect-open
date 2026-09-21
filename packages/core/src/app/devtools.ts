@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { call } from '../ipc/invoke'
+import { call } from '../ipc/invoke.ts'
 
 /**
  * Toggle the native web inspector for the calling window — open it, or close it

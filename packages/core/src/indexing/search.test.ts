@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { HIGHLIGHT_END, HIGHLIGHT_START, parseHighlights } from './search'
+import { HIGHLIGHT_END, HIGHLIGHT_START, parseHighlights } from './search.ts'
 
 const mark = (text: string): string => `${HIGHLIGHT_START}${text}${HIGHLIGHT_END}`
 

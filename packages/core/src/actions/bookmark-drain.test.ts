@@ -1,18 +1,18 @@
-import { saveArchivedPost } from '../x-archive'
+import { saveArchivedPost } from '../x-archive.ts'
 vi.mock('../x-archive', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../x-archive')>()),
+  ...(await importOriginal<typeof import('../x-archive.ts')>()),
   saveArchivedPost: vi.fn(async () => {}),
 }))
 import { beforeEach, expect, it, vi } from 'vitest'
-import { appendXPost } from './bookmark-capture'
-import { drainCaptureInbox } from './capture-drain'
-import type { XPostEnvelope } from './bookmark-envelope'
+import { appendXPost } from './bookmark-capture.ts'
+import { drainCaptureInbox } from './capture-drain.ts'
+import type { XPostEnvelope } from './bookmark-envelope.ts'
 import {
   captureInboxList,
   captureInboxRead,
   captureInboxRemove,
   writeNote,
-} from '../graph/commands'
+} from '../graph/commands.ts'
 
 vi.mock('../graph/commands', () => ({
   captureInboxList: vi.fn(),

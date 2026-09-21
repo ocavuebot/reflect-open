@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { getBridge, type Unlisten } from '../ipc/bridge'
+import { getBridge, type Unlisten } from '../ipc/bridge.ts'
 
 /** The Rust iCloud watch's conflict event (Plan 21 Phase 2). */
 const ICLOUD_CONFLICTS_EVENT = 'icloud:conflicts'

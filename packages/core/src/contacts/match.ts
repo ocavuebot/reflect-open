@@ -1,5 +1,5 @@
-import { lookupContactsByName, type ContactMatch } from './commands'
-import { contactDetailsMarkdown } from './markdown'
+import { lookupContactsByName, type ContactMatch } from './commands.ts'
+import { contactDetailsMarkdown } from './markdown.ts'
 
 /**
  * The person-note matching rule: a note earns a suggested-contact card only

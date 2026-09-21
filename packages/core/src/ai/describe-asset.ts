@@ -1,7 +1,7 @@
 import type { UserContent } from '@reflect/modules/ai'
-import { ReflectError } from '../errors'
-import type { AiProviderConfig } from '../settings/schema'
-import { languageModel } from './language-model'
+import { ReflectError } from '../errors.ts'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import { languageModel } from './language-model.ts'
 
 /**
  * BYOK description + OCR for one asset (Plan 20): a single short multimodal

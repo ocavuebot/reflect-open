@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { DescriptionRejectedError } from '../ai/describe-page'
-import { ReflectError } from '../errors'
+import { DescriptionRejectedError } from '../ai/describe-page.ts'
+import { ReflectError } from '../errors.ts'
 import {
   addSpool,
   CAPTURE_URL,
@@ -19,9 +19,9 @@ import {
   wireCaptureMocks,
   writeAssetMock,
   writeNoteMock,
-} from './capture-harness'
-import { captureIdentity } from './capture'
-import type { CaptureEnvelope } from './capture-envelope'
+} from './capture-harness.ts'
+import { captureIdentity } from './capture.ts'
+import type { CaptureEnvelope } from './capture-envelope.ts'
 
 const ensureBacklinkTargetMock = vi.hoisted(() => vi.fn())
 
@@ -42,7 +42,7 @@ vi.mock('./meta-scrape', () => ({
   scrapePageMeta: vi.fn(),
 }))
 vi.mock('../ai/describe-page', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../ai/describe-page')>()),
+  ...(await importOriginal<typeof import('../ai/describe-page.ts')>()),
   describePage: vi.fn(),
 }))
 vi.mock('../secrets/keychain', () => ({

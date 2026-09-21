@@ -1,11 +1,11 @@
-import { isAppError } from '../errors'
-import { readNote, writeNote } from '../graph/commands'
-import { dailyPath } from '../graph/paths'
-import { hashContent } from '../indexing/hash'
-import { parseNote } from '../markdown/extract'
-import { parseFrontmatter, splitFrontmatter, upsertFrontmatter } from '../markdown/frontmatter'
-import type { AiProviderConfig } from '../settings/schema'
-import type { CaptureIdentity } from './capture-identity'
+import { isAppError } from '../errors.ts'
+import { readNote, writeNote } from '../graph/commands.ts'
+import { dailyPath } from '../graph/paths.ts'
+import { hashContent } from '../indexing/hash.ts'
+import { parseNote } from '../markdown/extract.ts'
+import { parseFrontmatter, splitFrontmatter, upsertFrontmatter } from '../markdown/frontmatter.ts'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import type { CaptureIdentity } from './capture-identity.ts'
 import {
   captureNoteMeta,
   notePrivate,
@@ -13,7 +13,7 @@ import {
   retitleDailyEntry,
   type CaptureNoteMeta,
   type CaptureStatus,
-} from './capture-note'
+} from './capture-note.ts'
 
 export interface PendingCaptureSnapshot {
   /** Full source, including frontmatter, used to preserve unrelated keys. */

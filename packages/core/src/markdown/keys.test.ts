@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { z } from 'zod'
-import { foldFallbackTitleKey, foldKey, foldTag } from './keys'
+import { foldFallbackTitleKey, foldKey, foldTag } from './keys.ts'
 
 describe('foldKey', () => {
   it('trims and lowercases', () => {

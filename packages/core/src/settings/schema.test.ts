@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { CHAT_SYSTEM_PROMPT_MAX_LENGTH, DEFAULT_SETTINGS, settingsSchema } from './schema'
+import { CHAT_SYSTEM_PROMPT_MAX_LENGTH, DEFAULT_SETTINGS, settingsSchema } from './schema.ts'
 
 describe('settingsSchema', () => {
   it('defaults every key on an empty document (fresh install)', () => {

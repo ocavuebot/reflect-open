@@ -1,6 +1,6 @@
-import { splitFrontmatter } from './frontmatter'
-import { parseBody } from './grammar'
-import { isCodeBlock } from './node-types'
+import { splitFrontmatter } from './frontmatter.ts'
+import { parseBody } from './grammar.ts'
+import { isCodeBlock } from './node-types.ts'
 
 /**
  * Git conflict-marker detection (Plan 12).

@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import type { ContactMatch } from './commands'
-import { pickContactForEmail, resolveAttendeeContact } from './resolve'
+import { setBridge } from '../ipc/bridge.ts'
+import type { ContactMatch } from './commands.ts'
+import { pickContactForEmail, resolveAttendeeContact } from './resolve.ts'
 
 function contact(overrides: Partial<ContactMatch>): ContactMatch {
   return {

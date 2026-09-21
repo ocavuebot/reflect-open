@@ -1,8 +1,8 @@
 import { z } from 'zod'
 import type { ModelMessage } from '@reflect/modules/ai'
-import { db } from '../../indexing/db'
-import { call } from '../../ipc/invoke'
-import type { AssistantPart, ChatTurn } from './transcript'
+import { db } from '../../indexing/db.ts'
+import { call } from '../../ipc/invoke.ts'
+import type { AssistantPart, ChatTurn } from './transcript.ts'
 
 /**
  * Chat history persistence (the durable `chat_*` tables in the graph's

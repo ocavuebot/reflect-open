@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import type { ContactMatch } from './commands'
-import { appendContactDetails, contactDetailsMarkdown, noteHasContactDetails } from './markdown'
+import type { ContactMatch } from './commands.ts'
+import { appendContactDetails, contactDetailsMarkdown, noteHasContactDetails } from './markdown.ts'
 
 function contact(overrides: Partial<ContactMatch>): ContactMatch {
   return {

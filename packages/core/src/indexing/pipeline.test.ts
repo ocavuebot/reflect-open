@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { getBacklinks, resolveWikiTarget } from './queries'
-import { searchNotes } from './filtered-search'
-import { hashContent } from './hash'
-import { PROJECTION_VERSION } from './indexed-note'
+import { setBridge } from '../ipc/bridge.ts'
+import { getBacklinks, resolveWikiTarget } from './queries.ts'
+import { searchNotes } from './filtered-search.ts'
+import { hashContent } from './hash.ts'
+import { PROJECTION_VERSION } from './indexed-note.ts'
 import {
   indexNote,
   rebuildIndex,
@@ -11,9 +11,9 @@ import {
   reindexNotesReferencing,
   syncIndex,
   PROJECTION_VERSION_KEY,
-} from './indexer'
-import { subscribeIndexApplied } from './index-applied'
-import { applyIndexChanges } from './live'
+} from './indexer.ts'
+import { subscribeIndexApplied } from './index-applied.ts'
+import { applyIndexChanges } from './live.ts'
 
 // Install a fake bridge so both core's `call` and the Kysely runner resolve
 // against an in-test fake — exercises the pipeline + the Kysely→db_query bridge.

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
+import { setBridge } from '../ipc/bridge.ts'
 import {
   createGithubRepo,
   deviceFlowPoll,
@@ -12,7 +12,7 @@ import {
   newRepoUrl,
   parseGithubRemote,
   runDeviceFlow,
-} from './github'
+} from './github.ts'
 
 afterEach(() => {
   setBridge(null)

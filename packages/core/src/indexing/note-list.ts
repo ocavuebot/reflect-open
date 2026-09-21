@@ -1,7 +1,7 @@
 import { sql } from 'kysely'
-import { foldTag } from '../markdown'
-import { db } from './db'
-import { recallOrder } from './filtered-search'
+import { foldTag } from '../markdown/index.ts'
+import { db } from './db.ts'
+import { recallOrder } from './filtered-search.ts'
 
 /**
  * The All Notes list: every regular note, pinned first then newest, optionally

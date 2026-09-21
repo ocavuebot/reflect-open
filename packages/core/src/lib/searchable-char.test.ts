@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { hasSearchableChar } from './searchable-char'
+import { hasSearchableChar } from './searchable-char.ts'
 
 describe('hasSearchableChar', () => {
   it('is false for nothing and for whitespace', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { base64ToBytes, bytesToBase64 } from './base64'
+import { base64ToBytes, bytesToBase64 } from './base64.ts'
 
 describe('bytesToBase64', () => {
   it('matches btoa on small payloads', () => {

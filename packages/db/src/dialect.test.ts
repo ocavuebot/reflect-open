@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { createDb } from './db'
+import { createDb } from './db.ts'
 
 const runQuery = vi.fn<(sql: string, params: readonly unknown[]) => Promise<unknown>>()
 

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { isHttpBaseUrl, normalizeOpenAICompatibleBaseUrl } from '../ai/openai-compatible'
+import { isHttpBaseUrl, normalizeOpenAICompatibleBaseUrl } from '../ai/openai-compatible.ts'
 
 /**
  * The user-settings schema — the policy half of the settings store. Rust

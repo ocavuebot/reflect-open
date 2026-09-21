@@ -1,8 +1,8 @@
 import { sql } from 'kysely'
-import { db } from '../indexing/db'
-import { searchWithFilters } from '../indexing/filtered-search'
-import { literalSearchQuery } from '../indexing/filter-query'
-import { embedTexts } from './commands'
+import { db } from '../indexing/db.ts'
+import { searchWithFilters } from '../indexing/filtered-search.ts'
+import { literalSearchQuery } from '../indexing/filter-query.ts'
+import { embedTexts } from './commands.ts'
 
 /**
  * The shared retrieval contract (Plan 09): one `retrieve()` for search and AI.

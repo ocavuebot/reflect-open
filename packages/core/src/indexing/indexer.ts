@@ -1,6 +1,6 @@
-import { errorMessage, isAppError } from '../errors'
-import { listFiles, readNote } from '../graph/commands'
-import { parseNote } from '../markdown'
+import { errorMessage, isAppError } from '../errors.ts'
+import { listFiles, readNote } from '../graph/commands.ts'
+import { parseNote } from '../markdown/index.ts'
 import {
   applyIndexedNote,
   applyIndexedNotes,
@@ -11,15 +11,15 @@ import {
   setIndexMeta,
   touchIndexedNotes,
   type IndexedNoteTouch,
-} from './commands'
-import { assetReferencingNotePaths } from './asset-refs'
-import { gatherAssetDescriptionText } from './asset-description-text'
-import { emitIndexApplied } from './index-applied'
-import { hashContent } from './hash'
-import { buildIndexedNote, PROJECTION_VERSION, type IndexedNote } from './indexed-note'
-import { detectExternalMoves } from './move-healing'
-import { INDEX_PASS_YIELD_EVERY, yieldToEventLoop } from './pacing'
-import { getIndexMeta } from './queries'
+} from './commands.ts'
+import { assetReferencingNotePaths } from './asset-refs.ts'
+import { gatherAssetDescriptionText } from './asset-description-text.ts'
+import { emitIndexApplied } from './index-applied.ts'
+import { hashContent } from './hash.ts'
+import { buildIndexedNote, PROJECTION_VERSION, type IndexedNote } from './indexed-note.ts'
+import { detectExternalMoves } from './move-healing.ts'
+import { INDEX_PASS_YIELD_EVERY, yieldToEventLoop } from './pacing.ts'
+import { getIndexMeta } from './queries.ts'
 
 /**
  * The indexing pipeline (Plan 04): read (Plan 02) → parse/extract in TS

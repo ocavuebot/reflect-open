@@ -1,11 +1,11 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import type { HostedAiProviderConfig, OpenAiCompatibleProviderConfig } from '../settings/schema'
+import type { HostedAiProviderConfig, OpenAiCompatibleProviderConfig } from '../settings/schema.ts'
 
 const getSecret = vi.hoisted(() => vi.fn<(name: string) => Promise<string | null>>())
 
 vi.mock('../secrets/keychain', () => ({ getSecret }))
 
-const { aiApiKeyForConfig } = await import('./secrets')
+const { aiApiKeyForConfig } = await import('./secrets.ts')
 
 function hostedConfig(overrides: Partial<HostedAiProviderConfig>): HostedAiProviderConfig {
   return {

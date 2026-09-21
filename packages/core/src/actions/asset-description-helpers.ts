@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import type { AssetKind } from '../ai/describe-asset'
-import { ASSETS_DIR, DESCRIPTION_SUFFIX } from '../graph/paths'
-import { parseFrontmatter, splitFrontmatter, upsertFrontmatter } from '../markdown/frontmatter'
+import type { AssetKind } from '../ai/describe-asset.ts'
+import { ASSETS_DIR, DESCRIPTION_SUFFIX } from '../graph/paths.ts'
+import { parseFrontmatter, splitFrontmatter, upsertFrontmatter } from '../markdown/frontmatter.ts'
 
 /** The eligible asset type and how it enters a provider request. */
 export interface AssetType {

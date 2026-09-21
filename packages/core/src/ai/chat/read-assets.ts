@@ -1,16 +1,16 @@
-import { getXArchiveOwners } from '../../x-archive'
+import { getXArchiveOwners } from '../../x-archive.ts'
 import { z } from 'zod'
-import { classifyAssetFromNotes } from '../../actions/asset-privacy'
-import { isAppError } from '../../errors'
-import { descriptionPathFor, isAssetPath } from '../../graph/paths'
-import { canonicalAssetPath } from '../../markdown/extract'
-import { splitFrontmatter } from '../../markdown/frontmatter'
+import { classifyAssetFromNotes } from '../../actions/asset-privacy.ts'
+import { isAppError } from '../../errors.ts'
+import { descriptionPathFor, isAssetPath } from '../../graph/paths.ts'
+import { canonicalAssetPath } from '../../markdown/extract.ts'
+import { splitFrontmatter } from '../../markdown/frontmatter.ts'
 import {
   cloudSafeAssetDescription,
   isPrivateNoteError,
   type CloudAssetDescription,
   type CloudSafe,
-} from '../../privacy/checkers'
+} from '../../privacy/checkers.ts'
 
 /**
  * The read_assets tool's executor (Plan 20 meets Plan 10): resolve an

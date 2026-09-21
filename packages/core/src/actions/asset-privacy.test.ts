@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { getXArchiveOwners } from '../x-archive'
-import { classifyAsset, classifyAssetFromNotes } from './asset-privacy'
+import { getXArchiveOwners } from '../x-archive.ts'
+import { classifyAsset, classifyAssetFromNotes } from './asset-privacy.ts'
 
 vi.mock('../x-archive', () => ({ getXArchiveOwners: vi.fn() }))
 

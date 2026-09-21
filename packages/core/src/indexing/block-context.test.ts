@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { blockContextAt, blockContextLinesAt, prepareBlockContext } from './block-context'
+import { blockContextAt, blockContextLinesAt, prepareBlockContext } from './block-context.ts'
 
 /** Offset of the first `[[target]]` occurrence — the index's `pos_from`. */
 function posOf(content: string, link: string): number {

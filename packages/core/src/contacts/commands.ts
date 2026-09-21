@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { call } from '../ipc/invoke'
+import { call } from '../ipc/invoke.ts'
 
 /**
  * Typed bindings for the Rust `contacts` capability: live Apple Contacts

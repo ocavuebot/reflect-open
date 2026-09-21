@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { xPostEnvelopeSchema, xPostWireSchema } from './bookmark-envelope'
-export * from './bookmark-envelope'
+import { xPostEnvelopeSchema, xPostWireSchema } from './bookmark-envelope.ts'
+export * from './bookmark-envelope.ts'
 
 /**
  * The platform-agnostic capture envelope (Plan 11): the contract between

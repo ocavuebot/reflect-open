@@ -1,17 +1,17 @@
 import type { Tool, TypedToolCall, TypedToolResult } from '@reflect/modules/ai'
 import { z } from 'zod'
-import { readNote } from '../../graph/commands'
-import { retrieve, type RetrievalHit, type RetrieveOptions } from '../../embeddings/retrieve'
-import { assetReferencingNotePaths } from '../../indexing/asset-refs'
-import { listDailyNotes, type DailyNoteRow, type DailyNotesRange } from '../../indexing/queries'
+import { readNote } from '../../graph/commands.ts'
+import { retrieve, type RetrievalHit, type RetrieveOptions } from '../../embeddings/retrieve.ts'
+import { assetReferencingNotePaths } from '../../indexing/asset-refs.ts'
+import { listDailyNotes, type DailyNoteRow, type DailyNotesRange } from '../../indexing/queries.ts'
 import {
   listRecentNotes,
   type RecentNoteRow,
   type RecentNotesOptions,
-} from '../../indexing/note-list'
-import { isTagName } from '../../markdown/extract'
-import { buildReadOneAsset, readAssetsInput, type ReadAssetsOutput } from './read-assets'
-import { buildReadOneNote, readNotesInput, type ReadNotesOutput } from './read-notes'
+} from '../../indexing/note-list.ts'
+import { isTagName } from '../../markdown/extract.ts'
+import { buildReadOneAsset, readAssetsInput, type ReadAssetsOutput } from './read-assets.ts'
+import { buildReadOneNote, readNotesInput, type ReadNotesOutput } from './read-notes.ts'
 import {
   cloudSafeNoteListings,
   cloudSafeSearchHits,
@@ -20,7 +20,7 @@ import {
   type CloudSafe,
   type CloudSearchHit,
   type CloudSendable,
-} from '../../privacy/checkers'
+} from '../../privacy/checkers.ts'
 
 /**
  * The read-only note tools the chat model can call (Plan 10, first wave),

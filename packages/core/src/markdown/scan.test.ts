@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { scanInlineImages, scanInlineSegments, scanInlineWikiLinks } from './scan'
+import { scanInlineImages, scanInlineSegments, scanInlineWikiLinks } from './scan.ts'
 
 describe('scanInlineWikiLinks', () => {
   it('finds plain and aliased links with display spans', () => {

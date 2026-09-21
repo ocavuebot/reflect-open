@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { retitleDailyEntry, withTitle } from './capture-note'
+import { retitleDailyEntry, withTitle } from './capture-note.ts'
 
 const BASE = 'capture-2026-06-11-153022-845-7c9e'
 
