@@ -1,16 +1,16 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { useEditor } from '@meowdown/react'
 import { buildFileMarkdown, type EditorExtension } from '@meowdown/core'
-import { toPortableImageFile } from '@/lib/image-file'
-import { isTouchEditorSurface } from '@/lib/platform-surface'
-import { whenEditorMounted } from './when-editor-mounted'
+import { toPortableImageFile } from '@/lib/image-file.ts'
+import { isTouchEditorSurface } from '@/lib/platform-surface.ts'
+import { whenEditorMounted } from './when-editor-mounted.ts'
 import {
   clearFormattingToolbar,
   publishFormattingToolbar,
   type FormattingToolbarCapabilities,
   type FormattingToolbarCommands,
   type FormattingTriggerText,
-} from './formatting-toolbar-store'
+} from './formatting-toolbar-store.ts'
 
 /**
  * Publishes this editor's formatting-toolbar surface while it holds focus

@@ -4,10 +4,10 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { GraphProvider } from '@/providers/graph-provider'
-import { SettingsProvider } from '@/providers/settings-provider'
-import '@/test-utils/locator'
-import { GraphChooser } from './graph-chooser'
+import { GraphProvider } from '@/providers/graph-provider.tsx'
+import { SettingsProvider } from '@/providers/settings-provider.tsx'
+import '@/test-utils/locator.ts'
+import { GraphChooser } from './graph-chooser.tsx'
 
 vi.mock('@tauri-apps/plugin-dialog', () => ({ open: vi.fn() }))
 

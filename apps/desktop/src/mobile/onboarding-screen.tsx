@@ -1,12 +1,12 @@
 import { useState, type ReactElement } from 'react'
 import { Cloud, HardDrive } from 'lucide-react'
-import { InlineAlert } from '@/components/inline-alert'
-import { Button } from '@/components/ui/button'
-import { Spinner } from '@/components/ui/spinner'
-import { useAsyncAction } from '@/hooks/use-async-action'
-import { OnboardingIcloudHeader } from '@/mobile/onboarding-icloud-header'
-import { OnboardingIcloudSection } from '@/mobile/onboarding-icloud-section'
-import { useGraph } from '@/providers/graph-provider'
+import { InlineAlert } from '@/components/inline-alert.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { Spinner } from '@/components/ui/spinner.tsx'
+import { useAsyncAction } from '@/hooks/use-async-action.ts'
+import { OnboardingIcloudHeader } from '@/mobile/onboarding-icloud-header.tsx'
+import { OnboardingIcloudSection } from '@/mobile/onboarding-icloud-section.tsx'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /** Which control kicked off the in-flight choice, so only that one shows the
  * spinner/pending label (every button still disables). Container graph roots

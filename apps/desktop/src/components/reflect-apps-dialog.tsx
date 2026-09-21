@@ -1,7 +1,7 @@
 import type { ReactElement, RefObject } from 'react'
 import { ArrowUpRight, Globe, Smartphone, X, type LucideIcon } from 'lucide-react'
 import reflectAppsHero from '@/assets/reflect-apps-hero.png'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogClose,
@@ -9,8 +9,8 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { openUrlSync } from '@/lib/open-url'
+} from '@/components/ui/dialog.tsx'
+import { openUrlSync } from '@/lib/open-url.ts'
 
 interface ReflectAppsDialogProps {
   readonly open: boolean

@@ -8,7 +8,7 @@ import {
   formatTimeOfDay,
   isIsoDate,
   todayIso,
-} from './dates'
+} from './dates.ts'
 
 describe('dates', () => {
   it('todayIso returns a valid local ISO date', () => {

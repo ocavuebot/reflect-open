@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState, type ReactElement } from 'react'
 import { Square, Trash2 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import { formatRecordingElapsed } from '@/lib/recording-time'
-import { useMobileAudioMemo } from '@/mobile/audio-memo-provider'
-import { RecordingLevelWaveform } from '@/mobile/recording-level-waveform'
-import { useRouter } from '@/routing/router'
+import { Button } from '@/components/ui/button.tsx'
+import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import { formatRecordingElapsed } from '@/lib/recording-time.ts'
+import { useMobileAudioMemo } from '@/mobile/audio-memo-provider.tsx'
+import { RecordingLevelWaveform } from '@/mobile/recording-level-waveform.tsx'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * The recording sheet (V1's recording modal as a bottom drawer): waveform +

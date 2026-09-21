@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { hashContent } from './hash'
+import { hashContent } from './hash.ts'
 
 describe('hashContent', () => {
   it('is deterministic, content-sensitive, and hex-encoded', async () => {

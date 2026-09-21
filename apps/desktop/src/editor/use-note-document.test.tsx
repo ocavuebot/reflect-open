@@ -1,10 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import { setBridge, upsertFrontmatter } from '@reflect/core'
-import { onNoteMoved } from '@/lib/note-moves'
-import { flushOpenDocuments } from './open-documents'
-import type { NoteEditorHandle } from './note-editor'
-import { useNoteDocument } from './use-note-document'
+import { onNoteMoved } from '@/lib/note-moves.ts'
+import { flushOpenDocuments } from './open-documents.ts'
+import type { NoteEditorHandle } from './note-editor.tsx'
+import { useNoteDocument } from './use-note-document.ts'
 
 let emitChange: ((payload: unknown) => void) | null = null
 const mockInvoke = vi.fn<(command: string, args: Record<string, unknown>) => Promise<unknown>>()

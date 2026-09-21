@@ -2,13 +2,13 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { render } from 'vitest-browser-react'
 import type { ReactElement } from 'react'
 import { isModEvent } from '@meowdown/core'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { useNoteLinkNavigation } from './use-note-link-navigation'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { useNoteLinkNavigation } from './use-note-link-navigation.ts'
 
 const openRouteInNewWindow = vi.hoisted(() => vi.fn<() => Promise<boolean>>())
 
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 

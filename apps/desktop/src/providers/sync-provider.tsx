@@ -13,14 +13,14 @@ import {
   type BackupController,
   type BackupState,
   type ConnectExistingResult,
-} from '@/lib/backup-controller'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { createIcloudController, isICloudRoot } from '@/lib/icloud-controller'
-import { useMainWindowEffect } from '@/hooks/use-main-window-effect'
-import { isMobileSurface } from '@/lib/platform-surface'
-import { useGraph } from '@/providers/graph-provider'
+} from '@/lib/backup-controller.ts'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { createIcloudController, isICloudRoot } from '@/lib/icloud-controller.ts'
+import { useMainWindowEffect } from '@/hooks/use-main-window-effect.ts'
+import { isMobileSurface } from '@/lib/platform-surface.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
-export type { BackupState, ConnectExistingResult } from '@/lib/backup-controller'
+export type { BackupState, ConnectExistingResult } from '@/lib/backup-controller.ts'
 
 interface SyncContextValue {
   backup: BackupState

@@ -9,12 +9,12 @@ import {
   type PinnedNote,
   type Settings,
 } from '@reflect/core'
-import type { CommandContext } from '@/lib/commands/types'
-import type { NoteRoute, Route } from '@/routing/route'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import { UpdateProvider } from '@/providers/update-provider'
-import { RouterProvider } from '@/routing/router'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import type { CommandContext } from '@/lib/commands/types.ts'
+import type { NoteRoute, Route } from '@/routing/route.ts'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
+import { UpdateProvider } from '@/providers/update-provider.tsx'
+import { RouterProvider } from '@/routing/router.tsx'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
 
 const getPinnedNotes = vi.hoisted(() => vi.fn<() => Promise<PinnedNote[]>>(async () => []))
 const revealItemInDir = vi.hoisted(() => vi.fn<(path: string) => Promise<void>>(async () => {}))
@@ -40,7 +40,7 @@ const openNativeContextMenu = vi.hoisted(() =>
 const operationFail = vi.hoisted(() => vi.fn())
 const startOperation = vi.hoisted(() => vi.fn(() => ({ fail: operationFail })))
 vi.mock('@/lib/operations', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/operations')>()),
+  ...(await importOriginal<typeof import('@/lib/operations.ts')>()),
   startOperation,
 }))
 const commitNoteFrontmatter = vi.hoisted(() => vi.fn(async () => {}))
@@ -59,7 +59,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 }))
 vi.mock('@tauri-apps/plugin-opener', () => ({ revealItemInDir, openUrl }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 vi.mock('@/lib/native-menu/context-menu', () => ({ openNativeContextMenu }))
@@ -115,8 +115,8 @@ vi.mock('@/providers/audio-memo-provider', () => ({
 const GRAPH: GraphInfo = { root: '/notes', name: 'Notes', generation: 1 }
 
 // Import after the core mock so the command registry sees the mocked module.
-const { Sidebar } = await import('./sidebar')
-const { registerAppCommands } = await import('@/lib/commands/app-commands')
+const { Sidebar } = await import('./sidebar.tsx')
+const { registerAppCommands } = await import('@/lib/commands/app-commands.ts')
 registerAppCommands()
 
 beforeEach(() => {

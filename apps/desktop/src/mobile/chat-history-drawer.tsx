@@ -2,11 +2,11 @@ import type { ReactElement } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { formatDistanceToNow } from 'date-fns'
 import { Check, Trash2 } from 'lucide-react'
-import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { createChatConversationsQueryOptions } from '@/lib/query-options'
-import { useChatSession } from '@/providers/chat-provider'
-import { useGraph } from '@/providers/graph-provider'
+import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { createChatConversationsQueryOptions } from '@/lib/query-options.ts'
+import { useChatSession } from '@/providers/chat-provider.tsx'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 interface ChatHistoryDrawerProps {
   open: boolean

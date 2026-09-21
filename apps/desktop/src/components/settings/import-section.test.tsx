@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { page, type Locator } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import type { V1ImportState } from '@/providers/v1-import-provider'
+import type { V1ImportState } from '@/providers/v1-import-provider.tsx'
 
 const open = vi.hoisted(() => vi.fn<() => Promise<string | null>>())
 const startImport = vi.hoisted(() => vi.fn())
@@ -19,7 +19,7 @@ vi.mock('@/providers/v1-import-provider', () => ({
   }),
 }))
 
-const { ImportSection } = await import('./import-section')
+const { ImportSection } = await import('./import-section.tsx')
 
 beforeEach(() => {
   open.mockResolvedValue('/Users/alex/Downloads/reflect-v1.zip')

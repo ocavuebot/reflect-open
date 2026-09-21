@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { resolvePerson } from '../contacts/person'
-import { resolveAttendeeContact } from '../contacts/resolve'
-import { resolveMeetingAttendees, resolveMeetingAttendeeTargets } from './resolve-attendees'
+import { resolvePerson } from '../contacts/person.ts'
+import { resolveAttendeeContact } from '../contacts/resolve.ts'
+import { resolveMeetingAttendees, resolveMeetingAttendeeTargets } from './resolve-attendees.ts'
 
 vi.mock('../contacts/person', () => ({
   resolvePerson: vi.fn(),

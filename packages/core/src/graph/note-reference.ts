@@ -1,5 +1,5 @@
-import { foldKey } from '../markdown/keys'
-import { isNotePath, isSafeVisibleGraphPath } from './paths'
+import { foldKey } from '../markdown/keys.ts'
+import { isNotePath, isSafeVisibleGraphPath } from './paths.ts'
 
 /**
  * One authored note link reduced to how it must be looked up.

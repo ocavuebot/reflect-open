@@ -6,7 +6,7 @@
  * layer and sync engine are remote-agnostic, so supporting another host later
  * is a UX decision, not an engineering project.
  */
-export { apiHeaders, JSON_HEADERS, readJson, type FetchFn } from './github-api'
+export { apiHeaders, JSON_HEADERS, readJson, type FetchFn } from './github-api.ts'
 export {
   GITHUB_APP_CLIENT_ID,
   GITHUB_APP_SLUG,
@@ -28,7 +28,7 @@ export {
   type GithubAuth,
   type GithubUser,
   type RunDeviceFlowOptions,
-} from './github-auth'
+} from './github-auth.ts'
 export {
   BACKUP_REPO_DESCRIPTION,
   createGithubRepo,
@@ -38,4 +38,4 @@ export {
   parseGithubRemote,
   type GithubRepo,
   type GithubRepoRef,
-} from './github-repos'
+} from './github-repos.ts'

@@ -1,10 +1,10 @@
 import { useState, type ReactElement } from 'react'
 import { Plus } from 'lucide-react'
-import { useAiProviders } from '@/hooks/use-ai-providers'
-import { Button } from '@/components/ui/button'
-import { AddAiProviderDialog } from './add-ai-provider-dialog'
-import { AiProviderRow } from './ai-provider-row'
-import { SettingsSection } from './section'
+import { useAiProviders } from '@/hooks/use-ai-providers.ts'
+import { Button } from '@/components/ui/button.tsx'
+import { AddAiProviderDialog } from './add-ai-provider-dialog.tsx'
+import { AiProviderRow } from './ai-provider-row.tsx'
+import { SettingsSection } from './section.tsx'
 
 /**
  * Settings → AI providers (Plan 10): the configured BYOK providers. Each

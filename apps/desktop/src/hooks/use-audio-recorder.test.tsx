@@ -1,7 +1,7 @@
 import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { isRecordingSupported, useAudioRecorder } from './use-audio-recorder'
+import { isRecordingSupported, useAudioRecorder } from './use-audio-recorder.ts'
 
 class FakeMediaRecorder {
   static instances: FakeMediaRecorder[] = []

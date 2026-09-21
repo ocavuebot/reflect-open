@@ -3,7 +3,7 @@ import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { IntegrationsSection } from './integrations-section'
+import { IntegrationsSection } from './integrations-section.tsx'
 
 // A browser-mode module mock materializes value exports once, so the macOS
 // behavior needs its own file with the flag statically true

@@ -50,7 +50,7 @@ vi.mock('@/lib/windows/window-role', () => ({
   isMainWindow: () => true,
 }))
 
-const { installQuitFlush } = await import('./quit-flush')
+const { installQuitFlush } = await import('./quit-flush.ts')
 
 beforeEach(() => {
   windowMock.closeRequested = null

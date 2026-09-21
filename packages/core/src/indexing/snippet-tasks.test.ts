@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { toggleTaskMarker } from '../markdown/edit'
-import { blockContextLinesAt } from './block-context'
-import { extractSnippetTasks, type SnippetTask } from './snippet-tasks'
+import { toggleTaskMarker } from '../markdown/edit.ts'
+import { blockContextLinesAt } from './block-context.ts'
+import { extractSnippetTasks, type SnippetTask } from './snippet-tasks.ts'
 
 /** Offset of the first `[[target]]` occurrence — the index's `pos_from`. */
 function posOf(content: string, link: string): number {

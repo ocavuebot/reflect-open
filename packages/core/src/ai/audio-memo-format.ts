@@ -4,8 +4,8 @@ import {
   normalizedAudioMemoTitle,
   transcriptFallbackTitle,
   type AudioMemoEnrichmentCredentials,
-} from './audio-memo-title'
-import { languageModel } from './language-model'
+} from './audio-memo-title.ts'
+import { languageModel } from './language-model.ts'
 
 const FORMAT_TIMEOUT_MS = 60_000
 const NUMBER_SIGNATURE_PATTERN =

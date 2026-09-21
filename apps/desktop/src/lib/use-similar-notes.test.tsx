@@ -3,8 +3,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import type { ReactNode } from 'react'
 import type { RetrievalHit } from '@reflect/core'
-import { queryKeys } from './query-client'
-import { useSimilarNotes } from './use-similar-notes'
+import { queryKeys } from './query-client.ts'
+import { useSimilarNotes } from './use-similar-notes.ts'
 
 const relatedNotes = vi.hoisted(() => vi.fn())
 const readNote = vi.hoisted(() => vi.fn())

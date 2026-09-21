@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { createBackgroundReconciler } from './background-reconciler'
+import { createBackgroundReconciler } from './background-reconciler.ts'
 
 /** A promise whose resolution the test controls, to hold a pass mid-flight. */
 function deferred<T = void>(): { promise: Promise<T>; resolve: (value: T) => void } {

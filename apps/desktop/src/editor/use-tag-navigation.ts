@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { useRouter } from '@/routing/router'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * Navigation for a clicked inline `#tag`: open the All Notes screen filtered by

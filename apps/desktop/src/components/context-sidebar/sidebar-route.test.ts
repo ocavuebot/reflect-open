@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { contextSidebarTarget } from './sidebar-route'
+import { contextSidebarTarget } from './sidebar-route.ts'
 
 const TODAY = '2026-06-09'
 

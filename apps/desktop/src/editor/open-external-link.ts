@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import type { LinkClickHandler } from '@meowdown/core'
-import { isDeepLinkUrl } from '@/lib/deep-links/parse'
-import { useFollowDeepLink } from '@/lib/deep-links/use-follow-deep-link'
-import { openUrlSync } from '@/lib/open-url'
+import { isDeepLinkUrl } from '@/lib/deep-links/parse.ts'
+import { useFollowDeepLink } from '@/lib/deep-links/use-follow-deep-link.ts'
+import { openUrlSync } from '@/lib/open-url.ts'
 
 /**
  * Schemes that must never reach the OS opener: script and data URIs carry

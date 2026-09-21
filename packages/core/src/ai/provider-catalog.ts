@@ -1,9 +1,9 @@
 import type { AnthropicProvider } from '@reflect/modules/ai-sdk/anthropic'
 import type { GoogleProvider } from '@reflect/modules/ai-sdk/google'
 import type { OpenAIProvider } from '@reflect/modules/ai-sdk/openai'
-import type { AiProviderId } from '../settings/schema'
+import type { AiProviderId } from '../settings/schema.ts'
 
-import { DEFAULT_OPENAI_COMPATIBLE_MODEL } from './openai-compatible'
+import { DEFAULT_OPENAI_COMPATIBLE_MODEL } from './openai-compatible.ts'
 
 /** A compile-time guarantee that an array has at least one element. */
 type NonEmptyArray<ElementType> = [ElementType, ...ElementType[]]

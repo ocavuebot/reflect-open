@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { retitleWikiLinks } from './retitle'
-import { parseNote } from './extract'
+import { retitleWikiLinks } from './retitle.ts'
+import { parseNote } from './extract.ts'
 
 /**
  * Golden corpus + non-destructiveness gates (Plan 03). Markdown is the source of

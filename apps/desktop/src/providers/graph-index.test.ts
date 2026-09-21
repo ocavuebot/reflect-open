@@ -9,7 +9,7 @@ vi.mock('@reflect/core', () => ({
 }))
 
 import { openIndex, syncIndex, subscribeIndexChanges, watchStart, watchStop } from '@reflect/core'
-import { createGraphIndex, type GraphIndexProgress } from './graph-index'
+import { createGraphIndex, type GraphIndexProgress } from './graph-index.ts'
 
 const mockOpen = vi.mocked(openIndex)
 // syncIndex (hash reconcile, or a version-bump rebuild — core decides) is the

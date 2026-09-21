@@ -1,13 +1,13 @@
 import type { ReactElement } from 'react'
 import type { ChatTurn as ChatTurnModel } from '@reflect/core'
-import { Bubble, BubbleContent } from '@/components/ui/bubble'
-import { Marker, MarkerContent } from '@/components/ui/marker'
-import { Message, MessageContent, MessageFooter, MessageGroup } from '@/components/ui/message'
-import { useWikiLinkNavigation } from '@/editor/use-wiki-link-navigation'
-import { assistantReplyMarkdown } from '@/lib/chat-copy'
-import { ChatAssistantPart } from './chat-assistant-part'
-import { ChatCopyButton } from './chat-copy-button'
-import { ChatUserAttachments } from './chat-user-attachments'
+import { Bubble, BubbleContent } from '@/components/ui/bubble.tsx'
+import { Marker, MarkerContent } from '@/components/ui/marker.tsx'
+import { Message, MessageContent, MessageFooter, MessageGroup } from '@/components/ui/message.tsx'
+import { useWikiLinkNavigation } from '@/editor/use-wiki-link-navigation.ts'
+import { assistantReplyMarkdown } from '@/lib/chat-copy.ts'
+import { ChatAssistantPart } from './chat-assistant-part.tsx'
+import { ChatCopyButton } from './chat-copy-button.tsx'
+import { ChatUserAttachments } from './chat-user-attachments.tsx'
 
 interface ChatTurnProps {
   turn: ChatTurnModel

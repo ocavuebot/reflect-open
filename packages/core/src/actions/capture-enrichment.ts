@@ -3,10 +3,10 @@ import {
   isDescriptionRejected,
   normalizedPageTitle,
   type PageEnrichment,
-} from '../ai/describe-page'
-import { defaultAiProvider, type AiProvidersState } from '../ai/provider-config'
-import { aiApiKeyForConfig } from '../ai/secrets'
-import { errorMessage, isAppError, toAppError } from '../errors'
+} from '../ai/describe-page.ts'
+import { defaultAiProvider, type AiProvidersState } from '../ai/provider-config.ts'
+import { aiApiKeyForConfig } from '../ai/secrets.ts'
+import { errorMessage, isAppError, toAppError } from '../errors.ts'
 import {
   captureLinkPreview,
   listFiles,
@@ -14,20 +14,20 @@ import {
   readNote,
   writeAsset,
   writeNote,
-} from '../graph/commands'
-import { dailyPath } from '../graph/paths'
-import { hashContent } from '../indexing/hash'
-import { parseFrontmatter, splitFrontmatter, upsertFrontmatter } from '../markdown/frontmatter'
-import type { AiProviderConfig } from '../settings/schema'
-import type { ReconcileStop } from './audio-memo'
+} from '../graph/commands.ts'
+import { dailyPath } from '../graph/paths.ts'
+import { hashContent } from '../indexing/hash.ts'
+import { parseFrontmatter, splitFrontmatter, upsertFrontmatter } from '../markdown/frontmatter.ts'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import type { ReconcileStop } from './audio-memo.ts'
 import {
   finishCaptureWrite,
   hasCaptureWriteTransaction,
   persistCaptureEnrichment,
   readPendingCaptureSnapshot,
   type PendingCaptureSnapshot,
-} from './capture-enrichment-write'
-import { captureFromPath, type CaptureIdentity } from './capture-identity'
+} from './capture-enrichment-write.ts'
+import { captureFromPath, type CaptureIdentity } from './capture-identity.ts'
 import {
   captureDescriptionFromBody,
   captureNoteMeta,
@@ -41,9 +41,9 @@ import {
   withScreenshot,
   withTitle,
   type CaptureNoteMeta,
-} from './capture-note'
-import type { PageMeta } from '../link-preview/metadata'
-import { scrapePageMeta } from './meta-scrape'
+} from './capture-note.ts'
+import type { PageMeta } from '../link-preview/metadata.ts'
+import { scrapePageMeta } from './meta-scrape.ts'
 
 /**
  * Capture notes still awaiting enrichment, oldest first: well-formed capture

@@ -1,9 +1,9 @@
 import { sql } from 'kysely'
-import { wikiNoteReference } from '../graph/note-reference'
-import { foldTag, normalizeWikiTarget } from '../markdown'
-import { generateDateSuggestions, type DateSuggestionContext } from './date-suggestions'
-import { db } from './db'
-import { inClauseChunks, likeContains } from './query-utils'
+import { wikiNoteReference } from '../graph/note-reference.ts'
+import { foldTag, normalizeWikiTarget } from '../markdown/index.ts'
+import { generateDateSuggestions, type DateSuggestionContext } from './date-suggestions.ts'
+import { db } from './db.ts'
+import { inClauseChunks, likeContains } from './query-utils.ts'
 import {
   mergeDateSuggestions,
   rankWikiSuggestions,
@@ -12,7 +12,7 @@ import {
   type TitleCandidate,
   type WikiLinkSuggestion,
   type WikiSuggestion,
-} from './suggest'
+} from './suggest.ts'
 
 /** How many ranked-in-SQL rows each candidate query hands to the in-memory ranker. */
 const WIKI_CANDIDATE_LIMIT = 200

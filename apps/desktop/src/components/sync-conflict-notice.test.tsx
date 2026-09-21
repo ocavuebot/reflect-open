@@ -3,8 +3,8 @@ import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { getNote, readNote, type GraphInfo } from '@reflect/core'
-import { setPlatformSurface } from '@/lib/platform-surface'
-import { SyncConflictNotice } from './sync-conflict-notice'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
+import { SyncConflictNotice } from './sync-conflict-notice.tsx'
 
 vi.mock('@reflect/core', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@reflect/core')>()),

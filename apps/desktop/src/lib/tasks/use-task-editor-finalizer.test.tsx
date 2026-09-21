@@ -1,6 +1,6 @@
 import { renderHook } from 'vitest-browser-react'
 import { describe, expect, it, vi } from 'vitest'
-import { useTaskEditorFinalizer } from './use-task-editor-finalizer'
+import { useTaskEditorFinalizer } from './use-task-editor-finalizer.ts'
 
 async function setup(initial = 'milk') {
   const onCommit = vi.fn()

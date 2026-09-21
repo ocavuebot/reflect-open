@@ -1,13 +1,13 @@
 import { useEffect, useRef, type ReactElement, type ReactNode } from 'react'
 import type { GraphInfo } from '@reflect/core'
-import { handleDeepLink, type DeepLinkIo } from '@/lib/deep-links/handle'
-import { setDeepLinkHandler } from '@/lib/deep-links/intake'
-import { parseDeepLink } from '@/lib/deep-links/parse'
+import { handleDeepLink, type DeepLinkIo } from '@/lib/deep-links/handle.ts'
+import { setDeepLinkHandler } from '@/lib/deep-links/intake.ts'
+import { parseDeepLink } from '@/lib/deep-links/parse.ts'
 import {
   beginLinkNavigationIntent,
   isCurrentLinkNavigationIntent,
-} from '@/lib/windows/link-navigation-intent'
-import { useRouter } from '@/routing/router'
+} from '@/lib/windows/link-navigation-intent.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * Routes incoming `reflect://` URLs into the open graph session: attaches

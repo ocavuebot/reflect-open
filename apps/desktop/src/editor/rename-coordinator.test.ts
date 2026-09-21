@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { upsertFrontmatter } from '@reflect/core'
-import { onNoteMoved } from '@/lib/note-moves'
-import type { NoteSession } from './note-session'
-import { openSession, registerOpenDocument, retargetOpenDocument } from './open-documents'
+import { onNoteMoved } from '@/lib/note-moves.ts'
+import type { NoteSession } from './note-session.ts'
+import { openSession, registerOpenDocument, retargetOpenDocument } from './open-documents.ts'
 
 /**
  * The rename coordinator owns the riskiest background work in the app: a
@@ -62,7 +62,7 @@ vi.mock('@/lib/operations', () => ({
   },
 }))
 
-const { createRenameCoordinator } = await import('./rename-coordinator')
+const { createRenameCoordinator } = await import('./rename-coordinator.ts')
 
 const PATH = 'notes/subject.md'
 const MANAGED_ID = '01hv3xq7c2dm8k4t9w5e6r1n98'

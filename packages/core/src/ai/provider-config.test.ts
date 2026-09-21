@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { AiProviderConfig, HostedAiProviderConfig } from '../settings/schema'
+import type { AiProviderConfig, HostedAiProviderConfig } from '../settings/schema.ts'
 import {
   apiKeyHint,
   defaultAiProvider,
@@ -8,7 +8,7 @@ import {
   withAiProviderAdded,
   withAiProviderRemoved,
   type AiProvidersState,
-} from './provider-config'
+} from './provider-config.ts'
 
 function config(overrides: Partial<HostedAiProviderConfig>): HostedAiProviderConfig {
   return {

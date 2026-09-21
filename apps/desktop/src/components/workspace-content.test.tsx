@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { GraphInfo } from '@reflect/core'
-import type { ContextSidebarTarget } from '@/components/context-sidebar/sidebar-route'
+import type { ContextSidebarTarget } from '@/components/context-sidebar/sidebar-route.ts'
 
 interface WorkspaceState {
   collapsed: boolean
@@ -52,7 +52,7 @@ vi.mock('@/providers/settings-provider', () => ({
 }))
 vi.mock('@/routing/app-shortcuts', () => ({ useAppShortcuts: () => ({}) }))
 
-const { WorkspaceContent } = await import('./workspace-content')
+const { WorkspaceContent } = await import('./workspace-content.tsx')
 
 const GRAPH: GraphInfo = { root: '/notes', name: 'Notes', generation: 1 }
 

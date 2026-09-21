@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { errorMessage, runDeviceFlow } from '@reflect/core'
-import { invalidateGithubAuth } from '@/lib/github-auth-state'
-import { providerFetch } from '@/lib/provider-fetch'
+import { invalidateGithubAuth } from '@/lib/github-auth-state.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
 
 /** What a device-flow surface renders: nothing yet, or the code to enter. */
 export type DeviceFlowView =

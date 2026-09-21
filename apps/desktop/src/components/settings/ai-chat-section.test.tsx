@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { AiChatSection } from './ai-chat-section'
+import { AiChatSection } from './ai-chat-section.tsx'
 
 const settings = vi.hoisted(() => ({
   current: { chatSystemPrompt: '' },

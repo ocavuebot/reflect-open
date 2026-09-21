@@ -1,15 +1,15 @@
 import { useMemo, type ReactElement } from 'react'
 import { ArrowUp, Plus, Square, X } from 'lucide-react'
 import { getIsComposing } from '@meowdown/core'
-import { ShortcutKeys } from '@/components/shortcut-keys'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
 import {
   Attachment,
   AttachmentAction,
   AttachmentActions,
   AttachmentGroup,
   AttachmentMedia,
-} from '@/components/ui/attachment'
-import { Button } from '@/components/ui/button'
+} from '@/components/ui/attachment.tsx'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Select,
   SelectContent,
@@ -18,13 +18,13 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { imageFilesFrom } from '@/lib/chat-attachments'
-import { groupModelOptions } from '@/lib/chat-model-groups'
-import { keybindingFor } from '@/lib/commands/app-commands'
-import { useChatSession } from '@/providers/chat-provider'
-import { ChatHistoryMenu } from './chat-history-menu'
+} from '@/components/ui/select.tsx'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip.tsx'
+import { imageFilesFrom } from '@/lib/chat-attachments.ts'
+import { groupModelOptions } from '@/lib/chat-model-groups.ts'
+import { keybindingFor } from '@/lib/commands/app-commands.ts'
+import { useChatSession } from '@/providers/chat-provider.tsx'
+import { ChatHistoryMenu } from './chat-history-menu.tsx'
 
 const NEW_CHAT_BINDING = keybindingFor('chat.new')
 

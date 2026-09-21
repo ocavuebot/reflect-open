@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { render } from 'vitest-browser-react'
 import type { ReactElement } from 'react'
-import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { type FollowDeepLink, useFollowDeepLink } from './use-follow-deep-link'
+import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { type FollowDeepLink, useFollowDeepLink } from './use-follow-deep-link.ts'
 import { isModEvent } from '@meowdown/core'
 
 const dispatchDeepLink = vi.hoisted(() => vi.fn())
@@ -12,7 +12,7 @@ const openRouteInNewWindow = vi.hoisted(() => vi.fn<() => Promise<boolean>>())
 
 vi.mock('@/lib/deep-links/intake', () => ({ dispatchDeepLink }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openDeepLinkInNewWindow,
   openRouteInNewWindow,
 }))

@@ -7,9 +7,9 @@
  * without a database.
  */
 
-import { foldKey } from '../markdown/keys'
-import { displayNoteTitle, wikiLinkTargetForTitle } from '../markdown/note-title'
-import type { DateSuggestion } from './date-suggestions'
+import { foldKey } from '../markdown/keys.ts'
+import { displayNoteTitle, wikiLinkTargetForTitle } from '../markdown/note-title.ts'
+import type { DateSuggestion } from './date-suggestions.ts'
 
 /**
  * Marks a suggestion the date generator synthesised from a fuzzy query and

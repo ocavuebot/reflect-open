@@ -1,12 +1,12 @@
 import { useState, type ReactElement } from 'react'
 import { History, MessageSquare, Plus } from 'lucide-react'
-import { ChatTurnList } from '@/components/chat/chat-turn-list'
-import { Button } from '@/components/ui/button'
-import { MobileChatComposer } from '@/mobile/chat-composer'
-import { ChatHistoryDrawer } from '@/mobile/chat-history-drawer'
-import { MobileTopBar, MobileTopBarIconButton, MobileTopBarRow } from '@/mobile/top-bar'
-import { useChatSession } from '@/providers/chat-provider'
-import { useRouter } from '@/routing/router'
+import { ChatTurnList } from '@/components/chat/chat-turn-list.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { MobileChatComposer } from '@/mobile/chat-composer.tsx'
+import { ChatHistoryDrawer } from '@/mobile/chat-history-drawer.tsx'
+import { MobileTopBar, MobileTopBarIconButton, MobileTopBarRow } from '@/mobile/top-bar.tsx'
+import { useChatSession } from '@/providers/chat-provider.tsx'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * The Chat tab (Plan 23): desktop's dedicated chat view as a root tab —

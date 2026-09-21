@@ -1,11 +1,11 @@
 import type { ReactElement } from 'react'
 import type { ThemePreference } from '@reflect/core'
 import { Monitor, Moon, Sun, type LucideIcon } from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { useSettings } from '@/providers/settings-provider'
-import { SettingsField } from './field'
-import { SettingsOptionCard } from './option-card'
-import { SettingsSection } from './section'
+import { cn } from '@/lib/utils.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { SettingsField } from './field.tsx'
+import { SettingsOptionCard } from './option-card.tsx'
+import { SettingsSection } from './section.tsx'
 
 interface ThemeOption {
   value: ThemePreference

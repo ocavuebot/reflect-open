@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react'
-import { getTodaySnapshot, subscribeToday } from './today-store'
+import { getTodaySnapshot, subscribeToday } from './today-store.ts'
 
 /**
  * Today's ISO date as **live** state: re-renders when the local date changes.

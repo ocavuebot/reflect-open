@@ -16,7 +16,7 @@ async function loadHaptics(): Promise<() => void> {
     invoke: (command) => invokeMock(command),
     listen: async () => () => {},
   })
-  const module = await import('./haptics')
+  const module = await import('./haptics.ts')
   return module.hapticImpactLight
 }
 

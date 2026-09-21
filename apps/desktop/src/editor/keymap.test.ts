@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { listRegisteredBindings, registerKeymap } from './keymap'
+import { listRegisteredBindings, registerKeymap } from './keymap.ts'
 
 describe('keymap registry', () => {
   it('rejects duplicate bindings across scopes', () => {

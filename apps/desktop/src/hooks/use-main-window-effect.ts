@@ -1,5 +1,5 @@
 import { useEffect, type DependencyList, type EffectCallback } from 'react'
-import { isMainWindow } from '@/lib/windows/window-role'
+import { isMainWindow } from '@/lib/windows/window-role.ts'
 
 /**
  * `useEffect` that runs only in the MAIN window — the mount point for every

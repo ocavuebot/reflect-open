@@ -11,9 +11,9 @@ import {
   type AiProvidersState,
   type ReconcileStop,
 } from '@reflect/core'
-import { createBackgroundReconciler } from '@/lib/background-reconciler'
-import { providerFetch } from '@/lib/provider-fetch'
-import { invalidateIndexQueries } from '@/lib/query-client'
+import { createBackgroundReconciler } from '@/lib/background-reconciler.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
+import { invalidateIndexQueries } from '@/lib/query-client.ts'
 
 /**
  * The asset-description lifecycle for one graph session (Plan 20). Built on

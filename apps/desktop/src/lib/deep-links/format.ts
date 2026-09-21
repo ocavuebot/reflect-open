@@ -1,5 +1,5 @@
-import type { Route } from '@/routing/route'
-import { DEEP_LINK_SCHEME } from '@/lib/deep-links/deep-link'
+import type { Route } from '@/routing/route.ts'
+import { DEEP_LINK_SCHEME } from '@/lib/deep-links/deep-link.ts'
 
 /**
  * The write side of the deep-link codec: every URL this module emits parses

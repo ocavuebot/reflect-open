@@ -6,7 +6,7 @@ import { z } from 'zod'
 /**
  * Native menu → command registry hand-off. The menu is built once at startup,
  * before React mounts, so item activations land here and are forwarded to
- * whichever mounted workspace currently owns the {@link import('@/lib/commands/types').CommandContext}.
+ * whichever mounted workspace currently owns the {@link import('@/lib/commands/types.ts').CommandContext}.
  *
  * `useAppShortcuts` publishes its dispatcher on mount and clears it on
  * unmount. While no dispatcher is set (the moments before first mount, or

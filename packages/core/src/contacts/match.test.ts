@@ -1,12 +1,12 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import type { ContactMatch } from './commands'
+import { setBridge } from '../ipc/bridge.ts'
+import type { ContactMatch } from './commands.ts'
 import {
   contactLinkSuggestions,
   contactNamesEqual,
   matchContactForTitle,
   suggestContactForTitle,
-} from './match'
+} from './match.ts'
 
 function contact(overrides: Partial<ContactMatch>): ContactMatch {
   return {

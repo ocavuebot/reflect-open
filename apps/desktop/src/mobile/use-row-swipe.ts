@@ -1,6 +1,6 @@
 import { useRef, useState, type PointerEvent as ReactPointerEvent } from 'react'
-import { PointerDrag, VelocitySampler } from '@/lib/pointer-drag'
-import { usePrefersReducedMotion } from '@/mobile/use-reduced-motion'
+import { PointerDrag, VelocitySampler } from '@/lib/pointer-drag.ts'
+import { usePrefersReducedMotion } from '@/mobile/use-reduced-motion.ts'
 
 /** Finger travel (px) before the gesture commits to horizontal swipe or vertical scroll. */
 const DIRECTION_THRESHOLD = 10

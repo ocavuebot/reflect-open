@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parseBody } from './grammar'
+import { parseBody } from './grammar.ts'
 
 /** Collect `[from, to)` spans of every node named `name` in `body`. */
 function nodeSpans(body: string, name: string): Array<[number, number]> {

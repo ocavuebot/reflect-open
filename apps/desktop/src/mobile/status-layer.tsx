@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
-import { IndexProgressPill } from '@/mobile/index-progress-pill'
-import { MobileOperationsPills } from '@/mobile/operations-pill'
-import { SyncStatusPill } from '@/mobile/sync-status-pill'
-import { useKeyboardVisible } from '@/mobile/use-keyboard'
+import { IndexProgressPill } from '@/mobile/index-progress-pill.tsx'
+import { MobileOperationsPills } from '@/mobile/operations-pill.tsx'
+import { SyncStatusPill } from '@/mobile/sync-status-pill.tsx'
+import { useKeyboardVisible } from '@/mobile/use-keyboard.ts'
 
 /**
  * The one viewport-anchored slot for mobile status pills, stacked above the

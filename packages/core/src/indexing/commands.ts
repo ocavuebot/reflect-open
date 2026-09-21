@@ -1,8 +1,8 @@
 import { z } from 'zod'
-import { noteBasenameKey } from '../graph/note-reference'
-import { dateFromDailyPath, foldGraphPath, isCalendarDate } from '../graph/paths'
-import { call } from '../ipc/invoke'
-import type { IndexedNote } from './indexed-note'
+import { noteBasenameKey } from '../graph/note-reference.ts'
+import { dateFromDailyPath, foldGraphPath, isCalendarDate } from '../graph/paths.ts'
+import { call } from '../ipc/invoke.ts'
+import type { IndexedNote } from './indexed-note.ts'
 
 /** Index commands return `()` from Rust, which serializes to `null` over IPC. */
 const voidSchema = z.null()

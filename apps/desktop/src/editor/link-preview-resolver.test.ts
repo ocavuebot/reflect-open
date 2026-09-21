@@ -3,7 +3,7 @@ import {
   createNoteLinkPreviewResolver,
   type LinkPreviewResolverDependencies,
   type LinkPreviewSession,
-} from './link-preview-resolver'
+} from './link-preview-resolver.ts'
 
 const session: LinkPreviewSession = {
   path: 'notes/a.md',

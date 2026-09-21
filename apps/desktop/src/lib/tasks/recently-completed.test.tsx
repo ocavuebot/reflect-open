@@ -2,8 +2,8 @@ import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import type { OpenTask } from '@reflect/core'
-import { makeOpenTask as task } from './open-task-fixture'
-import { taskKey } from './task-identity'
+import { makeOpenTask as task } from './open-task-fixture.ts'
+import { taskKey } from './task-identity.ts'
 import {
   archiveRecentlyCompleted,
   forgetRecentlyCompleted,
@@ -13,7 +13,7 @@ import {
   relocateRecentlyCompleted,
   resetRecentlyCompleted,
   useRecentlyCompleted,
-} from './recently-completed'
+} from './recently-completed.ts'
 
 beforeEach(() => resetRecentlyCompleted())
 afterEach(() => {

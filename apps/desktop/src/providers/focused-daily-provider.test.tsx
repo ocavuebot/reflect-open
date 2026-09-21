@@ -1,13 +1,13 @@
 import { renderHook } from 'vitest-browser-react'
 import { describe, expect, it } from 'vitest'
 import type { ReactNode } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
 import {
   FocusedDailyProvider,
   useDailyContextTarget,
   useFocusedDailyDate,
   useSetFocusedDailyDate,
-} from './focused-daily-provider'
+} from './focused-daily-provider.tsx'
 
 function wrapper({ children }: { children: ReactNode }) {
   return <FocusedDailyProvider>{children}</FocusedDailyProvider>

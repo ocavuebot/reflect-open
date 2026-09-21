@@ -7,9 +7,9 @@ import {
   errorMessage,
   type AiProviderConfig,
 } from '@reflect/core'
-import { Button } from '@/components/ui/button'
-import { startOperation } from '@/lib/operations'
-import { ModelCombobox } from './model-combobox'
+import { Button } from '@/components/ui/button.tsx'
+import { startOperation } from '@/lib/operations.ts'
+import { ModelCombobox } from './model-combobox.tsx'
 
 interface AiProviderRowProps {
   config: AiProviderConfig

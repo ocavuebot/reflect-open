@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { foldKey } from '../markdown'
-import { resolveNoteTarget } from './resolve-target'
+import { setBridge } from '../ipc/bridge.ts'
+import { foldKey } from '../markdown/index.ts'
+import { resolveNoteTarget } from './resolve-target.ts'
 
 // Same fake-bridge harness as queries.test: `db_query` resolves against the
 // mock, so the tests pin the real compiled SQL and the resolution order.

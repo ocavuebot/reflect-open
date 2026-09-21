@@ -1,7 +1,7 @@
 import { upsertFrontmatter, type GraphInfo, type PinnedNote } from '@reflect/core'
-import { frontmatterPatchToYaml, type FrontmatterPatch } from '@/editor/note-session'
+import { frontmatterPatchToYaml, type FrontmatterPatch } from '@/editor/note-session.ts'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { queryKeys } from '@/lib/query-client'
+import { queryKeys } from '@/lib/query-client.ts'
 import { act, type ReactElement, type ReactNode } from 'react'
 import { cleanup, render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
@@ -131,7 +131,7 @@ vi.mock('@/lib/note-delete', () => ({ deleteOpenNote }))
 vi.mock('@/mobile/share', () => ({ shareNote }))
 vi.mock('@/lib/operations', () => ({ startOperation }))
 
-const { NoteActionsMenu } = await import('./note-actions-menu')
+const { NoteActionsMenu } = await import('./note-actions-menu.tsx')
 
 let currentNoteRow: {
   path: string

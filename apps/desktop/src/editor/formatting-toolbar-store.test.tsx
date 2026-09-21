@@ -6,7 +6,7 @@ import {
   publishFormattingToolbar,
   useFormattingToolbar,
   type FormattingToolbar,
-} from './formatting-toolbar-store'
+} from './formatting-toolbar-store.ts'
 
 function makeToolbar(
   overrides: Partial<FormattingToolbar['capabilities']> = {},

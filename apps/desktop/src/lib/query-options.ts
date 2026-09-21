@@ -8,7 +8,7 @@ import {
   loadSettings,
   saveSettings,
 } from '@reflect/core'
-import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client'
+import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client.ts'
 
 /** Conflicted-note rows shared by every sync status and settings surface. */
 export function createConflictedNotesQueryOptions(root: string | undefined) {

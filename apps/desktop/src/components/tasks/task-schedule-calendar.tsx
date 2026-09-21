@@ -1,11 +1,11 @@
 import { useState, type ReactElement } from 'react'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { weekStartDow } from '@reflect/core'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
-import { formatDayLabel } from '@/lib/dates'
-import { addMonths, buildMonthGrid, monthLabel, monthOf, weekdayLabels } from '@/lib/month-grid'
-import { cn } from '@/lib/utils'
-import { useSettings } from '@/providers/settings-provider'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover.tsx'
+import { formatDayLabel } from '@/lib/dates.ts'
+import { addMonths, buildMonthGrid, monthLabel, monthOf, weekdayLabels } from '@/lib/month-grid.ts'
+import { cn } from '@/lib/utils.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 interface TaskScheduleCalendarProps {
   /** Controlled open state (the ⌘⇧S shortcut toggles it). */

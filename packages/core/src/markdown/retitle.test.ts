@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { repointPathWikiLinks, retitleWikiLinks } from './retitle'
+import { repointPathWikiLinks, retitleWikiLinks } from './retitle.ts'
 
 /** Repoint only: the shape the pre-stable-display rewrite always used. */
 function repointOnly(fromKey: string, to: string) {

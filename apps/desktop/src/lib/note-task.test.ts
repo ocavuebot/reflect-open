@@ -8,7 +8,7 @@ import {
   insertTask,
   NoteBusyError,
   toggleTask,
-} from './note-task'
+} from './note-task.ts'
 
 const openSession = vi.hoisted(() => vi.fn())
 vi.mock('@/editor/open-documents', () => ({ openSession }))

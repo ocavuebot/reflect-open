@@ -2,8 +2,8 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { MobileStorageInfo } from '@reflect/core'
-import { fireEvent } from '@/test-utils/fire-event'
-import { MobileOnboardingScreen } from './onboarding-screen'
+import { fireEvent } from '@/test-utils/fire-event.ts'
+import { MobileOnboardingScreen } from './onboarding-screen.tsx'
 
 const completeOnboarding = vi.hoisted(() => vi.fn(async (_kind: string, _root?: string) => {}))
 const storageInfo = vi.hoisted<{ current: unknown }>(() => ({ current: null }))

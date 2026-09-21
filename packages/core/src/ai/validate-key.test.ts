@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
-import { APP_REVIEW_STUB_KEY } from './app-review-demo'
-import { validateApiKey } from './validate-key'
+import { APP_REVIEW_STUB_KEY } from './app-review-demo.ts'
+import { validateApiKey } from './validate-key.ts'
 
 function fetchReturning(status: number): typeof fetch {
   return async () => new Response(null, { status })

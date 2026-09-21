@@ -2,10 +2,10 @@ import { act } from 'react'
 import { cleanup, render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { resetOperations, startOperation, type OperationHandle } from '@/lib/operations'
-import { publishKeyboardHeight } from '@/mobile/use-keyboard'
-import { MobileOperationsPills } from './operations-pill'
-import { MobileStatusLayer } from './status-layer'
+import { resetOperations, startOperation, type OperationHandle } from '@/lib/operations.ts'
+import { publishKeyboardHeight } from '@/mobile/use-keyboard.ts'
+import { MobileOperationsPills } from './operations-pill.tsx'
+import { MobileStatusLayer } from './status-layer.tsx'
 
 /**
  * The mobile face of the operations store: failed/warning background work

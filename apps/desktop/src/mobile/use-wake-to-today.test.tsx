@@ -1,8 +1,8 @@
 import { render } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactElement } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { useWakeToToday } from './use-wake-to-today'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { useWakeToToday } from './use-wake-to-today.ts'
 
 /**
  * V1's wake-to-today: foregrounding the app on a later calendar date than it

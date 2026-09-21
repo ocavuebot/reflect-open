@@ -2,17 +2,17 @@ import type { ReactElement } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { formatDistanceToNow } from 'date-fns'
 import { Check, History, X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { createChatConversationsQueryOptions } from '@/lib/query-options'
-import { useChatSession } from '@/providers/chat-provider'
-import { useGraph } from '@/providers/graph-provider'
+} from '@/components/ui/dropdown-menu.tsx'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { createChatConversationsQueryOptions } from '@/lib/query-options.ts'
+import { useChatSession } from '@/providers/chat-provider.tsx'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /**
  * The conversation history: a dropdown over the persisted conversations,

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { appendListItem } from './append-list-item'
+import { appendListItem } from './append-list-item.ts'
 
 describe('appendListItem', () => {
   it('starts a list in an empty note', () => {

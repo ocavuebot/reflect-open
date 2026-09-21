@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
 import type { RecentGraph } from '@reflect/core'
 import { Check } from 'lucide-react'
-import { GraphSwatch } from '@/components/graph-swatch'
-import { ShortcutKeys } from '@/components/shortcut-keys'
+import { GraphSwatch } from '@/components/graph-swatch.tsx'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
 import {
   DropdownMenuItem,
   DropdownMenuRadioGroup,
@@ -10,10 +10,10 @@ import {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from '@/components/ui/dropdown-menu'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { useGraphColors } from '@/hooks/use-graph-colors'
-import { DEFAULT_GRAPH_COLOR, GRAPH_COLOR_OPTIONS } from '@/lib/graph-colors'
+} from '@/components/ui/dropdown-menu.tsx'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip.tsx'
+import { useGraphColors } from '@/hooks/use-graph-colors.ts'
+import { DEFAULT_GRAPH_COLOR, GRAPH_COLOR_OPTIONS } from '@/lib/graph-colors.ts'
 
 interface GraphMenuItemProps {
   graph: RecentGraph

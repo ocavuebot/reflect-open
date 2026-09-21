@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { render } from 'vitest-browser-react'
 import type { FileChange } from '@reflect/core'
-import { useFileChanges } from './use-file-changes'
+import { useFileChanges } from './use-file-changes.ts'
 
 const subscribeFileChanges = vi.hoisted(() => vi.fn())
 const hasBridge = vi.hoisted(() => vi.fn(() => true))

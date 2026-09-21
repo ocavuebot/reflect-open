@@ -26,8 +26,8 @@ vi.mock('@/lib/query-client', () => ({ throttledInvalidateIndexQueries }))
 import {
   getInitialWindowRoute,
   resetInitialWindowRouteForTests,
-} from '@/lib/windows/initial-window-route'
-import { useNoteWindowBoot } from './use-note-window-boot'
+} from '@/lib/windows/initial-window-route.ts'
+import { useNoteWindowBoot } from './use-note-window-boot.ts'
 
 const BOOT: WindowBootstrap = {
   graph: { root: '/g', name: 'g', generation: 3 },

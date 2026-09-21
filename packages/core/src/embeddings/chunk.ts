@@ -1,6 +1,9 @@
-import { parseNote, splitFrontmatter } from '../markdown'
-import { hashContent } from '../indexing/hash'
-import { MAX_ASSET_TEXT_CHARS, type AssetDescriptionBody } from '../indexing/asset-description-text'
+import { parseNote, splitFrontmatter } from '../markdown/index.ts'
+import { hashContent } from '../indexing/hash.ts'
+import {
+  MAX_ASSET_TEXT_CHARS,
+  type AssetDescriptionBody,
+} from '../indexing/asset-description-text.ts'
 
 /**
  * Sentence-aware note chunking (Plan 09). Sections split on headings, then

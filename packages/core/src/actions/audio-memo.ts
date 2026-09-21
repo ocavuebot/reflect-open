@@ -1,19 +1,19 @@
-import { errorMessage, isAppError, toAppError, type AppError } from '../errors'
+import { errorMessage, isAppError, toAppError, type AppError } from '../errors.ts'
 import {
   pickTranscriptionConfig,
   resolveTranscriptionTarget,
   type AiProvidersState,
-} from '../ai/provider-config'
-import { aiApiKeyForConfig, aiKeySecretName } from '../ai/secrets'
+} from '../ai/provider-config.ts'
+import { aiApiKeyForConfig, aiKeySecretName } from '../ai/secrets.ts'
 import {
   audioMemoEnrichmentConfig,
   pickAudioMemoEnrichmentConfig,
   type AudioMemoEnrichmentCredentials,
-} from '../ai/audio-memo-title'
-import { enrichSessionTranscript } from '../ai/audio-memo-transcript'
-import { AUDIO_EXTENSION_BY_MIME, baseMimeType } from '../ai/transcribe'
-import { APP_REVIEW_STUB_KEY, stubTranscriptBody } from '../ai/app-review-demo'
-import { bytesToBase64 } from '../lib/base64'
+} from '../ai/audio-memo-title.ts'
+import { enrichSessionTranscript } from '../ai/audio-memo-transcript.ts'
+import { AUDIO_EXTENSION_BY_MIME, baseMimeType } from '../ai/transcribe.ts'
+import { APP_REVIEW_STUB_KEY, stubTranscriptBody } from '../ai/app-review-demo.ts'
+import { bytesToBase64 } from '../lib/base64.ts'
 import {
   importAudioMemo,
   listDir,
@@ -21,9 +21,9 @@ import {
   readNote,
   writeAsset,
   writeNote,
-} from '../graph/commands'
-import { writeAssetStreamed } from '../graph/assets'
-import { hasBinaryIpc } from '../ipc/bridge'
+} from '../graph/commands.ts'
+import { writeAssetStreamed } from '../graph/assets.ts'
+import { hasBinaryIpc } from '../ipc/bridge.ts'
 import {
   groupAudioMemoSessions,
   isSessionReady,
@@ -31,11 +31,11 @@ import {
   transcribeSessionParts,
   type AudioMemoPart,
   type AudioMemoSession,
-} from './audio-memo-session'
-import { AUDIO_MEMOS_DIR, audioMemoPath, dailyPath, notePath } from '../graph/paths'
-import { appendListItemUnderBacklinkedHeading, wikiLinkSafe } from '../markdown/edit'
-import { getSecret } from '../secrets/keychain'
-import { ensureBacklinkTarget } from './backlink-target'
+} from './audio-memo-session.ts'
+import { AUDIO_MEMOS_DIR, audioMemoPath, dailyPath, notePath } from '../graph/paths.ts'
+import { appendListItemUnderBacklinkedHeading, wikiLinkSafe } from '../markdown/edit.ts'
+import { getSecret } from '../secrets/keychain.ts'
+import { ensureBacklinkTarget } from './backlink-target.ts'
 
 /**
  * Capture actions for audio memos (the first of the `actions/` capture

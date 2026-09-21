@@ -1,10 +1,10 @@
 import { useCallback, useState } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import { errorMessage, type NoteListEntry } from '@reflect/core'
-import { deleteOpenNote } from '@/lib/note-delete'
-import { startOperation } from '@/lib/operations'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+import { deleteOpenNote } from '@/lib/note-delete.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 export interface NoteTrash {
   /**

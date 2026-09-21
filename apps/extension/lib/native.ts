@@ -1,6 +1,6 @@
 import { browser } from 'wxt/browser'
 import { captureAckSchema, type ExtensionCaptureWire } from '@reflect/core/capture-envelope'
-import type { HoldReason } from './messages'
+import type { HoldReason } from './messages.ts'
 
 /**
  * The native-messaging hop: one `sendNativeMessage` per capture to the

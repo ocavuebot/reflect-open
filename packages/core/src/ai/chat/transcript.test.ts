@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { ChatStreamEvent } from './stream-chat'
+import type { ChatStreamEvent } from './stream-chat.ts'
 import {
   appendEvent,
   buildHistory,
@@ -8,7 +8,7 @@ import {
   type AssistantPart,
   type ChatAttachment,
   type ChatTurn,
-} from './transcript'
+} from './transcript.ts'
 
 function fold(events: ChatStreamEvent[]): AssistantPart[] {
   return events.reduce<AssistantPart[]>(appendEvent, [])

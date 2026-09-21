@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from 'react'
-import { InlineAlert } from '@/components/inline-alert'
-import { Button } from '@/components/ui/button'
-import type { ConnectGithubWizard } from '@/hooks/use-connect-github-wizard'
+import { InlineAlert } from '@/components/inline-alert.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import type { ConnectGithubWizard } from '@/hooks/use-connect-github-wizard.ts'
 
 interface ConnectGithubFinishStepProps {
   wizard: ConnectGithubWizard

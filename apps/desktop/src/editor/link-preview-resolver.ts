@@ -8,7 +8,7 @@ import {
   parseLinkPreviewMeta,
 } from '@reflect/core'
 import type { CloudSafe } from '@reflect/core'
-import { readExistingNoteSource } from '@/lib/read-existing-note-source'
+import { readExistingNoteSource } from '@/lib/read-existing-note-source.ts'
 
 /** Immutable identity of the note and editor session that owns a resolver. */
 export interface LinkPreviewSession {

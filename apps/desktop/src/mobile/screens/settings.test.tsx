@@ -3,9 +3,9 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { DEFAULT_SETTINGS, getConflictedNotes, type GraphInfo, type Settings } from '@reflect/core'
-import type { BackupState } from '@/lib/backup-controller'
-import '@/test-utils/locator'
-import { MobileSettings } from './settings'
+import type { BackupState } from '@/lib/backup-controller.ts'
+import '@/test-utils/locator.ts'
+import { MobileSettings } from './settings.tsx'
 
 /**
  * The mobile Settings screen (the pushed card that replaced the bottom

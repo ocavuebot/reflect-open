@@ -1,21 +1,21 @@
 import { describe, expect, it } from 'vitest'
-import { parseNote, upsertFrontmatter } from '../markdown'
-import { setBridge } from '../ipc/bridge'
+import { parseNote, upsertFrontmatter } from '../markdown/index.ts'
+import { setBridge } from '../ipc/bridge.ts'
 import {
   applyProjection,
   connectIndex,
   expectSuggestionOpensItsPath,
   openMigratedIndex,
   project,
-} from './flow-test-harness'
+} from './flow-test-harness.ts'
 import {
   getBacklinks,
   getLinkSources,
   resolveWikiTarget,
   suggestWikiLinkTargets,
   suggestWikiTargets,
-} from './queries'
-import { nextAliases, rewriteLinksForTitleChange } from './rename'
+} from './queries.ts'
+import { nextAliases, rewriteLinksForTitleChange } from './rename.ts'
 
 describe('v1 subject alias flow', () => {
   it('keeps `[[segment]]` links resolving after a `//` title is renamed away', async () => {

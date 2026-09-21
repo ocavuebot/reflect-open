@@ -1,13 +1,13 @@
 import { upsertFrontmatter, type PinnedNote } from '@reflect/core'
-import { frontmatterPatchToYaml, type FrontmatterPatch } from '@/editor/note-session'
+import { frontmatterPatchToYaml, type FrontmatterPatch } from '@/editor/note-session.ts'
 import { render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import { queryKeys } from '@/lib/query-client'
-import { RouterProvider } from '@/routing/router'
-import { NoteActionsSection } from './note-actions-section'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
+import { queryKeys } from '@/lib/query-client.ts'
+import { RouterProvider } from '@/routing/router.tsx'
+import { NoteActionsSection } from './note-actions-section.tsx'
 
 const getPinnedNotes = vi.hoisted(() => vi.fn())
 const getNote = vi.hoisted(() => vi.fn())
@@ -30,7 +30,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   getNote,
 }))
 vi.mock('@/lib/keybindings', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/keybindings')>()),
+  ...(await importOriginal<typeof import('@/lib/keybindings.ts')>()),
   isApplePlatform,
 }))
 vi.mock('@/lib/note-delete', () => ({ deleteOpenNote }))
@@ -203,7 +203,7 @@ describe('NoteActionsSection private toggle', () => {
   })
 
   it('shares an externally triggered privacy toggle with the button while saving', async () => {
-    const { toggleNotePrivate } = await import('@/lib/note-private')
+    const { toggleNotePrivate } = await import('@/lib/note-private.ts')
     const write = Promise.withResolvers<void>()
     commitNoteFrontmatter.mockReturnValueOnce(write.promise)
     const view = await renderSection('notes/a.md')

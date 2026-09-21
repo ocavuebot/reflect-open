@@ -1,6 +1,11 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from './bridge'
-import { iapGetProducts, iapIsOwned, iapPurchase, subscribeIapPurchaseUpdated } from './iap-plugin'
+import { setBridge } from './bridge.ts'
+import {
+  iapGetProducts,
+  iapIsOwned,
+  iapPurchase,
+  subscribeIapPurchaseUpdated,
+} from './iap-plugin.ts'
 
 afterEach(() => {
   setBridge(null)

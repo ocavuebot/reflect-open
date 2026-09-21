@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import { parseConflictMarkers, type ConflictSide } from '@reflect/core'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils.ts'
 
 /**
  * The dot classes for the two sides of a conflict block. Exported so the

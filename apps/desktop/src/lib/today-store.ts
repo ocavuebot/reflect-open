@@ -1,5 +1,5 @@
 import { addDays, startOfDay } from 'date-fns'
-import { todayIso } from './dates'
+import { todayIso } from './dates.ts'
 
 /**
  * Today's local calendar date as a module-level external store, shared by

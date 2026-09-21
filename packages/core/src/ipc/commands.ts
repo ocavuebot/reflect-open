@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { call } from './invoke'
+import { call } from './invoke.ts'
 
 const appVersionSchema = z.string()
 

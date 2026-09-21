@@ -1,11 +1,11 @@
 import { useState, type ReactElement } from 'react'
 import { Plus } from 'lucide-react'
 import type { AiPrompt } from '@reflect/core'
-import { Button } from '@/components/ui/button'
-import { useAiPrompts, type AiPromptDraft } from '@/hooks/use-ai-prompts'
-import { AiPromptDialog } from './ai-prompt-dialog'
-import { AiPromptRow } from './ai-prompt-row'
-import { SettingsSection } from './section'
+import { Button } from '@/components/ui/button.tsx'
+import { useAiPrompts, type AiPromptDraft } from '@/hooks/use-ai-prompts.ts'
+import { AiPromptDialog } from './ai-prompt-dialog.tsx'
+import { AiPromptRow } from './ai-prompt-row.tsx'
+import { SettingsSection } from './section.tsx'
 
 /**
  * Settings → AI prompts: the user's saved selection prompts, shown in the

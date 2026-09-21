@@ -1,25 +1,25 @@
 import { useEffect, type ReactElement } from 'react'
-import { installBackgroundFlush } from '@/lib/background-flush'
-import { MobileAudioMemoProvider } from '@/mobile/audio-memo-provider'
-import { AppErrorBoundary } from '@/components/app-error-boundary'
-import { MobileOnboardingScreen } from '@/mobile/onboarding-screen'
-import { PaywallScreen } from '@/mobile/paywall-screen'
-import { MobileShell } from '@/mobile/mobile-shell'
-import { MobileStatusLayer } from '@/mobile/status-layer'
-import { RecordingDrawer } from '@/mobile/recording-drawer'
-import { useICloudRefresh } from '@/mobile/use-icloud-refresh'
+import { installBackgroundFlush } from '@/lib/background-flush.ts'
+import { MobileAudioMemoProvider } from '@/mobile/audio-memo-provider.tsx'
+import { AppErrorBoundary } from '@/components/app-error-boundary.tsx'
+import { MobileOnboardingScreen } from '@/mobile/onboarding-screen.tsx'
+import { PaywallScreen } from '@/mobile/paywall-screen.tsx'
+import { MobileShell } from '@/mobile/mobile-shell.tsx'
+import { MobileStatusLayer } from '@/mobile/status-layer.tsx'
+import { RecordingDrawer } from '@/mobile/recording-drawer.tsx'
+import { useICloudRefresh } from '@/mobile/use-icloud-refresh.ts'
 import {
   useKeyboardCaretReveal,
   useKeyboardFieldReveal,
   useKeyboardHeightVar,
-} from '@/mobile/use-keyboard'
-import { usePaywallGate } from '@/mobile/use-paywall-gate'
-import { useTaskCheckboxHaptics } from '@/mobile/use-task-haptics'
-import { CaptureProvider } from '@/providers/capture-provider'
-import { ChatProvider } from '@/providers/chat-provider'
-import { useGraph } from '@/providers/graph-provider'
-import { SyncProvider } from '@/providers/sync-provider'
-import { RouterProvider } from '@/routing/router'
+} from '@/mobile/use-keyboard.ts'
+import { usePaywallGate } from '@/mobile/use-paywall-gate.ts'
+import { useTaskCheckboxHaptics } from '@/mobile/use-task-haptics.ts'
+import { CaptureProvider } from '@/providers/capture-provider.tsx'
+import { ChatProvider } from '@/providers/chat-provider.tsx'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { SyncProvider } from '@/providers/sync-provider.tsx'
+import { RouterProvider } from '@/routing/router.tsx'
 
 /**
  * Mobile root component (Plan 19): the graph provider bootstraps the fixed

@@ -3,7 +3,7 @@ import { page, userEvent, type Locator } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ContactMatch, MeetingAttendee, WikiSuggestion } from '@reflect/core'
-import { AttendeeCombobox } from './attendee-combobox'
+import { AttendeeCombobox } from './attendee-combobox.tsx'
 
 const suggestWikiTargets = vi.hoisted(() => vi.fn<() => Promise<WikiSuggestion[]>>(async () => []))
 const contactLinkSuggestions = vi.hoisted(() =>

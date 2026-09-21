@@ -1,10 +1,10 @@
 import type { ReactElement } from 'react'
 import { displayNoteTitle } from '@reflect/core'
-import { ArrowUturnLeftIcon } from '@/components/icons/arrow-uturn-left-icon'
-import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation'
-import { useSimilarNotes } from '@/lib/use-similar-notes'
-import { routeForPath } from '@/routing/route'
-import { SidebarSection } from './sidebar-section'
+import { ArrowUturnLeftIcon } from '@/components/icons/arrow-uturn-left-icon.tsx'
+import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation.ts'
+import { useSimilarNotes } from '@/lib/use-similar-notes.ts'
+import { routeForPath } from '@/routing/route.ts'
+import { SidebarSection } from './sidebar-section.tsx'
 import { isModEvent } from '@meowdown/core'
 
 interface SimilarNotesSectionProps {

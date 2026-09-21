@@ -5,7 +5,7 @@ import {
   resolveWikiLinkAsync,
   type AsyncWikiLookup,
   type WikiLookup,
-} from './resolve'
+} from './resolve.ts'
 
 describe('normalizeWikiTarget', () => {
   it('trims and case-folds, flagging daily-date targets', () => {

@@ -2,9 +2,9 @@ import { collectImages, parseXPostId } from '@meowdown/markdown'
 import { sleep } from '@ocavue/utils'
 import { useQueries } from '@tanstack/react-query'
 import { useEffect, useMemo, useState } from 'react'
-import { xPostQueryOptions } from '@/editor/use-x-post-resolver'
-import { queryClient } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+import { xPostQueryOptions } from '@/editor/use-x-post-resolver.ts'
+import { queryClient } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 // Longest wait before mounting anyway; cold-start archive reads measured up to 258 ms.
 const PRELOAD_BUDGET_MS = 300

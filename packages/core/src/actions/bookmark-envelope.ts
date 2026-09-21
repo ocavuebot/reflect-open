@@ -1,4 +1,4 @@
-import { xPostSchema } from '../x-archive'
+import { xPostSchema } from '../x-archive.ts'
 import { X_POST_ID_PATTERN } from '@post-embed/schema'
 import { z } from 'zod'
 

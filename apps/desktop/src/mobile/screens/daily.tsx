@@ -1,11 +1,11 @@
 import { useCallback, type ReactElement } from 'react'
-import { useToday } from '@/lib/use-today'
-import { CalendarStrip } from '@/mobile/calendar-strip'
-import { DailyCaptureMenu } from '@/mobile/daily-capture-menu'
-import { DayCarousel } from '@/mobile/day-carousel'
-import { useDailyArrivals } from '@/mobile/use-daily-arrivals'
-import { useSwipeTarget } from '@/mobile/use-swipe-target'
-import { useRouter } from '@/routing/router'
+import { useToday } from '@/lib/use-today.ts'
+import { CalendarStrip } from '@/mobile/calendar-strip.tsx'
+import { DailyCaptureMenu } from '@/mobile/daily-capture-menu.tsx'
+import { DayCarousel } from '@/mobile/day-carousel.tsx'
+import { useDailyArrivals } from '@/mobile/use-daily-arrivals.ts'
+import { useSwipeTarget } from '@/mobile/use-swipe-target.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * The mobile spine (Plan 19, V1 parity): a month header + week calendar strip

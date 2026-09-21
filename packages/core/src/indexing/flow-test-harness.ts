@@ -3,12 +3,12 @@ import { DatabaseSync, type SQLInputValue } from 'node:sqlite'
 import { fileURLToPath } from 'node:url'
 import { getLoadablePath as getSqliteVecPath } from 'sqlite-vec'
 import { expect } from 'vitest'
-import { resolveOrCreateNoteWithTitle } from '../graph/create-note'
-import { resolveExistingWikiTarget } from '../graph/resolve-existing-wiki-target'
-import { normalizeWikiTarget, parseNote } from '../markdown'
-import { setBridge } from '../ipc/bridge'
-import { buildIndexedNote, type IndexedNote } from './indexed-note'
-import type { suggestWikiLinkTargets } from './queries'
+import { resolveOrCreateNoteWithTitle } from '../graph/create-note.ts'
+import { resolveExistingWikiTarget } from '../graph/resolve-existing-wiki-target.ts'
+import { normalizeWikiTarget, parseNote } from '../markdown/index.ts'
+import { setBridge } from '../ipc/bridge.ts'
+import { buildIndexedNote, type IndexedNote } from './indexed-note.ts'
+import type { suggestWikiLinkTargets } from './queries.ts'
 
 /**
  * Shared harness for projection-flow tests (`*-flow.test.ts`): a real

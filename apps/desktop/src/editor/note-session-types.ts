@@ -1,6 +1,6 @@
 import type { TaskMarker } from '@reflect/core'
-import type { FrontmatterPatch } from './note-session-frontmatter'
-import type { RoundTripFidelity } from './roundtrip'
+import type { FrontmatterPatch } from './note-session-frontmatter.ts'
+import type { RoundTripFidelity } from './roundtrip.ts'
 
 export type NoteSessionStatus = 'loading' | 'ready' | 'error'
 

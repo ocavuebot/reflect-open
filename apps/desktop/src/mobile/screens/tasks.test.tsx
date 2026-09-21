@@ -4,12 +4,12 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent, type Locator } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { OpenTask } from '@reflect/core'
-import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture'
-import { resetRecentlyCompleted } from '@/lib/tasks/recently-completed'
-import { RouterProvider, useRouter } from '@/routing/router'
-import '@/test-utils/locator'
-import { swipe, translateX } from '@/test-utils/swipe'
-import { MobileTasks } from './tasks'
+import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture.ts'
+import { resetRecentlyCompleted } from '@/lib/tasks/recently-completed.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import '@/test-utils/locator.ts'
+import { swipe, translateX } from '@/test-utils/swipe.ts'
+import { MobileTasks } from './tasks.tsx'
 
 /**
  * The mobile Tasks tab (V1 mobile's third tab over Plan 18 data): desktop's
@@ -89,7 +89,7 @@ vi.mock('@/editor/note-editor', async () => {
       initialContent: string
       onChange?: (markdown: string) => void
       onWikiLinkClick?: (options: { target: string; openInNewWindow: boolean }) => void
-      handleRef?: (handle: import('@/editor/note-editor').NoteEditorHandle | null) => void
+      handleRef?: (handle: import('@/editor/note-editor.tsx').NoteEditorHandle | null) => void
     }) => {
       const areaRef = useRef<HTMLTextAreaElement | null>(null)
       useEffect(() => {
@@ -156,7 +156,7 @@ vi.mock('@/lib/note-task', () => ({
 const fail = vi.hoisted(() => vi.fn())
 const startOperation = vi.hoisted(() => vi.fn(() => ({ fail })))
 vi.mock('@/lib/operations', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/operations')>()),
+  ...(await importOriginal<typeof import('@/lib/operations.ts')>()),
   startOperation,
 }))
 

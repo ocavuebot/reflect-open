@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { IndexAppliedListener } from '@reflect/core'
-import { EmbeddingsSync } from './embeddings-sync'
+import { EmbeddingsSync } from './embeddings-sync.tsx'
 
 const core = vi.hoisted(() => ({
   embedNote: vi.fn(async () => ({ written: 0 })),

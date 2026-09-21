@@ -1,5 +1,5 @@
 import { sql } from 'kysely'
-import { db } from './db'
+import { db } from './db.ts'
 
 /**
  * Search-highlight plumbing for indexed snippets and query-matched titles.

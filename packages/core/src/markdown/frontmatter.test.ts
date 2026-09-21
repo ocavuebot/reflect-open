@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { parseFrontmatter, splitFrontmatter, upsertFrontmatter } from './frontmatter'
-import { isPinned, pinnedOrder } from './model'
+import { parseFrontmatter, splitFrontmatter, upsertFrontmatter } from './frontmatter.ts'
+import { isPinned, pinnedOrder } from './model.ts'
 
 describe('splitFrontmatter', () => {
   it('returns the whole file as body when there is no frontmatter', () => {

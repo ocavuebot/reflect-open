@@ -7,17 +7,17 @@ import {
   type NoteRow,
   type PinnedNote,
 } from '@reflect/core'
-import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter'
-import { startOperation } from '@/lib/operations'
-import { queryKeys } from '@/lib/query-client'
+import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { queryKeys } from '@/lib/query-client.ts'
 import {
   insertPinnedNote,
   invalidatePinnedNotesCache,
   pinnedNoteFor,
   updatePinnedNotesCache,
-} from './notes/pinned-notes-cache'
-import { getNextPinOrder, isValidPinOrder } from './notes/pin-order'
-import type { NoteActionInput } from './notes/types'
+} from './notes/pinned-notes-cache.ts'
+import { getNextPinOrder, isValidPinOrder } from './notes/pin-order.ts'
+import type { NoteActionInput } from './notes/types.ts'
 
 /** Toggle pin with shared optimistic feedback and save-error reporting. Markdown owns the final state. */
 export async function toggleNotePinned(input: NoteActionInput): Promise<void> {

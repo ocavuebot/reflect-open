@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { describe, expect, it, vi } from 'vitest'
-import { Toaster, toast } from './toast'
+import { Toaster, toast } from './toast.tsx'
 
 /**
  * The stacking transforms are arbitrary-value classes, so neither typecheck

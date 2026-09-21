@@ -1,8 +1,8 @@
 import { useState, type ReactElement } from 'react'
 import type { AiPrompt, AiPromptMode } from '@reflect/core'
-import { Button } from '@/components/ui/button'
-import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button.tsx'
+import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import { Input } from '@/components/ui/input.tsx'
 import {
   Select,
   SelectContent,
@@ -10,9 +10,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
-import { Textarea } from '@/components/ui/textarea'
-import type { AiPromptDraft } from '@/hooks/use-ai-prompts'
+} from '@/components/ui/select.tsx'
+import { Textarea } from '@/components/ui/textarea.tsx'
+import type { AiPromptDraft } from '@/hooks/use-ai-prompts.ts'
 
 interface AiPromptDrawerProps {
   /** The prompt being edited, `'new'` when adding; null renders nothing (exit animation). */

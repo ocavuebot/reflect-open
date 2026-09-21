@@ -1,9 +1,9 @@
 import { useEffect, useState, type ReactElement } from 'react'
 import { Check, Copy } from 'lucide-react'
 import { errorMessage } from '@reflect/core'
-import { Button } from '@/components/ui/button'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { startOperation } from '@/lib/operations'
+import { Button } from '@/components/ui/button.tsx'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip.tsx'
+import { startOperation } from '@/lib/operations.ts'
 
 interface ChatCopyButtonProps {
   /** The markdown put on the clipboard when the button is pressed. */

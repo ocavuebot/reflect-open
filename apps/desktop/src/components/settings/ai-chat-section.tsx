@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
 import { CHAT_SYSTEM_PROMPT_MAX_LENGTH, normalizeChatSystemPrompt } from '@reflect/core'
-import { useSettings } from '@/providers/settings-provider'
-import { SettingsSection } from './section'
-import { SettingsTextareaField } from './textarea-field'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { SettingsSection } from './section.tsx'
+import { SettingsTextareaField } from './textarea-field.tsx'
 
 /** Additional user instructions applied to every AI chat turn. */
 export function AiChatSection(): ReactElement {

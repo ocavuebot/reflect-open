@@ -1,10 +1,10 @@
 import type { ReactElement } from 'react'
 import { open } from '@tauri-apps/plugin-dialog'
 import { FileArchive } from 'lucide-react'
-import { SettingsField } from '@/components/settings/field'
-import { SettingsSection } from '@/components/settings/section'
-import { Button } from '@/components/ui/button'
-import { useV1Import } from '@/providers/v1-import-provider'
+import { SettingsField } from '@/components/settings/field.tsx'
+import { SettingsSection } from '@/components/settings/section.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { useV1Import } from '@/providers/v1-import-provider.tsx'
 
 /**
  * Settings -> Import: pick a Reflect V1 export zip and hand it to the

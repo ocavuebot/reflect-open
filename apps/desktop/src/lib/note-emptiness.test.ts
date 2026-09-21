@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isOstensiblyEmptyNoteSource } from './note-emptiness'
+import { isOstensiblyEmptyNoteSource } from './note-emptiness.ts'
 
 describe('isOstensiblyEmptyNoteSource', () => {
   it('treats blank and frontmatter-only notes as empty', () => {

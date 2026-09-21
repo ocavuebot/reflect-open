@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { MAX_ASSET_TEXT_CHARS } from '../indexing/asset-description-text'
-import { chunkAssetDescriptions, chunkNote } from './chunk'
+import { MAX_ASSET_TEXT_CHARS } from '../indexing/asset-description-text.ts'
+import { chunkAssetDescriptions, chunkNote } from './chunk.ts'
 
 const PATH = 'notes/a.md'
 

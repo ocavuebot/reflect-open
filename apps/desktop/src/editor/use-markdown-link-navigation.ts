@@ -1,10 +1,10 @@
 import { useCallback } from 'react'
 import { errorMessage, resolveExistingMarkdownTarget } from '@reflect/core'
-import { reportAmbiguousNoteTitle } from '@/editor/ambiguous-note-feedback'
-import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation'
-import { startOperation } from '@/lib/operations'
-import { useLinkIntentGuard } from '@/lib/windows/use-link-intent-guard'
-import { routeForPath } from '@/routing/route'
+import { reportAmbiguousNoteTitle } from '@/editor/ambiguous-note-feedback.ts'
+import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { useLinkIntentGuard } from '@/lib/windows/use-link-intent-guard.ts'
+import { routeForPath } from '@/routing/route.ts'
 
 /**
  * Navigation for a clicked Markdown note link (`[Plan](./Plan.md)`), the

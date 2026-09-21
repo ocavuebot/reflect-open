@@ -1,5 +1,5 @@
-import { toast } from '@/components/ui/toast'
-import type { UpdateController, UpdateState } from '@/lib/update-controller'
+import { toast } from '@/components/ui/toast.tsx'
+import type { UpdateController, UpdateState } from '@/lib/update-controller.ts'
 
 const UPDATE_TOAST_ID = 'reflect-update'
 // `timeout: 0` disables Base UI's auto-dismiss; the dismissible flag hides the

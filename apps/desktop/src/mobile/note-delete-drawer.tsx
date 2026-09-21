@@ -1,15 +1,15 @@
 import { useRef, useState, type ReactElement } from 'react'
 import { errorMessage } from '@reflect/core'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Drawer,
   DrawerBody,
   DrawerContent,
   DrawerDescription,
   DrawerTitle,
-} from '@/components/ui/drawer'
-import { deleteOpenNote } from '@/lib/note-delete'
-import { useGraph } from '@/providers/graph-provider'
+} from '@/components/ui/drawer.tsx'
+import { deleteOpenNote } from '@/lib/note-delete.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 interface NoteDeleteDrawerProps {
   /** Graph-relative path of the regular note to move to trash. */

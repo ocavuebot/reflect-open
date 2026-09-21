@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
+import { setBridge } from '../ipc/bridge.ts'
 import {
   dailyDatesInRange,
   findNotesByPathKey,
@@ -13,7 +13,7 @@ import {
   listDailyNotes,
   resolveWikiTarget,
   suggestWikiTargets,
-} from './queries'
+} from './queries.ts'
 
 // A fake bridge resolves `db_query` so the test exercises the real compiled
 // SQL (snake_case columns, range parameters) — the same harness pipeline.test

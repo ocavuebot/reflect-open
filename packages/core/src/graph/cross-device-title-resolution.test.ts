@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import type { IndexedNote } from '../indexing/indexed-note'
-import { applyIndexChanges } from '../indexing/live'
-import { resolveOrCreateNoteWithTitle } from './create-note'
+import { setBridge } from '../ipc/bridge.ts'
+import type { IndexedNote } from '../indexing/indexed-note.ts'
+import { applyIndexChanges } from '../indexing/live.ts'
+import { resolveOrCreateNoteWithTitle } from './create-note.ts'
 
 afterEach(() => {
   setBridge(null)

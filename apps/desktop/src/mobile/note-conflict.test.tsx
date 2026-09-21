@@ -3,9 +3,9 @@ import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { setPlatformSurface } from '@/lib/platform-surface'
-import { MobileNote } from '@/mobile/screens/note'
-import { RouterProvider } from '@/routing/router'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
+import { MobileNote } from '@/mobile/screens/note.tsx'
+import { RouterProvider } from '@/routing/router.tsx'
 
 /**
  * Conflict containment on the mobile note screen (Plan 19, step 10): a note

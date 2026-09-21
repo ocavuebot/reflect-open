@@ -1,7 +1,7 @@
 import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, describe, expect, it } from 'vitest'
-import { useDailyArrivals, type DailyArrivalsOptions } from './use-daily-arrivals'
+import { useDailyArrivals, type DailyArrivalsOptions } from './use-daily-arrivals.ts'
 
 /**
  * The daily surface's arrival bookkeeping (extracted from MobileDaily). The

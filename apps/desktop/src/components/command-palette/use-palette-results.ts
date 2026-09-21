@@ -1,14 +1,14 @@
 import { useDeferredValue, useMemo } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { parseSearchQuery, retrieve, searchWithFilters, suggestWikiTargets } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { listCommands } from '@/lib/commands/registry'
-import { todayIso } from '@/lib/dates'
-import { queryKeys } from '@/lib/query-client'
-import { useEmbedStatus } from '@/lib/use-embed-status'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
-import { buildPaletteSections, type PaletteSections } from './entries'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { listCommands } from '@/lib/commands/registry.ts'
+import { todayIso } from '@/lib/dates.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useEmbedStatus } from '@/lib/use-embed-status.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { buildPaletteSections, type PaletteSections } from './entries.ts'
 
 /**
  * The palette's data layer (Plan 08), extracted so the component stays

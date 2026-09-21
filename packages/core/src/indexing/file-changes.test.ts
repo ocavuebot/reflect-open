@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { emitFileChanges, subscribeFileChanges, type FileChange } from './file-changes'
+import { setBridge } from '../ipc/bridge.ts'
+import { emitFileChanges, subscribeFileChanges, type FileChange } from './file-changes.ts'
 
 afterEach(() => {
   setBridge(null)

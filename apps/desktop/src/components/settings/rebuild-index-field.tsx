@@ -1,8 +1,8 @@
 import { useState, type ReactElement } from 'react'
-import { Button } from '@/components/ui/button'
-import { rebuildIndexVisibly } from '@/lib/rebuild-index'
-import { useGraph } from '@/providers/graph-provider'
-import { SettingsField } from './field'
+import { Button } from '@/components/ui/button.tsx'
+import { rebuildIndexVisibly } from '@/lib/rebuild-index.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { SettingsField } from './field.tsx'
 
 /**
  * The recovery lever for the local index: a one-click full rebuild from the

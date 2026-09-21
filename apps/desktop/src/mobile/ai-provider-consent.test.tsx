@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { describe, expect, it, vi } from 'vitest'
 import { aiProvider } from '@reflect/core'
-import { AiProviderConsent } from './ai-provider-consent'
+import { AiProviderConsent } from './ai-provider-consent.tsx'
 
 const openUrl = vi.hoisted(() => vi.fn(() => Promise.resolve()))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl }))

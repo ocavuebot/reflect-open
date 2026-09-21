@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { subscribeOwnWrites } from '../indexing/local-write-echo'
-import { setBridge } from '../ipc/bridge'
+import { subscribeOwnWrites } from '../indexing/local-write-echo.ts'
+import { setBridge } from '../ipc/bridge.ts'
 import {
   cancelReflectV1Import,
   createNoteIfAbsent,
@@ -9,7 +9,7 @@ import {
   openAsset,
   subscribeImportProgress,
   IMPORT_PROGRESS_EVENT,
-} from './commands'
+} from './commands.ts'
 
 afterEach(() => {
   setBridge(null)

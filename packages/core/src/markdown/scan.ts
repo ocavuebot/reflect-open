@@ -1,6 +1,6 @@
-import { parseBody } from './grammar'
-import { parseInlineLink } from './link-syntax'
-import { isWikiNodeName, wikiBracketStart } from './wiki-nodes'
+import { parseBody } from './grammar.ts'
+import { parseInlineLink } from './link-syntax.ts'
+import { isWikiNodeName, wikiBracketStart } from './wiki-nodes.ts'
 
 /**
  * Inline scanning for the editor (Plan 05). The editor decorates `[[wiki

@@ -1,6 +1,6 @@
 import { beforeEach, expect, it, vi } from 'vitest'
 import { xPostWireSchema, type XPostKind } from '@reflect/core/capture-envelope'
-import { sendToHost } from './native'
+import { sendToHost } from './native.ts'
 
 const { send } = vi.hoisted(() => ({
   send: vi.fn<(application: string, message: unknown) => Promise<unknown>>(),

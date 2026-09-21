@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { AI_PROVIDERS, DEFAULT_CONTEXT_WINDOW, modelContextWindow } from './provider-catalog'
+import { AI_PROVIDERS, DEFAULT_CONTEXT_WINDOW, modelContextWindow } from './provider-catalog.ts'
 
 describe('AI_PROVIDERS', () => {
   it('orders each provider’s models from most to least capable', () => {

@@ -12,10 +12,10 @@ import {
   updateGist,
   type GistFrontmatter,
 } from '@reflect/core'
-import { setNoteRowOverlay } from '@/hooks/note-row-overlay'
-import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter'
-import { startOperation } from '@/lib/operations'
-import { providerFetch } from '@/lib/provider-fetch'
+import { setNoteRowOverlay } from '@/hooks/note-row-overlay.ts'
+import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
 
 const activeGistOperations = new Set<string>()
 

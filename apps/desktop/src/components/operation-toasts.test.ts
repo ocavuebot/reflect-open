@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { resetOperations, startOperation } from '@/lib/operations'
-import type { MockToastAddOptions } from '@/test-utils/toast'
-import { attachOperationToasts } from './operation-toasts'
+import { resetOperations, startOperation } from '@/lib/operations.ts'
+import type { MockToastAddOptions } from '@/test-utils/toast.ts'
+import { attachOperationToasts } from './operation-toasts.ts'
 
 const toast = vi.hoisted(() => ({
   add: vi.fn<(options: MockToastAddOptions) => string>(),

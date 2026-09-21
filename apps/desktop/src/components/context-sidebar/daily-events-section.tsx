@@ -1,11 +1,11 @@
 import { useState, type ReactElement } from 'react'
 import { Plus } from 'lucide-react'
 import type { CalendarEvent } from '@reflect/core'
-import { formatTimeOfDay } from '@/lib/dates'
-import { useCalendarChangeInvalidation, useDayEvents } from '@/lib/use-calendar'
-import { useSettings } from '@/providers/settings-provider'
-import { AddMeetingDialog } from './add-meeting-dialog'
-import { SidebarSection } from './sidebar-section'
+import { formatTimeOfDay } from '@/lib/dates.ts'
+import { useCalendarChangeInvalidation, useDayEvents } from '@/lib/use-calendar.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { AddMeetingDialog } from './add-meeting-dialog.tsx'
+import { SidebarSection } from './sidebar-section.tsx'
 
 interface DailyEventsSectionProps {
   /** The day whose events to show — a validated ISO date. */

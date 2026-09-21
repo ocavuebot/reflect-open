@@ -20,7 +20,7 @@ vi.mock('./open-documents', () => ({
   openSession: docs.openSession,
 }))
 
-const { placeOldTitleAlias } = await import('./alias-placement')
+const { placeOldTitleAlias } = await import('./alias-placement.ts')
 
 const PATH = 'notes/subject.md'
 const RENAME = { from: 'Old Title', to: 'New Title', previousAutoAliases: [] }

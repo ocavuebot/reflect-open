@@ -1,6 +1,6 @@
 import { sql } from 'kysely'
-import { db } from './db'
-import type { NoteTagFacet } from './note-list'
+import { db } from './db.ts'
+import type { NoteTagFacet } from './note-list.ts'
 
 /**
  * Graph-level aggregates for the AI chat's system prompt (the "graph

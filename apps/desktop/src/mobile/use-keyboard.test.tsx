@@ -6,7 +6,7 @@ import {
   publishKeyboardHeight,
   useKeyboardHeightVar,
   useKeyboardVisible,
-} from './use-keyboard'
+} from './use-keyboard.ts'
 
 /**
  * The keyboard-height store behind `--keyboard-height`: imperative consumers

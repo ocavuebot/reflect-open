@@ -12,8 +12,8 @@ import type {
   StreamChatOptions,
 } from '@reflect/core'
 import { NO_REPLY_NOTICE } from '@reflect/core'
-import { setPlatformSurface } from '@/lib/platform-surface'
-import { ChatProvider, useChatSession } from '@/providers/chat-provider'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
+import { ChatProvider, useChatSession } from '@/providers/chat-provider.tsx'
 
 /**
  * The provider's persistence lifecycle over a fully scripted store: resuming

@@ -1,5 +1,5 @@
-import { parseFrontmatter, splitFrontmatter } from '../markdown/frontmatter'
-import { NOTES_DIR, isNotePath } from './paths'
+import { parseFrontmatter, splitFrontmatter } from '../markdown/frontmatter.ts'
+import { NOTES_DIR, isNotePath } from './paths.ts'
 
 /** A canonical 128-bit ULID (the first character cannot exceed `7`). */
 const REFLECT_NOTE_ID_RE = /^[0-7][0-9a-hjkmnp-tv-z]{25}$/i

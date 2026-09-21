@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it } from 'vitest'
-import { SidebarSection } from './sidebar-section'
+import { SidebarSection } from './sidebar-section.tsx'
 
 function renderSection() {
   return render(

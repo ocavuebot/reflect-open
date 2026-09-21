@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import type { Route } from '@/routing/route'
-import { dailyDeepLink, deepLinkForRoute, noteDeepLink } from '@/lib/deep-links/format'
-import { parseDeepLink } from '@/lib/deep-links/parse'
+import type { Route } from '@/routing/route.ts'
+import { dailyDeepLink, deepLinkForRoute, noteDeepLink } from '@/lib/deep-links/format.ts'
+import { parseDeepLink } from '@/lib/deep-links/parse.ts'
 
 describe('deepLinkForRoute', () => {
   it('round-trips every addressable route through the parser', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { resolveTaskEdit, taskContent } from './task-content'
+import { resolveTaskEdit, taskContent } from './task-content.ts'
 
 describe('taskContent', () => {
   it('strips the open marker and its separating space', () => {

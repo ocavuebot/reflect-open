@@ -1,16 +1,16 @@
 import { useId, useState, type ReactElement } from 'react'
 import { Cloud, FolderOpen } from 'lucide-react'
 import { getIsComposing } from '@meowdown/core'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Spinner } from '@/components/ui/spinner'
+import { Button } from '@/components/ui/button.tsx'
+import { Input } from '@/components/ui/input.tsx'
+import { Spinner } from '@/components/ui/spinner.tsx'
 import {
   cleanGraphName,
   graphNameFromRoot,
   graphRootForName,
   isGraphNameTaken,
-} from '@/lib/graph-names'
-import { OnboardingIcloudHeader } from '@/mobile/onboarding-icloud-header'
+} from '@/lib/graph-names.ts'
+import { OnboardingIcloudHeader } from '@/mobile/onboarding-icloud-header.tsx'
 
 const DEFAULT_ICLOUD_NOTES_NAME = 'Notes'
 

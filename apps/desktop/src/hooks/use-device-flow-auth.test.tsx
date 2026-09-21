@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import { runDeviceFlow, ReflectError, type GithubAuth } from '@reflect/core'
-import { useDeviceFlowAuth } from './use-device-flow-auth'
+import { useDeviceFlowAuth } from './use-device-flow-auth.ts'
 
 vi.mock('@reflect/core', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@reflect/core')>()),

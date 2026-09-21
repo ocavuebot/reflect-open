@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { getBridge, type Unlisten } from '../ipc/bridge'
-import { call } from '../ipc/invoke'
+import { getBridge, type Unlisten } from '../ipc/bridge.ts'
+import { call } from '../ipc/invoke.ts'
 
 /**
  * Typed bindings for the Rust calendar capability (read-only EventKit —

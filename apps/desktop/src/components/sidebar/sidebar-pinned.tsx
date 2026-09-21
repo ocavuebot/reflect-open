@@ -11,14 +11,14 @@ import {
 } from '@dnd-kit/core'
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable'
 import { displayNoteTitle } from '@reflect/core'
-import { usePinnedNotes } from '@/hooks/use-pinned-notes'
-import { useReorderPinnedNotes } from '@/hooks/use-reorder-pinned-notes'
-import { formatDayLabel } from '@/lib/dates'
-import { useSettings } from '@/providers/settings-provider'
-import { routeForPath, routesEqual } from '@/routing/route'
-import { useRouter } from '@/routing/router'
-import { SidebarPinnedRowPreview } from './sidebar-pinned-row-preview'
-import { SidebarSortablePinnedRow } from './sidebar-sortable-pinned-row'
+import { usePinnedNotes } from '@/hooks/use-pinned-notes.ts'
+import { useReorderPinnedNotes } from '@/hooks/use-reorder-pinned-notes.ts'
+import { formatDayLabel } from '@/lib/dates.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { routeForPath, routesEqual } from '@/routing/route.ts'
+import { useRouter } from '@/routing/router.tsx'
+import { SidebarPinnedRowPreview } from './sidebar-pinned-row-preview.tsx'
+import { SidebarSortablePinnedRow } from './sidebar-sortable-pinned-row.tsx'
 
 /**
  * The sidebar's Pinned section (the Mac app's "Pinned notes" shelf):

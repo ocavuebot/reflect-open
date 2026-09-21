@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { createStorage } from '@/test-utils/storage'
-import { getSessionStorageStore, resetSessionStorageStores } from './session-storage'
+import { createStorage } from '@/test-utils/storage.ts'
+import { getSessionStorageStore, resetSessionStorageStores } from './session-storage.ts'
 
 beforeEach(() => {
   vi.stubGlobal('window', { sessionStorage: createStorage({ key: 'session' }) })

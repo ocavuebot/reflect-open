@@ -1,6 +1,6 @@
-import type { AiProviderConfig } from '../settings/schema'
-import { getSecret } from '../secrets/keychain'
-import { aiProviderRequiresApiKey } from './provider-catalog'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import { getSecret } from '../secrets/keychain.ts'
+import { aiProviderRequiresApiKey } from './provider-catalog.ts'
 
 /**
  * The AI domain's keychain policy: which entries hold BYOK provider keys.

@@ -5,15 +5,15 @@ import {
   readBookmarkSettings,
   writeBookmarkSettings,
   X_BOOKMARK_ACCESS,
-} from '@/lib/bookmark-settings'
+} from '@/lib/bookmark-settings.ts'
 import {
   INCLUDE_PAGE_TEXT_KEY,
   readIncludePageTextPreference,
   writeIncludePageTextPreference,
-} from '@/lib/popup-preferences'
-import { LIKE_SETTINGS_KEY, readLikeSettings, writeLikeSettings } from '@/lib/like-settings'
-import { SettingsSection, SettingsSwitchRow } from './settings-rows'
-import { useStoredSetting } from './use-stored-setting'
+} from '@/lib/popup-preferences.ts'
+import { LIKE_SETTINGS_KEY, readLikeSettings, writeLikeSettings } from '@/lib/like-settings.ts'
+import { SettingsSection, SettingsSwitchRow } from './settings-rows.tsx'
+import { useStoredSetting } from './use-stored-setting.ts'
 
 /**
  * The extension's settings page: every stored choice that is not part of a

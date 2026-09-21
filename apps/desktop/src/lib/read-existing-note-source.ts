@@ -1,5 +1,5 @@
 import { readNote } from '@reflect/core'
-import { openSession } from '@/editor/open-documents'
+import { openSession } from '@/editor/open-documents.ts'
 
 /**
  * Read an existing note without disturbing its editor session.

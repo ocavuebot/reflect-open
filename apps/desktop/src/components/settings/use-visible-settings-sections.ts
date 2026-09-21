@@ -1,6 +1,6 @@
-import { useContactsAuthorization } from '@/hooks/use-contacts-authorization'
-import { isMacosDesktop } from '@/lib/platform'
-import { SETTINGS_SECTIONS } from './sections'
+import { useContactsAuthorization } from '@/hooks/use-contacts-authorization.ts'
+import { isMacosDesktop } from '@/lib/platform.ts'
+import { SETTINGS_SECTIONS } from './sections.ts'
 
 /** One registered settings section (see {@link SETTINGS_SECTIONS}). */
 export type SettingsSectionEntry = (typeof SETTINGS_SECTIONS)[number]

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { marketingVersion } from './marketing-version'
+import { marketingVersion } from './marketing-version.ts'
 
 describe('marketingVersion', () => {
   it('strips the prerelease tag', () => {

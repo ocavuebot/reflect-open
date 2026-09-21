@@ -3,10 +3,10 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { openUrl } from '@tauri-apps/plugin-opener'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { BackupState } from '@/lib/backup-controller'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
-import '@/test-utils/locator'
-import { BackupSettingsField } from './backup-section'
+import type { BackupState } from '@/lib/backup-controller.ts'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import '@/test-utils/locator.ts'
+import { BackupSettingsField } from './backup-section.tsx'
 
 // The section's GitHub-vs-generic split (Plan 16): a hand-wired remote must
 // render host-neutrally, and its auth errors must surface the engine's

@@ -1,9 +1,9 @@
 import { useEffect, type ReactElement } from 'react'
-import { GraphChooser } from '@/components/graph-chooser'
-import { GraphWorkspace } from '@/components/graph-workspace'
-import { installQuitFlush } from '@/lib/quit-flush'
-import { isMainWindow } from '@/lib/windows/window-role'
-import { useGraph } from '@/providers/graph-provider'
+import { GraphChooser } from '@/components/graph-chooser.tsx'
+import { GraphWorkspace } from '@/components/graph-workspace.tsx'
+import { installQuitFlush } from '@/lib/quit-flush.ts'
+import { isMainWindow } from '@/lib/windows/window-role.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /**
  * Root component — the Plan 02 loading gate. Routes between the graph chooser

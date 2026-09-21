@@ -1,4 +1,4 @@
-import { getBridge, type Unlisten } from '../ipc/bridge'
+import { getBridge, type Unlisten } from '../ipc/bridge.ts'
 
 /**
  * The Rust-side "index rows committed" broadcast (`index:written`), emitted

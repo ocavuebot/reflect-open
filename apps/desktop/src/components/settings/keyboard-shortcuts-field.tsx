@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react'
 import { Keyboard } from 'lucide-react'
-import { ShortcutKeys } from '@/components/shortcut-keys'
-import { Button } from '@/components/ui/button'
-import { keybindingFor } from '@/lib/commands/app-commands'
-import { useShortcuts } from '@/providers/shortcuts-provider'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { keybindingFor } from '@/lib/commands/app-commands.ts'
+import { useShortcuts } from '@/providers/shortcuts-provider.tsx'
 
 const SHORTCUTS_BINDING = keybindingFor('shortcuts.show')
 

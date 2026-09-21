@@ -10,9 +10,9 @@ import {
   type CalendarEvent,
   type MeetingAttendee,
 } from '@reflect/core'
-import { InlineAlert } from '@/components/inline-alert'
-import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
+import { InlineAlert } from '@/components/inline-alert.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { Checkbox } from '@/components/ui/checkbox.tsx'
 import {
   Dialog,
   DialogContent,
@@ -20,12 +20,12 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { formatTimeOfDay } from '@/lib/dates'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
-import { AttendeeCombobox } from './attendee-combobox'
+} from '@/components/ui/dialog.tsx'
+import { Input } from '@/components/ui/input.tsx'
+import { formatTimeOfDay } from '@/lib/dates.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { AttendeeCombobox } from './attendee-combobox.tsx'
 
 interface AddMeetingDialogProps {
   /** The daily note receiving the entry — a validated ISO date. */

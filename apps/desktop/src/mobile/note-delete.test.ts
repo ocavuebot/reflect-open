@@ -3,8 +3,8 @@ import {
   createNoteSession,
   type NoteSession,
   type NoteSessionSnapshot,
-} from '@/editor/note-session'
-import { deleteOpenNote } from './note-delete'
+} from '@/editor/note-session.ts'
+import { deleteOpenNote } from './note-delete.ts'
 
 /**
  * `deleteOpenNote` discards an unpersisted note locally. Persisted notes are

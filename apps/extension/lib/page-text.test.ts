@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatParagraphs, normalizeParagraphText, samePageUrl } from './page-text'
+import { formatParagraphs, normalizeParagraphText, samePageUrl } from './page-text.ts'
 
 describe('normalizeParagraphText', () => {
   it('collapses inline whitespace inside one paragraph', () => {

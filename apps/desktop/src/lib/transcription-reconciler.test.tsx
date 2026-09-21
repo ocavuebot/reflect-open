@@ -8,7 +8,7 @@ import type {
 import {
   createTranscriptionReconciler,
   type TranscriptionReconciler,
-} from './transcription-reconciler'
+} from './transcription-reconciler.ts'
 
 const reconcileAudioMemos = vi.hoisted(() =>
   vi.fn<(input: ReconcileAudioMemosInput) => Promise<ReconcileAudioMemosOutcome>>(),

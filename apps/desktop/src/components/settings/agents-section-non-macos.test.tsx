@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { describe, expect, it, vi } from 'vitest'
-import { AgentsSection } from './agents-section'
+import { AgentsSection } from './agents-section.tsx'
 
 // A browser-mode module mock materializes value exports once, so the
 // off-macOS behavior needs its own file with the flag statically false

@@ -1,6 +1,6 @@
 import type { ReactElement, ReactNode } from 'react'
 import { ChevronLeft } from 'lucide-react'
-import { MobileTopBar, MobileTopBarIconButton, MobileTopBarRow } from '@/mobile/top-bar'
+import { MobileTopBar, MobileTopBarIconButton, MobileTopBarRow } from '@/mobile/top-bar.tsx'
 
 interface MobileScreenHeaderProps {
   title: string

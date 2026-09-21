@@ -3,8 +3,8 @@ import { render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactElement } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { TemplatesSection } from './templates-section'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { TemplatesSection } from './templates-section.tsx'
 
 const listTemplates = vi.hoisted(() => vi.fn())
 const openRouteInNewWindow = vi.hoisted(() => vi.fn<() => Promise<boolean>>())
@@ -14,7 +14,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   listTemplates,
 }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 vi.mock('@/providers/graph-provider', () => ({

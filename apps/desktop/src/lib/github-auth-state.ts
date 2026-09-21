@@ -1,4 +1,4 @@
-import { queryClient, queryKeys } from '@/lib/query-client'
+import { queryClient, queryKeys } from '@/lib/query-client.ts'
 
 /**
  * The query key for "is a GitHub credential stored on this machine" — read by

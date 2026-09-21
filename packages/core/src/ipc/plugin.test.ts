@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { z } from 'zod'
-import { isAppError } from '../errors'
-import { setBridge } from './bridge'
-import { definePluginCommand, definePluginEvent, ignoredResult } from './plugin'
+import { isAppError } from '../errors.ts'
+import { setBridge } from './bridge.ts'
+import { definePluginCommand, definePluginEvent, ignoredResult } from './plugin.ts'
 
 afterEach(() => {
   setBridge(null)

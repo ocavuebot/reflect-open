@@ -1,9 +1,9 @@
 import type { LanguageModel } from '@reflect/modules/ai'
-import { errorMessage } from '../errors'
-import type { AiProviderConfig } from '../settings/schema'
-import type { CloudSafe } from '../privacy/checkers'
-import { languageModel } from './language-model'
-import { renderSelectionPrompt } from './selection-prompts'
+import { errorMessage } from '../errors.ts'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import type { CloudSafe } from '../privacy/checkers.ts'
+import { languageModel } from './language-model.ts'
+import { renderSelectionPrompt } from './selection-prompts.ts'
 
 /**
  * The editor AI menu's provider call: one BYOK streaming completion that

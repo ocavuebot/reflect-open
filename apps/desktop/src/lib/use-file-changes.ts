@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { subscribeFileChanges, type FileChange } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
 
 /**
  * Subscribe to the watcher's file-change events (Plan 04b) for the lifetime of

@@ -3,8 +3,8 @@ import { page, type Locator } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { SettingsProvider } from '@/providers/settings-provider'
-import { CalendarIntegrationField } from './calendar-integration-field'
+import { SettingsProvider } from '@/providers/settings-provider.tsx'
+import { CalendarIntegrationField } from './calendar-integration-field.tsx'
 
 // The section renders only in the macOS desktop webview; jsdom is neither.
 vi.mock('@/lib/platform', () => ({ isMacosDesktop: true, isNativeShell: () => true }))

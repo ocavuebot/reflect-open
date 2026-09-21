@@ -1,7 +1,7 @@
 import { browser } from 'wxt/browser'
 import type { ExtensionCaptureWire } from '@reflect/core/capture-envelope'
-import type { FlushResult } from './messages'
-import { sendToHost } from './native'
+import type { FlushResult } from './messages.ts'
+import { sendToHost } from './native.ts'
 import {
   QUEUE_CAP,
   queueKey,
@@ -9,7 +9,7 @@ import {
   queuedCaptureSchema,
   sortQueue,
   type QueuedCapture,
-} from './queue'
+} from './queue.ts'
 
 /** Background-owned queue admission and delivery; popup reads are read-only. */
 

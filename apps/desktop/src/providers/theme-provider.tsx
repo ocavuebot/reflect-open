@@ -9,8 +9,8 @@ import {
   type ReactNode,
 } from 'react'
 import type { ThemePreference } from '@reflect/core'
-import { writeCachedThemePreference } from '@/lib/theme-cache'
-import { useSettings, type SettingsLoadOutcome } from '@/providers/settings-provider'
+import { writeCachedThemePreference } from '@/lib/theme-cache.ts'
+import { useSettings, type SettingsLoadOutcome } from '@/providers/settings-provider.tsx'
 
 /** User-selectable theme; `system` follows the OS preference. */
 export type Theme = ThemePreference

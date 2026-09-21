@@ -9,7 +9,7 @@ vi.mock('@/providers/graph-provider', () => ({
   useGraph: () => ({ indexGeneration: graph.indexGeneration }),
 }))
 
-const { RebuildIndexField } = await import('./rebuild-index-field')
+const { RebuildIndexField } = await import('./rebuild-index-field.tsx')
 
 function rebuildButton(): Locator {
   return page.getByRole('button', { name: /rebuild/i })

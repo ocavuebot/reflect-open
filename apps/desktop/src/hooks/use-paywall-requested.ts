@@ -1,4 +1,4 @@
-import { useSessionFlag } from '@/lib/use-session-flag'
+import { useSessionFlag } from '@/lib/use-session-flag.ts'
 
 /** Session-wide, so the request survives leaving and re-entering Settings. */
 const PAYWALL_REQUESTED_STORAGE_KEY = 'reflect.paywall-requested'

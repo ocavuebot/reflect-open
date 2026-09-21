@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatBinding } from './keybindings'
+import { formatBinding } from './keybindings.ts'
 
 describe('formatBinding', () => {
   it('renders Apple modifier symbols', () => {

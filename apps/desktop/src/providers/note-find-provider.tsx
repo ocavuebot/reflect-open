@@ -10,16 +10,16 @@ import {
   type ReactNode,
 } from 'react'
 import { getIsComposing, type SearchStatus } from '@meowdown/core'
-import { noteEditorHandleFor } from '@/editor/editor-handle-registry'
+import { noteEditorHandleFor } from '@/editor/editor-handle-registry.ts'
 import {
   listenForFocusedNoteMenuCommands,
   type FocusedNoteMenuCommand,
-} from '@/lib/native-menu/dispatch'
-import { useToday } from '@/lib/use-today'
-import { isMainWindow } from '@/lib/windows/window-role'
-import { useFocusedDailyDate } from '@/providers/focused-daily-provider'
-import { focusedNotePathForRoute } from '@/routing/route'
-import { useRouter } from '@/routing/router'
+} from '@/lib/native-menu/dispatch.ts'
+import { useToday } from '@/lib/use-today.ts'
+import { isMainWindow } from '@/lib/windows/window-role.ts'
+import { useFocusedDailyDate } from '@/providers/focused-daily-provider.tsx'
+import { focusedNotePathForRoute } from '@/routing/route.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 const NO_MATCHES: SearchStatus = { total: 0, active: 0 }
 

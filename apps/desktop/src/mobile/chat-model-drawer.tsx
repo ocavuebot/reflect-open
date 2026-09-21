@@ -1,8 +1,8 @@
 import { useMemo, type ReactElement } from 'react'
-import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import { groupModelOptions } from '@/lib/chat-model-groups'
-import { SettingsGroup, SettingsSelectRow } from '@/mobile/settings-list'
-import { useChatSession } from '@/providers/chat-provider'
+import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import { groupModelOptions } from '@/lib/chat-model-groups.ts'
+import { SettingsGroup, SettingsSelectRow } from '@/mobile/settings-list.tsx'
+import { useChatSession } from '@/providers/chat-provider.tsx'
 
 interface ChatModelDrawerProps {
   open: boolean

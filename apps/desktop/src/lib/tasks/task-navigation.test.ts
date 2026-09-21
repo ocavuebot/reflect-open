@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import type { OpenTask } from '@reflect/core'
-import { makeOpenTask } from './open-task-fixture'
-import { insertTargetForTask, previousTaskKey } from './task-navigation'
-import { taskKey } from './task-identity'
+import { makeOpenTask } from './open-task-fixture.ts'
+import { insertTargetForTask, previousTaskKey } from './task-navigation.ts'
+import { taskKey } from './task-identity.ts'
 
 function task(over: Partial<OpenTask> = {}): OpenTask {
   return makeOpenTask({ text: 'x', ...over })

@@ -5,6 +5,11 @@ settings:
   dedupePeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@tauri-apps/api@2.11.1': 155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59
+  '@wxt-dev/browser@0.2.2': ce52d49a3948aff84bf7221a2e9b13524f14da8e44f22f846787c4864186c08f
+  defuddle@0.19.3: 110ffacb2906c5be466d31a2d7e4a21cc364eec45f7028b131398cdfb355a88c
+
 importers:
 
   .:
@@ -98,7 +103,7 @@ importers:
         version: 5.102.8(react@19.3.0)
       '@tauri-apps/api':
         specifier: ^2.11.1
-        version: 2.11.1
+        version: 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
       '@tauri-apps/plugin-deep-link':
         specifier: ^2.4.10
         version: 2.4.10
@@ -246,7 +251,7 @@ importers:
         version: link:../../design-system
       defuddle:
         specifier: ^0.19.3
-        version: 0.19.3
+        version: 0.19.3(patch_hash=110ffacb2906c5be466d31a2d7e4a21cc364eec45f7028b131398cdfb355a88c)
       lucide-react:
         specifier: ^1.45.0
         version: 1.47.0(react@19.3.0)
@@ -7858,7 +7863,7 @@ snapshots:
       '@tanstack/query-core': 5.102.8
       react: 19.3.0
 
-  '@tauri-apps/api@2.11.1': {}
+  '@tauri-apps/api@2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)': {}
 
   '@tauri-apps/cli-darwin-arm64@2.11.4':
     optional: true
@@ -7909,27 +7914,27 @@ snapshots:
 
   '@tauri-apps/plugin-deep-link@2.4.10':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-dialog@2.7.3':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-http@2.6.1':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-opener@2.5.5':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-process@2.3.1':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-updater@2.11.0':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@topcli/prompts@4.0.0': {}
 
@@ -8288,7 +8293,7 @@ snapshots:
 
   '@webext-core/fake-browser@2.0.1':
     dependencies:
-      '@wxt-dev/browser': 0.2.2
+      '@wxt-dev/browser': 0.2.2(patch_hash=ce52d49a3948aff84bf7221a2e9b13524f14da8e44f22f846787c4864186c08f)
       lodash.merge: 4.6.2
 
   '@webext-core/isolated-element@1.1.5':
@@ -8304,7 +8309,7 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
-  '@wxt-dev/browser@0.2.2':
+  '@wxt-dev/browser@0.2.2(patch_hash=ce52d49a3948aff84bf7221a2e9b13524f14da8e44f22f846787c4864186c08f)':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
@@ -8754,7 +8759,7 @@ snapshots:
 
   defu@6.1.7: {}
 
-  defuddle@0.19.3:
+  defuddle@0.19.3(patch_hash=110ffacb2906c5be466d31a2d7e4a21cc364eec45f7028b131398cdfb355a88c):
     dependencies:
       commander: 12.1.0
     optionalDependencies:
@@ -11859,7 +11864,7 @@ snapshots:
       '@webext-core/fake-browser': 2.0.1
       '@webext-core/isolated-element': 1.1.5
       '@webext-core/match-patterns': 2.0.0
-      '@wxt-dev/browser': 0.2.2
+      '@wxt-dev/browser': 0.2.2(patch_hash=ce52d49a3948aff84bf7221a2e9b13524f14da8e44f22f846787c4864186c08f)
       '@wxt-dev/storage': 1.2.8
       c12: 3.3.4(magicast@0.5.3)
       cac: 7.0.0

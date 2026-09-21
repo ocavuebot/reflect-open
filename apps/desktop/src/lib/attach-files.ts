@@ -1,8 +1,8 @@
 import { open } from '@tauri-apps/plugin-dialog'
 import { assetFileName, errorMessage, importAsset } from '@reflect/core'
-import { noteEditorHandleFor } from '@/editor/editor-handle-registry'
-import type { CommandContext } from '@/lib/commands/types'
-import { startOperation } from '@/lib/operations'
+import { noteEditorHandleFor } from '@/editor/editor-handle-registry.ts'
+import type { CommandContext } from '@/lib/commands/types.ts'
+import { startOperation } from '@/lib/operations.ts'
 
 function basenameOf(sourcePath: string): string {
   const segments = sourcePath.split(/[/\\]/)

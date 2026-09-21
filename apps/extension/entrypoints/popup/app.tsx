@@ -1,17 +1,17 @@
 import { parseXPostId } from '@post-embed/schema'
 import { z } from 'zod'
 import { useEffect, useRef, useState, type FormEvent, type ReactElement } from 'react'
-import { PopupHeader } from './header'
+import { PopupHeader } from './header.tsx'
 import { browser } from 'wxt/browser'
-import { readQueue } from '@/lib/flush'
-import type { FlushResult } from '@/lib/messages'
-import { saveCapture } from '@/lib/save-capture'
+import { readQueue } from '@/lib/flush.ts'
+import type { FlushResult } from '@/lib/messages.ts'
+import { saveCapture } from '@/lib/save-capture.ts'
 import {
   readIncludePageTextPreference,
   writeIncludePageTextPreference,
-} from '@/lib/popup-preferences'
-import { tryExtractPageText } from './extract-page-text'
-import { useCapturedPage } from './use-captured-page'
+} from '@/lib/popup-preferences.ts'
+import { tryExtractPageText } from './extract-page-text.ts'
+import { useCapturedPage } from './use-captured-page.ts'
 
 /**
  * The capture popup: a snapshot of the page, an optional note, one Save.

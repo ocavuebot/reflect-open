@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils.ts'
 
 interface AppShellProps {
   /** The workspace sidebar; omit to render the note pane edge-to-edge. */

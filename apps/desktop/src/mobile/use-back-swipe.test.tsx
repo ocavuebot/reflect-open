@@ -1,7 +1,7 @@
 import { useRef, type ReactElement } from 'react'
 import { render } from 'vitest-browser-react'
 import { describe, expect, it, vi } from 'vitest'
-import { useBackSwipe } from './use-back-swipe'
+import { useBackSwipe } from './use-back-swipe.ts'
 
 /**
  * The scroll blocker's lifecycle: the non-passive `touchmove` listener must

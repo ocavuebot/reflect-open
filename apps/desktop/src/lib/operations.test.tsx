@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act } from 'react'
 import { renderHook } from 'vitest-browser-react'
-import { resetOperations, startOperation, useOperations } from './operations'
+import { resetOperations, startOperation, useOperations } from './operations.ts'
 
 beforeEach(() => {
   vi.useFakeTimers()

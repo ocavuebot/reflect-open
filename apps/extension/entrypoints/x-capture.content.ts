@@ -6,7 +6,7 @@ import {
   captureLookupRequestSchema,
   X_CAPTURE_CHANNEL,
   type CaptureLookupResponse,
-} from '@/lib/x-capture-messages'
+} from '@/lib/x-capture-messages.ts'
 
 export default defineContentScript({
   matches: ['https://x.com/*'],

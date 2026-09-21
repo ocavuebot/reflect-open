@@ -13,9 +13,9 @@ import {
   type GraphInfo,
   type IcloudSweepScope,
 } from '@reflect/core'
-import { dirtyOpenPaths } from '@/editor/open-documents'
-import { throttledInvalidateIndexQueries } from '@/lib/query-client'
-import { attachResumeListeners } from '@/lib/resume-listeners'
+import { dirtyOpenPaths } from '@/editor/open-documents.ts'
+import { throttledInvalidateIndexQueries } from '@/lib/query-client.ts'
+import { attachResumeListeners } from '@/lib/resume-listeners.ts'
 
 /**
  * Whether a graph root lives under iCloud Drive: the app's container and the

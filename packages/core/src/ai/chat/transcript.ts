@@ -1,6 +1,6 @@
 import type { ModelMessage } from '@reflect/modules/ai'
-import type { ChatStreamEvent } from './stream-chat'
-import type { NoteToolCall, NoteToolResult } from './tools'
+import type { ChatStreamEvent } from './stream-chat.ts'
+import type { NoteToolCall, NoteToolResult } from './tools.ts'
 
 /**
  * The chat conversation model (Plan 10). A {@link ChatTurn} is the single

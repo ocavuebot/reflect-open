@@ -10,7 +10,7 @@ import type {
   GraphInfo,
   Settings,
 } from '@reflect/core'
-import type { NativeRecordingPart } from '@/mobile/use-native-audio-recorder'
+import type { NativeRecordingPart } from '@/mobile/use-native-audio-recorder.ts'
 
 const captureAudioMemoPart = vi.hoisted(() =>
   vi.fn<(input: CaptureAudioMemoPartInput) => Promise<CaptureAudioMemoOutcome>>(),
@@ -165,7 +165,7 @@ vi.mock('@/providers/settings-provider', () => ({
   useSettings: () => ({ settings: SETTINGS.current as unknown as Settings }),
 }))
 
-const { MobileAudioMemoProvider, useMobileAudioMemo } = await import('./audio-memo-provider')
+const { MobileAudioMemoProvider, useMobileAudioMemo } = await import('./audio-memo-provider.tsx')
 
 const GRAPH: GraphInfo = { root: '/notes', name: 'Notes', generation: 3 }
 

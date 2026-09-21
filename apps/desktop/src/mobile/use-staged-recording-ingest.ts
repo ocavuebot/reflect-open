@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { listStaged } from '@reflect/core'
-import { isNativeShell } from '@/lib/platform'
+import { isNativeShell } from '@/lib/platform.ts'
 import {
   claimStagedPath,
   isStagedPathClaimed,
   type NativeRecordingPart,
-} from '@/mobile/use-native-audio-recorder'
+} from '@/mobile/use-native-audio-recorder.ts'
 
 /**
  * The orphan scan (audio-memos wave 1): staged segments no live flow owns —

@@ -1,6 +1,6 @@
-import { parseEnvPlatform } from '@/lib/env'
-import { warmMobileStorage } from '@/lib/mobile-boot-warm'
-import { MobileRoot } from '@/mobile/mobile-root'
+import { parseEnvPlatform } from '@/lib/env.ts'
+import { warmMobileStorage } from '@/lib/mobile-boot-warm.ts'
+import { MobileRoot } from '@/mobile/mobile-root.tsx'
 import type { ReactElement } from 'react'
 
 const platform = parseEnvPlatform() === 'ios' ? 'ios' : 'android'

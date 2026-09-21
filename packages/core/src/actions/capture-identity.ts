@@ -1,4 +1,4 @@
-import { assetPath, dailyPath, notePath } from '../graph/paths'
+import { assetPath, dailyPath, notePath } from '../graph/paths.ts'
 
 const INBOX_PREFIX = '.reflect/inbox/'
 

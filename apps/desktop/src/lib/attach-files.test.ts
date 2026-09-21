@@ -3,10 +3,10 @@ import { setBridge } from '@reflect/core'
 import {
   registerNoteEditorHandle,
   unregisterNoteEditorHandle,
-} from '@/editor/editor-handle-registry'
-import type { NoteEditorHandle } from '@/editor/note-editor'
-import type { CommandContext } from '@/lib/commands/types'
-import { attachFilesToNote } from './attach-files'
+} from '@/editor/editor-handle-registry.ts'
+import type { NoteEditorHandle } from '@/editor/note-editor.tsx'
+import type { CommandContext } from '@/lib/commands/types.ts'
+import { attachFilesToNote } from './attach-files.ts'
 
 const { openMock } = vi.hoisted(() => ({ openMock: vi.fn() }))
 vi.mock('@tauri-apps/plugin-dialog', () => ({ open: openMock }))

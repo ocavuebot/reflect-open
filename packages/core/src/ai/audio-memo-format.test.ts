@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { MockLanguageModelV3 } from '@reflect/modules/ai/test'
 import type { LanguageModelV3Usage } from '@ai-sdk/provider'
-import type { AiProviderConfig } from '../settings/schema'
-import { formatAudioMemoTranscript } from './audio-memo-format'
-import { languageModel } from './language-model'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import { formatAudioMemoTranscript } from './audio-memo-format.ts'
+import { languageModel } from './language-model.ts'
 
 vi.mock('./language-model', () => ({
   languageModel: vi.fn(),

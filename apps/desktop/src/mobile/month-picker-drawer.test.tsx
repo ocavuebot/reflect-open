@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { MonthPickerDrawer } from './month-picker-drawer'
+import { MonthPickerDrawer } from './month-picker-drawer.tsx'
 
 /**
  * The month title's picker sheet: a year pager over a twelve-month grid.

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { applyProjection, connectIndex, openMigratedIndex, project } from './flow-test-harness'
-import { suggestWikiLinkTargets, suggestWikiTargets } from './queries'
+import { setBridge } from '../ipc/bridge.ts'
+import { applyProjection, connectIndex, openMigratedIndex, project } from './flow-test-harness.ts'
+import { suggestWikiLinkTargets, suggestWikiTargets } from './queries.ts'
 
 /**
  * End-to-end flow for usage ranking: notes are projected from real Markdown

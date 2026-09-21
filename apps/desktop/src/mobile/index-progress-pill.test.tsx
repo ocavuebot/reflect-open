@@ -1,8 +1,8 @@
 import { render } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { setIndexProgress } from '@/lib/index-progress'
-import { publishKeyboardHeight } from '@/mobile/use-keyboard'
-import { IndexProgressPill } from './index-progress-pill'
+import { setIndexProgress } from '@/lib/index-progress.ts'
+import { publishKeyboardHeight } from '@/mobile/use-keyboard.ts'
+import { IndexProgressPill } from './index-progress-pill.tsx'
 
 /**
  * The "Preparing notes…" pill gates on the pass doing real work (`worked` =

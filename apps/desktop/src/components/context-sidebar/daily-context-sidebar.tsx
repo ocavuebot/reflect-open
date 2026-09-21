@@ -1,13 +1,13 @@
 import type { ReactElement } from 'react'
 import { dailyPath } from '@reflect/core'
-import { DailyEventsSection } from './daily-events-section'
-import { DayCalendar } from './day-calendar'
-import { NoteActionsSection } from './note-actions-section'
-import { PublishedUrlSection } from './published-url-section'
-import { SimilarNotesSection } from './similar-notes-section'
-import { useToday } from '@/lib/use-today'
-import { cn } from '@/lib/utils'
-import { hasMacosTitleBarOverlay } from '@/lib/window-chrome'
+import { DailyEventsSection } from './daily-events-section.tsx'
+import { DayCalendar } from './day-calendar.tsx'
+import { NoteActionsSection } from './note-actions-section.tsx'
+import { PublishedUrlSection } from './published-url-section.tsx'
+import { SimilarNotesSection } from './similar-notes-section.tsx'
+import { useToday } from '@/lib/use-today.ts'
+import { cn } from '@/lib/utils.ts'
+import { hasMacosTitleBarOverlay } from '@/lib/window-chrome.ts'
 
 interface DailyContextSidebarProps {
   /** The day the sidebar describes — a validated ISO date from the route. */

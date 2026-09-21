@@ -5,8 +5,8 @@ import { userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
 import type { NoteTagFacet } from '@reflect/core'
-import { FilterBar } from './filter-bar'
-import { EMPTY_ALL_NOTES_FILTERS, type AllNotesFilters } from './filter-state'
+import { FilterBar } from './filter-bar.tsx'
+import { EMPTY_ALL_NOTES_FILTERS, type AllNotesFilters } from './filter-state.ts'
 
 /**
  * The filter badge row (Plan 19): chips toggle or open pickers, everything

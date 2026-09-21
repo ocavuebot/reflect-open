@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { ReflectError } from '../errors'
-import { captureMetaFetch, captureOEmbedFetch } from '../graph/commands'
-import { scrapePageMeta } from './meta-scrape'
+import { ReflectError } from '../errors.ts'
+import { captureMetaFetch, captureOEmbedFetch } from '../graph/commands.ts'
+import { scrapePageMeta } from './meta-scrape.ts'
 
 vi.mock('../graph/commands', () => ({
   captureMetaFetch: vi.fn(),

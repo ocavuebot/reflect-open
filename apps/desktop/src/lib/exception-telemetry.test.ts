@@ -4,7 +4,7 @@ import {
   createExceptionTelemetryOptions,
   parseExceptionTelemetryDsn,
   scrubExceptionEvent,
-} from './exception-telemetry'
+} from './exception-telemetry.ts'
 
 describe('parseExceptionTelemetryDsn', () => {
   it('accepts only the production Reflect Sentry project', () => {

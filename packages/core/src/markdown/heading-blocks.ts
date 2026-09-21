@@ -1,4 +1,4 @@
-import type { Heading } from './model'
+import type { Heading } from './model.ts'
 
 /**
  * The headings that open a section: those `parseNote` saw as direct blocks of

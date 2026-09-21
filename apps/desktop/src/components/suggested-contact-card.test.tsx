@@ -3,8 +3,8 @@ import { page, userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
-import { SuggestedContactCard } from './suggested-contact-card'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { SuggestedContactCard } from './suggested-contact-card.tsx'
 
 // The card reads the graph (generation for writes) and the contacts opt-in;
 // both providers are per-app plumbing the component test doesn't need.

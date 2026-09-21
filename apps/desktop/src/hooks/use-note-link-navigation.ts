@@ -1,8 +1,8 @@
 import { useCallback, useLayoutEffect, useRef } from 'react'
-import { openRouteInNewWindow } from '@/lib/windows/open-in-new-window'
-import { useLinkIntentGuard } from '@/lib/windows/use-link-intent-guard'
-import type { NoteRoute } from '@/routing/route'
-import { useRouter } from '@/routing/router'
+import { openRouteInNewWindow } from '@/lib/windows/open-in-new-window.ts'
+import { useLinkIntentGuard } from '@/lib/windows/use-link-intent-guard.ts'
+import type { NoteRoute } from '@/routing/route.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 /** Open one concrete note from a link-like UI control. */
 export type NoteLinkNavigation = (options: { target: NoteRoute; openInNewWindow: boolean }) => void

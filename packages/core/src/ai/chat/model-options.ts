@@ -1,6 +1,6 @@
-import type { AiProviderConfig, AiProviderId, ChatModelSelection } from '../../settings/schema'
-import { aiProvider } from '../provider-catalog'
-import { defaultAiProvider, type AiProvidersState } from '../provider-config'
+import type { AiProviderConfig, AiProviderId, ChatModelSelection } from '../../settings/schema.ts'
+import { aiProvider } from '../provider-catalog.ts'
+import { defaultAiProvider, type AiProvidersState } from '../provider-config.ts'
 
 /**
  * The chat screen's model picker (Plan 10): every configured provider offers

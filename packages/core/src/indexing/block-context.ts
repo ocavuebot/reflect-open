@@ -1,9 +1,9 @@
 import type { SyntaxNode, Tree } from '@meowdown/markdown'
-import { parseFrontmatter, splitFrontmatter } from '../markdown/frontmatter'
-import { parseBody } from '../markdown/grammar'
-import { unescapeMarkdownText } from '../markdown/plain-text'
-import { normalizeWikiTarget } from '../markdown/resolve'
-import { isWikiNodeName, wikiBracketStart } from '../markdown/wiki-nodes'
+import { parseFrontmatter, splitFrontmatter } from '../markdown/frontmatter.ts'
+import { parseBody } from '../markdown/grammar.ts'
+import { unescapeMarkdownText } from '../markdown/plain-text.ts'
+import { normalizeWikiTarget } from '../markdown/resolve.ts'
+import { isWikiNodeName, wikiBracketStart } from '../markdown/wiki-nodes.ts'
 
 /**
  * Block-level context extraction for the backlinks panel, ported from old

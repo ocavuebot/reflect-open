@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { ReflectError } from '../errors'
-import { deleteSecret, getSecret, setSecret } from '../secrets/keychain'
-import { apiHeaders, JSON_HEADERS, readJson, type FetchFn } from './github-api'
+import { ReflectError } from '../errors.ts'
+import { deleteSecret, getSecret, setSecret } from '../secrets/keychain.ts'
+import { apiHeaders, JSON_HEADERS, readJson, type FetchFn } from './github-api.ts'
 
 /**
  * The Reflect GitHub App's client id, used by the device flow. Public by

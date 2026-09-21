@@ -3,7 +3,7 @@ import {
   isReflectManagedNote,
   isReflectManagedNotePath,
   isValidReflectNoteId,
-} from './note-management'
+} from './note-management.ts'
 
 const VALID_ID = '01hv3xq7c2dm8k4t9w5e6r1n98'
 

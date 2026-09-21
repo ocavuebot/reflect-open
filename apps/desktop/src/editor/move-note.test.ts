@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { onNoteMoved } from '@/lib/note-moves'
-import { followHealedMove, moveNoteCarryingSession } from './move-note'
-import type { NoteSession } from './note-session'
-import { openSession, registerOpenDocument } from './open-documents'
+import { onNoteMoved } from '@/lib/note-moves.ts'
+import { followHealedMove, moveNoteCarryingSession } from './move-note.ts'
+import type { NoteSession } from './note-session.ts'
+import { openSession, registerOpenDocument } from './open-documents.ts'
 
 /**
  * The shared move helper's carry/compensate contract (Plan 17): the session

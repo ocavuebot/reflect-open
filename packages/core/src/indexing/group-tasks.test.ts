@@ -4,8 +4,8 @@ import {
   groupTasks,
   taskDateBucket,
   visibleTaskBreadcrumbs,
-} from './group-tasks'
-import type { OpenTask } from './queries'
+} from './group-tasks.ts'
+import type { OpenTask } from './queries.ts'
 
 const TODAY = '2026-06-14'
 const PAST = '2026-06-10'

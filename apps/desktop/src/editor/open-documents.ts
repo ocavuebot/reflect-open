@@ -1,4 +1,4 @@
-import type { NoteSession } from './note-session'
+import type { NoteSession } from './note-session.ts'
 
 /**
  * The open note documents, as one app-global service (foundations hardening,

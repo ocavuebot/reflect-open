@@ -4,13 +4,13 @@ import type { ReactNode } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { open } from '@tauri-apps/plugin-dialog'
 import { setBridge } from '@reflect/core'
-import { GraphProvider, useGraph } from './graph-provider'
-import { SettingsProvider } from './settings-provider'
-import { queryClient as appQueryClient, queryKeys } from '@/lib/query-client'
+import { GraphProvider, useGraph } from './graph-provider.tsx'
+import { SettingsProvider } from './settings-provider.tsx'
+import { queryClient as appQueryClient, queryKeys } from '@/lib/query-client.ts'
 
 vi.mock('@tauri-apps/plugin-dialog', () => ({ open: vi.fn() }))
 vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform')>()),
+  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
   isNativeShell: () => true,
 }))
 

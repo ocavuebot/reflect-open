@@ -3,11 +3,11 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import type { ReactNode } from 'react'
 import { setBridge, type AppPlatform } from '@reflect/core'
-import { usePaywallRequested } from '@/hooks/use-paywall-requested'
-import { resetLocalStorageStores } from '@/lib/local-storage'
-import { queryKeys } from '@/lib/query-client'
-import { SettingsProvider } from '@/providers/settings-provider'
-import { usePaywallGate, type PaywallGate } from './use-paywall-gate'
+import { usePaywallRequested } from '@/hooks/use-paywall-requested.ts'
+import { resetLocalStorageStores } from '@/lib/local-storage.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { SettingsProvider } from '@/providers/settings-provider.tsx'
+import { usePaywallGate, type PaywallGate } from './use-paywall-gate.ts'
 
 /**
  * The gate's contract, one case per way in and out of the paywall. The

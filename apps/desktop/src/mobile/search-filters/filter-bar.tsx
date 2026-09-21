@@ -1,16 +1,16 @@
 import { useState, type ReactElement } from 'react'
 import { X } from 'lucide-react'
 import { displayNoteTitle, foldTag, type NoteTagFacet } from '@reflect/core'
-import { FilterChip } from './filter-chip'
+import { FilterChip } from './filter-chip.tsx'
 import {
   EMPTY_ALL_NOTES_FILTERS,
   hasActiveFilters,
   type AllNotesFilters,
   type NoteFilterRef,
-} from './filter-state'
-import { NotePickerDrawer } from './note-picker-drawer'
-import { TagFilterDrawer } from './tag-filter-drawer'
-import { UpdatedFilterDrawer } from './updated-filter-drawer'
+} from './filter-state.ts'
+import { NotePickerDrawer } from './note-picker-drawer.tsx'
+import { TagFilterDrawer } from './tag-filter-drawer.tsx'
+import { UpdatedFilterDrawer } from './updated-filter-drawer.tsx'
 
 type OpenDrawer = 'tags' | 'linkedTo' | 'linkedBy' | 'updated' | null
 

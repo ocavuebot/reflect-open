@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
-import { createDocumentBinding, type BindFactories } from './document-binding'
-import type { NoteSession } from './note-session'
-import { openSession } from './open-documents'
-import type { RenameCoordinator } from './rename-coordinator'
+import { createDocumentBinding, type BindFactories } from './document-binding.ts'
+import type { NoteSession } from './note-session.ts'
+import { openSession } from './open-documents.ts'
+import type { RenameCoordinator } from './rename-coordinator.ts'
 
 /**
  * The create/adopt/teardown/hand-off protocol, driven directly — the React

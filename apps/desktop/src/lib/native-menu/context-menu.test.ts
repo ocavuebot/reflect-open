@@ -24,7 +24,7 @@ const menuNew = vi.hoisted(() =>
 vi.mock('@tauri-apps/api/core', () => ({ isTauri }))
 vi.mock('@tauri-apps/api/menu', () => ({ Menu: { new: menuNew } }))
 
-const { openNativeContextMenu } = await import('./context-menu')
+const { openNativeContextMenu } = await import('./context-menu.ts')
 
 beforeEach(() => {
   isTauri.mockReset().mockReturnValue(true)

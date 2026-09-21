@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState, type ReactElement } from 'react'
 import { openUrl } from '@tauri-apps/plugin-opener'
 import { isDeviceFlowConfigured, saveGithubAuth, type GithubUser } from '@reflect/core'
-import { InlineAlert } from '@/components/inline-alert'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { useAsyncAction } from '@/hooks/use-async-action'
-import { useDeviceFlowAuth } from '@/hooks/use-device-flow-auth'
-import { fetchSignedInUser } from '@/lib/github-account'
-import { invalidateGithubAuth } from '@/lib/github-auth-state'
+import { InlineAlert } from '@/components/inline-alert.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { Input } from '@/components/ui/input.tsx'
+import { useAsyncAction } from '@/hooks/use-async-action.ts'
+import { useDeviceFlowAuth } from '@/hooks/use-device-flow-auth.ts'
+import { fetchSignedInUser } from '@/lib/github-account.ts'
+import { invalidateGithubAuth } from '@/lib/github-auth-state.ts'
 
 interface GithubAuthStepProps {
   /**

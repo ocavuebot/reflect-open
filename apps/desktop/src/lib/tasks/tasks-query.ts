@@ -1,6 +1,6 @@
 import { queryOptions } from '@tanstack/react-query'
 import { getCompletedTasks, getOpenTasks } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client'
+import { queryKeys } from '@/lib/query-client.ts'
 
 /**
  * The TanStack Query key for the open-tasks list, scoped to the graph root so a

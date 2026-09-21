@@ -1,18 +1,21 @@
 import type { GraphInfo, NoteRow, PinnedNote } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client'
-import { FocusedDailyProvider, useSetFocusedDailyDate } from '@/providers/focused-daily-provider'
+import { queryKeys } from '@/lib/query-client.ts'
+import {
+  FocusedDailyProvider,
+  useSetFocusedDailyDate,
+} from '@/providers/focused-daily-provider.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
 import { renderHook } from 'vitest-browser-react'
-import { PaletteProvider, usePalette } from '@/components/command-palette/palette-provider'
-import { listRegisteredBindings } from '@/editor/keymap'
-import { registerAppCommands } from '@/lib/commands/app-commands'
-import { NoteTemplatesProvider } from '@/providers/note-templates-provider'
-import { ShortcutsProvider, useShortcuts } from '@/providers/shortcuts-provider'
-import { SidebarProvider, useSidebar } from '@/providers/sidebar-provider'
-import { useAppShortcuts } from './app-shortcuts'
-import { RouterProvider, useRouter } from './router'
+import { PaletteProvider, usePalette } from '@/components/command-palette/palette-provider.tsx'
+import { listRegisteredBindings } from '@/editor/keymap.ts'
+import { registerAppCommands } from '@/lib/commands/app-commands.ts'
+import { NoteTemplatesProvider } from '@/providers/note-templates-provider.tsx'
+import { ShortcutsProvider, useShortcuts } from '@/providers/shortcuts-provider.tsx'
+import { SidebarProvider, useSidebar } from '@/providers/sidebar-provider.tsx'
+import { useAppShortcuts } from './app-shortcuts.ts'
+import { RouterProvider, useRouter } from './router.tsx'
 
 const commitNoteFrontmatter = vi.hoisted(() => vi.fn(async () => {}))
 const graphState = vi.hoisted((): { graph: GraphInfo | null } => ({

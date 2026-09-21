@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { readBookmarkSettings, writeBookmarkSettings } from './bookmark-settings'
-import { readLikeSettings, writeLikeSettings } from './like-settings'
+import { readBookmarkSettings, writeBookmarkSettings } from './bookmark-settings.ts'
+import { readLikeSettings, writeLikeSettings } from './like-settings.ts'
 
 const store = new Map<string, unknown>()
 

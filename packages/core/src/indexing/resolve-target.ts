@@ -1,7 +1,7 @@
 import { isIsoDate } from '@reflect/utils'
-import { dailyPath } from '../graph/paths'
-import { foldKey } from '../markdown'
-import { db } from './db'
+import { dailyPath } from '../graph/paths.ts'
+import { foldKey } from '../markdown/index.ts'
+import { db } from './db.ts'
 
 /**
  * Resolve a free-form note target — a deep link's `reflect://note/<target>`

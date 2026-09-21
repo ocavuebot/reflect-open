@@ -4,11 +4,11 @@ import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import type { ReactElement } from 'react'
 import { setBridge } from '@reflect/core'
-import { resetOperations, useOperations } from '@/lib/operations'
-import { queryKeys } from '@/lib/query-client'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
-import { AllNotesScreen } from './all-notes-screen'
+import { resetOperations, useOperations } from '@/lib/operations.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { AllNotesScreen } from './all-notes-screen.tsx'
 
 /**
  * The All Notes screen over the real query layer and a fake IPC bridge: rows
@@ -40,7 +40,7 @@ vi.mock('@/providers/settings-provider', () => ({
   }),
 }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 

@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { attachResumeListeners } from '@/lib/resume-listeners'
+import { attachResumeListeners } from '@/lib/resume-listeners.ts'
 
 beforeEach(() => {
   vi.useFakeTimers()

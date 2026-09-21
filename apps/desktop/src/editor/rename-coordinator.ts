@@ -11,13 +11,13 @@ import {
   slugPathForTitle,
   writeNote,
 } from '@reflect/core'
-import { placeOldTitleAlias } from './alias-placement'
-import { moveNoteCarryingSession } from './move-note'
-import type { NoteContentOrigin } from './note-session'
-import { composeRenameFailure, type RenamePhaseFailures } from './rename-failure'
-import { startOperation } from '@/lib/operations'
-import { createTitleRenameTracker } from './title-rename'
-import type { TitleRename } from './title-rename'
+import { placeOldTitleAlias } from './alias-placement.ts'
+import { moveNoteCarryingSession } from './move-note.ts'
+import type { NoteContentOrigin } from './note-session.ts'
+import { composeRenameFailure, type RenamePhaseFailures } from './rename-failure.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { createTitleRenameTracker } from './title-rename.ts'
+import type { TitleRename } from './title-rename.ts'
 
 /**
  * Owns one note's auto-rename lifecycle: the settled-title tracker, serialized

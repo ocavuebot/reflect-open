@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactElement } from 'react'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
 
 interface SummaryFixture {
   importedFiles: number
@@ -40,7 +40,7 @@ vi.mock('@/providers/graph-provider', () => ({
   useGraph: () => ({ refreshIndex }),
 }))
 
-const { V1ImportProvider, useV1Import } = await import('./v1-import-provider')
+const { V1ImportProvider, useV1Import } = await import('./v1-import-provider.tsx')
 
 function summary(overrides: Partial<SummaryFixture> = {}): SummaryFixture {
   return {

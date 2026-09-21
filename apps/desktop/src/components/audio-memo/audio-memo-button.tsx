@@ -1,12 +1,12 @@
 import { useRef, type ComponentProps, type ReactElement } from 'react'
 import { Square } from 'lucide-react'
-import { RecordingPopover } from '@/components/audio-memo/recording-popover'
-import { MicIcon } from '@/components/icons/mic-icon'
-import { Button } from '@/components/ui/button'
-import { Popover } from '@/components/ui/popover'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { cn } from '@/lib/utils'
-import { useAudioMemo } from '@/providers/audio-memo-provider'
+import { RecordingPopover } from '@/components/audio-memo/recording-popover.tsx'
+import { MicIcon } from '@/components/icons/mic-icon.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { Popover } from '@/components/ui/popover.tsx'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip.tsx'
+import { cn } from '@/lib/utils.ts'
+import { useAudioMemo } from '@/providers/audio-memo-provider.tsx'
 
 /**
  * The microphone beside the sidebar search box. Idle it starts a memo;

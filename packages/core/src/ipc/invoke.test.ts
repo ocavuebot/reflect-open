@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { z } from 'zod'
-import { isAppError } from '../errors'
-import { setBridge } from './bridge'
-import { call } from './invoke'
+import { isAppError } from '../errors.ts'
+import { setBridge } from './bridge.ts'
+import { call } from './invoke.ts'
 
 afterEach(() => {
   setBridge(null)

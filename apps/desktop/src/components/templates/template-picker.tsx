@@ -10,13 +10,13 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from '@/components/ui/command'
-import { noteEditorHandleFor } from '@/editor/editor-handle-registry'
-import type { CommandContext } from '@/lib/commands/types'
-import { insertTemplate } from '@/lib/note-templates'
-import { createTemplatesQueryOptions } from '@/lib/query-options'
-import { useGraph } from '@/providers/graph-provider'
-import { useNoteTemplates } from '@/providers/note-templates-provider'
+} from '@/components/ui/command.tsx'
+import { noteEditorHandleFor } from '@/editor/editor-handle-registry.ts'
+import type { CommandContext } from '@/lib/commands/types.ts'
+import { insertTemplate } from '@/lib/note-templates.ts'
+import { createTemplatesQueryOptions } from '@/lib/query-options.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useNoteTemplates } from '@/providers/note-templates-provider.tsx'
 
 /**
  * The "Insert template…" picker (docs/porting/note-templates.md): the graph's

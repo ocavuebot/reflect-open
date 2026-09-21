@@ -6,11 +6,11 @@ import {
   resolveOrCreateNoteWithTitle,
   resolveWikiTarget,
 } from '@reflect/core'
-import { reportAmbiguousNoteTitle } from '@/editor/ambiguous-note-feedback'
-import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation'
-import { startOperation } from '@/lib/operations'
-import { useLinkIntentGuard } from '@/lib/windows/use-link-intent-guard'
-import { routeForPath, type NoteRoute } from '@/routing/route'
+import { reportAmbiguousNoteTitle } from '@/editor/ambiguous-note-feedback.ts'
+import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { useLinkIntentGuard } from '@/lib/windows/use-link-intent-guard.ts'
+import { routeForPath, type NoteRoute } from '@/routing/route.ts'
 
 function reportUnavailableNoteTitle(title: string): void {
   startOperation('Opening link').fail(

@@ -8,8 +8,8 @@ import {
   writeNote,
   type GraphInfo,
 } from '@reflect/core'
-import { invalidateIndexQueries } from '@/lib/query-client'
-import { useConflictResolution } from './use-conflict-resolution'
+import { invalidateIndexQueries } from '@/lib/query-client.ts'
+import { useConflictResolution } from './use-conflict-resolution.ts'
 
 vi.mock('@reflect/core', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@reflect/core')>()),

@@ -9,13 +9,16 @@ import {
   syncAppStore,
 } from '@reflect/core'
 import appIcon from '@/assets/app-icon.png'
-import { Button } from '@/components/ui/button'
-import { Spinner } from '@/components/ui/spinner'
-import { openUrlSync } from '@/lib/open-url'
-import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client'
-import { cn } from '@/lib/utils'
-import { PRIVACY_POLICY_URL, TERMS_OF_USE_URL } from '@/mobile/legal-urls'
-import { refetchActiveSubscription, useActiveSubscription } from '@/mobile/use-active-subscription'
+import { Button } from '@/components/ui/button.tsx'
+import { Spinner } from '@/components/ui/spinner.tsx'
+import { openUrlSync } from '@/lib/open-url.ts'
+import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client.ts'
+import { cn } from '@/lib/utils.ts'
+import { PRIVACY_POLICY_URL, TERMS_OF_USE_URL } from '@/mobile/legal-urls.ts'
+import {
+  refetchActiveSubscription,
+  useActiveSubscription,
+} from '@/mobile/use-active-subscription.ts'
 
 type PurchasePlan = 'monthly' | 'yearly'
 

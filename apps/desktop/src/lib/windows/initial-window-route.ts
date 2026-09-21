@@ -1,6 +1,6 @@
 import { isDaily, isNotePath } from '@reflect/core'
-import { parseDeepLink } from '@/lib/deep-links/parse'
-import { routeForPath, type Route } from '@/routing/route'
+import { parseDeepLink } from '@/lib/deep-links/parse.ts'
+import { routeForPath, type Route } from '@/routing/route.ts'
 
 /**
  * A note window's first route, derived from its initial deep link BEFORE the

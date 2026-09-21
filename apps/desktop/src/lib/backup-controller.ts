@@ -25,14 +25,14 @@ import {
   type SyncStatus,
   type Unlisten,
 } from '@reflect/core'
-import { setBackupFlusher } from '@/lib/backup-flush'
-import { invalidateGithubAuth } from '@/lib/github-auth-state'
-import { startOperation } from '@/lib/operations'
-import { isNativeShell } from '@/lib/platform'
-import { isMobileSurface } from '@/lib/platform-surface'
-import { providerFetch } from '@/lib/provider-fetch'
-import { throttledInvalidateIndexQueries } from '@/lib/query-client'
-import { attachResumeListeners } from '@/lib/resume-listeners'
+import { setBackupFlusher } from '@/lib/backup-flush.ts'
+import { invalidateGithubAuth } from '@/lib/github-auth-state.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { isNativeShell } from '@/lib/platform.ts'
+import { isMobileSurface } from '@/lib/platform-surface.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
+import { throttledInvalidateIndexQueries } from '@/lib/query-client.ts'
+import { attachResumeListeners } from '@/lib/resume-listeners.ts'
 
 /**
  * Backup state as the UI sees it. `connected` means the graph has a repo and

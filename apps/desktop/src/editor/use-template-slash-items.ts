@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
 import type { SlashMenuItem, SlashMenuSearchHandler } from '@meowdown/react'
 import { displayNoteTitle, hasBridge, listTemplates } from '@reflect/core'
-import { insertTemplate } from '@/lib/note-templates'
-import { useGraph } from '@/providers/graph-provider'
-import type { NoteEditorHandle } from './note-editor'
+import { insertTemplate } from '@/lib/note-templates.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import type { NoteEditorHandle } from './note-editor.tsx'
 
 /**
  * The editor's `/` menu rows for note templates (docs/porting/note-templates.md):

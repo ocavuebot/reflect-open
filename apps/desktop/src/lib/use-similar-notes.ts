@@ -1,12 +1,12 @@
 import { useEffect, useMemo } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { isDaily, relatedNotes, type RetrievalHit } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { readNoteSource } from '@/lib/note-frontmatter'
-import { isOstensiblyEmptyNoteSource } from '@/lib/note-emptiness'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { readNoteSource } from '@/lib/note-frontmatter.ts'
+import { isOstensiblyEmptyNoteSource } from '@/lib/note-emptiness.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 const SIMILAR_NOTES_LIMIT = 6
 

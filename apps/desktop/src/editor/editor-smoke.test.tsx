@@ -4,8 +4,8 @@ import { openUrl } from '@tauri-apps/plugin-opener'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import { NoteEditor, type NoteEditorHandle } from '@/editor/note-editor'
-import '@/test-utils/locator'
+import { NoteEditor, type NoteEditorHandle } from '@/editor/note-editor.tsx'
+import '@/test-utils/locator.ts'
 
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn() }))
 

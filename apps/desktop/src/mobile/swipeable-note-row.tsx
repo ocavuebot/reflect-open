@@ -1,10 +1,10 @@
 import type { ReactElement, ReactNode } from 'react'
 import { Pin, PinOff, Trash2 } from 'lucide-react'
 import type { HighlightSegment } from '@reflect/core'
-import { formatRecencyLabel } from '@/lib/dates'
-import { SWIPE_ACTION_WIDTH, SwipeActionButton } from '@/mobile/swipe-action-button'
-import { useRowSwipe } from '@/mobile/use-row-swipe'
-import { useSettings } from '@/providers/settings-provider'
+import { formatRecencyLabel } from '@/lib/dates.ts'
+import { SWIPE_ACTION_WIDTH, SwipeActionButton } from '@/mobile/swipe-action-button.tsx'
+import { useRowSwipe } from '@/mobile/use-row-swipe.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /** V1's fixed row height (px) — placeholder resolution never causes jumps. */
 export const NOTE_ROW_HEIGHT = 64

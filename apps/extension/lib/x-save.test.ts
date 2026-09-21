@@ -1,6 +1,6 @@
 import { beforeEach, expect, it, vi } from 'vitest'
-import { saveXPost } from './x-save'
-import { enqueueCapture, flushQueue } from './flush'
+import { saveXPost } from './x-save.ts'
+import { enqueueCapture, flushQueue } from './flush.ts'
 
 const { get, sendMessage } = vi.hoisted(() => ({ get: vi.fn(), sendMessage: vi.fn() }))
 vi.mock('wxt/browser', () => ({ browser: { tabs: { get, sendMessage } } }))

@@ -1,10 +1,10 @@
 import type { ReactElement } from 'react'
 import { setLocalWriteEcho, type AppPlatform } from '@reflect/core'
-import { Toaster } from '@/components/ui/toast'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import { setPlatformSurface } from '@/lib/platform-surface'
-import { MobileApp } from '@/mobile/mobile-app'
-import { GraphProvider } from '@/providers/graph-provider'
+import { Toaster } from '@/components/ui/toast.tsx'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
+import { MobileApp } from '@/mobile/mobile-app.tsx'
+import { GraphProvider } from '@/providers/graph-provider.tsx'
 
 // Mobile has no file watcher: local writes echo their own file-change events
 // in-process (Plan 19, decision 5) so the index, query invalidation, and the

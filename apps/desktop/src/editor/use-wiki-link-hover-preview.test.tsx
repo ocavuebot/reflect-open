@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { render, renderHook } from 'vitest-browser-react'
 import type { ReactNode } from 'react'
 import type { WikilinkHoverHit } from '@meowdown/core'
-import { useWikiLinkHoverPreview } from './use-wiki-link-hover-preview'
+import { useWikiLinkHoverPreview } from './use-wiki-link-hover-preview.tsx'
 
 const mocks = vi.hoisted(() => ({
   resolveExistingWikiTarget: vi.fn(),

@@ -1,13 +1,13 @@
 import { useDeferredValue, useState, type ReactElement } from 'react'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { displayNoteTitle, parseSearchQuery, searchWithFilters } from '@reflect/core'
-import { Button } from '@/components/ui/button'
-import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { queryKeys } from '@/lib/query-client'
-import { SearchInput } from '@/mobile/search-input'
-import { useGraph } from '@/providers/graph-provider'
-import type { NoteFilterRef } from './filter-state'
+import { Button } from '@/components/ui/button.tsx'
+import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { SearchInput } from '@/mobile/search-input.tsx'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import type { NoteFilterRef } from './filter-state.ts'
 
 const PICKER_LIMIT = 20
 

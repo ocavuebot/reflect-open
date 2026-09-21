@@ -1,10 +1,10 @@
 import { useState, type ReactElement } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { weekStartDow } from '@reflect/core'
-import { formatDayLabel } from '@/lib/dates'
-import { addMonths, buildMonthGrid, monthLabel, monthOf, weekdayLabels } from '@/lib/month-grid'
-import { cn } from '@/lib/utils'
-import { useSettings } from '@/providers/settings-provider'
+import { formatDayLabel } from '@/lib/dates.ts'
+import { addMonths, buildMonthGrid, monthLabel, monthOf, weekdayLabels } from '@/lib/month-grid.ts'
+import { cn } from '@/lib/utils.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 interface TaskScheduleGridProps {
   /** Today's live ISO date — anchors the opening month and marks "today". */

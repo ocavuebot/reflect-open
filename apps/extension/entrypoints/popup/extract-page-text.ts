@@ -3,7 +3,7 @@ import {
   EXTRACT_PAGE_TEXT_MESSAGE_TYPE,
   extractPageTextResponseSchema,
   type ExtractPageTextRequest,
-} from '@/lib/page-text'
+} from '@/lib/page-text.ts'
 
 const CAPTURE_CONTENT_SCRIPT = '/content-scripts/capture-content.js'
 

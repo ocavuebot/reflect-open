@@ -1,5 +1,5 @@
 import { differenceInCalendarDays } from 'date-fns'
-import { addDaysIso, parseIsoDate } from './dates'
+import { addDaysIso, parseIsoDate } from './dates.ts'
 
 /**
  * The daily surfaces' virtual window (Plan 06b / Plan 19): a **fixed**

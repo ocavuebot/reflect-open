@@ -1,11 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { readNote, writeNote, type FileChange } from '@reflect/core'
-import { useFileChanges } from '@/lib/use-file-changes'
-import { createDocumentBinding, type DocumentBinding } from './document-binding'
-import type { NoteEditorHandle } from './note-editor'
-import { createRenameCoordinator } from './rename-coordinator'
-import { createNoteSession, INITIAL_NOTE_SNAPSHOT, type NoteSessionSnapshot } from './note-session'
-import { checkRoundTrip } from './roundtrip'
+import { useFileChanges } from '@/lib/use-file-changes.ts'
+import { createDocumentBinding, type DocumentBinding } from './document-binding.ts'
+import type { NoteEditorHandle } from './note-editor.tsx'
+import { createRenameCoordinator } from './rename-coordinator.ts'
+import {
+  createNoteSession,
+  INITIAL_NOTE_SNAPSHOT,
+  type NoteSessionSnapshot,
+} from './note-session.ts'
+import { checkRoundTrip } from './roundtrip.ts'
 
 /**
  * React adapter over the {@link createNoteSession} document state machine: one

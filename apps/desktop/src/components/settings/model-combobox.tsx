@@ -3,7 +3,7 @@ import { useCommandState } from 'cmdk'
 import { ChevronsUpDownIcon } from 'lucide-react'
 import { aiModelLabel, type AiModelOption, type AiProviderId } from '@reflect/core'
 import { getIsComposing } from '@meowdown/core'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Command,
   CommandEmpty,
@@ -11,8 +11,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from '@/components/ui/command'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+} from '@/components/ui/command.tsx'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover.tsx'
 
 interface FilterCountSyncProps {
   countRef: React.MutableRefObject<number>

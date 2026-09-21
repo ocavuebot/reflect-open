@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type ReactElement } from 'react'
-import { monthLabel } from '@/lib/month-grid'
-import { cn } from '@/lib/utils'
-import { usePrefersReducedMotion } from '@/mobile/use-reduced-motion'
+import { monthLabel } from '@/lib/month-grid.ts'
+import { cn } from '@/lib/utils.ts'
+import { usePrefersReducedMotion } from '@/mobile/use-reduced-motion.ts'
 import './month-title.css'
 
 /** Mirrors the animation durations in month-title.css (the fallback timer). */

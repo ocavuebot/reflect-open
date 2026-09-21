@@ -5,7 +5,7 @@ import {
   notePathForRoute,
   routeForPath,
   routesEqual,
-} from './route'
+} from './route.ts'
 
 describe('routeForPath', () => {
   it('routes real daily paths to the daily view', () => {

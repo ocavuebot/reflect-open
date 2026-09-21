@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { readNote } from '../graph/commands'
-import { resolveOrCreateNoteWithTitle } from '../graph/create-note'
-import { ensureBacklinkTarget } from './backlink-target'
+import { readNote } from '../graph/commands.ts'
+import { resolveOrCreateNoteWithTitle } from '../graph/create-note.ts'
+import { ensureBacklinkTarget } from './backlink-target.ts'
 
 vi.mock('../graph/commands', () => ({ readNote: vi.fn() }))
 vi.mock('../graph/create-note', () => ({ resolveOrCreateNoteWithTitle: vi.fn() }))

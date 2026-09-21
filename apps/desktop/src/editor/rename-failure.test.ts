@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { composeRenameFailure } from './rename-failure'
+import { composeRenameFailure } from './rename-failure.ts'
 
 describe('composeRenameFailure', () => {
   const FROM = 'Old Title'

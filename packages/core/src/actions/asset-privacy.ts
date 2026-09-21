@@ -1,8 +1,8 @@
-import { isAppError } from '../errors'
-import { readNote } from '../graph/commands'
-import { assetReferenceMatches, assetReferencingNotePaths } from '../indexing/asset-refs'
-import { parseNote } from '../markdown/extract'
-import { getXArchiveOwners } from '../x-archive'
+import { isAppError } from '../errors.ts'
+import { readNote } from '../graph/commands.ts'
+import { assetReferenceMatches, assetReferencingNotePaths } from '../indexing/asset-refs.ts'
+import { parseNote } from '../markdown/extract.ts'
+import { getXArchiveOwners } from '../x-archive.ts'
 
 /**
  * The asset privacy verdict both asset-description consumers share: the

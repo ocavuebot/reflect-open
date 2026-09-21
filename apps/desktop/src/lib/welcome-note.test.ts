@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { parseNote, setBridge, isPinned } from '@reflect/core'
-import { ensureWelcomeNote, WELCOME_NOTE_PATH, WELCOME_SEEDED_META_KEY } from './welcome-note'
+import { ensureWelcomeNote, WELCOME_NOTE_PATH, WELCOME_SEEDED_META_KEY } from './welcome-note.ts'
 
 interface WrittenNote {
   path: string

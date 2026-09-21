@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { DEFAULT_SETTINGS, type Settings } from '@reflect/core'
-import { DescribeAssetsField } from './describe-assets-field'
+import { DescribeAssetsField } from './describe-assets-field.tsx'
 
 const settingsRef = vi.hoisted(() => ({ current: {} as Settings }))
 const updateSettings = vi.hoisted(() => vi.fn())

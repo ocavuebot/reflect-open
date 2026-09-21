@@ -1,7 +1,7 @@
 import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { useDoubleTap } from './use-double-tap'
+import { useDoubleTap } from './use-double-tap.ts'
 
 async function mountTaps(activeKey: string | null = 'a') {
   return await renderHook((active: string | null = activeKey) => useDoubleTap<string>(active), {

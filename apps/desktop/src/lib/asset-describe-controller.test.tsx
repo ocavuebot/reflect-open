@@ -8,7 +8,7 @@ import type {
 import {
   createAssetDescribeController,
   type AssetDescribeController,
-} from './asset-describe-controller'
+} from './asset-describe-controller.ts'
 
 const reconcileAssetDescriptions = vi.hoisted(() =>
   vi.fn<(input: ReconcileAssetDescriptionsInput) => Promise<ReconcileAssetDescriptionsOutcome>>(),

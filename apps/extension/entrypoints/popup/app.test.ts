@@ -1,7 +1,7 @@
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { expect, it, vi } from 'vitest'
-import { CapturePopup } from './app'
+import { CapturePopup } from './app.tsx'
 
 const captured = vi.hoisted(() => ({
   status: 'ready',

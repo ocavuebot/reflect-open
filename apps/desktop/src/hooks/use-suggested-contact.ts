@@ -10,12 +10,12 @@ import {
   suggestContactForTitle,
   type ContactMatch,
 } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { readNoteSource } from '@/lib/note-frontmatter'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
-import { useContactsAuthorization } from './use-contacts-authorization'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { readNoteSource } from '@/lib/note-frontmatter.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { useContactsAuthorization } from './use-contacts-authorization.ts'
 
 /**
  * The Apple Contact this note's title exactly matches, or `null` — the

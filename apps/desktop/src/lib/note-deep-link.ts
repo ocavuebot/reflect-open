@@ -6,10 +6,10 @@ import {
   newNoteId,
   parseNote,
 } from '@reflect/core'
-import { isIsoDate } from '@/lib/dates'
-import { dailyDeepLink, noteDeepLink } from '@/lib/deep-links/format'
-import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter'
-import { startOperation } from '@/lib/operations'
+import { isIsoDate } from '@/lib/dates.ts'
+import { dailyDeepLink, noteDeepLink } from '@/lib/deep-links/format.ts'
+import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter.ts'
+import { startOperation } from '@/lib/operations.ts'
 
 /**
  * "Copy deep link" (the v1 `alt+mod+l` port): the clipboard gets the most

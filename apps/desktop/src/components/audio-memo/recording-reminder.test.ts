@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { MockToastAddOptions } from '@/test-utils/toast'
-import { showRecordingReminder } from './recording-reminder'
+import type { MockToastAddOptions } from '@/test-utils/toast.ts'
+import { showRecordingReminder } from './recording-reminder.ts'
 
 const toast = vi.hoisted(() => ({
   add: vi.fn<(options: MockToastAddOptions) => string>(),

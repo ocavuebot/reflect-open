@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react'
 import { TRANSCRIPTION_PROMPT_MAX_LENGTH, normalizeTranscriptionPrompt } from '@reflect/core'
-import { useSettings } from '@/providers/settings-provider'
-import { SettingsSection } from './section'
-import { SettingsSwitchField } from './switch-field'
-import { SettingsTextareaField } from './textarea-field'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { SettingsSection } from './section.tsx'
+import { SettingsSwitchField } from './switch-field.tsx'
+import { SettingsTextareaField } from './textarea-field.tsx'
 
 /** Preferences for recording enrichment after the raw audio is safely stored. */
 export function AudioMemosSection(): ReactElement {

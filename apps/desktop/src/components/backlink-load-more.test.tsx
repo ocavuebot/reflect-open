@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { BacklinkLoadMore } from './backlink-load-more'
+import { BacklinkLoadMore } from './backlink-load-more.tsx'
 
 const observerInstances: TestIntersectionObserver[] = []
 

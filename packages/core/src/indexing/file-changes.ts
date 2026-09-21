@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { getBridge, type Unlisten } from '../ipc/bridge'
+import { getBridge, type Unlisten } from '../ipc/bridge.ts'
 
 /**
  * The `index:changed` event stream from the Rust file watcher (Plan 04b): the

@@ -1,13 +1,13 @@
 import { ulid } from 'ulidx'
-import { upsertFrontmatter } from '../markdown/frontmatter'
-import { slugForTitle } from '../markdown/slug'
-import { createNoteIfAbsent } from './commands'
-import { wikiNoteReference } from './note-reference'
-import { notePath } from './paths'
+import { upsertFrontmatter } from '../markdown/frontmatter.ts'
+import { slugForTitle } from '../markdown/slug.ts'
+import { createNoteIfAbsent } from './commands.ts'
+import { wikiNoteReference } from './note-reference.ts'
+import { notePath } from './paths.ts'
 import {
   resolveExistingWikiTarget,
   type ExistingWikiTargetResolution,
-} from './resolve-existing-wiki-target'
+} from './resolve-existing-wiki-target.ts'
 
 /**
  * Note identity at creation (`docs/readable-filenames.md`): regular notes get

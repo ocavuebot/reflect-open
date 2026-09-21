@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parseRepoInput, suggestRepoName } from './github-repos'
+import { parseRepoInput, suggestRepoName } from './github-repos.ts'
 
 describe('parseRepoInput', () => {
   it('accepts owner/name and full GitHub URLs', () => {

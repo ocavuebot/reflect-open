@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type ReactElement } from 'react'
-import { cn } from '@/lib/utils'
-import { scrollToSettingsSection } from './section-scrolling'
-import type { SettingsSectionId } from './sections'
-import { useActiveSettingsSection } from './use-active-settings-section'
-import { useVisibleSettingsSections } from './use-visible-settings-sections'
+import { cn } from '@/lib/utils.ts'
+import { scrollToSettingsSection } from './section-scrolling.ts'
+import type { SettingsSectionId } from './sections.ts'
+import { useActiveSettingsSection } from './use-active-settings-section.ts'
+import { useVisibleSettingsSections } from './use-visible-settings-sections.ts'
 
 /** Where the sliding marker sits, in the rail's own coordinates. */
 interface MarkerPosition {

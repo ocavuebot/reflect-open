@@ -1,4 +1,4 @@
-import { defineDesktopProject } from './vitest.shared'
+import { defineDesktopProject } from './vitest.shared.ts'
 
 export default defineDesktopProject({
   test: {

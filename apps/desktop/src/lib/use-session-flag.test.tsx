@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
-import { useSessionFlag } from './use-session-flag'
+import { useSessionFlag } from './use-session-flag.ts'
 
 beforeEach(() => {
   window.sessionStorage.clear()
