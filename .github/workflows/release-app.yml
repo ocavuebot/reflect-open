@@ -38,6 +38,8 @@ permissions:
 jobs:
   preflight:
     name: Preflight release
+    # Match release-browser-extension.yml: never publish from a fork.
+    if: github.repository == 'team-reflect/reflect-open'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
