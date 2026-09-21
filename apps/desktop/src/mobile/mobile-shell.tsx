@@ -4,7 +4,10 @@ import { useDoubleTap } from '@/hooks/use-double-tap.ts'
 import { MobileFormattingToolbar } from '@/mobile/formatting-toolbar.tsx'
 import { MobileStack } from '@/mobile/mobile-stack.tsx'
 import { MobileTabBar, tabRootFor, type MobileTab } from '@/mobile/mobile-tab-bar.tsx'
-import { EMPTY_ALL_NOTES_FILTERS, type AllNotesFilters } from '@/mobile/search-filters/filter-state.ts'
+import {
+  EMPTY_ALL_NOTES_FILTERS,
+  type AllNotesFilters,
+} from '@/mobile/search-filters/filter-state.ts'
 import { useKeyboardVisible } from '@/mobile/use-keyboard.ts'
 import { useWakeToToday } from '@/mobile/use-wake-to-today.ts'
 import { routesEqual, type Route } from '@/routing/route.ts'

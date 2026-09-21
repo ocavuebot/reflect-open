@@ -11,7 +11,10 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { DEFAULT_SETTINGS, errorMessage, type Settings } from '@reflect/core'
 import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
 import { startOperation } from '@/lib/operations.ts'
-import { createSettingsQueryOptions, createSettingsSaveMutationOptions } from '@/lib/query-options.ts'
+import {
+  createSettingsQueryOptions,
+  createSettingsSaveMutationOptions,
+} from '@/lib/query-options.ts'
 import { setSettingsFlusher } from '@/lib/settings-flush.ts'
 
 interface SettingsContextValue {

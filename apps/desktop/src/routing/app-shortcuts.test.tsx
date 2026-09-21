@@ -1,6 +1,9 @@
 import type { GraphInfo, NoteRow, PinnedNote } from '@reflect/core'
 import { queryKeys } from '@/lib/query-client.ts'
-import { FocusedDailyProvider, useSetFocusedDailyDate } from '@/providers/focused-daily-provider.tsx'
+import {
+  FocusedDailyProvider,
+  useSetFocusedDailyDate,
+} from '@/providers/focused-daily-provider.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'

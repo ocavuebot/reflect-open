@@ -41,7 +41,10 @@ import {
   SettingsValueRow,
   type SegmentedOption,
 } from '@/mobile/settings-list.tsx'
-import { refetchActiveSubscription, useActiveSubscription } from '@/mobile/use-active-subscription.ts'
+import {
+  refetchActiveSubscription,
+  useActiveSubscription,
+} from '@/mobile/use-active-subscription.ts'
 import { useAppStoreEnvironment } from '@/mobile/use-app-store-environment.ts'
 import { useMobileSyncStatus } from '@/mobile/use-sync-status.ts'
 import { useGraph } from '@/providers/graph-provider.tsx'

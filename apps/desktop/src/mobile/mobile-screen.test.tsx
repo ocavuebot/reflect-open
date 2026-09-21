@@ -5,7 +5,10 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { format } from 'date-fns'
 import { act, StrictMode, type ReactElement } from 'react'
 import { setBridge } from '@reflect/core'
-import { clearFormattingToolbar, publishFormattingToolbar } from '@/editor/formatting-toolbar-store.ts'
+import {
+  clearFormattingToolbar,
+  publishFormattingToolbar,
+} from '@/editor/formatting-toolbar-store.ts'
 import { RouterProvider, useRouter } from '@/routing/router.tsx'
 import type { Route } from '@/routing/route.ts'
 import { addDaysIso, formatDayLabel, parseIsoDate, todayIso } from '@/lib/dates.ts'

@@ -15,7 +15,10 @@ import { useEditorAutocomplete } from '@/editor/use-editor-autocomplete.ts'
 import { useTagNavigation } from '@/editor/use-tag-navigation.ts'
 import { useWikiLinkNavigation } from '@/editor/use-wiki-link-navigation.ts'
 import { taskContent } from '@/lib/tasks/task-content.ts'
-import { useTaskEditorFinalizer, type TaskEditorApi } from '@/lib/tasks/use-task-editor-finalizer.ts'
+import {
+  useTaskEditorFinalizer,
+  type TaskEditorApi,
+} from '@/lib/tasks/use-task-editor-finalizer.ts'
 import { useGraph } from '@/providers/graph-provider.tsx'
 import { useSettings } from '@/providers/settings-provider.tsx'
 

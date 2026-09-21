@@ -11,7 +11,10 @@ import {
 import { dispatchDeepLink } from '@/lib/deep-links/intake.ts'
 import { throttledInvalidateIndexQueries } from '@/lib/query-client.ts'
 import { trackSubscriptions } from '@/lib/subscriptions.ts'
-import { initialRouteForDeepLink, setInitialWindowRoute } from '@/lib/windows/initial-window-route.ts'
+import {
+  initialRouteForDeepLink,
+  setInitialWindowRoute,
+} from '@/lib/windows/initial-window-route.ts'
 import { isMainWindow } from '@/lib/windows/window-role.ts'
 
 /** The graph provider's channels for the note-window boot leg. */
