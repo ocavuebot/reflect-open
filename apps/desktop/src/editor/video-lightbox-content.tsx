@@ -1,11 +1,16 @@
 import type { ReactElement } from 'react'
-import { LightboxVideo, type LightboxVideoItem } from '@meowdown/react'
+import {
+  LightboxFrame,
+  LightboxVideo,
+  type LightboxFrameItem,
+  type LightboxVideoItem,
+} from '@meowdown/react'
 import { XIcon } from 'lucide-react'
 import { LightboxChromeButton } from '@/editor/lightbox-chrome-button.tsx'
 import { cn } from '@/lib/utils.ts'
 
 interface VideoLightboxContentProps {
-  item: LightboxVideoItem
+  item: LightboxVideoItem | LightboxFrameItem
   mobileSurface: boolean
   onClose: () => void
 }
@@ -32,7 +37,7 @@ export function VideoLightboxContent({
       <LightboxChromeButton side="left" size="icon-lg" aria-label="Close" onClick={onClose}>
         <XIcon />
       </LightboxChromeButton>
-      <LightboxVideo item={item} />
+      {item.type === 'video' ? <LightboxVideo item={item} /> : <LightboxFrame item={item} />}
     </div>
   )
 }
