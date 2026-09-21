@@ -1,6 +1,6 @@
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { useArrivalFocus, type ArrivalFocusOptions } from './use-arrival-focus'
+import { useArrivalFocus, type ArrivalFocusOptions } from './use-arrival-focus.ts'
 
 async function mountFocus(initial: Omit<ArrivalFocusOptions, 'target'>) {
   const focus = vi.fn()

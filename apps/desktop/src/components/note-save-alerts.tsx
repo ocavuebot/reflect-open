@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
-import { InlineAlert } from '@/components/inline-alert'
-import { NoteConflictBanner } from '@/components/note-conflict-banner'
-import type { AssetSaveError } from '@/editor/use-asset-persistence'
-import type { NoteDocument } from '@/editor/use-note-document'
+import { InlineAlert } from '@/components/inline-alert.tsx'
+import { NoteConflictBanner } from '@/components/note-conflict-banner.tsx'
+import type { AssetSaveError } from '@/editor/use-asset-persistence.ts'
+import type { NoteDocument } from '@/editor/use-note-document.ts'
 
 interface NoteSaveAlertsProps {
   document: NoteDocument

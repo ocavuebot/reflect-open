@@ -1,5 +1,5 @@
 import { getCurrentWindow } from '@tauri-apps/api/window'
-import { isNativeShell } from '@/lib/platform'
+import { isNativeShell } from '@/lib/platform.ts'
 
 /**
  * Set this webview's OS window title. Best-effort and shell-only: browser

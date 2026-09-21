@@ -3,7 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import type { ReactNode } from 'react'
 import type { BacklinkContext, BacklinkContextPage } from '@reflect/core'
-import { useBacklinkSources } from './use-backlink-sources'
+import { useBacklinkSources } from './use-backlink-sources.ts'
 
 const getBacklinksWithContext = vi.hoisted(() => vi.fn())
 vi.mock('@reflect/core', async (importOriginal) => ({

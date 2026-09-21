@@ -30,7 +30,7 @@ vi.mock('@/providers/settings-provider', () => ({
   }),
 }))
 
-import { CaptureProvider } from './capture-provider'
+import { CaptureProvider } from './capture-provider.tsx'
 
 const GRAPH: GraphInfo = { root: '/g', name: 'g', generation: 7 }
 

@@ -1,7 +1,7 @@
 import { parseNote, TaskStaleError, type TaskMarker } from '@reflect/core'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { createNoteSession, type NoteSessionSnapshot } from './note-session'
-import type { RoundTripFidelity } from './roundtrip'
+import { createNoteSession, type NoteSessionSnapshot } from './note-session.ts'
+import type { RoundTripFidelity } from './roundtrip.ts'
 
 /** The first task's {@link TaskMarker} as the index records it. */
 function firstTask(source: string): TaskMarker {

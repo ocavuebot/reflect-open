@@ -2,7 +2,7 @@ import { act, type ReactNode } from 'react'
 import { cleanup, render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { fireEvent } from '@/test-utils/fire-event'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 
 const memo = vi.hoisted(() => ({
   phase: 'recording' as 'idle' | 'requesting' | 'recording' | 'transcribing' | 'error',
@@ -40,7 +40,7 @@ vi.mock('@/routing/router', () => ({
   useRouter: () => ({ navigate }),
 }))
 
-const { RecordingDrawer } = await import('./recording-drawer')
+const { RecordingDrawer } = await import('./recording-drawer.tsx')
 
 beforeEach(() => {
   vi.useRealTimers()

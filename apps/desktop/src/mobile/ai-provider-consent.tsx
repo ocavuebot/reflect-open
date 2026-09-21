@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import { TRANSCRIPTION_PROVIDERS, type AiProviderInfo } from '@reflect/core'
-import { openUrlSync } from '@/lib/open-url'
-import { PRIVACY_POLICY_URL } from '@/mobile/legal-urls'
+import { openUrlSync } from '@/lib/open-url.ts'
+import { PRIVACY_POLICY_URL } from '@/mobile/legal-urls.ts'
 
 const TRANSCRIBING_PROVIDER_IDS: readonly string[] = TRANSCRIPTION_PROVIDERS
 

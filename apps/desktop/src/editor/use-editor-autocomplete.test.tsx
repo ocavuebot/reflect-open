@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
-import { useEditorAutocomplete } from './use-editor-autocomplete'
+import { useEditorAutocomplete } from './use-editor-autocomplete.ts'
 
 const resolveOrCreateNoteWithTitle = vi.hoisted(() => vi.fn())
 const ensurePersonNote = vi.hoisted(() => vi.fn())

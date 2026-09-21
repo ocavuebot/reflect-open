@@ -16,10 +16,10 @@ import {
   type Settings,
   type StreamChatOptions,
 } from '@reflect/core'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import { ChatProvider, useChatSession } from '@/providers/chat-provider'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { ChatScreen } from './chat-screen'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
+import { ChatProvider, useChatSession } from '@/providers/chat-provider.tsx'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { ChatScreen } from './chat-screen.tsx'
 
 /**
  * The chat view over a faked engine: the provider stack and screen are real,
@@ -54,7 +54,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   loadChatGraphContext,
 }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 

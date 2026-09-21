@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { usePoll } from './use-poll'
+import { usePoll } from './use-poll.ts'
 
 /**
  * Visibility is simulated by overriding `document.visibilityState` and

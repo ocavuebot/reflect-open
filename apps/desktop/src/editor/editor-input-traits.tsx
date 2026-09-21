@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useEditor } from '@meowdown/react'
-import { isTouchEditorSurface } from '@/lib/platform-surface'
-import { whenEditorMounted } from './when-editor-mounted'
+import { isTouchEditorSurface } from '@/lib/platform-surface.ts'
+import { whenEditorMounted } from './when-editor-mounted.ts'
 
 /**
  * iOS text-input hygiene on the editing surface (Plan 19, decision 7 — a gate

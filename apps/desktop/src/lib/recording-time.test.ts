@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatRecordingElapsed } from './recording-time'
+import { formatRecordingElapsed } from './recording-time.ts'
 
 describe('formatRecordingElapsed', () => {
   it('formats sub-hour times as m:ss', () => {

@@ -1,10 +1,10 @@
 import { useState, type ReactElement } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import { monthLabel, monthShortLabel } from '@/lib/month-grid'
-import { cn } from '@/lib/utils'
-import { hapticImpactLight } from '@/mobile/haptics'
+import { Button } from '@/components/ui/button.tsx'
+import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import { monthLabel, monthShortLabel } from '@/lib/month-grid.ts'
+import { cn } from '@/lib/utils.ts'
+import { hapticImpactLight } from '@/mobile/haptics.ts'
 
 interface MonthPickerDrawerProps {
   open: boolean

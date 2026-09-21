@@ -2,10 +2,10 @@ import { useEffect } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import { setPlatformSurface } from '@/lib/platform-surface'
-import '@/test-utils/locator'
-import { useFormattingToolbar, type FormattingToolbar } from './formatting-toolbar-store'
-import { NoteEditor, type NoteEditorHandle } from './note-editor'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
+import '@/test-utils/locator.ts'
+import { useFormattingToolbar, type FormattingToolbar } from './formatting-toolbar-store.ts'
+import { NoteEditor, type NoteEditorHandle } from './note-editor.tsx'
 
 const pmRoot = page.locate('.ProseMirror')
 const toolbarState = page.getByTestId('toolbar-state')

@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { describe, expect, it, vi } from 'vitest'
-import { NoteConflictBanner } from './note-conflict-banner'
+import { NoteConflictBanner } from './note-conflict-banner.tsx'
 
 async function renderBanner() {
   const onKeepMine = vi.fn()

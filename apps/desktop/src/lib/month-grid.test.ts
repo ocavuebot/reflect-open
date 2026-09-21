@@ -6,7 +6,7 @@ import {
   monthOf,
   monthShortLabel,
   weekdayLabels,
-} from './month-grid'
+} from './month-grid.ts'
 
 describe('monthOf', () => {
   it('extracts the YYYY-MM month of an ISO date', () => {

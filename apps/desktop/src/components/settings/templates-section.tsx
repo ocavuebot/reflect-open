@@ -2,7 +2,7 @@ import { useState, type ReactElement } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { displayNoteTitle, errorMessage, type TemplateEntry } from '@reflect/core'
 import { Pencil, Plus, Trash2 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogClose,
@@ -10,17 +10,17 @@ import {
   DialogDescription,
   DialogFooter,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation'
-import { deleteOpenNote } from '@/lib/note-delete'
-import { renameTemplate } from '@/lib/note-templates'
-import { startOperation } from '@/lib/operations'
-import { createTemplatesQueryOptions } from '@/lib/query-options'
-import { useGraph } from '@/providers/graph-provider'
-import { useNoteTemplates } from '@/providers/note-templates-provider'
-import { SettingsField } from './field'
-import { SettingsSection } from './section'
+} from '@/components/ui/dialog.tsx'
+import { Input } from '@/components/ui/input.tsx'
+import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation.ts'
+import { deleteOpenNote } from '@/lib/note-delete.ts'
+import { renameTemplate } from '@/lib/note-templates.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { createTemplatesQueryOptions } from '@/lib/query-options.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useNoteTemplates } from '@/providers/note-templates-provider.tsx'
+import { SettingsField } from './field.tsx'
+import { SettingsSection } from './section.tsx'
 import { isModEvent } from '@meowdown/core'
 
 /**

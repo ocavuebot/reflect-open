@@ -1,15 +1,15 @@
 import type { ReactElement } from 'react'
 import type { GraphImportProgress, GraphImportSummary } from '@reflect/core'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { Progress } from '@/components/ui/progress'
-import type { V1ImportState } from '@/providers/v1-import-provider'
+} from '@/components/ui/dialog.tsx'
+import { Progress } from '@/components/ui/progress.tsx'
+import type { V1ImportState } from '@/providers/v1-import-provider.tsx'
 
 interface V1ImportDialogProps {
   state: V1ImportState

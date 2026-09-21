@@ -2,9 +2,9 @@ import { render } from 'vitest-browser-react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
-import { BacklinksPanel } from './backlinks-panel'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { BacklinksPanel } from './backlinks-panel.tsx'
 
 const { getBacklinksWithContext, getBacklinksPage } = vi.hoisted(() => {
   const getBacklinksWithContext = vi.fn()
@@ -28,7 +28,7 @@ vi.mock('@/providers/graph-provider', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 

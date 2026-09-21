@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { listCommands, registerCommands, resetCommands, runCommand } from './registry'
-import type { CommandContext } from './types'
+import { listCommands, registerCommands, resetCommands, runCommand } from './registry.ts'
+import type { CommandContext } from './types.ts'
 
 afterEach(() => {
   resetCommands()

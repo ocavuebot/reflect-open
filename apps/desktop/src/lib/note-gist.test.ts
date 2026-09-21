@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { gistBodyHash, upsertFrontmatter } from '@reflect/core'
-import type { NoteSession } from '@/editor/note-session'
-import { getNoteRowOverlay, resetNoteRowOverlays } from '@/hooks/note-row-overlay'
+import type { NoteSession } from '@/editor/note-session.ts'
+import { getNoteRowOverlay, resetNoteRowOverlays } from '@/hooks/note-row-overlay.ts'
 
 const readNote = vi.hoisted(() => vi.fn<(path: string) => Promise<string>>())
 const writeNote = vi.hoisted(() => vi.fn(async () => {}))
@@ -29,7 +29,7 @@ vi.mock('@/editor/open-documents', () => ({ openSession }))
 vi.mock('@/lib/operations', () => ({ startOperation }))
 
 const { publishNoteToGist, runGistPublish, runGistUnpublish, unpublishNoteGist } =
-  await import('./note-gist')
+  await import('./note-gist.ts')
 
 const PUBLISHED = { id: 'g1', htmlUrl: 'https://gist.github.com/alex/g1' }
 const BODY = '# A\n\nhello\n'

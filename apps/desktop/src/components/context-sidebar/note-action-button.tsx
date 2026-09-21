@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from 'react'
-import { ShortcutKeys } from '@/components/shortcut-keys'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { cn } from '@/lib/utils'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip.tsx'
+import { cn } from '@/lib/utils.ts'
 
 interface NoteActionButtonProps {
   isActive: boolean

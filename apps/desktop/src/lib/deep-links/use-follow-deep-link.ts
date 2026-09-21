@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
-import { dispatchDeepLink } from '@/lib/deep-links/intake'
-import { parseDeepLink } from '@/lib/deep-links/parse'
-import { openDeepLinkInNewWindow } from '@/lib/windows/open-in-new-window'
-import { useLinkIntentGuard } from '@/lib/windows/use-link-intent-guard'
+import { dispatchDeepLink } from '@/lib/deep-links/intake.ts'
+import { parseDeepLink } from '@/lib/deep-links/parse.ts'
+import { openDeepLinkInNewWindow } from '@/lib/windows/open-in-new-window.ts'
+import { useLinkIntentGuard } from '@/lib/windows/use-link-intent-guard.ts'
 
 /** Follow one in-app `reflect://` link. */
 export type FollowDeepLink = (options: { href: string; openInNewWindow: boolean }) => void

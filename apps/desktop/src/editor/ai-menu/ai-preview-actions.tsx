@@ -1,13 +1,13 @@
 import type { ReactElement } from 'react'
 import { ChevronDownIcon, RotateCcwIcon } from 'lucide-react'
 import type { AiPromptMode, ChatModelOption } from '@reflect/core'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+} from '@/components/ui/dropdown-menu.tsx'
 
 interface AiPreviewActionsProps {
   /** The staged placement of the current run, or null while nothing runs. */

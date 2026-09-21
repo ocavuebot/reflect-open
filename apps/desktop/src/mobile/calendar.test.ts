@@ -6,7 +6,7 @@ import {
   weekIndexOf,
   weekOf,
   weekStartOf,
-} from './calendar'
+} from './calendar.ts'
 
 /**
  * 2026-06-12 is a Friday; 2026-06-14 a Sunday — fixed anchors for the

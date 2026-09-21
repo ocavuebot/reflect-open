@@ -2,8 +2,8 @@ import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import type { WeekStartDay } from '@reflect/core'
-import { createWeekWindow, weekAtIndex, weekIndexOf, weekStartOf } from './calendar'
-import { shouldRecenterWeeks, useWeekStrip } from './use-week-strip'
+import { createWeekWindow, weekAtIndex, weekIndexOf, weekStartOf } from './calendar.ts'
+import { shouldRecenterWeeks, useWeekStrip } from './use-week-strip.ts'
 
 /**
  * The strip's Embla wiring — window rebuilds landing on the anchor, the

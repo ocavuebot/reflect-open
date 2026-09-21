@@ -19,13 +19,13 @@ import {
   suggestTags,
   suggestWikiLinkTargets,
 } from '@reflect/core'
-import { reportAmbiguousNoteTitle } from '@/editor/ambiguous-note-feedback'
-import { buildAutocompleteEntries } from '@/editor/wiki-autocomplete-entries'
-import { useContactsAuthorization } from '@/hooks/use-contacts-authorization'
-import { formatDayLabel, todayIso } from '@/lib/dates'
-import { startOperation } from '@/lib/operations'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
+import { reportAmbiguousNoteTitle } from '@/editor/ambiguous-note-feedback.ts'
+import { buildAutocompleteEntries } from '@/editor/wiki-autocomplete-entries.ts'
+import { useContactsAuthorization } from '@/hooks/use-contacts-authorization.ts'
+import { formatDayLabel, todayIso } from '@/lib/dates.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /** The `[[` and `#` autocomplete search handlers a {@link NoteEditor} wires up. */
 export interface EditorAutocomplete {

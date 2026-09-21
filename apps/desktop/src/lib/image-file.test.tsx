@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { toPortableImageFile } from './image-file'
+import { toPortableImageFile } from './image-file.ts'
 
 /** A decodable image, wrapped under whatever name and type the test needs. */
 async function imageFile(name: string, type: string): Promise<File> {

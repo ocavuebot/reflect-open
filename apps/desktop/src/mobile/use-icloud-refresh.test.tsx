@@ -2,7 +2,7 @@ import { act } from 'react'
 import { renderHook, cleanup } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { useICloudRefresh } from './use-icloud-refresh'
+import { useICloudRefresh } from './use-icloud-refresh.ts'
 
 const graphState = vi.hoisted<{
   current: {

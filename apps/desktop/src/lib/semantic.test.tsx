@@ -4,7 +4,7 @@ import {
   consumeLegacySemanticOptIn,
   ensureEmbeddingsVisibly,
   retryFailedEmbeddings,
-} from './semantic'
+} from './semantic.ts'
 
 afterEach(() => {
   setBridge(null)

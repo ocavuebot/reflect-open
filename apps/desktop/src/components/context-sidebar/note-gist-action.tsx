@@ -1,12 +1,12 @@
 import { useState, type ReactElement } from 'react'
 import { CloudOff, CloudUpload } from 'lucide-react'
-import { ShortcutKeys } from '@/components/shortcut-keys'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { useNoteRowOverlay } from '@/hooks/note-row-overlay'
-import { useGithubConnected } from '@/hooks/use-github-connected'
-import { useNoteRow } from '@/hooks/use-note-row'
-import { runGistPublish, runGistUnpublish } from '@/lib/note-gist'
-import { useGraph } from '@/providers/graph-provider'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip.tsx'
+import { useNoteRowOverlay } from '@/hooks/note-row-overlay.ts'
+import { useGithubConnected } from '@/hooks/use-github-connected.ts'
+import { useNoteRow } from '@/hooks/use-note-row.ts'
+import { runGistPublish, runGistUnpublish } from '@/lib/note-gist.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 interface NoteGistActionProps {
   /** Graph-relative path of the note the action operates on. */

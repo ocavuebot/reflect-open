@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { makeOpenTask as task } from './open-task-fixture'
+import { makeOpenTask as task } from './open-task-fixture.ts'
 import {
   asCompleted,
   asOpen,
@@ -8,7 +8,7 @@ import {
   withEditedTask,
   withRelocatedTaskMarkers,
   withoutTasks,
-} from './task-cache'
+} from './task-cache.ts'
 
 const a = task({ markerOffset: 1, text: 'a' })
 const b = task({ markerOffset: 2, text: 'b' })

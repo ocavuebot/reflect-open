@@ -16,22 +16,22 @@ import {
   type EditorTextSize,
   type ThemePreference,
 } from '@reflect/core'
-import { useAiPrompts } from '@/hooks/use-ai-prompts'
-import { useAiProviders } from '@/hooks/use-ai-providers'
-import { useAppVersion } from '@/hooks/use-app-version'
-import { usePaywallRequested } from '@/hooks/use-paywall-requested'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { useCrashTest, useDebugUnlockTap } from '@/hooks/use-debug-unlock'
-import { marketingVersion } from '@/lib/marketing-version'
-import { openUrlSync } from '@/lib/open-url'
-import { queryKeys } from '@/lib/query-client'
-import { AddAiProviderDrawer } from '@/mobile/add-ai-provider-drawer'
-import { AiPromptDrawer } from '@/mobile/ai-prompt-drawer'
-import { AiProviderActionsDrawer } from '@/mobile/ai-provider-actions-drawer'
-import { ConnectGithubDrawer } from '@/mobile/connect-github-drawer'
-import { PRIVACY_POLICY_URL, TERMS_OF_USE_URL } from '@/mobile/legal-urls'
-import { MobileScreenHeader } from '@/mobile/screen-header'
-import { TextSettingDrawer } from '@/mobile/text-setting-drawer'
+import { useAiPrompts } from '@/hooks/use-ai-prompts.ts'
+import { useAiProviders } from '@/hooks/use-ai-providers.ts'
+import { useAppVersion } from '@/hooks/use-app-version.ts'
+import { usePaywallRequested } from '@/hooks/use-paywall-requested.ts'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { useCrashTest, useDebugUnlockTap } from '@/hooks/use-debug-unlock.ts'
+import { marketingVersion } from '@/lib/marketing-version.ts'
+import { openUrlSync } from '@/lib/open-url.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { AddAiProviderDrawer } from '@/mobile/add-ai-provider-drawer.tsx'
+import { AiPromptDrawer } from '@/mobile/ai-prompt-drawer.tsx'
+import { AiProviderActionsDrawer } from '@/mobile/ai-provider-actions-drawer.tsx'
+import { ConnectGithubDrawer } from '@/mobile/connect-github-drawer.tsx'
+import { PRIVACY_POLICY_URL, TERMS_OF_USE_URL } from '@/mobile/legal-urls.ts'
+import { MobileScreenHeader } from '@/mobile/screen-header.tsx'
+import { TextSettingDrawer } from '@/mobile/text-setting-drawer.tsx'
 import {
   SettingsActionRow,
   SettingsGroup,
@@ -40,14 +40,17 @@ import {
   SettingsSwitchRow,
   SettingsValueRow,
   type SegmentedOption,
-} from '@/mobile/settings-list'
-import { refetchActiveSubscription, useActiveSubscription } from '@/mobile/use-active-subscription'
-import { useAppStoreEnvironment } from '@/mobile/use-app-store-environment'
-import { useMobileSyncStatus } from '@/mobile/use-sync-status'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
-import { useSyncContext } from '@/providers/sync-provider'
-import { useRouter } from '@/routing/router'
+} from '@/mobile/settings-list.tsx'
+import {
+  refetchActiveSubscription,
+  useActiveSubscription,
+} from '@/mobile/use-active-subscription.ts'
+import { useAppStoreEnvironment } from '@/mobile/use-app-store-environment.ts'
+import { useMobileSyncStatus } from '@/mobile/use-sync-status.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { useSyncContext } from '@/providers/sync-provider.tsx'
+import { useRouter } from '@/routing/router.tsx'
 
 const THEME_OPTIONS: readonly SegmentedOption<ThemePreference>[] = [
   { value: 'system', label: 'System' },

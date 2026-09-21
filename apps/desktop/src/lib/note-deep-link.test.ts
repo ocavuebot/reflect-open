@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import type { NoteSession } from '@/editor/note-session'
+import type { NoteSession } from '@/editor/note-session.ts'
 
 const readNote = vi.hoisted(() => vi.fn<(path: string) => Promise<string>>())
 const writeNote = vi.hoisted(() => vi.fn(async () => {}))
@@ -14,7 +14,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 }))
 vi.mock('@/editor/open-documents', () => ({ openSession }))
 
-const { deepLinkForNote } = await import('./note-deep-link')
+const { deepLinkForNote } = await import('./note-deep-link.ts')
 
 const ULID_RE = /^[0-9a-hjkmnp-tv-z]{26}$/
 

@@ -9,7 +9,7 @@ import {
   resetNoteRowOverlays,
   setNoteRowOverlay,
   useNoteRowOverlay,
-} from './note-row-overlay'
+} from './note-row-overlay.ts'
 
 function noteRow(overrides: Partial<NoteRow> = {}): NoteRow {
   return {

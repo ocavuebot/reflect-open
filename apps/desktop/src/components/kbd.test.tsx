@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { describe, expect, it } from 'vitest'
-import { Kbd } from './kbd'
+import { Kbd } from './kbd.tsx'
 
 describe('Kbd', () => {
   it('renders its children inside a kbd element', async () => {

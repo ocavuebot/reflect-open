@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
 import { foldGraphPath, type IndexedNote } from '@reflect/core'
-import { createDevBridge } from '@/dev/dev-bridge'
-import { createDevFileStore } from '@/dev/dev-file-store'
-import { createDevIndexDb } from '@/dev/dev-index-db'
+import { createDevBridge } from '@/dev/dev-bridge.ts'
+import { createDevFileStore } from '@/dev/dev-file-store.ts'
+import { createDevIndexDb } from '@/dev/dev-index-db.ts'
 
 /**
  * The dev bridge's `index_reconcile_scan` mirrors the native scan in

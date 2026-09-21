@@ -9,8 +9,8 @@ import {
   writeNote,
   type ContactMatch,
 } from '@reflect/core'
-import { openSession } from '@/editor/open-documents'
-import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter'
+import { openSession } from '@/editor/open-documents.ts'
+import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter.ts'
 
 /**
  * The suggested-contact card's two resolutions (the contacts-integration

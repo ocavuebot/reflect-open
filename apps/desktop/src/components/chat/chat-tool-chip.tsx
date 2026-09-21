@@ -7,11 +7,11 @@ import {
   type AssistantPart,
   type NoteHitSummary,
 } from '@reflect/core'
-import { Marker, MarkerContent, MarkerIcon } from '@/components/ui/marker'
-import { Spinner } from '@/components/ui/spinner'
-import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation'
-import { routeForPath } from '@/routing/route'
-import { useRouter } from '@/routing/router'
+import { Marker, MarkerContent, MarkerIcon } from '@/components/ui/marker.tsx'
+import { Spinner } from '@/components/ui/spinner.tsx'
+import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation.ts'
+import { routeForPath } from '@/routing/route.ts'
+import { useRouter } from '@/routing/router.tsx'
 import { isModEvent } from '@meowdown/core'
 
 interface ChatToolChipProps {

@@ -1,7 +1,7 @@
 import { startTransition, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import { createDayWindow, dateAtIndex, indexWithin, type DayWindow } from '@/lib/day-window'
-import { getKeyboardHeight } from '@/mobile/use-keyboard'
+import { createDayWindow, dateAtIndex, indexWithin, type DayWindow } from '@/lib/day-window.ts'
+import { getKeyboardHeight } from '@/mobile/use-keyboard.ts'
 
 /**
  * Days either side of the carousel anchor. A fixed **symmetric** window

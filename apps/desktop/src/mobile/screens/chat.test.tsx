@@ -10,9 +10,9 @@ import type {
   Settings,
   StreamChatOptions,
 } from '@reflect/core'
-import { ChatProvider } from '@/providers/chat-provider'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { fireEvent } from '@/test-utils/fire-event'
+import { ChatProvider } from '@/providers/chat-provider.tsx'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 
 /**
  * The Chat tab over a faked engine (the desktop chat-screen harness, mobile
@@ -67,7 +67,7 @@ vi.mock('@/components/ui/drawer', () => ({
   DrawerTitle: ({ children }: { children?: ReactNode }) => <h2>{children}</h2>,
 }))
 
-const { MobileChat } = await import('./chat')
+const { MobileChat } = await import('./chat.tsx')
 
 afterEach(async () => {
   await cleanup()

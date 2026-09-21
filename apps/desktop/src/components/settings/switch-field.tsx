@@ -1,5 +1,5 @@
 import { useId, type ReactElement } from 'react'
-import { Switch } from '@/components/ui/switch'
+import { Switch } from '@/components/ui/switch.tsx'
 
 interface SettingsSwitchFieldProps {
   /** The setting name shown beside the switch. */

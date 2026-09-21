@@ -1,7 +1,7 @@
 import { differenceInCalendarDays, getDay } from 'date-fns'
 import { weekStartDow, type WeekStartDay } from '@reflect/core'
-import { addDaysIso, parseIsoDate } from '@/lib/dates'
-import { monthOf } from '@/lib/month-grid'
+import { addDaysIso, parseIsoDate } from '@/lib/dates.ts'
+import { monthOf } from '@/lib/month-grid.ts'
 
 /**
  * Date math for the V1-parity Daily surface's **calendar strip** — the month

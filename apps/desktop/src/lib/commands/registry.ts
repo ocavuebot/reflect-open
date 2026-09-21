@@ -1,4 +1,4 @@
-import type { AppCommand, CommandContext } from './types'
+import type { AppCommand, CommandContext } from './types.ts'
 
 /**
  * The command registry (Plan 08): a flat, collision-checked id → command map.

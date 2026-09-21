@@ -1,9 +1,9 @@
 import { errorMessage, openNoteWindow } from '@reflect/core'
-import { deepLinkForRoute } from '@/lib/deep-links/format'
-import { parseDeepLink } from '@/lib/deep-links/parse'
-import { isNativeShell } from '@/lib/platform'
-import { isMobileSurface } from '@/lib/platform-surface'
-import type { Route } from '@/routing/route'
+import { deepLinkForRoute } from '@/lib/deep-links/format.ts'
+import { parseDeepLink } from '@/lib/deep-links/parse.ts'
+import { isNativeShell } from '@/lib/platform.ts'
+import { isMobileSurface } from '@/lib/platform-surface.ts'
+import type { Route } from '@/routing/route.ts'
 
 /**
  * Open a target in a secondary note window (Plan 06). Modifier-click callers

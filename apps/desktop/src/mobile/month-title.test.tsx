@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { MONTH_TITLE_TRANSITION_MS, MonthTitle } from './month-title'
+import { MONTH_TITLE_TRANSITION_MS, MonthTitle } from './month-title.tsx'
 
 /**
  * The month header's ticker roll: later months roll up, earlier months roll

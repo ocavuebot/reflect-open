@@ -7,12 +7,12 @@ import {
   AttachmentActions,
   AttachmentGroup,
   AttachmentMedia,
-} from '@/components/ui/attachment'
-import { Button } from '@/components/ui/button'
-import { ChatModelDrawer } from '@/mobile/chat-model-drawer'
-import { useArrivalFocus } from '@/mobile/use-arrival-focus'
-import { useChatSession } from '@/providers/chat-provider'
-import { useRouter } from '@/routing/router'
+} from '@/components/ui/attachment.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { ChatModelDrawer } from '@/mobile/chat-model-drawer.tsx'
+import { useArrivalFocus } from '@/mobile/use-arrival-focus.ts'
+import { useChatSession } from '@/providers/chat-provider.tsx'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * The mobile chat composer (Plan 23): a plain textarea bound to the

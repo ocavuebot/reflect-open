@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
-import { ShortcutKeys } from '@/components/shortcut-keys'
-import { formatBindingLabel } from '@/lib/keybindings'
-import type { Shortcut } from '@/lib/shortcuts'
-import { cn } from '@/lib/utils'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
+import { formatBindingLabel } from '@/lib/keybindings.ts'
+import type { Shortcut } from '@/lib/shortcuts.ts'
+import { cn } from '@/lib/utils.ts'
 
 interface ShortcutListProps {
   /** Group heading (a keymap scope: "App", "Editor"). */

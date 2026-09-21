@@ -8,14 +8,14 @@ import {
 import { Circle, CircleCheck } from 'lucide-react'
 import { displayNoteTitle, type OpenTask } from '@reflect/core'
 import { getIsComposing } from '@meowdown/core'
-import { formatDayLabel } from '@/lib/dates'
-import { taskKey } from '@/lib/tasks/task-identity'
-import { useTaskCheckboxToggle } from '@/lib/tasks/use-task-checkbox-toggle'
-import { cn } from '@/lib/utils'
-import type { ModClickEvent } from '@/lib/windows/open-in-new-window'
-import { useSettings } from '@/providers/settings-provider'
-import { TaskEditor, type TaskNavigate } from './task-editor'
-import { TaskText } from './task-text'
+import { formatDayLabel } from '@/lib/dates.ts'
+import { taskKey } from '@/lib/tasks/task-identity.ts'
+import { useTaskCheckboxToggle } from '@/lib/tasks/use-task-checkbox-toggle.ts'
+import { cn } from '@/lib/utils.ts'
+import type { ModClickEvent } from '@/lib/windows/open-in-new-window.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { TaskEditor, type TaskNavigate } from './task-editor.tsx'
+import { TaskText } from './task-text.tsx'
 
 interface TaskRowProps {
   task: OpenTask

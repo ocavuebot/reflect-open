@@ -1,5 +1,5 @@
 import { useState, type ReactElement } from 'react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogClose,
@@ -9,8 +9,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog'
-import { useAsyncAction } from '@/hooks/use-async-action'
+} from '@/components/ui/dialog.tsx'
+import { useAsyncAction } from '@/hooks/use-async-action.ts'
 
 interface GithubSignOutRowProps {
   /** Remove the machine's GitHub credential (every connected graph stops syncing). */

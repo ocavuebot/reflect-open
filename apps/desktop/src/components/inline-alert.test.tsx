@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { describe, expect, it } from 'vitest'
-import { InlineAlert } from './inline-alert'
+import { InlineAlert } from './inline-alert.tsx'
 
 describe('InlineAlert', () => {
   it('announces its content with role=alert', async () => {

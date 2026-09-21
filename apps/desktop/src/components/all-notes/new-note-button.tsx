@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
-import { keybindingFor, newNoteRoute } from '@/lib/commands/app-commands'
-import { formatBindingLabel } from '@/lib/keybindings'
-import { useRouter } from '@/routing/router'
+import { keybindingFor, newNoteRoute } from '@/lib/commands/app-commands.ts'
+import { formatBindingLabel } from '@/lib/keybindings.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 const NEW_NOTE_BINDING = keybindingFor('note.new')
 

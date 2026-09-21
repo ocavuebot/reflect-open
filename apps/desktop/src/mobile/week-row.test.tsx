@@ -1,8 +1,8 @@
 import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import '@/test-utils/locator'
-import { WeekRow } from './week-row'
+import '@/test-utils/locator.ts'
+import { WeekRow } from './week-row.tsx'
 
 const hapticImpactLight = vi.hoisted(() => vi.fn())
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef, type RefObject } from 'react'
-import type { ListSelection } from '@/lib/selection/use-list-selection'
+import type { ListSelection } from '@/lib/selection/use-list-selection.ts'
 
 export interface AllNotesKeyboardOptions {
   selection: ListSelection
@@ -22,7 +22,7 @@ const OWNS_KEYS = '[role="menu"], [role="dialog"], [role="listbox"], input, text
  * The All Notes view's keyboard shortcuts (V1 parity), bound to a single
  * `document` keydown listener for the screen's life — so they work the moment
  * you're on the screen (which focuses its surface on mount), without first
- * clicking into the list. Mirrors {@link import('@/lib/tasks/use-task-keyboard').useTaskKeyboard},
+ * clicking into the list. Mirrors {@link import('@/lib/tasks/use-task-keyboard.ts').useTaskKeyboard},
  * with a smaller map: there's no inline editor and no add/complete here.
  *
  * The map: ↑/↓ move a single selection (Shift to extend the range), ⌘A select

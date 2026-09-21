@@ -1,6 +1,6 @@
 import { useLayoutEffect, useMemo, useRef } from 'react'
 import type { LinkPreviewResolver } from '@meowdown/core'
-import { createNoteLinkPreviewResolver, type LinkPreviewSession } from './link-preview-resolver'
+import { createNoteLinkPreviewResolver, type LinkPreviewSession } from './link-preview-resolver.ts'
 
 /** A privacy-gated, note-scoped link-preview resolver for one editor session. */
 export function useLinkPreview(

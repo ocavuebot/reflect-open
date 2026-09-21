@@ -1,7 +1,7 @@
 import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, describe, expect, it } from 'vitest'
-import { useSwipeTarget } from './use-swipe-target'
+import { useSwipeTarget } from './use-swipe-target.ts'
 
 /**
  * The strip's optimistic swipe target (extracted from MobileDaily). The

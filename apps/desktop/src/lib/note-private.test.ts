@@ -1,9 +1,9 @@
 import { QueryClient } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { NoteRow } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client'
-import { createNoteSession } from '@/editor/note-session'
-import type { NoteSession } from '@/editor/note-session'
+import { queryKeys } from '@/lib/query-client.ts'
+import { createNoteSession } from '@/editor/note-session.ts'
+import type { NoteSession } from '@/editor/note-session.ts'
 
 const readNote = vi.hoisted(() => vi.fn<(path: string) => Promise<string>>())
 const writeNote = vi.hoisted(() => vi.fn(async () => {}))
@@ -16,7 +16,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 }))
 vi.mock('@/editor/open-documents', () => ({ openSession }))
 
-const { toggleNotePrivate } = await import('./note-private')
+const { toggleNotePrivate } = await import('./note-private.ts')
 
 let client: QueryClient
 const operationFail = vi.hoisted(() => vi.fn())

@@ -2,12 +2,12 @@ import { useState, type ReactElement } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import { UserRound } from 'lucide-react'
 import { errorMessage } from '@reflect/core'
-import { Button } from '@/components/ui/button'
-import { useSuggestedContact } from '@/hooks/use-suggested-contact'
-import { addContactToNote, ignoreContactSuggestion } from '@/lib/note-contact'
-import { queryKeys } from '@/lib/query-client'
-import { cn } from '@/lib/utils'
-import { useGraph } from '@/providers/graph-provider'
+import { Button } from '@/components/ui/button.tsx'
+import { useSuggestedContact } from '@/hooks/use-suggested-contact.ts'
+import { addContactToNote, ignoreContactSuggestion } from '@/lib/note-contact.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { cn } from '@/lib/utils.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 interface SuggestedContactCardProps {
   /** Graph-relative path of the note the card sits above. */

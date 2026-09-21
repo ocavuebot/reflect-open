@@ -7,10 +7,10 @@ import {
   type GithubRepoRef,
   type GithubUser,
 } from '@reflect/core'
-import { useAsyncAction } from '@/hooks/use-async-action'
-import { usePoll } from '@/hooks/use-poll'
-import { parseRepoInput } from '@/lib/github-repos'
-import { useSync } from '@/providers/sync-provider'
+import { useAsyncAction } from '@/hooks/use-async-action.ts'
+import { usePoll } from '@/hooks/use-poll.ts'
+import { parseRepoInput } from '@/lib/github-repos.ts'
+import { useSync } from '@/providers/sync-provider.tsx'
 
 export type ConnectWizardStep = 'repo' | 'auth' | 'finish'
 

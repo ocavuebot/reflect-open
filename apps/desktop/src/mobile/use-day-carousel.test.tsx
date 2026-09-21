@@ -1,14 +1,14 @@
 import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { createDayWindow, dateAtIndex } from '@/lib/day-window'
+import { createDayWindow, dateAtIndex } from '@/lib/day-window.ts'
 import {
   CAROUSEL_RADIUS,
   reconcileCarousel,
   shouldRecenter,
   useDayCarousel,
   type ReconcileInput,
-} from './use-day-carousel'
+} from './use-day-carousel.ts'
 
 /**
  * The carousel's follow-the-route decision in isolation — Embla pointer

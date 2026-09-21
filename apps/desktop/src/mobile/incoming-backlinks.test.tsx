@@ -3,10 +3,10 @@ import { render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
-import '@/test-utils/locator'
-import { IncomingBacklinks } from './incoming-backlinks'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import '@/test-utils/locator.ts'
+import { IncomingBacklinks } from './incoming-backlinks.tsx'
 
 const { getBacklinksWithContext, getBacklinksPage } = vi.hoisted(() => {
   const getBacklinksWithContext = vi.fn()

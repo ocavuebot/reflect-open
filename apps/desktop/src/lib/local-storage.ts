@@ -1,4 +1,4 @@
-import { StorageStore } from '@/lib/storage'
+import { StorageStore } from '@/lib/storage.ts'
 
 const localStorageStores = new Map<string, StorageStore>()
 

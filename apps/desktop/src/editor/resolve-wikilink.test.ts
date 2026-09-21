@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { resolveWikilink } from './resolve-wikilink'
+import { resolveWikilink } from './resolve-wikilink.ts'
 
 describe('resolveWikilink', () => {
   it('splits an alias at the first pipe, trimming both halves', () => {

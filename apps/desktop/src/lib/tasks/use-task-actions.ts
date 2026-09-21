@@ -1,28 +1,34 @@
 import { useMutation } from '@tanstack/react-query'
 import type { OpenTask } from '@reflect/core'
-import { convertTaskToBullet, deleteTask, editTask, insertTask, toggleTask } from '@/lib/note-task'
-import { mutationKeys } from '@/lib/query-client'
-import { editAndToggleError, isEditAndToggleError } from '@/lib/tasks/edit-and-toggle-error'
+import {
+  convertTaskToBullet,
+  deleteTask,
+  editTask,
+  insertTask,
+  toggleTask,
+} from '@/lib/note-task.ts'
+import { mutationKeys } from '@/lib/query-client.ts'
+import { editAndToggleError, isEditAndToggleError } from '@/lib/tasks/edit-and-toggle-error.ts'
 import {
   archiveRecentlyCompleted,
   forgetRecentlyCompleted,
   hasRecentlyCompleted,
   markRecentlyCompleted,
-} from '@/lib/tasks/recently-completed'
-import { scheduledContent } from '@/lib/tasks/task-schedule-content'
+} from '@/lib/tasks/recently-completed.ts'
+import { scheduledContent } from '@/lib/tasks/task-schedule-content.ts'
 import {
   asCompleted,
   asOpen,
   taskRawWithContent,
   withEditedTask,
   withoutTasks,
-} from '@/lib/tasks/task-cache'
-import { taskKey } from '@/lib/tasks/task-identity'
-import { insertedTaskRow, type InsertTaskTarget } from '@/lib/tasks/task-insert-target'
-import { useTaskCheckboxAction } from '@/lib/tasks/use-task-checkbox-action'
-import { useTaskCacheWriter } from '@/lib/tasks/use-task-cache'
-import { useTaskContextInsert } from '@/lib/tasks/use-task-context-insert'
-import { useGraph } from '@/providers/graph-provider'
+} from '@/lib/tasks/task-cache.ts'
+import { taskKey } from '@/lib/tasks/task-identity.ts'
+import { insertedTaskRow, type InsertTaskTarget } from '@/lib/tasks/task-insert-target.ts'
+import { useTaskCheckboxAction } from '@/lib/tasks/use-task-checkbox-action.ts'
+import { useTaskCacheWriter } from '@/lib/tasks/use-task-cache.ts'
+import { useTaskContextInsert } from '@/lib/tasks/use-task-context-insert.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /**
  * Bulk task actions for the Tasks view's keyboard shortcuts (Plan 18): complete

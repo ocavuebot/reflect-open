@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createDevFileStore } from './dev-file-store'
+import { createDevFileStore } from './dev-file-store.ts'
 
 describe('dev file store discovery', () => {
   it('lists eligible root and nested Markdown with native policy parity', () => {

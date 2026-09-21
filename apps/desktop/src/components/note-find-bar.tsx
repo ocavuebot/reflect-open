@@ -1,8 +1,8 @@
 import { useLayoutEffect, useRef, type KeyboardEvent, type ReactElement } from 'react'
 import { ChevronDownIcon, ChevronUpIcon, XIcon } from 'lucide-react'
 import { getIsComposing } from '@meowdown/core'
-import { SearchIcon } from '@/components/icons/search-icon'
-import { useNoteFind } from '@/providers/note-find-provider'
+import { SearchIcon } from '@/components/icons/search-icon.tsx'
+import { useNoteFind } from '@/providers/note-find-provider.tsx'
 
 const FIND_BUTTON_CLASS =
   'flex size-6 shrink-0 cursor-pointer items-center justify-center rounded-[5px] text-text-muted transition-colors hover:bg-surface-hover hover:text-text disabled:pointer-events-none disabled:opacity-40'

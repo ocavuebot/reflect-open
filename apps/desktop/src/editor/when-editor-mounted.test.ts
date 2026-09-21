@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { whenEditorMounted } from './when-editor-mounted'
+import { whenEditorMounted } from './when-editor-mounted.ts'
 
 /**
  * Frame scheduling is driven by hand: `requestAnimationFrame` pushes into a

@@ -5,11 +5,11 @@ import {
   type AiProvidersState,
   type GraphInfo,
 } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { useMainWindowEffect } from '@/hooks/use-main-window-effect'
-import { createCaptureController } from '@/lib/capture-controller'
-import { isMobileSurface } from '@/lib/platform-surface'
-import { useSettings } from '@/providers/settings-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { useMainWindowEffect } from '@/hooks/use-main-window-effect.ts'
+import { createCaptureController } from '@/lib/capture-controller.ts'
+import { isMobileSurface } from '@/lib/platform-surface.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /**
  * Mounts the link-capture lifecycle for the open graph (Plan 11): registers

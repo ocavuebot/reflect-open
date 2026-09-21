@@ -7,8 +7,8 @@ import {
   normalizeOpenAICompatibleBaseUrl,
   validateApiKey,
 } from '@reflect/core'
-import { providerFetch } from '@/lib/provider-fetch'
-import type { NewAiProvider } from '@/hooks/use-ai-providers'
+import { providerFetch } from '@/lib/provider-fetch.ts'
+import type { NewAiProvider } from '@/hooks/use-ai-providers.ts'
 
 interface UseAddAiProviderSubmitOptions {
   /** Persists the new provider (keychain + settings); rejects on failure. */

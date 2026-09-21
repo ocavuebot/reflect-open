@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { checkRoundTrip } from './roundtrip'
+import { checkRoundTrip } from './roundtrip.ts'
 
 describe('checkRoundTrip', () => {
   it('classifies faithful content as exact', () => {

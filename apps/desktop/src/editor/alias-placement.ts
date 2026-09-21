@@ -6,7 +6,7 @@ import {
   upsertFrontmatter,
   writeNote,
 } from '@reflect/core'
-import { openSession } from './open-documents'
+import { openSession } from './open-documents.ts'
 
 /**
  * Old-title alias placement after a settled rename (Plan 07b): the renamed

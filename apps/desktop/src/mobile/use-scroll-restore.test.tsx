@@ -1,7 +1,7 @@
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { UIEvent } from 'react'
-import { RESTORE_DEADLINE_MS, useScrollRestore } from './use-scroll-restore'
+import { RESTORE_DEADLINE_MS, useScrollRestore } from './use-scroll-restore.ts'
 
 /**
  * The remount scroll-restore loop in isolation (extracted from DaySlide).

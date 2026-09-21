@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { useSessionStorageExternalStore } from '@/hooks/use-session-storage-external-store'
+import { useSessionStorageExternalStore } from '@/hooks/use-session-storage-external-store.ts'
 
 /**
  * A boolean flag persisted in sessionStorage and shared live across every

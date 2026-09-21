@@ -1,10 +1,10 @@
 import { render } from 'vitest-browser-react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { ShortcutKeys } from './shortcut-keys'
+import { ShortcutKeys } from './shortcut-keys.tsx'
 
 const isApplePlatform = vi.hoisted(() => vi.fn(() => false))
 vi.mock('@/lib/keybindings', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/keybindings')>()),
+  ...(await importOriginal<typeof import('@/lib/keybindings.ts')>()),
   isApplePlatform,
 }))
 

@@ -1,7 +1,7 @@
 import { IAP_PRODUCT_IDS, indexedNoteSchema, ReflectError, type IpcBridge } from '@reflect/core'
 import { z } from 'zod'
-import type { DevFileStore } from '@/dev/dev-file-store'
-import type { DevIndexDb } from '@/dev/dev-index-db'
+import type { DevFileStore } from '@/dev/dev-file-store.ts'
+import type { DevIndexDb } from '@/dev/dev-index-db.ts'
 
 /** The fixed fake graph root the dev bridge reports (mirrors `mobile_storage`). */
 export const DEV_GRAPH_ROOT = '/dev-graph'

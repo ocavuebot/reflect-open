@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { ChatTurn } from '@reflect/core'
-import { assistantReplyMarkdown } from './chat-copy'
+import { assistantReplyMarkdown } from './chat-copy.ts'
 
 function turnWith(parts: ChatTurn['parts']): ChatTurn {
   return {

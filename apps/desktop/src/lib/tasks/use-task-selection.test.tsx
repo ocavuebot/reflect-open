@@ -1,7 +1,7 @@
 import { act } from 'react'
 import { renderHook } from 'vitest-browser-react'
 import { describe, expect, it } from 'vitest'
-import { useTaskSelection } from './use-task-selection'
+import { useTaskSelection } from './use-task-selection.ts'
 
 const KEYS = ['a', 'b', 'c', 'd']
 const noMods = { metaKey: false, ctrlKey: false, shiftKey: false }

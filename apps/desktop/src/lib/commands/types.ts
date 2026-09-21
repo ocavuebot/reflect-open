@@ -1,5 +1,5 @@
-import type { Route } from '@/routing/route'
-import type { NavigateOptions } from '@/routing/router'
+import type { Route } from '@/routing/route.ts'
+import type { NavigateOptions } from '@/routing/router.tsx'
 
 /**
  * The typed command contract (Plan 08): one registry powers the ⌘K palette,

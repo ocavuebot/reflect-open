@@ -19,8 +19,8 @@ import {
   type GraphImportSummary,
   type GraphInfo,
 } from '@reflect/core'
-import { V1ImportDialog } from '@/components/v1-import-dialog'
-import { useGraph } from '@/providers/graph-provider'
+import { V1ImportDialog } from '@/components/v1-import-dialog.tsx'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /**
  * Where the Reflect V1 import stands. `running.progress` is null until the

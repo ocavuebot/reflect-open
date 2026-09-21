@@ -4,7 +4,7 @@ import {
   initialRouteForDeepLink,
   resetInitialWindowRouteForTests,
   setInitialWindowRoute,
-} from './initial-window-route'
+} from './initial-window-route.ts'
 
 beforeEach(resetInitialWindowRouteForTests)
 

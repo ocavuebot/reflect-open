@@ -3,9 +3,9 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { getConflictedNotes, type GraphInfo } from '@reflect/core'
-import type { BackupState } from '@/lib/backup-controller'
-import { publishKeyboardHeight } from '@/mobile/use-keyboard'
-import { SyncStatusPill } from './sync-status-pill'
+import type { BackupState } from '@/lib/backup-controller.ts'
+import { publishKeyboardHeight } from '@/mobile/use-keyboard.ts'
+import { SyncStatusPill } from './sync-status-pill.tsx'
 
 /**
  * The floating status pill (Plan 19, step 10): visible only when sync has

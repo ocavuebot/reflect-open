@@ -1,11 +1,11 @@
 import { useQueryClient } from '@tanstack/react-query'
 import { errorMessage, type OpenTask } from '@reflect/core'
-import type { TaskMarkerOffsetChange } from '@/lib/note-task'
-import { startOperation } from '@/lib/operations'
-import { queryKeys } from '@/lib/query-client'
-import { withRelocatedTaskMarkers } from '@/lib/tasks/task-cache'
-import { sameTask } from '@/lib/tasks/task-identity'
-import { useGraph } from '@/providers/graph-provider'
+import type { TaskMarkerOffsetChange } from '@/lib/note-task.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { withRelocatedTaskMarkers } from '@/lib/tasks/task-cache.ts'
+import { sameTask } from '@/lib/tasks/task-identity.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /** Updates a cached task list in place; returning the same `undefined` is a no-op. */
 type TaskListPatch = (rows: OpenTask[] | undefined) => OpenTask[] | undefined

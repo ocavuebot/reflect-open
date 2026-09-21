@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
 import { getPinnedNotes, type PinnedNote } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /**
  * The pinned notes from the index, kept fresh by the usual index invalidation

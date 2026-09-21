@@ -1,12 +1,12 @@
 import type { ReactElement } from 'react'
 import { isUntitledNotePath } from '@reflect/core'
-import { NotePane } from '@/components/note-pane'
-import { IncomingBacklinks } from '@/mobile/incoming-backlinks'
-import { MOBILE_CONTENT_GUTTER } from '@/mobile/mobile-content-gutter'
-import { MobileScreenHeader } from '@/mobile/screen-header'
-import { NoteActionsMenu } from '@/mobile/note-actions-menu'
-import { cn } from '@/lib/utils'
-import { useRouter } from '@/routing/router'
+import { NotePane } from '@/components/note-pane.tsx'
+import { IncomingBacklinks } from '@/mobile/incoming-backlinks.tsx'
+import { MOBILE_CONTENT_GUTTER } from '@/mobile/mobile-content-gutter.ts'
+import { MobileScreenHeader } from '@/mobile/screen-header.tsx'
+import { NoteActionsMenu } from '@/mobile/note-actions-menu.tsx'
+import { cn } from '@/lib/utils.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * One note, opened from a wiki link, the new-note action, or (later) search

@@ -10,8 +10,8 @@ import {
   revealAsset as revealAssetCommand,
   type FileMeta,
 } from '@reflect/core'
-import { formatBytes } from '@/lib/format-bytes'
-import { startOperation } from '@/lib/operations'
+import { formatBytes } from '@/lib/format-bytes.ts'
+import { startOperation } from '@/lib/operations.ts'
 
 /**
  * Above this size, a save gets a non-blocking status-line warning. Never a

@@ -1,6 +1,6 @@
 import type { ReactElement, ReactNode } from 'react'
-import { NotePane } from '@/components/note-pane'
-import { ScrollRestored } from '@/routing/scroll-restore'
+import { NotePane } from '@/components/note-pane.tsx'
+import { ScrollRestored } from '@/routing/scroll-restore.tsx'
 
 interface SingleNoteViewProps {
   /** Graph-relative path of the note filling this view. */

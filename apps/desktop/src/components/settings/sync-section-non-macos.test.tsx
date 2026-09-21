@@ -2,9 +2,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { describe, expect, it, vi } from 'vitest'
-import '@/test-utils/locator'
-import { RouterProvider } from '@/routing/router'
-import { SyncSection } from './sync-section'
+import '@/test-utils/locator.ts'
+import { RouterProvider } from '@/routing/router.tsx'
+import { SyncSection } from './sync-section.tsx'
 
 // A browser-mode module mock materializes value exports once, so the
 // platform-hidden behavior needs its own file with the flag statically false

@@ -1,6 +1,6 @@
-import type { NoteSession } from './note-session'
-import { registerOpenDocument } from './open-documents'
-import type { RenameCoordinator } from './rename-coordinator'
+import type { NoteSession } from './note-session.ts'
+import { registerOpenDocument } from './open-documents.ts'
+import type { RenameCoordinator } from './rename-coordinator.ts'
 
 /**
  * One pane's document lifecycle policy (Plan 17), extracted from

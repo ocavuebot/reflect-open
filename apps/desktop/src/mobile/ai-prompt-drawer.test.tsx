@@ -3,7 +3,7 @@ import { page, userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
 import type { AiPrompt } from '@reflect/core'
-import '@/test-utils/locator'
+import '@/test-utils/locator.ts'
 
 /**
  * The mobile add/edit sheet for a saved AI prompt: collecting a draft for
@@ -21,7 +21,7 @@ vi.mock('@/components/ui/drawer', () => ({
   DrawerTitle: ({ children }: { children?: ReactNode }) => <h2>{children}</h2>,
 }))
 
-const { AiPromptDrawer } = await import('./ai-prompt-drawer')
+const { AiPromptDrawer } = await import('./ai-prompt-drawer.tsx')
 
 const onSave = vi.fn<(draft: unknown) => void>()
 const onRemove = vi.fn<(id: string) => void>()

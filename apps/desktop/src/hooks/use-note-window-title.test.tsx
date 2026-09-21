@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 const setWindowTitle = vi.hoisted(() => vi.fn())
 vi.mock('@/lib/windows/window-title', () => ({ setWindowTitle }))
 
-import { useNoteWindowTitle } from './use-note-window-title'
+import { useNoteWindowTitle } from './use-note-window-title.ts'
 
 beforeEach(() => {
   vi.clearAllMocks()

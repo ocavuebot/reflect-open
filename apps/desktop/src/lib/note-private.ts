@@ -1,8 +1,8 @@
 import { errorMessage, parseNote, type NoteRow } from '@reflect/core'
-import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter'
-import { startOperation } from '@/lib/operations'
-import { queryKeys } from '@/lib/query-client'
-import type { NoteActionInput } from './notes/types'
+import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import type { NoteActionInput } from './notes/types.ts'
 
 const pendingPrivacy = new Set<string>()
 

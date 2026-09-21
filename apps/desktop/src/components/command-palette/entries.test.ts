@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import type { AppCommand } from '@/lib/commands/types'
+import type { AppCommand } from '@/lib/commands/types.ts'
 import type { WikiSuggestion } from '@reflect/core'
-import { buildPaletteSections, type PaletteHit } from './entries'
+import { buildPaletteSections, type PaletteHit } from './entries.ts'
 
 function suggestion(path: string, title: string, date: string | null = null): WikiSuggestion {
   return { target: title, path, title, alias: null, date }

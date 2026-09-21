@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { openUrl } from '@tauri-apps/plugin-opener'
-import { openUrlSync } from './open-url'
+import { openUrlSync } from './open-url.ts'
 
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn(async () => {}) }))
 

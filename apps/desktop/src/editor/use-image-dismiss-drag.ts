@@ -9,7 +9,7 @@ import {
 } from 'react'
 import { flushSync } from 'react-dom'
 import { clamp } from '@ocavue/utils'
-import { PointerDrag, VelocitySampler, VELOCITY_STALE_MS } from '@/lib/pointer-drag'
+import { PointerDrag, VelocitySampler, VELOCITY_STALE_MS } from '@/lib/pointer-drag.ts'
 
 const DRAG_ACTIVATE_PX = 8
 const DISMISS_FRACTION = 0.18

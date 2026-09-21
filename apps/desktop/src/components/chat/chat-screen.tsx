@@ -1,11 +1,11 @@
 import type { ReactElement } from 'react'
 import { MessageSquare } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { imageFilesFrom } from '@/lib/chat-attachments'
-import { useChatSession } from '@/providers/chat-provider'
-import { useRouter } from '@/routing/router'
-import { ChatInput } from './chat-input'
-import { ChatTurnList } from './chat-turn-list'
+import { Button } from '@/components/ui/button.tsx'
+import { imageFilesFrom } from '@/lib/chat-attachments.ts'
+import { useChatSession } from '@/providers/chat-provider.tsx'
+import { useRouter } from '@/routing/router.tsx'
+import { ChatInput } from './chat-input.tsx'
+import { ChatTurnList } from './chat-turn-list.tsx'
 
 /**
  * The dedicated chat view (Plan 10, revised: a full route, not a side panel).

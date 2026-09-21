@@ -1,9 +1,9 @@
 import { memo, type MouseEvent, type ReactElement } from 'react'
 import { displayNoteTitle, type NoteListEntry } from '@reflect/core'
-import { formatRecencyLabel } from '@/lib/dates'
-import { cn } from '@/lib/utils'
-import type { ModClickEvent } from '@/lib/windows/open-in-new-window'
-import { useSettings } from '@/providers/settings-provider'
+import { formatRecencyLabel } from '@/lib/dates.ts'
+import { cn } from '@/lib/utils.ts'
+import type { ModClickEvent } from '@/lib/windows/open-in-new-window.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /**
  * The shared column template (Subject · Snippet · Tags · Updated) — the header

@@ -4,10 +4,10 @@ import { page, type Locator } from 'vitest/browser'
 import type { ReactElement } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { GraphInfo } from '@reflect/core'
-import type { BackupState } from '@/lib/backup-controller'
-import '@/test-utils/locator'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { SyncSection } from './sync-section'
+import type { BackupState } from '@/lib/backup-controller.ts'
+import '@/test-utils/locator.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { SyncSection } from './sync-section.tsx'
 
 const core = vi.hoisted(() => ({
   status: {
@@ -51,7 +51,7 @@ vi.mock('@/providers/graph-provider', () => ({
 }))
 vi.mock('@/providers/sync-provider', () => ({ useSync: () => sync }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 

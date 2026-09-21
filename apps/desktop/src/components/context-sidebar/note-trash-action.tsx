@@ -1,7 +1,7 @@
 import { useState, type ReactElement } from 'react'
 import { errorMessage, isDaily } from '@reflect/core'
 import { Trash2 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogClose,
@@ -9,11 +9,11 @@ import {
   DialogDescription,
   DialogFooter,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { deleteOpenNote } from '@/lib/note-delete'
-import { startOperation } from '@/lib/operations'
-import { useGraph } from '@/providers/graph-provider'
-import { useRouter } from '@/routing/router'
+} from '@/components/ui/dialog.tsx'
+import { deleteOpenNote } from '@/lib/note-delete.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useRouter } from '@/routing/router.tsx'
 
 interface NoteTrashActionProps {
   /** Graph-relative path of the regular note to move into trash. */

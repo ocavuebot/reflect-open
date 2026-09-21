@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
-import { BackupSettingsField } from './backup-section'
-import { IcloudSettingsField } from './icloud-section'
-import { SettingsSection } from './section'
+import { BackupSettingsField } from './backup-section.tsx'
+import { IcloudSettingsField } from './icloud-section.tsx'
+import { SettingsSection } from './section.tsx'
 
 /**
  * Settings → Sync: iCloud Drive and Git remote sync live together here. Keep

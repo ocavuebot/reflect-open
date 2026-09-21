@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { queryClient, queryKeys, throttledInvalidateIndexQueries } from './query-client'
+import { queryClient, queryKeys, throttledInvalidateIndexQueries } from './query-client.ts'
 
 const invalidateSpy = vi.spyOn(queryClient, 'invalidateQueries')
 

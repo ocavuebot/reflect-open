@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { emitFileChanges, setBridge, writeNote } from '@reflect/core'
-import { createIcloudController, isICloudRoot } from './icloud-controller'
+import { createIcloudController, isICloudRoot } from './icloud-controller.ts'
 
 /**
  * The Plan 21 controller contract, most importantly the shadow-base guard:

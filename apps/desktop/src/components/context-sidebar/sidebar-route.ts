@@ -1,4 +1,4 @@
-import type { Route } from '@/routing/route'
+import type { Route } from '@/routing/route.ts'
 
 /** What the AppShell's right context region should describe for a route. */
 export type ContextSidebarTarget = { kind: 'daily'; date: string } | { kind: 'note'; path: string }

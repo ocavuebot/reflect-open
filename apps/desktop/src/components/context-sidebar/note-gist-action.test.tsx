@@ -2,9 +2,9 @@ import { render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { NoteRow } from '@reflect/core'
-import { resetNoteRowOverlays, setNoteRowOverlay } from '@/hooks/note-row-overlay'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import { NoteGistAction } from './note-gist-action'
+import { resetNoteRowOverlays, setNoteRowOverlay } from '@/hooks/note-row-overlay.ts'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
+import { NoteGistAction } from './note-gist-action.tsx'
 
 const useGithubConnected = vi.hoisted(() => vi.fn(() => true))
 const useNoteRow = vi.hoisted(() => vi.fn<(path: string) => NoteRow | null>(() => null))

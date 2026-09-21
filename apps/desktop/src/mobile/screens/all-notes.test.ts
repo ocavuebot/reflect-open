@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { FilteredSearchHit, NoteTagFacet } from '@reflect/core'
-import { matchingTagFacets, rowForHit } from './all-notes'
+import { matchingTagFacets, rowForHit } from './all-notes.tsx'
 
 function hit(overrides: Partial<FilteredSearchHit>): FilteredSearchHit {
   return {

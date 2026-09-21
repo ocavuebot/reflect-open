@@ -10,9 +10,9 @@ import {
   type MobileStorageInfo,
   type MobileStorageKind,
 } from '@reflect/core'
-import { takeWarmMobileStorage } from '@/lib/mobile-boot-warm'
-import { createSettingsQueryOptions } from '@/lib/query-options'
-import { useSettings } from '@/providers/settings-provider'
+import { takeWarmMobileStorage } from '@/lib/mobile-boot-warm.ts'
+import { createSettingsQueryOptions } from '@/lib/query-options.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /** The graph directory created in the container for a fresh start — reads as
  * `iCloud Drive → Reflect → Notes` in Files/Finder. */

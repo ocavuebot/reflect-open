@@ -1,10 +1,10 @@
 import type { TextCaptureKind } from '@reflect/core'
-import { isIsoDate } from '@/lib/dates'
+import { isIsoDate } from '@/lib/dates.ts'
 import {
   DEEP_LINK_SCHEME,
   DEEP_LINK_TEXT_MAX_LENGTH,
   type DeepLink,
-} from '@/lib/deep-links/deep-link'
+} from '@/lib/deep-links/deep-link.ts'
 
 /**
  * Parse a `reflect://` URL into a {@link DeepLink}, or null for anything the

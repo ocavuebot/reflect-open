@@ -5,6 +5,10 @@ settings:
   dedupePeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@tauri-apps/api@2.11.1': 155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59
+  vitest-fail-on-console@0.10.1: c81d2c01afedd655ed45783726ed85c48cd77dcf364a79f25ac1046161330452
+
 importers:
 
   .:
@@ -98,7 +102,7 @@ importers:
         version: 5.102.8(react@19.3.0)
       '@tauri-apps/api':
         specifier: ^2.11.1
-        version: 2.11.1
+        version: 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
       '@tauri-apps/plugin-deep-link':
         specifier: ^2.4.10
         version: 2.4.10
@@ -228,7 +232,7 @@ importers:
         version: 2.3.0(@types/react-dom@19.3.0)(@types/react@19.3.0)(react-dom@19.3.0)(react@19.3.0)(vitest@4.1.11)
       vitest-fail-on-console:
         specifier: ^0.10.1
-        version: 0.10.1(@vitest/utils@4.1.11)(vite@8.3.0)(vitest@4.1.11)
+        version: 0.10.1(patch_hash=c81d2c01afedd655ed45783726ed85c48cd77dcf364a79f25ac1046161330452)(@vitest/utils@4.1.11)(vite@8.3.0)(vitest@4.1.11)
 
   apps/extension:
     dependencies:
@@ -7858,7 +7862,7 @@ snapshots:
       '@tanstack/query-core': 5.102.8
       react: 19.3.0
 
-  '@tauri-apps/api@2.11.1': {}
+  '@tauri-apps/api@2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)': {}
 
   '@tauri-apps/cli-darwin-arm64@2.11.4':
     optional: true
@@ -7909,27 +7913,27 @@ snapshots:
 
   '@tauri-apps/plugin-deep-link@2.4.10':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-dialog@2.7.3':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-http@2.6.1':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-opener@2.5.5':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-process@2.3.1':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@tauri-apps/plugin-updater@2.11.0':
     dependencies:
-      '@tauri-apps/api': 2.11.1
+      '@tauri-apps/api': 2.11.1(patch_hash=155d56e43dbc9ad3291b0cccca3c8d349ecc656ebd080bf4d114a4f57b969b59)
 
   '@topcli/prompts@4.0.0': {}
 
@@ -11759,7 +11763,7 @@ snapshots:
       '@types/react': 19.3.0
       '@types/react-dom': 19.3.0(@types/react@19.3.0)
 
-  vitest-fail-on-console@0.10.1(@vitest/utils@4.1.11)(vite@8.3.0)(vitest@4.1.11):
+  vitest-fail-on-console@0.10.1(patch_hash=c81d2c01afedd655ed45783726ed85c48cd77dcf364a79f25ac1046161330452)(@vitest/utils@4.1.11)(vite@8.3.0)(vitest@4.1.11):
     dependencies:
       '@vitest/utils': 4.1.11
       chalk: 5.6.2

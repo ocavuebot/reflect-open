@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import '@/test-utils/locator'
-import { NoteEditor, type NoteEditorHandle } from './note-editor'
+import '@/test-utils/locator.ts'
+import { NoteEditor, type NoteEditorHandle } from './note-editor.tsx'
 
 const pmRoot = page.locate('.ProseMirror')
 

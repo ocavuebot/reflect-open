@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { describe, expect, it } from 'vitest'
-import { ConflictNoteView } from './conflict-note-view'
+import { ConflictNoteView } from './conflict-note-view.tsx'
 
 const CONFLICTED = [
   '# Standup',

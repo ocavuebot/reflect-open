@@ -2,11 +2,11 @@ import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { OpenTask } from '@reflect/core'
-import { makeOpenTask as task } from './open-task-fixture'
-import { taskKey } from './task-identity'
-import type { TaskActions } from './use-task-actions'
-import type { TaskSelection } from './use-task-selection'
-import { useTaskKeyboard } from './use-task-keyboard'
+import { makeOpenTask as task } from './open-task-fixture.ts'
+import { taskKey } from './task-identity.ts'
+import type { TaskActions } from './use-task-actions.ts'
+import type { TaskSelection } from './use-task-selection.ts'
+import { useTaskKeyboard } from './use-task-keyboard.ts'
 
 function makeSelection(over: Partial<TaskSelection> = {}): TaskSelection {
   return {

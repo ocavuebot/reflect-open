@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { createStorage } from '@/test-utils/storage'
-import { getLocalStorageStore, resetLocalStorageStores } from './local-storage'
+import { createStorage } from '@/test-utils/storage.ts'
+import { getLocalStorageStore, resetLocalStorageStores } from './local-storage.ts'
 
 beforeEach(() => {
   vi.stubGlobal('window', { localStorage: createStorage({ key: 'local' }) })

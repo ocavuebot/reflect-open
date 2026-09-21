@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { ShortcutKeys } from '@/components/shortcut-keys'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { keybindingFor } from '@/lib/commands/app-commands'
-import { useRouter } from '@/routing/router'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip.tsx'
+import { keybindingFor } from '@/lib/commands/app-commands.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 const BACK_BINDING = keybindingFor('history.back')
 const FORWARD_BINDING = keybindingFor('history.forward')

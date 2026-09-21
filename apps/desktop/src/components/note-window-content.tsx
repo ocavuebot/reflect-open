@@ -1,13 +1,13 @@
 import type { ReactElement } from 'react'
 import { dailyPath, displayNoteTitle } from '@reflect/core'
-import { NoteFindBar } from '@/components/note-find-bar'
-import { RouteContent } from '@/components/route-content'
-import { SingleNoteView } from '@/components/single-note-view'
-import { useNoteRow } from '@/hooks/use-note-row'
-import { useNoteWindowTitle } from '@/hooks/use-note-window-title'
-import { formatDayLabel, todayIso } from '@/lib/dates'
-import { useSettings } from '@/providers/settings-provider'
-import { useRouter } from '@/routing/router'
+import { NoteFindBar } from '@/components/note-find-bar.tsx'
+import { RouteContent } from '@/components/route-content.tsx'
+import { SingleNoteView } from '@/components/single-note-view.tsx'
+import { useNoteRow } from '@/hooks/use-note-row.ts'
+import { useNoteWindowTitle } from '@/hooks/use-note-window-title.ts'
+import { formatDayLabel, todayIso } from '@/lib/dates.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * A secondary note window's whole surface: the routed view, full-bleed — no

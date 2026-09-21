@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { bindingToAccelerator } from './accelerator'
+import { bindingToAccelerator } from './accelerator.ts'
 
 describe('bindingToAccelerator', () => {
   it('maps Mod to the platform-resolving CmdOrCtrl', () => {

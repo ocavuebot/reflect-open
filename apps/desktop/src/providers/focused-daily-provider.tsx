@@ -9,10 +9,10 @@ import {
 import {
   contextSidebarTarget,
   type ContextSidebarTarget,
-} from '@/components/context-sidebar/sidebar-route'
-import { useToday } from '@/lib/use-today'
-import { effectiveDailyDate } from '@/routing/route'
-import { useRouter } from '@/routing/router'
+} from '@/components/context-sidebar/sidebar-route.ts'
+import { useToday } from '@/lib/use-today.ts'
+import { effectiveDailyDate } from '@/routing/route.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * Which day in the daily stream currently holds the user's focus, so the

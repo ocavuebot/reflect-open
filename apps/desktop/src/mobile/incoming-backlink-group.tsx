@@ -2,9 +2,9 @@ import { useState, type ReactElement } from 'react'
 import { ChevronRight } from 'lucide-react'
 import type { WikilinkClickHandler } from '@meowdown/core'
 import { displayNoteTitle } from '@reflect/core'
-import { BacklinkSnippet } from '@/components/backlink-snippet'
-import type { BacklinkSource } from '@/lib/group-backlinks'
-import { cn } from '@/lib/utils'
+import { BacklinkSnippet } from '@/components/backlink-snippet.tsx'
+import type { BacklinkSource } from '@/lib/group-backlinks.ts'
+import { cn } from '@/lib/utils.ts'
 
 interface IncomingBacklinkGroupProps {
   source: BacklinkSource

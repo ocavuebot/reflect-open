@@ -1,13 +1,13 @@
 import { Fragment, type Dispatch, type ReactElement, type SetStateAction } from 'react'
 import { Plus } from 'lucide-react'
 import { groupTaskContexts, type OpenTask, type TaskGroup } from '@reflect/core'
-import { TaskBreadcrumbs } from '@/components/tasks/task-breadcrumbs'
-import { addTargetForGroup, taskGroupHeaderStyle } from '@/lib/tasks/task-group-presentation'
-import { taskKey } from '@/lib/tasks/task-identity'
-import type { InsertTaskTarget } from '@/lib/tasks/task-insert-target'
-import { cn } from '@/lib/utils'
-import { hapticImpactLight } from '@/mobile/haptics'
-import { MobileTaskRow } from '@/mobile/task-row'
+import { TaskBreadcrumbs } from '@/components/tasks/task-breadcrumbs.tsx'
+import { addTargetForGroup, taskGroupHeaderStyle } from '@/lib/tasks/task-group-presentation.tsx'
+import { taskKey } from '@/lib/tasks/task-identity.ts'
+import type { InsertTaskTarget } from '@/lib/tasks/task-insert-target.ts'
+import { cn } from '@/lib/utils.ts'
+import { hapticImpactLight } from '@/mobile/haptics.ts'
+import { MobileTaskRow } from '@/mobile/task-row.tsx'
 
 interface MobileTaskGroupProps {
   group: TaskGroup

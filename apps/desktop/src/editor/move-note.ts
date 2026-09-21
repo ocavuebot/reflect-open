@@ -1,6 +1,6 @@
 import { moveNoteIndexed } from '@reflect/core'
-import { emitNoteMoved } from '@/lib/note-moves'
-import { openSession, retargetOpenDocument } from './open-documents'
+import { emitNoteMoved } from '@/lib/note-moves.ts'
+import { openSession, retargetOpenDocument } from './open-documents.ts'
 
 /**
  * Move a note's file + projection, carrying any live editor session along

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { getIndexProgress, setIndexProgress, subscribeIndexProgress } from './index-progress'
+import { getIndexProgress, setIndexProgress, subscribeIndexProgress } from './index-progress.ts'
 
 afterEach(() => {
   setIndexProgress(null)

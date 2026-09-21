@@ -1,10 +1,10 @@
 import type { ReactElement } from 'react'
-import { Button } from '@/components/ui/button'
-import { useAppVersion } from '@/hooks/use-app-version'
-import { useCrashTest, useDebugUnlockTap } from '@/hooks/use-debug-unlock'
-import { useUpdate } from '@/providers/update-provider'
-import { SettingsSection } from './section'
-import { UpdateField } from './update-field'
+import { Button } from '@/components/ui/button.tsx'
+import { useAppVersion } from '@/hooks/use-app-version.ts'
+import { useCrashTest, useDebugUnlockTap } from '@/hooks/use-debug-unlock.ts'
+import { useUpdate } from '@/providers/update-provider.tsx'
+import { SettingsSection } from './section.tsx'
+import { UpdateField } from './update-field.tsx'
 
 export function AboutSection(): ReactElement {
   const version = useAppVersion()

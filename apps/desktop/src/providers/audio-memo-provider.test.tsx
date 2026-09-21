@@ -9,7 +9,7 @@ import type {
   GraphInfo,
   Settings,
 } from '@reflect/core'
-import type { UseAudioRecorderOptions } from '@/hooks/use-audio-recorder'
+import type { UseAudioRecorderOptions } from '@/hooks/use-audio-recorder.ts'
 
 const captureAudioMemoPart = vi.hoisted(() =>
   vi.fn<(input: CaptureAudioMemoPartInput) => Promise<CaptureAudioMemoOutcome>>(),
@@ -154,7 +154,7 @@ vi.mock('@/lib/operations', () => ({
 
 vi.mock('@/components/ui/toast', () => ({ toast }))
 
-const { AudioMemoProvider, useAudioMemo } = await import('./audio-memo-provider')
+const { AudioMemoProvider, useAudioMemo } = await import('./audio-memo-provider.tsx')
 
 const GRAPH: GraphInfo = { root: '/notes', name: 'Notes', generation: 3 }
 

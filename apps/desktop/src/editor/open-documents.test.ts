@@ -1,11 +1,11 @@
 import { describe, expect, it, vi } from 'vitest'
-import { createNoteSession, type NoteSession, type NoteSessionSnapshot } from './note-session'
+import { createNoteSession, type NoteSession, type NoteSessionSnapshot } from './note-session.ts'
 import {
   flushOpenDocuments,
   openSession,
   registerOpenDocument,
   reloadOpenDocuments,
-} from './open-documents'
+} from './open-documents.ts'
 
 function fakeSession(path: string, log: string[]): NoteSession {
   return {
@@ -112,7 +112,7 @@ describe('open documents', () => {
 
 describe('retargetOpenDocument (Plan 17)', () => {
   it('re-keys the entry; the original unregister still finds it by identity', async () => {
-    const { retargetOpenDocument } = await import('./open-documents')
+    const { retargetOpenDocument } = await import('./open-documents.ts')
     const session = fakeSession('notes/a.md', [])
     const unregister = registerOpenDocument({ session })
 
@@ -125,7 +125,7 @@ describe('retargetOpenDocument (Plan 17)', () => {
   })
 
   it('re-keying a path with no entry is a no-op', async () => {
-    const { retargetOpenDocument } = await import('./open-documents')
+    const { retargetOpenDocument } = await import('./open-documents.ts')
     retargetOpenDocument('notes/ghost.md', 'notes/elsewhere.md', fakeSession('notes/ghost.md', []))
     expect(openSession('notes/elsewhere.md')).toBeNull()
   })
@@ -133,7 +133,7 @@ describe('retargetOpenDocument (Plan 17)', () => {
   it("never re-keys a different pane's document at the same path", async () => {
     // The failed-move compensation re-keys (to → from); when the entry at
     // `to` belongs to another pane, it must stay exactly where it is.
-    const { retargetOpenDocument } = await import('./open-documents')
+    const { retargetOpenDocument } = await import('./open-documents.ts')
     const foreign = fakeSession('notes/taken.md', [])
     const unregister = registerOpenDocument({ session: foreign })
     try {

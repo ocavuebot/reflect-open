@@ -10,8 +10,8 @@ import {
   type ReactElement,
   type ReactNode,
 } from 'react'
-import { onNoteMoved } from '@/lib/note-moves'
-import { normalizeRoute, routesEqual, type Route } from './route'
+import { onNoteMoved } from '@/lib/note-moves.ts'
+import { normalizeRoute, routesEqual, type Route } from './route.ts'
 
 /**
  * The app router (Plan 06): a history stack over typed {@link Route}s — no URL,

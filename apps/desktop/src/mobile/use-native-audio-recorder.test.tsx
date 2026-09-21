@@ -6,7 +6,7 @@ import {
   isStagedPathClaimed,
   releaseStagedPath,
   useNativeAudioRecorder,
-} from './use-native-audio-recorder'
+} from './use-native-audio-recorder.ts'
 
 const invoke = vi.fn<(command: string, args?: unknown) => Promise<unknown>>()
 

@@ -10,14 +10,14 @@ import {
   upsertFrontmatter,
   type TaskMarker,
 } from '@reflect/core'
-import { splitDoc } from './note-session-doc'
-import { frontmatterPatchToYaml, type FrontmatterPatch } from './note-session-frontmatter'
+import { splitDoc } from './note-session-doc.ts'
+import { frontmatterPatchToYaml, type FrontmatterPatch } from './note-session-frontmatter.ts'
 import type {
   NoteSession,
   NoteSessionOptions,
   NoteSessionSnapshot,
   NoteSessionStatus,
-} from './note-session-types'
+} from './note-session-types.ts'
 
 const DEFAULT_SAVE_DEBOUNCE_MS = 800
 

@@ -3,11 +3,11 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import type { ReactNode } from 'react'
 import { setBridge } from '@reflect/core'
-import { resetOperations } from '@/lib/operations'
-import { THEME_PREFERENCE_CACHE_KEY } from '@/lib/theme-cache'
-import { queryKeys } from '@/lib/query-client'
-import { SettingsProvider } from './settings-provider'
-import { ThemeProvider, useTheme } from './theme-provider'
+import { resetOperations } from '@/lib/operations.ts'
+import { THEME_PREFERENCE_CACHE_KEY } from '@/lib/theme-cache.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { SettingsProvider } from './settings-provider.tsx'
+import { ThemeProvider, useTheme } from './theme-provider.tsx'
 
 /**
  * Covers the startup-flash contract: `public/theme-init.js` paints the cached

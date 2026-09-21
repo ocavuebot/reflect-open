@@ -5,7 +5,7 @@ import {
   resetDeepLinkIntakeForTests,
   setDeepLinkHandler,
   startDeepLinkListener,
-} from '@/lib/deep-links/intake'
+} from '@/lib/deep-links/intake.ts'
 
 vi.mock('@tauri-apps/plugin-deep-link', () => ({
   getCurrent: vi.fn(),

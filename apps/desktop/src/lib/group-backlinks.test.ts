@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { groupBacklinksBySource } from './group-backlinks'
+import { groupBacklinksBySource } from './group-backlinks.ts'
 
 describe('groupBacklinksBySource', () => {
   it('groups rows by source note, preserving order and per-link keys', () => {

@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import { useQuery, useQueryClient, type QueryClient } from '@tanstack/react-query'
 import { IAP_PRODUCT_IDS, iapIsOwned, subscribeIapPurchaseUpdated } from '@reflect/core'
 import { z } from 'zod'
-import { getLocalStorageStore } from '@/lib/local-storage'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+import { getLocalStorageStore } from '@/lib/local-storage.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 const activeSubscriptionSchema = z.enum(['yearly', 'monthly']).nullable()
 type ActiveSubscription = z.infer<typeof activeSubscriptionSchema>

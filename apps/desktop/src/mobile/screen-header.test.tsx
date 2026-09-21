@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { describe, expect, it, vi } from 'vitest'
-import { MobileScreenHeader } from './screen-header'
+import { MobileScreenHeader } from './screen-header.tsx'
 
 describe('MobileScreenHeader', () => {
   it('centers the title between balanced header action slots', async () => {

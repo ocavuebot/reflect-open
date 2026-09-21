@@ -6,7 +6,7 @@ import {
   indexWithin,
   FUTURE_DAYS,
   PAST_DAYS,
-} from './day-window'
+} from './day-window.ts'
 
 describe('day window', () => {
   const window = createDayWindow('2026-06-09')

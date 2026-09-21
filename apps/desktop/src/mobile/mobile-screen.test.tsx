@@ -5,16 +5,19 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { format } from 'date-fns'
 import { act, StrictMode, type ReactElement } from 'react'
 import { setBridge } from '@reflect/core'
-import { clearFormattingToolbar, publishFormattingToolbar } from '@/editor/formatting-toolbar-store'
-import { RouterProvider, useRouter } from '@/routing/router'
-import type { Route } from '@/routing/route'
-import { addDaysIso, formatDayLabel, parseIsoDate, todayIso } from '@/lib/dates'
-import { monthLabel, monthOf } from '@/lib/month-grid'
-import { fireEvent } from '@/test-utils/fire-event'
-import '@/test-utils/locator'
-import { createWeekWindow, weekOf } from './calendar'
-import { MobileShell } from './mobile-shell'
-import { publishKeyboardHeight } from './use-keyboard'
+import {
+  clearFormattingToolbar,
+  publishFormattingToolbar,
+} from '@/editor/formatting-toolbar-store.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import type { Route } from '@/routing/route.ts'
+import { addDaysIso, formatDayLabel, parseIsoDate, todayIso } from '@/lib/dates.ts'
+import { monthLabel, monthOf } from '@/lib/month-grid.ts'
+import { fireEvent } from '@/test-utils/fire-event.ts'
+import '@/test-utils/locator.ts'
+import { createWeekWindow, weekOf } from './calendar.ts'
+import { MobileShell } from './mobile-shell.tsx'
+import { publishKeyboardHeight } from './use-keyboard.ts'
 
 const waitFor = vi.waitFor
 
@@ -42,7 +45,7 @@ vi.mock('@/editor/note-editor', async () => {
     }: {
       initialContent: string
       onWikiLinkClick?: (options: { target: string; openInNewWindow: boolean }) => void
-      handleRef?: (handle: import('@/editor/note-editor').NoteEditorHandle | null) => void
+      handleRef?: (handle: import('@/editor/note-editor.tsx').NoteEditorHandle | null) => void
     }) => {
       const markdownRef = useRef(initialContent)
       useEffect(() => {

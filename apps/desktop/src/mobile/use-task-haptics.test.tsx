@@ -1,7 +1,7 @@
 import { renderHook } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { hapticImpactLight } from '@/mobile/haptics'
-import { useTaskCheckboxHaptics } from './use-task-haptics'
+import { hapticImpactLight } from '@/mobile/haptics.ts'
+import { useTaskCheckboxHaptics } from './use-task-haptics.ts'
 
 vi.mock('@/mobile/haptics', () => ({
   hapticImpactLight: vi.fn(),

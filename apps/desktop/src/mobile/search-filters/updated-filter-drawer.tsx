@@ -1,14 +1,14 @@
 import { useState, type ReactElement } from 'react'
 import { Check } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button.tsx'
+import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import { Input } from '@/components/ui/input.tsx'
 import {
   UPDATED_PRESETS,
   updatedPresetFilter,
   updatedRangeFilter,
   type UpdatedFilter,
-} from './filter-state'
+} from './filter-state.ts'
 
 interface UpdatedFilterDrawerProps {
   open: boolean

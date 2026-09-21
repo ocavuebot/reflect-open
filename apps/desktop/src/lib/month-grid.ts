@@ -9,7 +9,7 @@ import {
   startOfMonth,
   startOfWeek,
 } from 'date-fns'
-import { addDaysIso } from './dates'
+import { addDaysIso } from './dates.ts'
 
 /**
  * Pure month-grid math for the daily sidebar's calendar (no DOM, no queries).

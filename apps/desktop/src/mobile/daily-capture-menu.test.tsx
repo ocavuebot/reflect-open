@@ -1,6 +1,6 @@
 import { render, type RenderResult } from 'vitest-browser-react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { DailyCaptureMenu } from './daily-capture-menu'
+import { DailyCaptureMenu } from './daily-capture-menu.tsx'
 
 const navigate = vi.hoisted(() => vi.fn())
 const hapticImpactLight = vi.hoisted(() => vi.fn())

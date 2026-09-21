@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
 import { displayNoteTitle, type ConflictedNote } from '@reflect/core'
 import { ChevronRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation'
+import { Button } from '@/components/ui/button.tsx'
+import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation.ts'
 import { isModEvent } from '@meowdown/core'
 
 interface ConflictedNoteLinksProps {

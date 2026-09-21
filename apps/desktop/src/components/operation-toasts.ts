@@ -1,5 +1,5 @@
-import { toast } from '@/components/ui/toast'
-import { getOperations, subscribeOperations, type Operation } from '@/lib/operations'
+import { toast } from '@/components/ui/toast.tsx'
+import { getOperations, subscribeOperations, type Operation } from '@/lib/operations.ts'
 
 /**
  * The desktop face of the operations store (foundations hardening): a small,

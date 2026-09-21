@@ -9,9 +9,9 @@ import {
   setBridge,
   syncAppStore,
 } from '@reflect/core'
-import { createDevBridge } from '@/dev/dev-bridge'
-import { createDevFileStore } from '@/dev/dev-file-store'
-import { createDevIndexDb } from '@/dev/dev-index-db'
+import { createDevBridge } from '@/dev/dev-bridge.ts'
+import { createDevFileStore } from '@/dev/dev-file-store.ts'
+import { createDevIndexDb } from '@/dev/dev-index-db.ts'
 
 async function installPreview(): Promise<void> {
   setBridge(

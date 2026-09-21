@@ -1,7 +1,7 @@
 import { useMemo, type ReactElement } from 'react'
-import { KBD_FRAME_CLASS } from '@/components/kbd'
-import { formatBinding, isApplePlatform } from '@/lib/keybindings'
-import { cn } from '@/lib/utils'
+import { KBD_FRAME_CLASS } from '@/components/kbd.tsx'
+import { formatBinding, isApplePlatform } from '@/lib/keybindings.ts'
+import { cn } from '@/lib/utils.ts'
 
 interface ShortcutKeysProps {
   /** A keymap-registry binding, e.g. `Mod-d` or `Mod-\`. */

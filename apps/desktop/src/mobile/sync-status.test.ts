@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import type { BackupState } from '@/lib/backup-controller'
-import { mobileSyncStatus } from './sync-status'
+import type { BackupState } from '@/lib/backup-controller.ts'
+import { mobileSyncStatus } from './sync-status.ts'
 
 /**
  * The plain-language mapping (Plan 19, step 10): engine product states plus

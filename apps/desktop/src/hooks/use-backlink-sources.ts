@@ -6,10 +6,10 @@ import {
   type BacklinkContextPage,
   type BacklinkSourceCursor,
 } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { groupBacklinksBySource, type BacklinkSource } from '@/lib/group-backlinks'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { groupBacklinksBySource, type BacklinkSource } from '@/lib/group-backlinks.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 const BACKLINK_SOURCES_PER_PAGE = 10
 

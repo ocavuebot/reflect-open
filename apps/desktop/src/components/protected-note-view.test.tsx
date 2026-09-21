@@ -1,6 +1,6 @@
 import { render } from 'vitest-browser-react'
 import { describe, expect, it } from 'vitest'
-import { ProtectedNoteView } from './protected-note-view'
+import { ProtectedNoteView } from './protected-note-view.tsx'
 
 const CONTENT = `---
 title: Setext

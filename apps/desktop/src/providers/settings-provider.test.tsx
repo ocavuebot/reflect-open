@@ -3,12 +3,12 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import { StrictMode, type ReactNode } from 'react'
 import { setBridge, type AiProviderConfig, type Settings } from '@reflect/core'
-import { resetOperations, useOperations } from '@/lib/operations'
-import { flushSettings } from '@/lib/settings-flush'
-import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client'
-import { createSettingsQueryOptions } from '@/lib/query-options'
-import { deferred, type Deferred } from '@/test-utils/deferred'
-import { SettingsProvider, useSettings } from './settings-provider'
+import { resetOperations, useOperations } from '@/lib/operations.ts'
+import { flushSettings } from '@/lib/settings-flush.ts'
+import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client.ts'
+import { createSettingsQueryOptions } from '@/lib/query-options.ts'
+import { deferred, type Deferred } from '@/test-utils/deferred.ts'
+import { SettingsProvider, useSettings } from './settings-provider.tsx'
 
 /**
  * Exercises the hydration + overrides contract: defaults while the load is in

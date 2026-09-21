@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
-import { useAsyncAction } from './use-async-action'
+import { useAsyncAction } from './use-async-action.ts'
 
 describe('useAsyncAction', () => {
   it('flips pending for the duration of the action', async () => {

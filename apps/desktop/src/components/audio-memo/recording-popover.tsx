@@ -1,10 +1,10 @@
 import type { ComponentProps, ReactElement } from 'react'
-import { RecordingWaveform } from '@/components/audio-memo/recording-waveform'
-import { Button } from '@/components/ui/button'
-import { PopoverContent } from '@/components/ui/popover'
-import { Spinner } from '@/components/ui/spinner'
-import { formatRecordingElapsed } from '@/lib/recording-time'
-import { useAudioMemo } from '@/providers/audio-memo-provider'
+import { RecordingWaveform } from '@/components/audio-memo/recording-waveform.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { PopoverContent } from '@/components/ui/popover.tsx'
+import { Spinner } from '@/components/ui/spinner.tsx'
+import { formatRecordingElapsed } from '@/lib/recording-time.ts'
+import { useAudioMemo } from '@/providers/audio-memo-provider.tsx'
 
 /**
  * The floating panel beside the mic while a memo is in flight: waveform +

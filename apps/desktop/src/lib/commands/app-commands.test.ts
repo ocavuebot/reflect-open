@@ -1,9 +1,9 @@
 import { describe, expect, it, vi } from 'vitest'
 import type { EmbedStatus } from '@reflect/core'
-import { notePathForRoute, type Route } from '@/routing/route'
-import type { NavigateOptions } from '@/routing/router'
-import { resetOperations } from '@/lib/operations'
-import type { CommandContext } from './types'
+import { notePathForRoute, type Route } from '@/routing/route.ts'
+import type { NavigateOptions } from '@/routing/router.tsx'
+import { resetOperations } from '@/lib/operations.ts'
+import type { CommandContext } from './types.ts'
 
 const TODAY = '2026-06-09'
 
@@ -23,18 +23,18 @@ const startOperation = vi.hoisted(() =>
   vi.fn(() => ({ progress: vi.fn(), done: vi.fn(), fail: operationFail })),
 )
 vi.mock('@/lib/semantic', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/semantic')>()),
+  ...(await importOriginal<typeof import('@/lib/semantic.ts')>()),
   backfillEmbeddingsVisibly,
 }))
 vi.mock('@/lib/note-deep-link', () => ({ runCopyDeepLink }))
 vi.mock('@/lib/note-copy-path', () => ({ runCopyNotePath }))
 vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform')>()),
+  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
   isNativeShell,
 }))
 vi.mock('@/lib/windows/open-in-new-window', () => ({ openRouteInNewWindow }))
 vi.mock('@/lib/operations', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/operations')>()),
+  ...(await importOriginal<typeof import('@/lib/operations.ts')>()),
   startOperation,
 }))
 vi.mock('@reflect/core', async (importOriginal) => ({
@@ -46,7 +46,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 }))
 
 // Importing registers the commands (module side effect, like production).
-const { APP_COMMANDS, keybindingFor } = await import('./app-commands')
+const { APP_COMMANDS, keybindingFor } = await import('./app-commands.ts')
 
 function command(id: string) {
   const found = APP_COMMANDS.find((entry) => entry.id === id)

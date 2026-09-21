@@ -13,7 +13,7 @@ vi.mock('@/components/ui/drawer', () => ({
   DrawerTitle: ({ children }: { children?: ReactNode }) => <h2>{children}</h2>,
 }))
 
-const { AiProviderActionsDrawer } = await import('./ai-provider-actions-drawer')
+const { AiProviderActionsDrawer } = await import('./ai-provider-actions-drawer.tsx')
 
 const PROVIDER: AiProviderConfig = {
   id: 'p1',

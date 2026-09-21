@@ -3,7 +3,7 @@ import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { IntegrationsSection } from './integrations-section'
+import { IntegrationsSection } from './integrations-section.tsx'
 
 const openUrl = vi.hoisted(() => vi.fn(async () => {}))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl }))

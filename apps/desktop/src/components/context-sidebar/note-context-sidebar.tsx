@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
-import { NoteActionsSection } from './note-actions-section'
-import { PublishedUrlSection } from './published-url-section'
-import { SimilarNotesSection } from './similar-notes-section'
+import { NoteActionsSection } from './note-actions-section.tsx'
+import { PublishedUrlSection } from './published-url-section.tsx'
+import { SimilarNotesSection } from './similar-notes-section.tsx'
 
 interface NoteContextSidebarProps {
   /** Graph-relative path of the open note the sidebar describes. */

@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
-import { SettingsNavigator } from '@/components/settings/settings-navigator'
-import { SettingsScreen } from '@/components/settings-screen'
-import { ScrollRestored } from '@/routing/scroll-restore'
+import { SettingsNavigator } from '@/components/settings/settings-navigator.tsx'
+import { SettingsScreen } from '@/components/settings-screen.tsx'
+import { ScrollRestored } from '@/routing/scroll-restore.tsx'
 
 export function SettingsRoute(): ReactElement {
   // The section navigator floats in the left gutter — absolutely

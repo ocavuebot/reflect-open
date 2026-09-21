@@ -4,9 +4,9 @@ import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
 import { fetch as tauriFetch } from '@tauri-apps/plugin-http'
-import type { ConnectExistingResult } from '@/lib/backup-controller'
-import { fireEvent } from '@/test-utils/fire-event'
-import { ConnectGithubDrawer } from './connect-github-drawer'
+import type { ConnectExistingResult } from '@/lib/backup-controller.ts'
+import { fireEvent } from '@/test-utils/fire-event.ts'
+import { ConnectGithubDrawer } from './connect-github-drawer.tsx'
 
 /**
  * The mobile connect sheet. The wizard's flow branches (create handoff,
@@ -31,7 +31,7 @@ const sync = vi.hoisted(() => ({
 vi.mock('@/providers/sync-provider', () => ({ useSync: () => sync }))
 vi.mock('@tauri-apps/plugin-http', () => ({ fetch: vi.fn() }))
 vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform')>()),
+  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
   isNativeShell: () => true,
 }))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn() }))

@@ -8,11 +8,11 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
  */
 async function freshModule(
   invoke: (command: string) => Promise<unknown>,
-): Promise<typeof import('./mobile-boot-warm')> {
+): Promise<typeof import('./mobile-boot-warm.ts')> {
   vi.resetModules()
   const core = await import('@reflect/core')
   core.setBridge({ invoke: async (command) => await invoke(command), listen: async () => () => {} })
-  return await import('./mobile-boot-warm')
+  return await import('./mobile-boot-warm.ts')
 }
 
 const STORAGE = {

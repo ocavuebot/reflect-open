@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { ContactMatch, WikiLinkSuggestion } from '@reflect/core'
-import { buildAutocompleteEntries } from './wiki-autocomplete-entries'
+import { buildAutocompleteEntries } from './wiki-autocomplete-entries.ts'
 
 function suggestion(overrides: Partial<WikiLinkSuggestion>): WikiLinkSuggestion {
   const target = overrides.target ?? 'Note'

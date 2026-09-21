@@ -12,10 +12,10 @@ import {
   type CalendarAuthorizationStatus,
   type Unlisten,
 } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { isMacosDesktop } from '@/lib/platform'
-import { queryKeys } from '@/lib/query-client'
-import { useSettings } from '@/providers/settings-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { isMacosDesktop } from '@/lib/platform.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /**
  * TanStack Query hooks over the calendar bindings

@@ -3,8 +3,8 @@ import { userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { SimilarNotesSection } from './similar-notes-section'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { SimilarNotesSection } from './similar-notes-section.tsx'
 
 const relatedNotes = vi.hoisted(() => vi.fn())
 const readNote = vi.hoisted(() => vi.fn())
@@ -16,7 +16,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   relatedNotes,
 }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 vi.mock('@/providers/graph-provider', () => ({

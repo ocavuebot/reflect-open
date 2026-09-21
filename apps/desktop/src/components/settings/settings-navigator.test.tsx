@@ -2,9 +2,9 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { describe, expect, it, vi } from 'vitest'
-import '@/test-utils/locator'
-import { SETTINGS_SECTIONS, settingsSectionDomId } from './sections'
-import { SettingsNavigator } from './settings-navigator'
+import '@/test-utils/locator.ts'
+import { SETTINGS_SECTIONS, settingsSectionDomId } from './sections.ts'
+import { SettingsNavigator } from './settings-navigator.tsx'
 
 // No bridge is installed here, so the platform-gated entries are hidden
 // (Integrations needs the Rust contacts answer; Agents needs `isMacosDesktop`,

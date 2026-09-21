@@ -1,16 +1,16 @@
 import { useMutation } from '@tanstack/react-query'
 import type { OpenTask } from '@reflect/core'
-import { toggleTask } from '@/lib/note-task'
-import { mutationKeys } from '@/lib/query-client'
+import { toggleTask } from '@/lib/note-task.ts'
+import { mutationKeys } from '@/lib/query-client.ts'
 import {
   forgetRecentlyCompleted,
   hasRecentlyCompleted,
   markRecentlyCompleted,
-} from '@/lib/tasks/recently-completed'
-import { asCompleted, asOpen, withoutTasks } from '@/lib/tasks/task-cache'
-import { taskKey } from '@/lib/tasks/task-identity'
-import { type TaskCacheSnapshot, useTaskCacheWriter } from '@/lib/tasks/use-task-cache'
-import { useGraph } from '@/providers/graph-provider'
+} from '@/lib/tasks/recently-completed.ts'
+import { asCompleted, asOpen, withoutTasks } from '@/lib/tasks/task-cache.ts'
+import { taskKey } from '@/lib/tasks/task-identity.ts'
+import { type TaskCacheSnapshot, useTaskCacheWriter } from '@/lib/tasks/use-task-cache.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 interface ToggleTaskContext {
   snapshot: TaskCacheSnapshot

@@ -1,7 +1,7 @@
 import { useState, type ReactElement } from 'react'
 import { errorMessage } from '@reflect/core'
 import { getIsComposing } from '@meowdown/core'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogClose,
@@ -9,11 +9,11 @@ import {
   DialogDescription,
   DialogFooter,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { useGraph } from '@/providers/graph-provider'
-import { SettingsField } from './field'
-import { SettingsSection } from './section'
+} from '@/components/ui/dialog.tsx'
+import { Input } from '@/components/ui/input.tsx'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { SettingsField } from './field.tsx'
+import { SettingsSection } from './section.tsx'
 
 export function DestructiveSection(): ReactElement {
   const { graph, forget, deleteGraph } = useGraph()

@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { createTitleRenameTracker, type TitleRename } from './title-rename'
+import { createTitleRenameTracker, type TitleRename } from './title-rename.ts'
 
 beforeEach(() => {
   vi.useFakeTimers()

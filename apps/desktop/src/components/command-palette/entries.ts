@@ -1,5 +1,5 @@
 import { aliasHint, dailyPath, parseSearchQuery } from '@reflect/core'
-import type { AppCommand } from '@/lib/commands/types'
+import type { AppCommand } from '@/lib/commands/types.ts'
 import type { FilteredSearchHit, WikiSuggestion } from '@reflect/core'
 
 /**

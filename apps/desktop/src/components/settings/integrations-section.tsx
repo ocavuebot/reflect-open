@@ -1,16 +1,16 @@
 import { useEffect, useState, type ReactElement } from 'react'
 import { requestContactsAccess } from '@reflect/core'
-import { InlineAlert } from '@/components/inline-alert'
+import { InlineAlert } from '@/components/inline-alert.tsx'
 import {
   useContactsAuthorization,
   useRefreshContactsAuthorization,
-} from '@/hooks/use-contacts-authorization'
-import { openUrlSync } from '@/lib/open-url'
-import { isMacosDesktop } from '@/lib/platform'
-import { useSettings } from '@/providers/settings-provider'
-import { CalendarIntegrationField } from './calendar-integration-field'
-import { SettingsSection } from './section'
-import { SettingsSwitchField } from './switch-field'
+} from '@/hooks/use-contacts-authorization.ts'
+import { openUrlSync } from '@/lib/open-url.ts'
+import { isMacosDesktop } from '@/lib/platform.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
+import { CalendarIntegrationField } from './calendar-integration-field.tsx'
+import { SettingsSection } from './section.tsx'
+import { SettingsSwitchField } from './switch-field.tsx'
 
 /**
  * macOS System Settings, opened straight to the Contacts privacy pane. This

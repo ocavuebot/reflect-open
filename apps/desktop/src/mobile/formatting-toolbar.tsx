@@ -12,9 +12,9 @@ import {
   ListTodo,
   Slash,
 } from 'lucide-react'
-import { useFormattingToolbar } from '@/editor/formatting-toolbar-store'
-import { pickFiles } from '@/lib/pick-files'
-import { hapticImpactLight } from '@/mobile/haptics'
+import { useFormattingToolbar } from '@/editor/formatting-toolbar-store.ts'
+import { pickFiles } from '@/lib/pick-files.ts'
+import { hapticImpactLight } from '@/mobile/haptics.ts'
 
 /**
  * The webview-drawn formatting toolbar (Plan 19, decision 8 — V1's native

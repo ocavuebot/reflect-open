@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { pickFiles } from './pick-files'
+import { pickFiles } from './pick-files.ts'
 
 function openedInput(): HTMLInputElement {
   const input = document.body.querySelector<HTMLInputElement>('input[type="file"]')

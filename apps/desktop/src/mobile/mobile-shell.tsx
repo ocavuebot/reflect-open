@@ -1,14 +1,17 @@
 import { Suspense, useEffect, useRef, useState, type ReactElement } from 'react'
-import { LoadingScreen } from '@/components/loading-screen'
-import { useDoubleTap } from '@/hooks/use-double-tap'
-import { MobileFormattingToolbar } from '@/mobile/formatting-toolbar'
-import { MobileStack } from '@/mobile/mobile-stack'
-import { MobileTabBar, tabRootFor, type MobileTab } from '@/mobile/mobile-tab-bar'
-import { EMPTY_ALL_NOTES_FILTERS, type AllNotesFilters } from '@/mobile/search-filters/filter-state'
-import { useKeyboardVisible } from '@/mobile/use-keyboard'
-import { useWakeToToday } from '@/mobile/use-wake-to-today'
-import { routesEqual, type Route } from '@/routing/route'
-import { useRouter } from '@/routing/router'
+import { LoadingScreen } from '@/components/loading-screen.tsx'
+import { useDoubleTap } from '@/hooks/use-double-tap.ts'
+import { MobileFormattingToolbar } from '@/mobile/formatting-toolbar.tsx'
+import { MobileStack } from '@/mobile/mobile-stack.tsx'
+import { MobileTabBar, tabRootFor, type MobileTab } from '@/mobile/mobile-tab-bar.tsx'
+import {
+  EMPTY_ALL_NOTES_FILTERS,
+  type AllNotesFilters,
+} from '@/mobile/search-filters/filter-state.ts'
+import { useKeyboardVisible } from '@/mobile/use-keyboard.ts'
+import { useWakeToToday } from '@/mobile/use-wake-to-today.ts'
+import { routesEqual, type Route } from '@/routing/route.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 type DailyRoute = Extract<Route, { kind: 'today' }> | Extract<Route, { kind: 'daily' }>
 

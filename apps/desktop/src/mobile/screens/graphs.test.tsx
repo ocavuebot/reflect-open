@@ -4,7 +4,7 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { GraphInfo } from '@reflect/core'
-import { MobileGraphs } from './graphs'
+import { MobileGraphs } from './graphs.tsx'
 
 /**
  * The Graphs screen (the mobile graph switcher): a checkmark-selection list

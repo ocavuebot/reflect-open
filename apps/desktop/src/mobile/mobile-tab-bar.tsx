@@ -1,8 +1,8 @@
 import { useLayoutEffect, useRef, type ReactElement } from 'react'
 import { CircleCheck, Files, MessageSquare, SquarePen } from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { hapticImpactLight } from '@/mobile/haptics'
-import type { Route } from '@/routing/route'
+import { cn } from '@/lib/utils.ts'
+import { hapticImpactLight } from '@/mobile/haptics.ts'
+import type { Route } from '@/routing/route.ts'
 
 export type MobileTab = 'daily' | 'all' | 'tasks' | 'chat'
 

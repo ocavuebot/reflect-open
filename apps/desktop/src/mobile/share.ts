@@ -1,5 +1,5 @@
 import { splitFrontmatter } from '@reflect/core'
-import { openSession } from '@/editor/open-documents'
+import { openSession } from '@/editor/open-documents.ts'
 
 /**
  * Share a note through the OS share sheet (Plan 19, V1 parity) via the Web

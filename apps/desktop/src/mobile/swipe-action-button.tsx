@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils.ts'
 
 /** Width (px) of one action button under a swipeable list row. */
 export const SWIPE_ACTION_WIDTH = 68

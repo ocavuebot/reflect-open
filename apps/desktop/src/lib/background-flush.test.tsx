@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { installBackgroundFlush } from './background-flush'
+import { installBackgroundFlush } from './background-flush.ts'
 
 /**
  * The Plan 19 decision-6 contract: backgrounding the app mid-edit (inside the

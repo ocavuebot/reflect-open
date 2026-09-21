@@ -19,10 +19,10 @@ import {
   listAudioMemoSegments,
   type GraphInfo,
 } from '@reflect/core'
-import { useAudioMemoPipeline } from '@/hooks/use-audio-memo-pipeline'
-import { isNativeShell } from '@/lib/platform'
-import type { AudioMemoPhase } from '@/providers/audio-memo-provider'
-import { hapticImpactLight } from '@/mobile/haptics'
+import { useAudioMemoPipeline } from '@/hooks/use-audio-memo-pipeline.ts'
+import { isNativeShell } from '@/lib/platform.ts'
+import type { AudioMemoPhase } from '@/providers/audio-memo-provider.tsx'
+import { hapticImpactLight } from '@/mobile/haptics.ts'
 import {
   deleteStagedRecording,
   isMicDeniedError,
@@ -30,9 +30,9 @@ import {
   releaseStagedPath,
   useNativeAudioRecorder,
   type NativeRecordingPart,
-} from '@/mobile/use-native-audio-recorder'
-import { useNativeRecordAction } from '@/mobile/use-native-record-action'
-import { useStagedRecordingIngest } from '@/mobile/use-staged-recording-ingest'
+} from '@/mobile/use-native-audio-recorder.ts'
+import { useNativeRecordAction } from '@/mobile/use-native-record-action.ts'
+import { useStagedRecordingIngest } from '@/mobile/use-staged-recording-ingest.ts'
 
 /**
  * The mobile React surface for audio memos: the native recorder plugin over

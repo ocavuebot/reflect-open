@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils.ts'
 
 /** Placeholder while a note document loads. */
 export function NoteLoading({ className }: { className?: string }): ReactElement {

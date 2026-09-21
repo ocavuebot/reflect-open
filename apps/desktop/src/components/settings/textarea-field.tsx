@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState, type ReactElement } from 'react'
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
-import { SettingsField } from './field'
+import { Button } from '@/components/ui/button.tsx'
+import { Textarea } from '@/components/ui/textarea.tsx'
+import { SettingsField } from './field.tsx'
 
 interface SettingsTextareaFieldProps {
   legend: string

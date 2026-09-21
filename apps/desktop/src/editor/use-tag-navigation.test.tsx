@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
 import { render } from 'vitest-browser-react'
 import type { ReactNode } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { useTagNavigation } from './use-tag-navigation'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { useTagNavigation } from './use-tag-navigation.ts'
 
 let lastHandler: ((tag: string) => void) | null = null
 
