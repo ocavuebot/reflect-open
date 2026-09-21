@@ -1,0 +1,500 @@
+diff --git a/dist/defuddle.d.ts b/dist/defuddle.d.ts
+index caf531dc105a110bb1fa7eea31942df19b916673..5091576fb7fedc20101e4c117c79ab85b52b4d7b 100644
+--- a/dist/defuddle.d.ts
++++ b/dist/defuddle.d.ts
+@@ -1,4 +1,4 @@
+-import { DefuddleOptions, DefuddleResponse } from './types';
++import { DefuddleOptions, DefuddleResponse } from './types.js';
+ export declare class Defuddle {
+     private doc;
+     private options;
+diff --git a/dist/elements/math.core.d.ts b/dist/elements/math.core.d.ts
+index 9ee633ada9ccdb69698dd4a608eb7379aba8a9e5..245ef8ba129d3ee1dc9e37a753b047376ffa4241 100644
+--- a/dist/elements/math.core.d.ts
++++ b/dist/elements/math.core.d.ts
+@@ -1,4 +1,4 @@
+-import { MathData } from './math.base';
++import { MathData } from './math.base.js';
+ export declare const createCleanMathEl: (mathData: MathData | null, latex: string | null, isBlock: boolean, doc: Document) => Element;
+ export declare const mathRules: {
+     selector: string;
+diff --git a/dist/elements/math.d.ts b/dist/elements/math.d.ts
+index 8cd7354f3f25504716aa48959b43079508546e3f..e3a4ddd41ec282ed7d5d595ee2c45ef0a1b351b1 100644
+--- a/dist/elements/math.d.ts
++++ b/dist/elements/math.d.ts
+@@ -1,2 +1,2 @@
+-export type { MathData } from './math.base';
+-export { mathRules, createCleanMathEl } from './math.full';
++export type { MathData } from './math.base.js';
++export { mathRules, createCleanMathEl } from './math.full.js';
+diff --git a/dist/elements/math.full.d.ts b/dist/elements/math.full.d.ts
+index 3d46f91fc2c57311170560b765d83f3b232f48ee..b97a474c405d421fc3e40c7fb5479d21a4c6cb1d 100644
+--- a/dist/elements/math.full.d.ts
++++ b/dist/elements/math.full.d.ts
+@@ -1,4 +1,4 @@
+-import { MathData } from './math.base';
++import { MathData } from './math.base.js';
+ export declare const getLatexFromElement: (el: Element) => string | null;
+ export declare const createCleanMathEl: (mathData: MathData | null, latex: string | null, isBlock: boolean, doc: Document) => Element;
+ export declare const mathRules: {
+diff --git a/dist/extractor-registry.d.ts b/dist/extractor-registry.d.ts
+index d5290b788cd545a5c26cccb600804a7e01b89096..997aee4b1774a1ff9fdd3ce3f22bf384fdc6359d 100644
+--- a/dist/extractor-registry.d.ts
++++ b/dist/extractor-registry.d.ts
+@@ -1,4 +1,4 @@
+-import { BaseExtractor, ExtractorOptions } from './extractors/_base';
++import { BaseExtractor, ExtractorOptions } from './extractors/_base.js';
+ type ExtractorConstructor = new (document: Document, url: string, schemaOrgData?: any, options?: ExtractorOptions) => BaseExtractor;
+ interface ExtractorMapping {
+     patterns: (string | RegExp)[];
+diff --git a/dist/extractors/_base.d.ts b/dist/extractors/_base.d.ts
+index 4ced458c2d1dc3c9c2405c46936bbff0d30e001e..a459430fff5e5f169b33d450995a1f9a7c3cf7a8 100644
+--- a/dist/extractors/_base.d.ts
++++ b/dist/extractors/_base.d.ts
+@@ -1,4 +1,4 @@
+-import { ExtractorResult } from '../types/extractors';
++import { ExtractorResult } from '../types/extractors.js';
+ export interface ExtractorOptions {
+     includeReplies?: boolean | 'extractors';
+     language?: string;
+diff --git a/dist/extractors/_conversation.d.ts b/dist/extractors/_conversation.d.ts
+index 1b64d017e59babb9149b6f698b57823946b8a3a3..230e9e1668d6c16d56127cbc8490856fce1196b9 100644
+--- a/dist/extractors/_conversation.d.ts
++++ b/dist/extractors/_conversation.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ConversationMessage, ConversationMetadata, Footnote, ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ConversationMessage, ConversationMetadata, Footnote, ExtractorResult } from '../types/extractors.js';
+ export declare abstract class ConversationExtractor extends BaseExtractor {
+     protected abstract extractMessages(): ConversationMessage[];
+     protected abstract getMetadata(): ConversationMetadata;
+diff --git a/dist/extractors/bbcode-data.d.ts b/dist/extractors/bbcode-data.d.ts
+index c118b1d5ba6340441e0026b3ee94ff6ec7045c8b..8d5e6fd29496412a2121003e43b3d48b1362239d 100644
+--- a/dist/extractors/bbcode-data.d.ts
++++ b/dist/extractors/bbcode-data.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class BbcodeDataExtractor extends BaseExtractor {
+     private eventData;
+     canExtract(): boolean;
+diff --git a/dist/extractors/bilibili.d.ts b/dist/extractors/bilibili.d.ts
+index 804b132c53e8cd9108b8bb00141d77badcbb5717..e5c1c41f626a9ed6f69b6a167d0ccd658af6553d 100644
+--- a/dist/extractors/bilibili.d.ts
++++ b/dist/extractors/bilibili.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class BilibiliExtractor extends BaseExtractor {
+     private static transcriptCache;
+     private _bvid;
+diff --git a/dist/extractors/bluesky.d.ts b/dist/extractors/bluesky.d.ts
+index 910a7faa5c41c07b63cbbc581ba64eefbccd56fc..9625bff5a8c999392e77c71e915c301f73255dbc 100644
+--- a/dist/extractors/bluesky.d.ts
++++ b/dist/extractors/bluesky.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class BlueskyExtractor extends BaseExtractor {
+     private threadScreen;
+     private postItems;
+diff --git a/dist/extractors/c2-wiki.d.ts b/dist/extractors/c2-wiki.d.ts
+index ead53f5dbd9e7d378e4b24d83257ab29258cf48c..b261b6c029b481aaee818498488e408c6a695a9d 100644
+--- a/dist/extractors/c2-wiki.d.ts
++++ b/dist/extractors/c2-wiki.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class C2WikiExtractor extends BaseExtractor {
+     private pageTitle;
+     canExtract(): boolean;
+diff --git a/dist/extractors/chatgpt.d.ts b/dist/extractors/chatgpt.d.ts
+index 05485c955cf2f15330c8206fe04b22ced8238eb8..f4a1bf4ea93d5cf773ec326327f364a27f65e0f9 100644
+--- a/dist/extractors/chatgpt.d.ts
++++ b/dist/extractors/chatgpt.d.ts
+@@ -1,6 +1,6 @@
+-import { ConversationExtractor } from './_conversation';
+-import { ExtractorOptions } from './_base';
+-import { ConversationMessage, ConversationMetadata, Footnote } from '../types/extractors';
++import { ConversationExtractor } from './_conversation.js';
++import { ExtractorOptions } from './_base.js';
++import { ConversationMessage, ConversationMetadata, Footnote } from '../types/extractors.js';
+ export declare class ChatGPTExtractor extends ConversationExtractor {
+     private turns;
+     private footnotes;
+diff --git a/dist/extractors/claude.d.ts b/dist/extractors/claude.d.ts
+index 2110fd562db66227528b9324accacb4171e7141e..81eeddc33cb6350884cb1b9e253d235df0f3f55b 100644
+--- a/dist/extractors/claude.d.ts
++++ b/dist/extractors/claude.d.ts
+@@ -1,6 +1,6 @@
+-import { ConversationExtractor } from './_conversation';
+-import { ExtractorOptions } from './_base';
+-import { ConversationMessage, ConversationMetadata } from '../types/extractors';
++import { ConversationExtractor } from './_conversation.js';
++import { ExtractorOptions } from './_base.js';
++import { ConversationMessage, ConversationMetadata } from '../types/extractors.js';
+ export declare class ClaudeExtractor extends ConversationExtractor {
+     private articles;
+     constructor(document: Document, url: string, schemaOrgData?: any, options?: ExtractorOptions);
+diff --git a/dist/extractors/discourse.d.ts b/dist/extractors/discourse.d.ts
+index 23fc9c02b7c74aaccb58f81ab057c0cd588a7bb0..75714f60fe4c394cddd5598cfa6607b6d310df8a 100644
+--- a/dist/extractors/discourse.d.ts
++++ b/dist/extractors/discourse.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class DiscourseExtractor extends BaseExtractor {
+     private isDiscourse;
+     constructor(document: Document, url: string, schemaOrgData?: any, options?: ExtractorOptions);
+diff --git a/dist/extractors/gemini.d.ts b/dist/extractors/gemini.d.ts
+index 62d9a5a03caa50fc284cdebfa753c62920c74dea..b063f37444fab9f9ad8633daf4f4767e80871227 100644
+--- a/dist/extractors/gemini.d.ts
++++ b/dist/extractors/gemini.d.ts
+@@ -1,6 +1,6 @@
+-import { ConversationExtractor } from './_conversation';
+-import { ExtractorOptions } from './_base';
+-import { ConversationMessage, ConversationMetadata, Footnote } from '../types/extractors';
++import { ConversationExtractor } from './_conversation.js';
++import { ExtractorOptions } from './_base.js';
++import { ConversationMessage, ConversationMetadata, Footnote } from '../types/extractors.js';
+ export declare class GeminiExtractor extends ConversationExtractor {
+     private conversationContainers;
+     private footnotes;
+diff --git a/dist/extractors/github.d.ts b/dist/extractors/github.d.ts
+index 2a3602f236c0fbbf0d589ba4776fce01abab6cb2..b84d164785ed164f4ae4e32eff8c6babd571d4a0 100644
+--- a/dist/extractors/github.d.ts
++++ b/dist/extractors/github.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class GitHubExtractor extends BaseExtractor {
+     private isIssue;
+     private isPR;
+diff --git a/dist/extractors/gmail.d.ts b/dist/extractors/gmail.d.ts
+index 914e2173919f5f89754c94d0559233dc2c15a519..6cf4a2265e758fbfc92a72af645c6e9e8065f115 100644
+--- a/dist/extractors/gmail.d.ts
++++ b/dist/extractors/gmail.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class GmailExtractor extends BaseExtractor {
+     canExtract(): boolean;
+     extract(): ExtractorResult;
+diff --git a/dist/extractors/grok.d.ts b/dist/extractors/grok.d.ts
+index 7080daac5879ffa531593459152b0ef0611ab587..46540ceb85794e009068ea0ae22ac4c8e2986808 100644
+--- a/dist/extractors/grok.d.ts
++++ b/dist/extractors/grok.d.ts
+@@ -1,6 +1,6 @@
+-import { ConversationExtractor } from './_conversation';
+-import { ExtractorOptions } from './_base';
+-import { ConversationMessage, ConversationMetadata, Footnote } from '../types/extractors';
++import { ConversationExtractor } from './_conversation.js';
++import { ExtractorOptions } from './_base.js';
++import { ConversationMessage, ConversationMetadata, Footnote } from '../types/extractors.js';
+ export declare class GrokExtractor extends ConversationExtractor {
+     private messageContainerSelector;
+     private messageBubbles;
+diff --git a/dist/extractors/hackernews.d.ts b/dist/extractors/hackernews.d.ts
+index d5a45ee16cf2c88bfeda97c9675c6d1b4dff6b0d..902b753b4898e4a9bac0e4d62d05bb7639690cf2 100644
+--- a/dist/extractors/hackernews.d.ts
++++ b/dist/extractors/hackernews.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class HackerNewsExtractor extends BaseExtractor {
+     private mainPost;
+     private isCommentPage;
+diff --git a/dist/extractors/leetcode.d.ts b/dist/extractors/leetcode.d.ts
+index db8b63720f760a9ec368512d130d902a4c8319c3..e10840e2dcb4f8c506ec46eeb697e13c094a39af 100644
+--- a/dist/extractors/leetcode.d.ts
++++ b/dist/extractors/leetcode.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class LeetCodeExtractor extends BaseExtractor {
+     canExtract(): boolean;
+     extract(): ExtractorResult;
+diff --git a/dist/extractors/linkedin.d.ts b/dist/extractors/linkedin.d.ts
+index d6476fa9479fe1110c74ab1c3717ceb4f8c25fb7..6e54cc1d9bb2f4f11eb7c2a8515f1b4b7d520687 100644
+--- a/dist/extractors/linkedin.d.ts
++++ b/dist/extractors/linkedin.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class LinkedInExtractor extends BaseExtractor {
+     private postArticle;
+     constructor(document: Document, url: string, schemaOrgData?: any, options?: any);
+diff --git a/dist/extractors/lwn.d.ts b/dist/extractors/lwn.d.ts
+index bf98604f08bdbdd3d2fd73ab58bbd6b1308795aa..6dac2e0d8e1cadf527070f5c4739259b99793c71 100644
+--- a/dist/extractors/lwn.d.ts
++++ b/dist/extractors/lwn.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class LwnExtractor extends BaseExtractor {
+     canExtract(): boolean;
+     extract(): ExtractorResult;
+diff --git a/dist/extractors/mastodon.d.ts b/dist/extractors/mastodon.d.ts
+index d73fea268a9dfc5ab2acf2bc33a2edfc017abae8..37aff630b8e6583cb53ed7bae32ad8c7dcfbc0ce 100644
+--- a/dist/extractors/mastodon.d.ts
++++ b/dist/extractors/mastodon.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class MastodonExtractor extends BaseExtractor {
+     private mainPost;
+     private replyStatuses;
+diff --git a/dist/extractors/medium.d.ts b/dist/extractors/medium.d.ts
+index 21977848796f6b00e38003a82956442a04030090..aa8fea444cde6de6b3f04ee18c4d26c79cba8a7c 100644
+--- a/dist/extractors/medium.d.ts
++++ b/dist/extractors/medium.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class MediumExtractor extends BaseExtractor {
+     private article;
+     constructor(document: Document, url: string, schemaOrgData?: any, options?: ExtractorOptions);
+diff --git a/dist/extractors/nytimes.d.ts b/dist/extractors/nytimes.d.ts
+index 2022024c75ab2f8236f44ab0407ab03b5f57b587..2dcc1d5166187cb338baa711ac4f8f276590f706 100644
+--- a/dist/extractors/nytimes.d.ts
++++ b/dist/extractors/nytimes.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class NytimesExtractor extends BaseExtractor {
+     private preloadedData;
+     private contentSelector;
+diff --git a/dist/extractors/reddit.d.ts b/dist/extractors/reddit.d.ts
+index 7ee2258539aed94cc3e42e853583432ea96dfd7b..0acd008f7638546830d46cda81639553b2a8e292 100644
+--- a/dist/extractors/reddit.d.ts
++++ b/dist/extractors/reddit.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class RedditExtractor extends BaseExtractor {
+     private shredditPost;
+     private isOldReddit;
+diff --git a/dist/extractors/substack.d.ts b/dist/extractors/substack.d.ts
+index 1610a24f7a1f084123f169ac2e3b92d34443041c..c049c6551657309678db2885b3adc86415be0839 100644
+--- a/dist/extractors/substack.d.ts
++++ b/dist/extractors/substack.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class SubstackExtractor extends BaseExtractor {
+     private noteText;
+     private noteImage;
+diff --git a/dist/extractors/threads.d.ts b/dist/extractors/threads.d.ts
+index ab2d296be973e96dd133be5d78f8462981f3526f..3f89123cb4322dd15bff741728f815114b69b3d3 100644
+--- a/dist/extractors/threads.d.ts
++++ b/dist/extractors/threads.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class ThreadsExtractor extends BaseExtractor {
+     private pagelets;
+     private regionContainer;
+diff --git a/dist/extractors/twitter.d.ts b/dist/extractors/twitter.d.ts
+index 5fdf5c2338830949f3eeaaef59a4a681282b9565..bef8bb864c0c28dac8503a01e90bc57aabdd40b3 100644
+--- a/dist/extractors/twitter.d.ts
++++ b/dist/extractors/twitter.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class TwitterExtractor extends BaseExtractor {
+     private mainTweet;
+     private threadTweets;
+diff --git a/dist/extractors/wikipedia.d.ts b/dist/extractors/wikipedia.d.ts
+index 4fa3fb370cd60f053b432ba2b17de3dabd91738f..22fae2481d5f887a3069b8e3097a485dc2ba4f39 100644
+--- a/dist/extractors/wikipedia.d.ts
++++ b/dist/extractors/wikipedia.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class WikipediaExtractor extends BaseExtractor {
+     canExtract(): boolean;
+     extract(): ExtractorResult;
+diff --git a/dist/extractors/x-article.d.ts b/dist/extractors/x-article.d.ts
+index c993870f1db63b3e23b11f41ceed9c3c1ccb590f..5c8c7dee71c162780dcf0f389775236b3d190fa6 100644
+--- a/dist/extractors/x-article.d.ts
++++ b/dist/extractors/x-article.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class XArticleExtractor extends BaseExtractor {
+     private articleContainer;
+     constructor(document: Document, url: string, schemaOrgData?: any, options?: ExtractorOptions);
+diff --git a/dist/extractors/x-oembed.d.ts b/dist/extractors/x-oembed.d.ts
+index 1be17682cfa79dc8c8f01b73fc7f0154281768b7..de99c27c271a36f5b97f742de3db0dc96dcb0830 100644
+--- a/dist/extractors/x-oembed.d.ts
++++ b/dist/extractors/x-oembed.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class XOembedExtractor extends BaseExtractor {
+     canExtract(): boolean;
+     extract(): ExtractorResult;
+diff --git a/dist/extractors/youtube.d.ts b/dist/extractors/youtube.d.ts
+index 7f43934a4fd9e2de14ea57354b7d7f18f210fcb7..8958d0ff6251715092f86488c464a55ef41360ab 100644
+--- a/dist/extractors/youtube.d.ts
++++ b/dist/extractors/youtube.d.ts
+@@ -1,5 +1,5 @@
+-import { BaseExtractor, ExtractorOptions } from './_base';
+-import { ExtractorResult } from '../types/extractors';
++import { BaseExtractor, ExtractorOptions } from './_base.js';
++import { ExtractorResult } from '../types/extractors.js';
+ export declare class YoutubeExtractor extends BaseExtractor {
+     private videoElement;
+     private inlineJsonCache;
+diff --git a/dist/frontmatter.d.ts b/dist/frontmatter.d.ts
+index c2d504778b96910837f1cad3579d146729d39cf8..b3f5d2f73b901008a19ed2366327b50b45fa8720 100644
+--- a/dist/frontmatter.d.ts
++++ b/dist/frontmatter.d.ts
+@@ -1,4 +1,4 @@
+-import type { DefuddleResponse } from './types';
++import type { DefuddleResponse } from './types.js';
+ /**
+  * Build a YAML frontmatter block ("---\n…\n---\n\n") from extracted metadata.
+  * Shared by the CLI (`--frontmatter`) and the defuddle.md worker so both emit
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+index 314ba021e8c40e62c0e864f5d7be1615e1aa09a3..ca34283a62b977e40af5ab9cea163b9c181a1b85 100644
+--- a/dist/index.d.ts
++++ b/dist/index.d.ts
+@@ -1,3 +1,3 @@
+-import { Defuddle } from './defuddle';
+-export type { DefuddleOptions, DefuddleResponse, DefuddleMetadata, DebugInfo, DebugRemoval } from './types';
++import { Defuddle } from './defuddle.js';
++export type { DefuddleOptions, DefuddleResponse, DefuddleMetadata, DebugInfo, DebugRemoval } from './types.js';
+ export default Defuddle;
+diff --git a/dist/index.full.d.ts b/dist/index.full.d.ts
+index e312c96e8290cc26a931fc97cd37d40fe224c123..bff14d1731ab4b8b86a0c41dfb1c1826935c2fd9 100644
+--- a/dist/index.full.d.ts
++++ b/dist/index.full.d.ts
+@@ -1,5 +1,5 @@
+-import { DefuddleOptions, DefuddleResponse } from './types';
+-import { createMarkdownContent } from './markdown';
++import { DefuddleOptions, DefuddleResponse } from './types.js';
++import { createMarkdownContent } from './markdown.js';
+ export type { DefuddleOptions, DefuddleResponse };
+ export { createMarkdownContent };
+ declare class Defuddle {
+diff --git a/dist/markdown.d.ts b/dist/markdown.d.ts
+index 6a6c2af8922df812f321cef67d1761b9720592d2..6eae175e1879ae22d893a41a24d4b28cf38f6b43 100644
+--- a/dist/markdown.d.ts
++++ b/dist/markdown.d.ts
+@@ -1,4 +1,4 @@
+-import type { DefuddleResponse, DefuddleOptions } from './types';
++import type { DefuddleResponse, DefuddleOptions } from './types.js';
+ type GenericElement = {
+     classList?: {
+         contains: (className: string) => boolean;
+diff --git a/dist/metadata.d.ts b/dist/metadata.d.ts
+index e4a481718e40756315b947ae128f061336a1b4f9..e2d45c0942ac9c7cdd7b7e1d7b03f2e9b456ffcf 100644
+--- a/dist/metadata.d.ts
++++ b/dist/metadata.d.ts
+@@ -1,4 +1,4 @@
+-import { DefuddleMetadata, MetaTagItem } from './types';
++import { DefuddleMetadata, MetaTagItem } from './types.js';
+ export declare class MetadataExtractor {
+     static extract(doc: Document, schemaOrgData: any, metaTags: MetaTagItem[]): DefuddleMetadata;
+     private static isPlaceholderValue;
+diff --git a/dist/node.d.ts b/dist/node.d.ts
+index 777c8ac63d1c7d5b48ae5fcb3f8cd85691c9b138..f84baa54d8282db22f4377a75c680222eca2fb84 100644
+--- a/dist/node.d.ts
++++ b/dist/node.d.ts
+@@ -1,5 +1,5 @@
+-import { Defuddle as DefuddleClass } from './defuddle';
+-import type { DefuddleOptions, DefuddleResponse } from './types';
++import { Defuddle as DefuddleClass } from './defuddle.js';
++import type { DefuddleOptions, DefuddleResponse } from './types.js';
+ /**
+  * Parse HTML content from a Document, HTML string, or JSDOM instance.
+  * Accepts any DOM Document implementation (linkedom, JSDOM, happy-dom, etc.).
+diff --git a/dist/removals/content-patterns.d.ts b/dist/removals/content-patterns.d.ts
+index e163ceacb68a52aff826ffc61bbd54d2ec4de49c..21e666e0203548b9b311886ef140a061c1d86002 100644
+--- a/dist/removals/content-patterns.d.ts
++++ b/dist/removals/content-patterns.d.ts
+@@ -1,3 +1,3 @@
+-import { DebugRemoval } from '../types';
++import { DebugRemoval } from '../types.js';
+ export declare function removeEyebrowLabel(mainContent: Element, debug: boolean, debugRemovals?: DebugRemoval[]): void;
+ export declare function removeByContentPattern(mainContent: Element, debug: boolean, url: string, title: string, description: string, debugRemovals?: DebugRemoval[]): void;
+diff --git a/dist/removals/hidden.d.ts b/dist/removals/hidden.d.ts
+index e709a1241907fdee71a15573535999daf6be5d33..306ead9adc722b74d6519555d6b66e696eec526f 100644
+--- a/dist/removals/hidden.d.ts
++++ b/dist/removals/hidden.d.ts
+@@ -1,2 +1,2 @@
+-import { DebugRemoval } from '../types';
++import { DebugRemoval } from '../types.js';
+ export declare function removeHiddenElements(doc: Document, debug: boolean, debugRemovals?: DebugRemoval[]): void;
+diff --git a/dist/removals/scoring.d.ts b/dist/removals/scoring.d.ts
+index aa4bf4a1b5b634c3acd592defe3fd26cb2d45b62..8e5a79d9d61cbcb977c61a74c9ac16659c3a87ed 100644
+--- a/dist/removals/scoring.d.ts
++++ b/dist/removals/scoring.d.ts
+@@ -1,4 +1,4 @@
+-import { DebugRemoval } from '../types';
++import { DebugRemoval } from '../types.js';
+ export interface ContentScore {
+     score: number;
+     element: Element;
+diff --git a/dist/removals/selectors.d.ts b/dist/removals/selectors.d.ts
+index b57818349455562254c4fc61f551b86acdfeba47..06a3da9e489a458550d22b6418419b722a988397 100644
+--- a/dist/removals/selectors.d.ts
++++ b/dist/removals/selectors.d.ts
+@@ -1,2 +1,2 @@
+-import { DebugRemoval } from '../types';
++import { DebugRemoval } from '../types.js';
+ export declare function removeBySelector(doc: Document, debug: boolean, removeExact?: boolean, removePartial?: boolean, mainContent?: Element | null, debugRemovals?: DebugRemoval[], skipHiddenExactSelectors?: boolean): void;
+diff --git a/dist/standardize.d.ts b/dist/standardize.d.ts
+index 341347a7b269bc9c33cda9291b5cfe8b600adcc0..38315506d478c04058eabf0165fb72695d41a9c3 100644
+--- a/dist/standardize.d.ts
++++ b/dist/standardize.d.ts
+@@ -1,4 +1,4 @@
+-import { DefuddleMetadata } from './types';
++import { DefuddleMetadata } from './types.js';
+ /**
+  * Cleanup pass for HTML built by a site extractor.
+  *

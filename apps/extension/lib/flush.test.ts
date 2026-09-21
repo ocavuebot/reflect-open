@@ -6,8 +6,8 @@ import {
 } from '@reflect/core/capture-envelope'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { CaptureWireMessage } from '@reflect/core/capture-envelope'
-import { enqueueCapture, flushQueue, readQueue } from './flush'
-import { sendToHost, type SendOutcome } from './native'
+import { enqueueCapture, flushQueue, readQueue } from './flush.ts'
+import { sendToHost, type SendOutcome } from './native.ts'
 
 /** In-memory `chrome.storage.local` faithful to get(null)/set/remove. */
 const store = new Map<string, unknown>()

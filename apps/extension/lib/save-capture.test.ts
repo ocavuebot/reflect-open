@@ -1,8 +1,8 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { enqueueCapture, readQueue } from './flush'
-import { buildWireMessage } from './capture-message'
-import { queueKey } from './queue'
-import { saveCapture } from './save-capture'
+import { enqueueCapture, readQueue } from './flush.ts'
+import { buildWireMessage } from './capture-message.ts'
+import { queueKey } from './queue.ts'
+import { saveCapture } from './save-capture.ts'
 
 const store = new Map<string, unknown>()
 

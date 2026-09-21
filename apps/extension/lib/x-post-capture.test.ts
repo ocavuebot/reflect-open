@@ -5,10 +5,10 @@ import {
   parseXPostId,
   registerXPostObserver,
   type XPostRequest,
-} from './x-post-capture'
-import { readLikeSettings } from './like-settings'
-import { saveXPost } from './x-save'
-import { readBookmarkSettings } from './bookmark-settings'
+} from './x-post-capture.ts'
+import { readLikeSettings } from './like-settings.ts'
+import { saveXPost } from './x-save.ts'
+import { readBookmarkSettings } from './bookmark-settings.ts'
 
 const { tabMock, observe } = vi.hoisted(() => ({
   tabMock: vi.fn(async () => ({ incognito: false })),

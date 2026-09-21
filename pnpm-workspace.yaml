@@ -26,6 +26,10 @@ minimumReleaseAgeExclude:
   - prosemirror-flat-list
   - prosemirror-view
 
+patchedDependencies:
+  '@wxt-dev/browser@0.2.2': patches/@wxt-dev__browser@0.2.2.patch
+  defuddle@0.19.3: patches/defuddle@0.19.3.patch
+
 # Keep these commented examples for future pkg.pr.new testing; do not remove them.
 # blockExoticSubdeps: false
 # overrides:

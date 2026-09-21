@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { OptionsPage } from './app'
+import { OptionsPage } from './app.tsx'
 import './style.css'
 
 // MV3 pages forbid inline scripts, so the design-system `.dark` scope is set

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { CaptureWireMessage } from '@reflect/core/capture-envelope'
-import { queueKey, queuedCaptureSchema, sortQueue, type QueuedCapture } from './queue'
+import { queueKey, queuedCaptureSchema, sortQueue, type QueuedCapture } from './queue.ts'
 
 function wire(id: string): CaptureWireMessage {
   return {

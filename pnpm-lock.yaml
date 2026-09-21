@@ -5,6 +5,10 @@ settings:
   dedupePeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@wxt-dev/browser@0.2.2': ce52d49a3948aff84bf7221a2e9b13524f14da8e44f22f846787c4864186c08f
+  defuddle@0.19.3: 110ffacb2906c5be466d31a2d7e4a21cc364eec45f7028b131398cdfb355a88c
+
 importers:
 
   .:
@@ -246,7 +250,7 @@ importers:
         version: link:../../design-system
       defuddle:
         specifier: ^0.19.3
-        version: 0.19.3
+        version: 0.19.3(patch_hash=110ffacb2906c5be466d31a2d7e4a21cc364eec45f7028b131398cdfb355a88c)
       lucide-react:
         specifier: ^1.45.0
         version: 1.47.0(react@19.3.0)
@@ -8288,7 +8292,7 @@ snapshots:
 
   '@webext-core/fake-browser@2.0.1':
     dependencies:
-      '@wxt-dev/browser': 0.2.2
+      '@wxt-dev/browser': 0.2.2(patch_hash=ce52d49a3948aff84bf7221a2e9b13524f14da8e44f22f846787c4864186c08f)
       lodash.merge: 4.6.2
 
   '@webext-core/isolated-element@1.1.5':
@@ -8304,7 +8308,7 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
-  '@wxt-dev/browser@0.2.2':
+  '@wxt-dev/browser@0.2.2(patch_hash=ce52d49a3948aff84bf7221a2e9b13524f14da8e44f22f846787c4864186c08f)':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
@@ -8754,7 +8758,7 @@ snapshots:
 
   defu@6.1.7: {}
 
-  defuddle@0.19.3:
+  defuddle@0.19.3(patch_hash=110ffacb2906c5be466d31a2d7e4a21cc364eec45f7028b131398cdfb355a88c):
     dependencies:
       commander: 12.1.0
     optionalDependencies:
@@ -11859,7 +11863,7 @@ snapshots:
       '@webext-core/fake-browser': 2.0.1
       '@webext-core/isolated-element': 1.1.5
       '@webext-core/match-patterns': 2.0.0
-      '@wxt-dev/browser': 0.2.2
+      '@wxt-dev/browser': 0.2.2(patch_hash=ce52d49a3948aff84bf7221a2e9b13524f14da8e44f22f846787c4864186c08f)
       '@wxt-dev/storage': 1.2.8
       c12: 3.3.4(magicast@0.5.3)
       cac: 7.0.0
