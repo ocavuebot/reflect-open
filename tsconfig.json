@@ -1,5 +1,9 @@
 {
   "extends": "@ocavue/tsconfig/dom/root.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext"
+  },
   "references": [
     {
       "path": "./apps/desktop/tsconfig.json"
