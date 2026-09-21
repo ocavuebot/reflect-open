@@ -15,10 +15,7 @@ import { useEditorAutocomplete } from '@/editor/use-editor-autocomplete'
 import { useTagNavigation } from '@/editor/use-tag-navigation'
 import { useWikiLinkNavigation } from '@/editor/use-wiki-link-navigation'
 import { taskContent } from '@/lib/tasks/task-content'
-import {
-  useTaskEditorFinalizer,
-  type TaskEditorApi,
-} from '@/lib/tasks/use-task-editor-finalizer'
+import { useTaskEditorFinalizer, type TaskEditorApi } from '@/lib/tasks/use-task-editor-finalizer'
 import { useGraph } from '@/providers/graph-provider'
 import { useSettings } from '@/providers/settings-provider'
 

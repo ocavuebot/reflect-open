@@ -41,10 +41,7 @@ import {
   SettingsValueRow,
   type SegmentedOption,
 } from '@/mobile/settings-list'
-import {
-  refetchActiveSubscription,
-  useActiveSubscription,
-} from '@/mobile/use-active-subscription'
+import { refetchActiveSubscription, useActiveSubscription } from '@/mobile/use-active-subscription'
 import { useAppStoreEnvironment } from '@/mobile/use-app-store-environment'
 import { useMobileSyncStatus } from '@/mobile/use-sync-status'
 import { useGraph } from '@/providers/graph-provider'

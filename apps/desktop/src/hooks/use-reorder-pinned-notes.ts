@@ -1,9 +1,6 @@
 import { reorderPinnedNotes } from '@/lib/note-pin'
 import { updatePinOrder } from '@/lib/notes/pin-order'
-import {
-  invalidatePinnedNotesCache,
-  updatePinnedNotesCache,
-} from '@/lib/notes/pinned-notes-cache'
+import { invalidatePinnedNotesCache, updatePinnedNotesCache } from '@/lib/notes/pinned-notes-cache'
 import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client'
 import { useGraph } from '@/providers/graph-provider'
 import { arrayMove } from '@dnd-kit/sortable'

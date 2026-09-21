@@ -11,10 +11,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
-import {
-  useConnectGithubWizard,
-  type ConnectWizardStep,
-} from '@/hooks/use-connect-github-wizard'
+import { useConnectGithubWizard, type ConnectWizardStep } from '@/hooks/use-connect-github-wizard'
 
 interface ConnectGithubDialogProps {
   /** A suggested name for a newly created backup repo (from the graph name). */

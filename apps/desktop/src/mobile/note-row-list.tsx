@@ -3,11 +3,7 @@ import { Virtualizer } from 'virtua'
 import { useQueryClient } from '@tanstack/react-query'
 import { toggleNotePinned } from '@/lib/note-pin'
 import { NoteDeleteDrawer } from '@/mobile/note-delete-drawer'
-import {
-  NOTE_ROW_HEIGHT,
-  SwipeableNoteRow,
-  type NoteRowModel,
-} from '@/mobile/swipeable-note-row'
+import { NOTE_ROW_HEIGHT, SwipeableNoteRow, type NoteRowModel } from '@/mobile/swipeable-note-row'
 import { useGraph } from '@/providers/graph-provider'
 
 interface NoteRowListProps {

@@ -1,12 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import type { OpenTask } from '@reflect/core'
-import {
-  convertTaskToBullet,
-  deleteTask,
-  editTask,
-  insertTask,
-  toggleTask,
-} from '@/lib/note-task'
+import { convertTaskToBullet, deleteTask, editTask, insertTask, toggleTask } from '@/lib/note-task'
 import { mutationKeys } from '@/lib/query-client'
 import { editAndToggleError, isEditAndToggleError } from '@/lib/tasks/edit-and-toggle-error'
 import {

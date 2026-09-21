@@ -15,10 +15,7 @@ import { openUrlSync } from '@/lib/open-url'
 import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client'
 import { cn } from '@/lib/utils'
 import { PRIVACY_POLICY_URL, TERMS_OF_USE_URL } from '@/mobile/legal-urls'
-import {
-  refetchActiveSubscription,
-  useActiveSubscription,
-} from '@/mobile/use-active-subscription'
+import { refetchActiveSubscription, useActiveSubscription } from '@/mobile/use-active-subscription'
 
 type PurchasePlan = 'monthly' | 'yearly'
 
