@@ -11,7 +11,7 @@ import { readIncludePageTextPreference } from '@/lib/popup-preferences'
 import { saveCapture } from '@/lib/save-capture'
 import { snapshotTab } from '@/lib/snapshot-active-tab'
 import { registerXPostObserver } from '@/lib/x-post-capture'
-import { tryExtractPageText } from './popup/extract-page-text'
+import { tryExtractPageText } from './popup/extract-page-text.ts'
 
 /**
  * The MV3 service worker owns retries and the shortcut fast path. Every

@@ -12,8 +12,8 @@ import {
   writeIncludePageTextPreference,
 } from '@/lib/popup-preferences'
 import { LIKE_SETTINGS_KEY, readLikeSettings, writeLikeSettings } from '@/lib/like-settings'
-import { SettingsSection, SettingsSwitchRow } from './settings-rows'
-import { useStoredSetting } from './use-stored-setting'
+import { SettingsSection, SettingsSwitchRow } from './settings-rows.tsx'
+import { useStoredSetting } from './use-stored-setting.ts'
 
 /**
  * The extension's settings page: every stored choice that is not part of a

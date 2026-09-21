@@ -1,9 +1,9 @@
 import { z } from 'zod'
 import { browser } from 'wxt/browser'
 import { postIdSchema, type XPostKind } from '@reflect/core/capture-envelope'
-import { saveXPost } from './x-save'
-import { readBookmarkSettings } from './bookmark-settings'
-import { readLikeSettings } from './like-settings'
+import { saveXPost } from './x-save.ts'
+import { readBookmarkSettings } from './bookmark-settings.ts'
+import { readLikeSettings } from './like-settings.ts'
 
 const requestSchema = z.object({ variables: z.object({ tweet_id: postIdSchema }) })
 const MAX_REQUEST_BYTES = 65536

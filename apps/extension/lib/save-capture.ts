@@ -1,7 +1,7 @@
 import type { ExtensionCaptureWire } from '@reflect/core/capture-envelope'
-import { buildWireMessage, type BuildWireMessageInput } from './capture-message'
-import { enqueueCapture, readQueue } from './flush'
-import { flushResultSchema, type FlushResult } from './messages'
+import { buildWireMessage, type BuildWireMessageInput } from './capture-message.ts'
+import { enqueueCapture, readQueue } from './flush.ts'
+import { flushResultSchema, type FlushResult } from './messages.ts'
 
 /**
  * The fate of one just-enqueued capture after its immediate flush attempt.

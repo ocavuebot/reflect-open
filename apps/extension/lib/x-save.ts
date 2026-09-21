@@ -1,7 +1,7 @@
 import { browser } from 'wxt/browser'
 import { xPostEnvelopeSchema, type XPostKind } from '@reflect/core/capture-envelope'
-import { captureLookupResponseSchema } from './x-capture-messages'
-import { enqueueCapture, flushQueue } from './flush'
+import { captureLookupResponseSchema } from './x-capture-messages.ts'
+import { enqueueCapture, flushQueue } from './flush.ts'
 
 interface SaveXPostOptions {
   kind?: XPostKind
