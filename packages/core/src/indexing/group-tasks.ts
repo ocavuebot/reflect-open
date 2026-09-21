@@ -1,5 +1,5 @@
-import { displayNoteTitle } from '../markdown/note-title'
-import type { OpenTask } from './queries'
+import { displayNoteTitle } from '../markdown/note-title.ts'
+import type { OpenTask } from './queries.ts'
 
 /**
  * Grouping for the Tasks view (Plan 18), faithful to V1's `task-view.ts`: open

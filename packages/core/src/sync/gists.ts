@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { ReflectError } from '../errors'
-import { apiHeaders, readJson } from './github'
+import { ReflectError } from '../errors.ts'
+import { apiHeaders, readJson } from './github.ts'
 
 /**
  * The GitHub Gists REST surface behind "Publish to gist": create a secret

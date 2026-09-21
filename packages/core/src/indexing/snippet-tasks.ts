@@ -1,6 +1,6 @@
 import type { SyntaxNode } from '@meowdown/markdown'
-import { parseBody } from '../markdown/grammar'
-import { parseTaskMarker } from '../markdown/task-marker'
+import { parseBody } from '../markdown/grammar.ts'
+import { parseTaskMarker } from '../markdown/task-marker.ts'
 
 /**
  * Task checkboxes inside a backlink snippet, anchored back to the source note.

@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import type { CloudSafe } from '../privacy/checkers'
-import { call } from '../ipc/invoke'
+import type { CloudSafe } from '../privacy/checkers.ts'
+import { call } from '../ipc/invoke.ts'
 
 const LINK_PREVIEW_HTML_MAX_CHARS = 2 * 1024 * 1024
 const LINK_PREVIEW_ICON_MAX_CHARS = 64 * 1024

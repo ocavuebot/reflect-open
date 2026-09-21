@@ -1,14 +1,14 @@
-import { describeAsset, isAssetDescriptionRejected } from '../ai/describe-asset'
-import { defaultAiProvider, type AiProvidersState } from '../ai/provider-config'
-import { aiApiKeyForConfig } from '../ai/secrets'
-import { base64ToBytes } from '../lib/base64'
-import { errorMessage, isAppError, toAppError } from '../errors'
-import { listDir, readAsset, readNote, writeNote } from '../graph/commands'
-import { ASSETS_DIR, descriptionPathFor } from '../graph/paths'
-import type { FileMeta } from '../graph/schemas'
-import { hashContent } from '../indexing/hash'
-import type { AiProviderConfig } from '../settings/schema'
-import type { ReconcileStop } from './audio-memo'
+import { describeAsset, isAssetDescriptionRejected } from '../ai/describe-asset.ts'
+import { defaultAiProvider, type AiProvidersState } from '../ai/provider-config.ts'
+import { aiApiKeyForConfig } from '../ai/secrets.ts'
+import { base64ToBytes } from '../lib/base64.ts'
+import { errorMessage, isAppError, toAppError } from '../errors.ts'
+import { listDir, readAsset, readNote, writeNote } from '../graph/commands.ts'
+import { ASSETS_DIR, descriptionPathFor } from '../graph/paths.ts'
+import type { FileMeta } from '../graph/schemas.ts'
+import { hashContent } from '../indexing/hash.ts'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import type { ReconcileStop } from './audio-memo.ts'
 import {
   assetTypeFor,
   base64ByteLength,
@@ -16,8 +16,8 @@ import {
   isEligibleAssetPath,
   readManagedDescription,
   type ManagedDescription,
-} from './asset-description-helpers'
-import { classifyAsset } from './asset-privacy'
+} from './asset-description-helpers.ts'
+import { classifyAsset } from './asset-privacy.ts'
 export {
   assetTypeFor,
   base64ByteLength,
@@ -27,8 +27,8 @@ export {
   type AssetDescriptionMeta,
   type AssetType,
   type ManagedDescription,
-} from './asset-description-helpers'
-export { classifyAsset, classifyAssetFromNotes, type AssetVerdict } from './asset-privacy'
+} from './asset-description-helpers.ts'
+export { classifyAsset, classifyAssetFromNotes, type AssetVerdict } from './asset-privacy.ts'
 
 /**
  * Asset descriptions (Plan 20). For each eligible image/PDF under `assets/`

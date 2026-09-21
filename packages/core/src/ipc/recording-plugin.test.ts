@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from './bridge'
-import { listStaged, startRecording, stopRecording } from './recording-plugin'
+import { setBridge } from './bridge.ts'
+import { listStaged, startRecording, stopRecording } from './recording-plugin.ts'
 
 afterEach(() => {
   setBridge(null)

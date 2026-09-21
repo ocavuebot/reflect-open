@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { gistBodyHash, gistFilename } from './gist'
+import { gistBodyHash, gistFilename } from './gist.ts'
 
 describe('gistBodyHash', () => {
   it('is deterministic and 16 hex chars', () => {

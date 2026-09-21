@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../../ipc/bridge'
-import { loadChatMessages, saveChatMessage } from './store'
-import type { ChatTurn } from './transcript'
+import { setBridge } from '../../ipc/bridge.ts'
+import { loadChatMessages, saveChatMessage } from './store.ts'
+import type { ChatTurn } from './transcript.ts'
 
 /**
  * The store against a scripted bridge: writes assert the exact Rust command

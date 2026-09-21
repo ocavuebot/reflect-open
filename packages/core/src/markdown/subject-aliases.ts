@@ -15,7 +15,7 @@
  * the parity corpus (`fixtures/parity/`) keeps the two in lockstep.
  */
 
-import { foldKey } from './keys'
+import { foldKey } from './keys.ts'
 
 /**
  * A `//` separator: exactly two slashes, not preceded by `:` or `/` and not

@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { parseXPost } from '@post-embed/schema'
 import type { XPost, XPostBase } from '@post-embed/types'
-import { call } from './ipc/invoke'
+import { call } from './ipc/invoke.ts'
 
 export interface ArchivedXPost {
   kind: 'x-post'

@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { gistBodyHash, parseNote } from '../markdown'
-import { buildIndexedNote, CLAIM_TIER, indexedNoteSchema, PROJECTION_VERSION } from './indexed-note'
+import { gistBodyHash, parseNote } from '../markdown/index.ts'
+import {
+  buildIndexedNote,
+  CLAIM_TIER,
+  indexedNoteSchema,
+  PROJECTION_VERSION,
+} from './indexed-note.ts'
 
 describe('buildIndexedNote', () => {
   it('carries the projection version that rebuilds has_content and the FTS body', () => {

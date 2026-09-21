@@ -1,10 +1,13 @@
-import { resolveOrCreateNoteWithTitle, type ResolveOrCreateNoteResult } from '../graph/create-note'
-import { db } from '../indexing/db'
-import { getWikiAddressForPath } from '../indexing/queries-suggestions'
-import { inClauseChunks } from '../indexing/query-utils'
-import { serializeWikiSuggestionAddress } from '../indexing/suggest'
-import { canonicalEmails } from '../markdown/email-fields'
-import type { ContactMatch } from './commands'
+import {
+  resolveOrCreateNoteWithTitle,
+  type ResolveOrCreateNoteResult,
+} from '../graph/create-note.ts'
+import { db } from '../indexing/db.ts'
+import { getWikiAddressForPath } from '../indexing/queries-suggestions.ts'
+import { inClauseChunks } from '../indexing/query-utils.ts'
+import { serializeWikiSuggestionAddress } from '../indexing/suggest.ts'
+import { canonicalEmails } from '../markdown/email-fields.ts'
+import type { ContactMatch } from './commands.ts'
 
 const PERSON_TAG_KEY = 'person'
 

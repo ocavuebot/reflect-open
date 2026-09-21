@@ -1,7 +1,7 @@
-import { isAppError } from '../errors'
-import { readNoteLocal } from '../graph/commands'
-import { descriptionPathFor } from '../graph/paths'
-import { splitFrontmatter } from '../markdown/frontmatter'
+import { isAppError } from '../errors.ts'
+import { readNoteLocal } from '../graph/commands.ts'
+import { descriptionPathFor } from '../graph/paths.ts'
+import { splitFrontmatter } from '../markdown/frontmatter.ts'
 
 /**
  * Folding asset descriptions into a note's search text (Plan 20, search

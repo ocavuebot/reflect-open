@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { RetrievalHit } from '../embeddings/retrieve'
+import type { RetrievalHit } from '../embeddings/retrieve.ts'
 import {
   assertCloudAllowed,
   cloudSafeAssetDescription,
@@ -10,7 +10,7 @@ import {
   isPrivateNoteError,
   notePrivate,
   PrivateNoteError,
-} from './checkers'
+} from './checkers.ts'
 
 // Sentinels no other string in the system (prompts included) can collide
 // with — a payload assertion against them can never pass vacuously.

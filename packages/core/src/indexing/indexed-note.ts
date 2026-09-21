@@ -1,13 +1,17 @@
 import { z } from 'zod'
-import { markdownNoteReference, noteBasenameKey, wikiNoteReference } from '../graph/note-reference'
+import {
+  markdownNoteReference,
+  noteBasenameKey,
+  wikiNoteReference,
+} from '../graph/note-reference.ts'
 import {
   dateFromDailyPath,
   foldGraphPath,
   isCalendarDate,
   isDaily,
   isTemplatePath,
-} from '../graph/paths'
-import { hasSearchableChar } from '../lib/searchable-char'
+} from '../graph/paths.ts'
+import { hasSearchableChar } from '../lib/searchable-char.ts'
 import {
   detectConflictMarkers,
   extractEmailFields,
@@ -21,9 +25,9 @@ import {
   subjectAliases,
   wikiLinkTargetForTitle,
   type ParsedNote,
-} from '../markdown'
-import { previewSnippet } from './snippet'
-import { serializeWikiSuggestionAddress } from './suggest'
+} from '../markdown/index.ts'
+import { previewSnippet } from './snippet.ts'
+import { serializeWikiSuggestionAddress } from './suggest.ts'
 
 /**
  * The index write payload (Plan 04): a {@link ParsedNote} (Plan 03) flattened into

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { definePluginCommand, definePluginEvent, ignoredResult } from './plugin'
+import { definePluginCommand, definePluginEvent, ignoredResult } from './plugin.ts'
 
 /**
  * Typed bindings for `plugins/tauri-plugin-recording` — the native audio-memo

@@ -1,7 +1,7 @@
 import { expect, it } from 'vitest'
-import fixtures from './bookmark-envelope.fixtures.json'
-import { extensionCaptureWireSchema, inboxEnvelopeSchema } from './capture-envelope'
-import { xPostWireSchema } from './bookmark-envelope'
+import fixtures from './bookmark-envelope.fixtures.json' with { type: 'json' }
+import { extensionCaptureWireSchema, inboxEnvelopeSchema } from './capture-envelope.ts'
+import { xPostWireSchema } from './bookmark-envelope.ts'
 
 it('validates X post envelopes for wire and inbox', () => {
   for (const value of fixtures.accepted) {

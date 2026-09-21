@@ -12,7 +12,7 @@
  */
 
 import { sql, type RawBuilder } from 'kysely'
-import { foldKey } from '../markdown'
+import { foldKey } from '../markdown/index.ts'
 
 /** Split a free-text query into the terms shared by FTS and title recall. */
 export function splitSearchTerms(query: string): string[] {

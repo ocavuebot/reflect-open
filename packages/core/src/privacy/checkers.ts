@@ -1,5 +1,5 @@
-import type { RetrievalHit } from '../embeddings/retrieve'
-import { parseFrontmatter, splitFrontmatter } from '../markdown/frontmatter'
+import type { RetrievalHit } from '../embeddings/retrieve.ts'
+import { parseFrontmatter, splitFrontmatter } from '../markdown/frontmatter.ts'
 
 /**
  * Reflect's outbound-service privacy gate (Plan 10). `private: true` is a hard block:

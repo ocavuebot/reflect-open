@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { errorMessage, isAppError, ReflectError, toAppError } from './errors'
+import { errorMessage, isAppError, ReflectError, toAppError } from './errors.ts'
 
 describe('isAppError', () => {
   it('accepts every contract kind', () => {

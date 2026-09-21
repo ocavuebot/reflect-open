@@ -1,9 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { resolveOrCreateNoteWithTitle } from '../graph/create-note'
-import { setBridge } from '../ipc/bridge'
-import { getWikiAddressForPath } from '../indexing/queries-suggestions'
-import type { ContactMatch } from './commands'
-import { ensurePersonNote, resolvePerson, resolvePersonContact } from './person'
+import { resolveOrCreateNoteWithTitle } from '../graph/create-note.ts'
+import { setBridge } from '../ipc/bridge.ts'
+import { getWikiAddressForPath } from '../indexing/queries-suggestions.ts'
+import type { ContactMatch } from './commands.ts'
+import { ensurePersonNote, resolvePerson, resolvePersonContact } from './person.ts'
 
 vi.mock('../graph/create-note', () => ({
   resolveOrCreateNoteWithTitle: vi.fn(),

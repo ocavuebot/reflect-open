@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { call } from '../ipc/invoke'
+import { call } from '../ipc/invoke.ts'
 
 /**
  * Typed bindings for the Rust git primitives (Plan 12). The Rust layer is

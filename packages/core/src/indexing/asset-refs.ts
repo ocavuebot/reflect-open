@@ -1,5 +1,5 @@
-import { getXArchiveOwners } from '../x-archive'
-import { db } from './db'
+import { getXArchiveOwners } from '../x-archive.ts'
+import { db } from './db.ts'
 
 /**
  * Does an indexed reference name this file? A bare `![[photo.png]]` is stored

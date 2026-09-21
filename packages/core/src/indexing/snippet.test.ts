@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { lineAt, lineSnippet, previewSnippet } from './snippet'
+import { lineAt, lineSnippet, previewSnippet } from './snippet.ts'
 
 /** True when `text` contains a UTF-16 surrogate without its pair. */
 function hasLoneSurrogate(text: string): boolean {

@@ -1,7 +1,13 @@
 import { sql } from 'kysely'
-import { foldTag, normalizeWikiTarget, resolved, unresolved, type Resolution } from '../markdown'
-import { db } from './db'
-import { inClauseChunks } from './query-utils'
+import {
+  foldTag,
+  normalizeWikiTarget,
+  resolved,
+  unresolved,
+  type Resolution,
+} from '../markdown/index.ts'
+import { db } from './db.ts'
+import { inClauseChunks } from './query-utils.ts'
 export {
   getBacklinks,
   getBacklinksWithContext,
@@ -10,8 +16,8 @@ export {
   type BacklinkContextPage,
   type BacklinkContextPageOptions,
   type BacklinkSourceCursor,
-} from './queries-backlinks'
-export { getCompletedTasks, getOpenTasks, type OpenTask } from './queries-tasks'
+} from './queries-backlinks.ts'
+export { getCompletedTasks, getOpenTasks, type OpenTask } from './queries-tasks.ts'
 export {
   getWikiAddressForPath,
   suggestTags,
@@ -19,7 +25,7 @@ export {
   suggestWikiTargets,
   type TagSuggestion,
   type WikiLinkSuggestionResult,
-} from './queries-suggestions'
+} from './queries-suggestions.ts'
 
 /**
  * Index read getters (Plan 04). Queries are built with Kysely and execute over

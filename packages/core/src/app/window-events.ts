@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { getBridge, type Unlisten } from '../ipc/bridge'
+import { getBridge, type Unlisten } from '../ipc/bridge.ts'
 
 /**
  * Events the shell targets at one specific window (`emit_to`), as opposed to

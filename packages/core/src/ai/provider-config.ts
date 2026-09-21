@@ -1,4 +1,4 @@
-import type { AiProviderConfig } from '../settings/schema'
+import type { AiProviderConfig } from '../settings/schema.ts'
 
 /**
  * Pure transforms over the configured-AI-provider state (Plan 10). The

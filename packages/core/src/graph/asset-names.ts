@@ -1,4 +1,4 @@
-import { slugForTitle } from '../markdown/slug'
+import { slugForTitle } from '../markdown/slug.ts'
 
 /**
  * Extensions are advisory (they pick the OS opener), so a short alphanumeric

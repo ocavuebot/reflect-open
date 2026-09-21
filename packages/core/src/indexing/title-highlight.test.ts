@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { HIGHLIGHT_END, HIGHLIGHT_START, parseHighlights } from './search'
-import { highlightTitle } from './title-highlight'
+import { HIGHLIGHT_END, HIGHLIGHT_START, parseHighlights } from './search.ts'
+import { highlightTitle } from './title-highlight.ts'
 
 function segments(title: string, query: string, ftsHighlightedTitle: string | null = null) {
   return parseHighlights(highlightTitle(title, query, ftsHighlightedTitle))

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { displayNoteTitle, wikiLinkTargetForTitle } from './note-title'
+import { displayNoteTitle, wikiLinkTargetForTitle } from './note-title.ts'
 
 describe('displayNoteTitle', () => {
   it('flattens wiki links to their alias and markdown links to their text', () => {

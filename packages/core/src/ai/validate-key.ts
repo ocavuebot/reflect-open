@@ -1,8 +1,8 @@
-import type { AiProviderId, HostedAiProviderId } from '../settings/schema'
-import { anthropicDirectBrowserAccessHeaders } from './anthropic-headers'
-import { APP_REVIEW_STUB_KEY } from './app-review-demo'
-import { isHttpBaseUrl, normalizeOpenAICompatibleBaseUrl } from './openai-compatible'
-import { OPENROUTER_BASE_URL } from './openrouter'
+import type { AiProviderId, HostedAiProviderId } from '../settings/schema.ts'
+import { anthropicDirectBrowserAccessHeaders } from './anthropic-headers.ts'
+import { APP_REVIEW_STUB_KEY } from './app-review-demo.ts'
+import { isHttpBaseUrl, normalizeOpenAICompatibleBaseUrl } from './openai-compatible.ts'
+import { OPENROUTER_BASE_URL } from './openrouter.ts'
 
 /**
  * BYOK key validation (Plan 10): one cheap authenticated probe against the

@@ -6,7 +6,7 @@ import {
   inboxEnvelopeSchema,
   textCaptureEnvelopeSchema,
   TEXT_CAPTURE_MAX_LENGTH,
-} from './capture-envelope'
+} from './capture-envelope.ts'
 
 const VALID = {
   version: 1,

@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { createSyncEngine, isSyncError, type SyncStatus } from './engine'
+import { setBridge } from '../ipc/bridge.ts'
+import { createSyncEngine, isSyncError, type SyncStatus } from './engine.ts'
 
 beforeEach(() => {
   vi.useFakeTimers()
@@ -147,7 +147,7 @@ describe('createSyncEngine', () => {
     // getGithubToken throws ReflectError (an Error subclass) for transient
     // refresh failures — the engine must read it like any AppError, or the
     // offline/auth UX silently degrades to a generic error.
-    const { ReflectError } = await import('../errors')
+    const { ReflectError } = await import('../errors.ts')
     for (const [kind, expected] of [
       ['network', { state: 'offline' }],
       ['auth', { state: 'error', errorKind: 'auth' }],

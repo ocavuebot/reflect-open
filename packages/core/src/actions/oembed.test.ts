@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { oembedRequestURL, parseOEmbedAnswer } from './oembed'
+import { oembedRequestURL, parseOEmbedAnswer } from './oembed.ts'
 
 describe('oembedRequestURL', () => {
   it('builds the YouTube request with the capture URL form-encoded', () => {

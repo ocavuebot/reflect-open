@@ -1,6 +1,6 @@
 import type { XPost } from '@post-embed/types'
 import { expect, it } from 'vitest'
-import { createArchivedPost, xPostSchema } from './x-archive'
+import { createArchivedPost, xPostSchema } from './x-archive.ts'
 
 it('archives the highest bitrate MP4 in the post and quote without mutating capture data', () => {
   const video = {

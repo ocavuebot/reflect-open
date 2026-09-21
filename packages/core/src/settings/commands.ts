@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { call } from '../ipc/invoke'
-import { settingsSchema, type Settings } from './schema'
+import { call } from '../ipc/invoke.ts'
+import { settingsSchema, type Settings } from './schema.ts'
 
 /** Commands that return `()` from Rust serialize as `null` over IPC. */
 const voidSchema = z.null()

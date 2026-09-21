@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { resolved, unresolved } from '../markdown'
+import { resolved, unresolved } from '../markdown/index.ts'
 import {
   nextAliases,
   rewriteLinksForTitleChange,
   rewritePathLinksForMove,
   type RenameIo,
-} from './rename'
+} from './rename.ts'
 
 function fakeIo(
   files: Record<string, string>,

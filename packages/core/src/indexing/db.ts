@@ -1,7 +1,7 @@
 import { createDb, type Database } from '@reflect/db'
 import type { Kysely } from 'kysely'
-import { toAppError } from '../errors'
-import { getBridge } from '../ipc/bridge'
+import { toAppError } from '../errors.ts'
+import { getBridge } from '../ipc/bridge.ts'
 
 /**
  * The shared Kysely instance over the active graph's SQLite index. Queries

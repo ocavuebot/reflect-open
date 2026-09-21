@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { bytesToBase64 } from '../lib/base64'
-import { ReflectError } from '../errors'
-import type { TranscriptionProvider } from './provider-config'
+import { bytesToBase64 } from '../lib/base64.ts'
+import { ReflectError } from '../errors.ts'
+import type { TranscriptionProvider } from './provider-config.ts'
 import {
   httpError,
   safeJson,
@@ -9,7 +9,7 @@ import {
   TranscriptionOversizeError,
   TranscriptionRejectedError,
   TRANSCRIPTION_TRANSFER_TIMEOUT_MS,
-} from './transcribe-http'
+} from './transcribe-http.ts'
 
 /**
  * BYOK audio transcription (audio memos): one segment-sized recording in,

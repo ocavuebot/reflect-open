@@ -1,4 +1,4 @@
-import { definePluginCommand, ignoredResult } from './plugin'
+import { definePluginCommand, ignoredResult } from './plugin.ts'
 
 /**
  * Typed bindings for `plugins/tauri-plugin-mobile-haptics`, the app's

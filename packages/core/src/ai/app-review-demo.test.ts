@@ -1,8 +1,8 @@
 import { generateText, streamText } from '@reflect/modules/ai'
 import { describe, expect, it } from 'vitest'
-import type { AiProviderConfig } from '../settings/schema'
-import { APP_REVIEW_STUB_KEY, createDemoModel, DEMO_REPLY_TEXT } from './app-review-demo'
-import { streamChat, type ChatStreamEvent } from './chat/stream-chat'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import { APP_REVIEW_STUB_KEY, createDemoModel, DEMO_REPLY_TEXT } from './app-review-demo.ts'
+import { streamChat, type ChatStreamEvent } from './chat/stream-chat.ts'
 
 const throwingFetch = (() => {
   throw new Error('demo mode must not fetch')

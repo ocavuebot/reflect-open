@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { hasAuthoredTitle, isTagName, parseNote } from './extract'
+import { hasAuthoredTitle, isTagName, parseNote } from './extract.ts'
 
 function parse(source: string, path = 'notes/test.md') {
   return parseNote({ path, source })

@@ -1,19 +1,19 @@
-import type { Unlisten } from '../ipc/bridge'
-import { isAssetPath, isNotePath } from '../graph/paths'
-import { readNote } from '../graph/commands'
-import { moveIndexedRows, removeFromIndex } from './commands'
-import { subscribeFileChanges, type FileChange } from './file-changes'
-import { hashContent, matchesTrustedMtime } from './hash'
-import { emitIndexApplied } from './index-applied'
+import type { Unlisten } from '../ipc/bridge.ts'
+import { isAssetPath, isNotePath } from '../graph/paths.ts'
+import { readNote } from '../graph/commands.ts'
+import { moveIndexedRows, removeFromIndex } from './commands.ts'
+import { subscribeFileChanges, type FileChange } from './file-changes.ts'
+import { hashContent, matchesTrustedMtime } from './hash.ts'
+import { emitIndexApplied } from './index-applied.ts'
 import {
   buildNoteProjection,
   createIndexApplyBatch,
   createMtimeTouchBatch,
   indexNote,
-} from './indexer'
-import { detectExternalMoves } from './move-healing'
-import { INDEX_PASS_YIELD_EVERY, yieldToEventLoop } from './pacing'
-import { getIndexedFileFactsByPath, getNoteIdsByPath, type IndexedFileFacts } from './queries'
+} from './indexer.ts'
+import { detectExternalMoves } from './move-healing.ts'
+import { INDEX_PASS_YIELD_EVERY, yieldToEventLoop } from './pacing.ts'
+import { getIndexedFileFactsByPath, getNoteIdsByPath, type IndexedFileFacts } from './queries.ts'
 
 /**
  * Live re-indexing from the Rust watcher (Plan 04b). Batches of

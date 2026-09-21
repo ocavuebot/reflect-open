@@ -1,4 +1,4 @@
-import { lookupContactsByEmail, type ContactMatch } from './commands'
+import { lookupContactsByEmail, type ContactMatch } from './commands.ts'
 
 /**
  * Attendee resolution for the calendar flow (see

@@ -1,7 +1,7 @@
-import { noteExists } from '../graph/commands'
-import { notePath, templatePath } from '../graph/paths'
-import { slugForTitle } from '../markdown/slug'
-import { db } from './db'
+import { noteExists } from '../graph/commands.ts'
+import { notePath, templatePath } from '../graph/paths.ts'
+import { slugForTitle } from '../markdown/slug.ts'
+import { db } from './db.ts'
 
 /**
  * Collision-free note-path selection — where a note's file should live for

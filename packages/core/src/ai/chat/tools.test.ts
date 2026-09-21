@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import type { ToolExecutionOptions } from '@reflect/modules/ai'
-import type { RetrievalHit, RetrieveOptions } from '../../embeddings/retrieve'
-import type { DailyNoteRow, DailyNotesRange } from '../../indexing/queries'
-import type { RecentNoteRow, RecentNotesOptions } from '../../indexing/note-list'
+import type { RetrievalHit, RetrieveOptions } from '../../embeddings/retrieve.ts'
+import type { DailyNoteRow, DailyNotesRange } from '../../indexing/queries.ts'
+import type { RecentNoteRow, RecentNotesOptions } from '../../indexing/note-list.ts'
 import {
   ASSET_UNAVAILABLE_ERROR,
   MAX_ASSET_DESCRIPTION_CHARS,
@@ -10,8 +10,8 @@ import {
   NOT_AN_ASSET_ERROR,
   type ReadAssetResult,
   type ReadAssetsOutput,
-} from './read-assets'
-import { MAX_NOTE_CONTENT_CHARS, type ReadNoteResult, type ReadNotesOutput } from './read-notes'
+} from './read-assets.ts'
+import { MAX_NOTE_CONTENT_CHARS, type ReadNoteResult, type ReadNotesOutput } from './read-notes.ts'
 import {
   buildNoteTools,
   INVALID_TAG_ERROR,
@@ -20,7 +20,7 @@ import {
   type ListRecentNotesOutput,
   type NoteTools,
   type SearchNotesOutput,
-} from './tools'
+} from './tools.ts'
 
 const CALL: ToolExecutionOptions<Record<string, unknown>> = {
   toolCallId: 'call-1',

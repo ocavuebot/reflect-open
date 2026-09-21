@@ -1,17 +1,20 @@
 import { z } from 'zod'
-import { errorMessage, isAppError } from '../errors'
-import { TRANSCRIPTION_MAX_SEGMENT_BYTES, type TranscriptionProvider } from '../ai/provider-config'
-import { transcribeAudio } from '../ai/transcribe'
-import { isTranscriptionOversize, isTranscriptionRejected } from '../ai/transcribe-http'
-import { base64ToBytes } from '../lib/base64'
+import { errorMessage, isAppError } from '../errors.ts'
+import {
+  TRANSCRIPTION_MAX_SEGMENT_BYTES,
+  type TranscriptionProvider,
+} from '../ai/provider-config.ts'
+import { transcribeAudio } from '../ai/transcribe.ts'
+import { isTranscriptionOversize, isTranscriptionRejected } from '../ai/transcribe-http.ts'
+import { base64ToBytes } from '../lib/base64.ts'
 import {
   readAsset,
   readAssetBinary,
   readTranscriptCache,
   writeTranscriptCache,
-} from '../graph/commands'
-import { hasBinaryIpc } from '../ipc/bridge'
-import type { AudioMemoIdentity } from './audio-memo'
+} from '../graph/commands.ts'
+import { hasBinaryIpc } from '../ipc/bridge.ts'
+import type { AudioMemoIdentity } from './audio-memo.ts'
 
 /**
  * Session semantics for segmented audio memos. One recording session rotates

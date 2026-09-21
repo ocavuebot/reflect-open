@@ -5,7 +5,7 @@ import type {
   LanguageModelV3StreamResult,
   LanguageModelV3Usage,
 } from '@ai-sdk/provider'
-import { streamTransformTurn, type TransformStreamEvent } from './transform-selection'
+import { streamTransformTurn, type TransformStreamEvent } from './transform-selection.ts'
 
 const USAGE: LanguageModelV3Usage = {
   inputTokens: { total: 1, noCache: 1, cacheRead: undefined, cacheWrite: undefined },

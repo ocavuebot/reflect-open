@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import type { AiProvidersState } from './provider-config'
-import type { AiProviderConfig } from '../settings/schema'
-import { wikiLinkSafe } from '../markdown/edit'
-import { languageModel } from './language-model'
-import { clipAtWordBoundary } from './text'
+import type { AiProvidersState } from './provider-config.ts'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import { wikiLinkSafe } from '../markdown/edit.ts'
+import { languageModel } from './language-model.ts'
+import { clipAtWordBoundary } from './text.ts'
 
 const TITLE_TIMEOUT_MS = 30_000
 const MAX_TRANSCRIPT_CHARS = 4_000

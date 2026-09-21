@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { slugForTitle } from './slug'
+import { slugForTitle } from './slug.ts'
 
 /**
  * The golden corpus FREEZES the slug rules: changing `slugForTitle`'s output

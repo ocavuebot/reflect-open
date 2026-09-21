@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import type { HostedAiProviderConfig } from '../../settings/schema'
-import { aiProvider } from '../provider-catalog'
-import { chatModelOptions, resolveChatModel } from './model-options'
+import type { HostedAiProviderConfig } from '../../settings/schema.ts'
+import { aiProvider } from '../provider-catalog.ts'
+import { chatModelOptions, resolveChatModel } from './model-options.ts'
 
 function config(overrides: Partial<HostedAiProviderConfig>): HostedAiProviderConfig {
   const provider = overrides.provider ?? 'anthropic'

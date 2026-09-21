@@ -1,10 +1,10 @@
 import type { UserContent } from '@reflect/modules/ai'
 import { z } from 'zod'
-import { ReflectError } from '../errors'
-import { wikiLinkSafe } from '../markdown/edit'
-import type { AiProviderConfig } from '../settings/schema'
-import { languageModel } from './language-model'
-import { clipAtWordBoundary } from './text'
+import { ReflectError } from '../errors.ts'
+import { wikiLinkSafe } from '../markdown/edit.ts'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import { languageModel } from './language-model.ts'
+import { clipAtWordBoundary } from './text.ts'
 
 /**
  * BYOK page enrichment for link capture (Plan 11): one short multimodal call

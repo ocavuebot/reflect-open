@@ -1,11 +1,11 @@
-import { foldGraphPath } from '../graph/paths'
-import { wikiLinkSafe } from '../markdown/edit'
-import { foldKey } from '../markdown/keys'
-import { displayNoteTitle, wikiLinkTargetForTitle } from '../markdown/note-title'
-import type { Resolution } from '../markdown/resolve'
-import { repointPathWikiLinks, retitleWikiLinks } from '../markdown/retitle'
-import { subjectAliases } from '../markdown/subject-aliases'
-import { isWikiLinkSafeText, serializeWikiSuggestionAddress } from './suggest'
+import { foldGraphPath } from '../graph/paths.ts'
+import { wikiLinkSafe } from '../markdown/edit.ts'
+import { foldKey } from '../markdown/keys.ts'
+import { displayNoteTitle, wikiLinkTargetForTitle } from '../markdown/note-title.ts'
+import type { Resolution } from '../markdown/resolve.ts'
+import { repointPathWikiLinks, retitleWikiLinks } from '../markdown/retitle.ts'
+import { subjectAliases } from '../markdown/subject-aliases.ts'
+import { isWikiLinkSafeText, serializeWikiSuggestionAddress } from './suggest.ts'
 
 /**
  * The rename-rewrite pipeline (Plan 07b): when a note's settled title changes,

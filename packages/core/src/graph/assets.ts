@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { echoLocalWrite } from '../indexing/local-write-echo'
-import { call, callBinary } from '../ipc/invoke'
-import { blobChunks } from '../lib/blob'
+import { echoLocalWrite } from '../indexing/local-write-echo.ts'
+import { call, callBinary } from '../ipc/invoke.ts'
+import { blobChunks } from '../lib/blob.ts'
 
 /** Commands that return `()` from Rust serialize as `null` over IPC. */
 const voidSchema = z.null()

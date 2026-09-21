@@ -1,9 +1,9 @@
 vi.mock('../x-archive', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../x-archive')>()),
+  ...(await importOriginal<typeof import('../x-archive.ts')>()),
   saveArchivedPost: vi.fn(async () => {}),
 }))
-import { drainCaptureInbox } from './capture-drain'
-import fixtures from './bookmark-envelope.fixtures.json'
+import { drainCaptureInbox } from './capture-drain.ts'
+import fixtures from './bookmark-envelope.fixtures.json' with { type: 'json' }
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import {
   addSpool,
@@ -21,8 +21,8 @@ import {
   spool,
   wireCaptureMocks,
   writeNoteMock,
-} from './capture-harness'
-import type { TextCaptureEnvelope } from './capture-envelope'
+} from './capture-harness.ts'
+import type { TextCaptureEnvelope } from './capture-envelope.ts'
 
 const ensureBacklinkTargetMock = vi.hoisted(() => vi.fn())
 
@@ -43,7 +43,7 @@ vi.mock('./meta-scrape', () => ({
   scrapePageMeta: vi.fn(),
 }))
 vi.mock('../ai/describe-page', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../ai/describe-page')>()),
+  ...(await importOriginal<typeof import('../ai/describe-page.ts')>()),
   describePage: vi.fn(),
 }))
 vi.mock('../secrets/keychain', () => ({

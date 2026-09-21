@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { listTemplates } from './template-list'
+import { setBridge } from '../ipc/bridge.ts'
+import { listTemplates } from './template-list.ts'
 
 // A fake bridge resolves `db_query` so the test exercises the real compiled
 // SQL — the same harness the other indexing query tests use.

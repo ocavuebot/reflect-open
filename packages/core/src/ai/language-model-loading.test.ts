@@ -1,6 +1,6 @@
 import { expect, it, vi } from 'vitest'
-import type { AiProviderConfig } from '../settings/schema'
-import { APP_REVIEW_STUB_KEY } from './app-review-demo'
+import type { AiProviderConfig } from '../settings/schema.ts'
+import { APP_REVIEW_STUB_KEY } from './app-review-demo.ts'
 
 const loaded = vi.hoisted(() => new Set<string>())
 
@@ -22,8 +22,8 @@ vi.mock('@reflect/modules/ai-sdk/openai-compatible', async (original) => {
 })
 
 it('loads no SDK for configuration or demo mode, then only each selected implementation', async () => {
-  const { aiProvider } = await import('./provider-catalog')
-  const { languageModel } = await import('./language-model')
+  const { aiProvider } = await import('./provider-catalog.ts')
+  const { languageModel } = await import('./language-model.ts')
   const transport = vi.fn<typeof fetch>()
   const config: AiProviderConfig = {
     id: 'cfg',
