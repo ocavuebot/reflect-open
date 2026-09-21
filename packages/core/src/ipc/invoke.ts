@@ -1,6 +1,6 @@
 import type { ZodType } from 'zod'
-import { toAppError, type AppError } from '../errors'
-import { getBridge } from './bridge'
+import { toAppError, type AppError } from '../errors.ts'
+import { getBridge } from './bridge.ts'
 
 /**
  * The single boundary where an untyped native IPC response becomes a typed,

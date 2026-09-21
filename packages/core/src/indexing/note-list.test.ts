@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { listNotes, listNoteTags, listRecentNotes } from './note-list'
+import { setBridge } from '../ipc/bridge.ts'
+import { listNotes, listNoteTags, listRecentNotes } from './note-list.ts'
 
 // A fake bridge resolves `db_query` so the tests exercise the real compiled
 // SQL (snake_case columns, parameters) — the same harness queries.test uses.

@@ -1,13 +1,17 @@
-import { isAppError } from '../errors'
-import { CLAIM_TIER, projectNoteAliases } from '../indexing/indexed-note'
-import { findNotesByPathKey, findWikiTargetMatch, type WikiTargetMatch } from '../indexing/queries'
-import { parseNote } from '../markdown/extract'
-import { foldFallbackTitleKey, foldKey } from '../markdown/keys'
-import { normalizeWikiTarget } from '../markdown/resolve'
-import { slugForTitle } from '../markdown/slug'
-import { listFiles, readNote } from './commands'
-import { markdownNoteReference, wikiNoteReference, type NoteReference } from './note-reference'
-import { dailyPath, foldGraphPath, NOTES_DIR } from './paths'
+import { isAppError } from '../errors.ts'
+import { CLAIM_TIER, projectNoteAliases } from '../indexing/indexed-note.ts'
+import {
+  findNotesByPathKey,
+  findWikiTargetMatch,
+  type WikiTargetMatch,
+} from '../indexing/queries.ts'
+import { parseNote } from '../markdown/extract.ts'
+import { foldFallbackTitleKey, foldKey } from '../markdown/keys.ts'
+import { normalizeWikiTarget } from '../markdown/resolve.ts'
+import { slugForTitle } from '../markdown/slug.ts'
+import { listFiles, readNote } from './commands.ts'
+import { markdownNoteReference, wikiNoteReference, type NoteReference } from './note-reference.ts'
+import { dailyPath, foldGraphPath, NOTES_DIR } from './paths.ts'
 
 /** The side-effect-free outcome of resolving one existing note-link target. */
 export type ExistingWikiTargetResolution =

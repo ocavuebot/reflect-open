@@ -1,10 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { readNoteLocal } from '../graph/commands'
+import { readNoteLocal } from '../graph/commands.ts'
 import {
   gatherAssetDescriptionBodies,
   gatherAssetDescriptionText,
   MAX_ASSET_TEXT_CHARS,
-} from './asset-description-text'
+} from './asset-description-text.ts'
 
 vi.mock('../graph/commands', () => ({
   readNoteLocal: vi.fn(),

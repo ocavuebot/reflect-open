@@ -1,14 +1,14 @@
 import { describe, expect, it } from 'vitest'
-import { resolveOrCreateNoteWithTitle } from '../graph/create-note'
-import { setBridge } from '../ipc/bridge'
+import { resolveOrCreateNoteWithTitle } from '../graph/create-note.ts'
+import { setBridge } from '../ipc/bridge.ts'
 import {
   applyProjection,
   connectIndex,
   expectSuggestionOpensItsPath,
   openMigratedIndex,
   project,
-} from './flow-test-harness'
-import { getBacklinks, suggestWikiLinkTargets } from './queries'
+} from './flow-test-harness.ts'
+import { getBacklinks, suggestWikiLinkTargets } from './queries.ts'
 
 describe('colon and slash title flow', () => {
   it('projects, resolves, backlinks, and autocompletes a colon title', async () => {

@@ -18,16 +18,16 @@ export {
   type AssetRef,
   type TaskMarker,
   type ParsedNote,
-} from './model'
+} from './model.ts'
 export {
   splitFrontmatter,
   parseFrontmatter,
   upsertFrontmatter,
   type FrontmatterSplit,
   type ParsedFrontmatter,
-} from './frontmatter'
-export { parseBody } from './grammar'
-export { parseNote, isTagName, hasAuthoredTitle } from './extract'
+} from './frontmatter.ts'
+export { parseBody } from './grammar.ts'
+export { parseNote, isTagName, hasAuthoredTitle } from './extract.ts'
 export {
   scanInlineWikiLinks,
   scanInlineImages,
@@ -35,7 +35,7 @@ export {
   type InlineWikiLink,
   type InlineImage,
   type InlineSegment,
-} from './scan'
+} from './scan.ts'
 export {
   appendBlock,
   appendListItem,
@@ -50,10 +50,10 @@ export {
   taskLineToBullet,
   toggleTaskMarker,
   TaskStaleError,
-} from './edit'
-export { retitleWikiLinks, type WikiLinkRetitleOptions } from './retitle'
-export { displayNoteTitle, wikiLinkTargetForTitle } from './note-title'
-export { parseTaskMarker } from './task-marker'
+} from './edit.ts'
+export { retitleWikiLinks, type WikiLinkRetitleOptions } from './retitle.ts'
+export { displayNoteTitle, wikiLinkTargetForTitle } from './note-title.ts'
+export { parseTaskMarker } from './task-marker.ts'
 export {
   conflictMarkerBlockCount,
   conflictMarkerLabels,
@@ -64,13 +64,13 @@ export {
   type ConflictResolution,
   type ConflictSegment,
   type ConflictSide,
-} from './conflict-markers'
-export { canonicalEmail, canonicalEmails, extractEmailFields, foldEmail } from './email-fields'
-export { foldFallbackTitleKey, foldKey, foldTag } from './keys'
-export { documentLineEnding } from './line-endings'
-export { gistBodyHash, gistFilename } from './gist'
-export { slugForTitle } from './slug'
-export { subjectAliases } from './subject-aliases'
+} from './conflict-markers.ts'
+export { canonicalEmail, canonicalEmails, extractEmailFields, foldEmail } from './email-fields.ts'
+export { foldFallbackTitleKey, foldKey, foldTag } from './keys.ts'
+export { documentLineEnding } from './line-endings.ts'
+export { gistBodyHash, gistFilename } from './gist.ts'
+export { slugForTitle } from './slug.ts'
+export { subjectAliases } from './subject-aliases.ts'
 export {
   normalizeWikiTarget,
   resolved,
@@ -81,4 +81,4 @@ export {
   type Resolution,
   type WikiLookup,
   type AsyncWikiLookup,
-} from './resolve'
+} from './resolve.ts'

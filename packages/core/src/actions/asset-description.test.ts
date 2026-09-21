@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { AssetDescriptionRejectedError, describeAsset } from '../ai/describe-asset'
-import type { AiProvidersState } from '../ai/provider-config'
-import { ReflectError } from '../errors'
-import { listDir, readAsset, readNote, writeNote } from '../graph/commands'
-import { assetReferencingNotePaths } from '../indexing/asset-refs'
-import { hashContent } from '../indexing/hash'
-import { getSecret } from '../secrets/keychain'
-import { descriptionPathFor } from '../graph/paths'
+import { AssetDescriptionRejectedError, describeAsset } from '../ai/describe-asset.ts'
+import type { AiProvidersState } from '../ai/provider-config.ts'
+import { ReflectError } from '../errors.ts'
+import { listDir, readAsset, readNote, writeNote } from '../graph/commands.ts'
+import { assetReferencingNotePaths } from '../indexing/asset-refs.ts'
+import { hashContent } from '../indexing/hash.ts'
+import { getSecret } from '../secrets/keychain.ts'
+import { descriptionPathFor } from '../graph/paths.ts'
 import {
   assetTypeFor,
   base64ByteLength,
@@ -16,7 +16,7 @@ import {
   readManagedDescription,
   reconcileAssetDescriptions,
   type ReconcileAssetDescriptionsInput,
-} from './asset-description'
+} from './asset-description.ts'
 
 vi.mock('../graph/commands', () => ({
   listDir: vi.fn(),
@@ -25,14 +25,14 @@ vi.mock('../graph/commands', () => ({
   writeNote: vi.fn(),
 }))
 vi.mock('../indexing/asset-refs', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../indexing/asset-refs')>()),
+  ...(await importOriginal<typeof import('../indexing/asset-refs.ts')>()),
   assetReferencingNotePaths: vi.fn(),
 }))
 vi.mock('../secrets/keychain', () => ({
   getSecret: vi.fn(),
 }))
 vi.mock('../ai/describe-asset', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../ai/describe-asset')>()),
+  ...(await importOriginal<typeof import('../ai/describe-asset.ts')>()),
   describeAsset: vi.fn(),
 }))
 

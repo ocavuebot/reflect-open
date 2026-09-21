@@ -26,7 +26,7 @@ export {
   type PushOutcome,
   type SkippedFile,
   type ChangedFile,
-} from './commands'
+} from './commands.ts'
 export {
   GITHUB_APP_CLIENT_ID,
   GITHUB_APP_SLUG,
@@ -56,8 +56,8 @@ export {
   type GithubRepoRef,
   type GithubRepo,
   type GithubUser,
-} from './github'
-export { createGist, updateGist, deleteGist, type PublishedGist, type GistFile } from './gists'
+} from './github.ts'
+export { createGist, updateGist, deleteGist, type PublishedGist, type GistFile } from './gists.ts'
 export {
   createSyncEngine,
   isSyncError,
@@ -65,4 +65,4 @@ export {
   type SyncEngineOptions,
   type SyncErrorKind,
   type SyncStatus,
-} from './engine'
+} from './engine.ts'

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { audioMemoPartFromPath, audioMemoPartPath, audioMemoIdentity } from './audio-memo'
+import { audioMemoPartFromPath, audioMemoPartPath, audioMemoIdentity } from './audio-memo.ts'
 import {
   AUDIO_MEMO_SEGMENT_MS,
   decodePartResult,
@@ -10,7 +10,7 @@ import {
   partTranscriptName,
   stitchSessionTranscript,
   type AudioMemoPart,
-} from './audio-memo-session'
+} from './audio-memo-session.ts'
 
 const MEMO = audioMemoIdentity(new Date(2026, 5, 11, 15, 30, 22, 845), 'audio/mp4')
 const OTHER = audioMemoIdentity(new Date(2026, 5, 11, 16, 0, 0, 0), 'audio/mp4')

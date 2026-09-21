@@ -1,11 +1,11 @@
 import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { isNotePath, mayContainNotes } from '../graph/paths'
-import { foldKey, parseNote } from '../markdown'
-import { hashContent } from './hash'
-import { buildIndexedNote } from './indexed-note'
-import { buildFtsMatch } from './search-query'
+import { isNotePath, mayContainNotes } from '../graph/paths.ts'
+import { foldKey, parseNote } from '../markdown/index.ts'
+import { hashContent } from './hash.ts'
+import { buildIndexedNote } from './indexed-note.ts'
+import { buildFtsMatch } from './search-query.ts'
 
 /**
  * The TS side of the TS↔Rust parity contract (see `fixtures/parity/README.txt`).

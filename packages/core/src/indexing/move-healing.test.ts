@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { detectExternalMoves } from './move-healing'
+import { setBridge } from '../ipc/bridge.ts'
+import { detectExternalMoves } from './move-healing.ts'
 
 afterEach(() => {
   setBridge(null)

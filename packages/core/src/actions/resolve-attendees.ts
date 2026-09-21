@@ -1,9 +1,9 @@
-import { resolvePerson, type PersonResolution } from '../contacts/person'
-import { resolveAttendeeContact } from '../contacts/resolve'
-import { serializeWikiSuggestionAddress } from '../indexing/suggest'
-import { canonicalEmail, canonicalEmails } from '../markdown/email-fields'
-import { wikiLinkSafe } from '../markdown/edit'
-import type { MeetingAttendee } from './add-meeting'
+import { resolvePerson, type PersonResolution } from '../contacts/person.ts'
+import { resolveAttendeeContact } from '../contacts/resolve.ts'
+import { serializeWikiSuggestionAddress } from '../indexing/suggest.ts'
+import { canonicalEmail, canonicalEmails } from '../markdown/email-fields.ts'
+import { wikiLinkSafe } from '../markdown/edit.ts'
+import type { MeetingAttendee } from './add-meeting.ts'
 
 /** An attendee classified for linked or plain-text meeting serialization. */
 export type ResolvedMeetingAttendee =

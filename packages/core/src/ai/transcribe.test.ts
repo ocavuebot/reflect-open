@@ -6,9 +6,9 @@ import {
   OPENAI_TRANSCRIPTION_MODEL,
   transcribeAudio,
   type TranscriptionRequest,
-} from './transcribe'
-import { bytesToBase64 } from '../lib/base64'
-import { isTranscriptionOversize, isTranscriptionRejected } from './transcribe-http'
+} from './transcribe.ts'
+import { bytesToBase64 } from '../lib/base64.ts'
+import { isTranscriptionOversize, isTranscriptionRejected } from './transcribe-http.ts'
 
 interface RecordedCall {
   url: string

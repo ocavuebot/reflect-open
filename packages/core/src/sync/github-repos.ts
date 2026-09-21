@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { ReflectError } from '../errors'
-import { apiHeaders, readJson, type FetchFn } from './github-api'
+import { ReflectError } from '../errors.ts'
+import { apiHeaders, readJson, type FetchFn } from './github-api.ts'
 
 export interface GithubRepoRef {
   owner: string

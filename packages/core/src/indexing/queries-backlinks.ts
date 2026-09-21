@@ -1,9 +1,13 @@
 import type { Database } from '@reflect/db'
 import { sql, type Selectable } from 'kysely'
-import { readNote } from '../graph/commands'
-import { blockContextLinesAt, prepareBlockContext, type BlockContextSource } from './block-context'
-import { db } from './db'
-import { extractSnippetTasks, type SnippetTask } from './snippet-tasks'
+import { readNote } from '../graph/commands.ts'
+import {
+  blockContextLinesAt,
+  prepareBlockContext,
+  type BlockContextSource,
+} from './block-context.ts'
+import { db } from './db.ts'
+import { extractSnippetTasks, type SnippetTask } from './snippet-tasks.ts'
 
 export type Backlink = Pick<
   Selectable<Database['backlinks']>,

@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { embedNote } from './pipeline'
+import { setBridge } from '../ipc/bridge.ts'
+import { embedNote } from './pipeline.ts'
 
 afterEach(() => {
   setBridge(null)

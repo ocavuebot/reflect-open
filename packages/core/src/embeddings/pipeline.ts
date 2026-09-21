@@ -1,10 +1,10 @@
-import { readNoteLocal } from '../graph/commands'
-import { isTemplatePath } from '../graph/paths'
-import { gatherAssetDescriptionBodies } from '../indexing/asset-description-text'
-import { db } from '../indexing/db'
-import { parseNote } from '../markdown'
-import { chunkAssetDescriptions, chunkNote } from './chunk'
-import { embedApply, embedRemove, embedTexts, type EmbedChunkPayload } from './commands'
+import { readNoteLocal } from '../graph/commands.ts'
+import { isTemplatePath } from '../graph/paths.ts'
+import { gatherAssetDescriptionBodies } from '../indexing/asset-description-text.ts'
+import { db } from '../indexing/db.ts'
+import { parseNote } from '../markdown/index.ts'
+import { chunkAssetDescriptions, chunkNote } from './chunk.ts'
+import { embedApply, embedRemove, embedTexts, type EmbedChunkPayload } from './commands.ts'
 
 /**
  * The incremental embedding pass (Plan 09): chunk a note, diff chunk hashes

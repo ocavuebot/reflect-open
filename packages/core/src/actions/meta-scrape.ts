@@ -1,7 +1,7 @@
-import { toAppError } from '../errors'
-import { captureMetaFetch, captureOEmbedFetch } from '../graph/commands'
-import { normalizePageMetaValue, parsePageMeta, type PageMeta } from '../link-preview/metadata'
-import { oembedRequestURL, parseOEmbedAnswer } from './oembed'
+import { toAppError } from '../errors.ts'
+import { captureMetaFetch, captureOEmbedFetch } from '../graph/commands.ts'
+import { normalizePageMetaValue, parsePageMeta, type PageMeta } from '../link-preview/metadata.ts'
+import { oembedRequestURL, parseOEmbedAnswer } from './oembed.ts'
 
 /**
  * Meta-tag scraping for link capture (Plan 11) — the no-AI half of

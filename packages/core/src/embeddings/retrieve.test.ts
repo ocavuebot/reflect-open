@@ -5,7 +5,7 @@ import {
   mergeNearestFirst,
   type ChunkHitRow,
   type RetrievalHit,
-} from './retrieve'
+} from './retrieve.ts'
 
 function hit(path: string, overrides?: Partial<RetrievalHit>): RetrievalHit {
   return {

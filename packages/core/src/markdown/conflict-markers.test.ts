@@ -6,7 +6,7 @@ import {
   detectConflictMarkers,
   parseConflictMarkers,
   resolveConflictMarkers,
-} from './conflict-markers'
+} from './conflict-markers.ts'
 
 const CONFLICTED = [
   '# Shared',

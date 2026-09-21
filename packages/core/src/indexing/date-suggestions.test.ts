@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { generateDateSuggestions, type DateSuggestion } from './date-suggestions'
-import type { DateFormat, WeekStartDay } from '../settings/schema'
+import { generateDateSuggestions, type DateSuggestion } from './date-suggestions.ts'
+import type { DateFormat, WeekStartDay } from '../settings/schema.ts'
 
 /**
  * The V1 backlink-menu doc's worked examples are the spec here: today is

@@ -1,10 +1,10 @@
 import type { SyntaxNode } from '@meowdown/markdown'
-import { appendBlock } from './append-section'
-import { splitFrontmatter } from './frontmatter'
-import { parseBody } from './grammar'
-import { lineEndingAt, offsetBeforeLineEnding } from './line-endings'
-import type { Heading } from './model'
-import { headingLevelOf, isBulletList, isListItem, isListMark } from './node-types'
+import { appendBlock } from './append-section.ts'
+import { splitFrontmatter } from './frontmatter.ts'
+import { parseBody } from './grammar.ts'
+import { lineEndingAt, offsetBeforeLineEnding } from './line-endings.ts'
+import type { Heading } from './model.ts'
+import { headingLevelOf, isBulletList, isListItem, isListMark } from './node-types.ts'
 
 /** The bullet a new list is born with when the section has none to copy. */
 const DEFAULT_LIST_MARK = '-'

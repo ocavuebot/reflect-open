@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { call } from '../ipc/invoke'
+import { call } from '../ipc/invoke.ts'
 
 const backgroundTaskTokenSchema = z.string()
 

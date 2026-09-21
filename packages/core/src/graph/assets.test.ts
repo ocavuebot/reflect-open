@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { createAsset, importAsset } from './assets'
+import { setBridge } from '../ipc/bridge.ts'
+import { createAsset, importAsset } from './assets.ts'
 
 afterEach(() => {
   setBridge(null)

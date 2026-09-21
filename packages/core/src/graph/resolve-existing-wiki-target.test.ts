@@ -1,9 +1,9 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
+import { setBridge } from '../ipc/bridge.ts'
 import {
   resolveExistingMarkdownTarget,
   resolveExistingWikiTarget,
-} from './resolve-existing-wiki-target'
+} from './resolve-existing-wiki-target.ts'
 
 interface BridgeBehavior {
   readonly files?: Record<string, string>

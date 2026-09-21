@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { definePluginCommand, definePluginEvent, ignoredResult } from './plugin'
+import { definePluginCommand, definePluginEvent, ignoredResult } from './plugin.ts'
 
 /**
  * Typed bindings for `tauri-plugin-iap` — the StoreKit In-App Purchase

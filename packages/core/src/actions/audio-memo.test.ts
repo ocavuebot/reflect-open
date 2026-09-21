@@ -1,10 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import type { AiProvidersState } from '../ai/provider-config'
-import type { GenerateAudioMemoTitleRequest } from '../ai/audio-memo-title'
+import type { AiProvidersState } from '../ai/provider-config.ts'
+import type { GenerateAudioMemoTitleRequest } from '../ai/audio-memo-title.ts'
 import type {
   FormatAudioMemoTranscriptRequest,
   FormattedAudioMemoTranscript,
-} from '../ai/audio-memo-format'
+} from '../ai/audio-memo-format.ts'
 import {
   audioMemoFromPath,
   audioMemoIdentity,
@@ -15,8 +15,8 @@ import {
   reconcileAudioMemos,
   type ReconcileAudioMemosInput,
   type ReconcileStop,
-} from './audio-memo'
-import { APP_REVIEW_STUB_KEY } from '../ai/app-review-demo'
+} from './audio-memo.ts'
+import { APP_REVIEW_STUB_KEY } from '../ai/app-review-demo.ts'
 import {
   importAudioMemo,
   listDir,
@@ -27,10 +27,10 @@ import {
   writeAsset,
   writeNote,
   writeTranscriptCache,
-} from '../graph/commands'
-import { transcribeAudio } from '../ai/transcribe'
-import { TranscriptionRejectedError } from '../ai/transcribe-http'
-import { getSecret } from '../secrets/keychain'
+} from '../graph/commands.ts'
+import { transcribeAudio } from '../ai/transcribe.ts'
+import { TranscriptionRejectedError } from '../ai/transcribe-http.ts'
+import { getSecret } from '../secrets/keychain.ts'
 
 const generateAudioMemoTitleMock = vi.hoisted(() =>
   vi.fn<(request: GenerateAudioMemoTitleRequest) => Promise<string>>(),
@@ -53,11 +53,11 @@ vi.mock('../graph/commands', () => ({
   writeTranscriptCache: vi.fn(),
 }))
 vi.mock('../ai/transcribe', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../ai/transcribe')>()),
+  ...(await importOriginal<typeof import('../ai/transcribe.ts')>()),
   transcribeAudio: vi.fn(),
 }))
 vi.mock('../ai/audio-memo-title', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../ai/audio-memo-title')>()),
+  ...(await importOriginal<typeof import('../ai/audio-memo-title.ts')>()),
   generateAudioMemoTitle: generateAudioMemoTitleMock,
 }))
 vi.mock('../ai/audio-memo-format', () => ({

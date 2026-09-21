@@ -1,7 +1,7 @@
-import { wikiNoteReference } from '../graph/note-reference'
-import { foldGraphPath } from '../graph/paths'
-import { parseNote } from './extract'
-import { foldKey } from './keys'
+import { wikiNoteReference } from '../graph/note-reference.ts'
+import { foldGraphPath } from '../graph/paths.ts'
+import { parseNote } from './extract.ts'
+import { foldKey } from './keys.ts'
 
 /**
  * The source-level half of a retitle (Plan 07b): given one note that links to a

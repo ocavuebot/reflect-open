@@ -1,12 +1,12 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
+import { setBridge } from '../ipc/bridge.ts'
 import {
   createNoteWithTitle,
   isUntitledNotePath,
   resolveOrCreateNoteWithTitle,
   untitledNotePath,
   untitledNoteSeed,
-} from './create-note'
+} from './create-note.ts'
 
 afterEach(() => {
   setBridge(null)

@@ -1,4 +1,4 @@
-import { documentLineEnding } from './line-endings'
+import { documentLineEnding } from './line-endings.ts'
 
 /**
  * Append `block` as its own paragraph at the end of the note, one blank line

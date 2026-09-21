@@ -4,7 +4,7 @@ import {
   isTranscriptionOversize,
   isTranscriptionRejected,
   send,
-} from './transcribe-http'
+} from './transcribe-http.ts'
 
 const googleInvalidKey = JSON.stringify({
   error: {

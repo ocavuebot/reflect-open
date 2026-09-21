@@ -1,6 +1,6 @@
 import { isMap, parse as parseYaml, parseDocument, type Document } from 'yaml'
-import { documentLineEnding } from './line-endings'
-import { frontmatterSchema, type Frontmatter } from './model'
+import { documentLineEnding } from './line-endings.ts'
+import { frontmatterSchema, type Frontmatter } from './model.ts'
 
 /**
  * YAML frontmatter handling (Plan 03). Markdown is the source of truth and files

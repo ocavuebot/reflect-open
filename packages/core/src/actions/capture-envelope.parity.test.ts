@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import fixtures from './capture-envelope.fixtures.json'
-import { captureWireMessageSchema } from './capture-envelope'
+import fixtures from './capture-envelope.fixtures.json' with { type: 'json' }
+import { captureWireMessageSchema } from './capture-envelope.ts'
 
 /**
  * One half of the shared contract pin — the other half is the parity test in

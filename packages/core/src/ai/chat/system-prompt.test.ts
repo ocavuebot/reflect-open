@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { cloudSafeGraphContext, type CloudGraphContext } from '../../privacy/checkers'
-import { chatSystemPrompt } from './system-prompt'
+import { cloudSafeGraphContext, type CloudGraphContext } from '../../privacy/checkers.ts'
+import { chatSystemPrompt } from './system-prompt.ts'
 
 function context(overrides: Partial<CloudGraphContext> = {}) {
   return cloudSafeGraphContext({

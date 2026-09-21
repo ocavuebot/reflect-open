@@ -6,18 +6,18 @@ import type {
   LanguageModelV3StreamResult,
   LanguageModelV3Usage,
 } from '@ai-sdk/provider'
-import type { RetrievalHit } from '../../embeddings/retrieve'
-import { cloudSafeGraphContext } from '../../privacy/checkers'
-import { languageModel } from '../language-model'
-import { fitToContextWindow } from './context-window'
-import { MAX_STEPS, streamChat, streamChatTurn, type ChatStreamEvent } from './stream-chat'
+import type { RetrievalHit } from '../../embeddings/retrieve.ts'
+import { cloudSafeGraphContext } from '../../privacy/checkers.ts'
+import { languageModel } from '../language-model.ts'
+import { fitToContextWindow } from './context-window.ts'
+import { MAX_STEPS, streamChat, streamChatTurn, type ChatStreamEvent } from './stream-chat.ts'
 
 vi.mock('../language-model', () => ({
   languageModel: vi.fn(),
 }))
 
 vi.mock('./context-window', async (importOriginal) => {
-  const original = await importOriginal<typeof import('./context-window')>()
+  const original = await importOriginal<typeof import('./context-window.ts')>()
   return {
     ...original,
     fitToContextWindow: vi.fn(original.fitToContextWindow),

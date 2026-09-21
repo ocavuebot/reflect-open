@@ -1,6 +1,6 @@
 import type { SyntaxNode } from '@meowdown/markdown'
-import type { Span } from './model'
-import { plainTextOfRange } from './plain-text'
+import type { Span } from './model.ts'
+import { plainTextOfRange } from './plain-text.ts'
 
 /**
  * A task's breadcrumbs are the rendered labels of its ancestor `ListItem`

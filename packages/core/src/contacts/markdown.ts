@@ -1,7 +1,7 @@
-import { appendBlock } from '../markdown/edit'
-import { canonicalEmails } from '../markdown/email-fields'
-import { splitFrontmatter } from '../markdown/frontmatter'
-import type { ContactMatch } from './commands'
+import { appendBlock } from '../markdown/edit.ts'
+import { canonicalEmails } from '../markdown/email-fields.ts'
+import { splitFrontmatter } from '../markdown/frontmatter.ts'
+import type { ContactMatch } from './commands.ts'
 
 /**
  * What the suggested-contact card's **Add** writes: the contact's details as

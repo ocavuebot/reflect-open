@@ -1,7 +1,7 @@
 import { parseXPostId } from '@post-embed/schema'
-import { parseNote } from '../markdown/extract'
-import { sectionEnd, topLevelHeadings } from '../markdown/heading-blocks'
-import type { XPostEnvelope } from './bookmark-envelope'
+import { parseNote } from '../markdown/extract.ts'
+import { sectionEnd, topLevelHeadings } from '../markdown/heading-blocks.ts'
+import type { XPostEnvelope } from './bookmark-envelope.ts'
 
 /** Append an X embed under its action section unless the note already links that post. */
 export function appendXPost(source: string, envelope: XPostEnvelope): string {

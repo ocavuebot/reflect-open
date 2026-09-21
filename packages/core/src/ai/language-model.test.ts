@@ -1,12 +1,12 @@
 import { generateText } from '@reflect/modules/ai'
 import { describe, expect, it } from 'vitest'
-import type { AiProviderConfig } from '../settings/schema'
+import type { AiProviderConfig } from '../settings/schema.ts'
 import {
   ANTHROPIC_DIRECT_BROWSER_ACCESS_HEADER,
   ANTHROPIC_DIRECT_BROWSER_ACCESS_VALUE,
-} from './anthropic-headers'
-import { APP_REVIEW_STUB_KEY, DEMO_REPLY_TEXT } from './app-review-demo'
-import { languageModel } from './language-model'
+} from './anthropic-headers.ts'
+import { APP_REVIEW_STUB_KEY, DEMO_REPLY_TEXT } from './app-review-demo.ts'
+import { languageModel } from './language-model.ts'
 
 interface RecordedCall {
   readonly url: string

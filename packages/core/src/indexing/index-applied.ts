@@ -1,4 +1,4 @@
-import type { FileChange } from './file-changes'
+import type { FileChange } from './file-changes.ts'
 
 /**
  * The post-index "batch applied" signal (Plan 20 search/privacy closure).

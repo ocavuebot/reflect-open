@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { parseSearchQuery } from './filter-query'
-import { searchWithFilters } from './filtered-search'
+import { setBridge } from '../ipc/bridge.ts'
+import { parseSearchQuery } from './filter-query.ts'
+import { searchWithFilters } from './filtered-search.ts'
 
 const mockInvoke = vi.fn<(command: string, args: Record<string, unknown>) => Promise<unknown>>()
 

@@ -4,9 +4,9 @@ export {
   subscribeBridgeChanges,
   type IpcBridge,
   type Unlisten,
-} from '../ipc/bridge'
-export { call, callBinary } from '../ipc/invoke'
-export { type PluginSubscription } from '../ipc/plugin'
+} from '../ipc/bridge.ts'
+export { call, callBinary } from '../ipc/invoke.ts'
+export { type PluginSubscription } from '../ipc/plugin.ts'
 export {
   actionPerformed,
   actionsReady,
@@ -29,8 +29,8 @@ export {
   type RecordingStoppedEvent,
   type StagedRecordingFile,
   type StartRecordingOptions,
-} from '../ipc/recording-plugin'
-export { impactLight } from '../ipc/mobile-haptics-plugin'
+} from '../ipc/recording-plugin.ts'
+export { impactLight } from '../ipc/mobile-haptics-plugin.ts'
 export {
   getAppVersion,
   mobileStorage,
@@ -50,24 +50,24 @@ export {
   type IcloudSweepOutcome,
   type MobileStorageInfo,
   type MobileStorageKind,
-} from '../ipc/commands'
-export { isMobilePlatform, type AppPlatform } from '../app/platform'
-export { confirmQuit, subscribeQuitRequested } from '../app/quit'
+} from '../ipc/commands.ts'
+export { isMobilePlatform, type AppPlatform } from '../app/platform.ts'
+export { confirmQuit, subscribeQuitRequested } from '../app/quit.ts'
 export {
   beginBackgroundTask,
   endBackgroundTask,
   type BackgroundTaskToken,
-} from '../app/background-task'
-export { WINDOW_NAVIGATE_EVENT, subscribeWindowNavigate } from '../app/window-events'
-export { toggleDevtools } from '../app/devtools'
+} from '../app/background-task.ts'
+export { WINDOW_NAVIGATE_EVENT, subscribeWindowNavigate } from '../app/window-events.ts'
+export { toggleDevtools } from '../app/devtools.ts'
 export {
   agentSkillStatus,
   agentSkillInstall,
   agentSkillUninstall,
   type AgentSkillInstallState,
   type AgentSkillStatus,
-} from '../app/agent-skill'
-export { chunkNote, type NoteChunk } from '../embeddings/chunk'
+} from '../app/agent-skill.ts'
+export { chunkNote, type NoteChunk } from '../embeddings/chunk.ts'
 export {
   embedStatus,
   embedEnsure,
@@ -79,15 +79,15 @@ export {
   type EmbedStatus,
   type EmbedProgress,
   type EmbedChunkPayload,
-} from '../embeddings/commands'
-export { embedNote, backfillEmbeddings } from '../embeddings/pipeline'
+} from '../embeddings/commands.ts'
+export { embedNote, backfillEmbeddings } from '../embeddings/pipeline.ts'
 export {
   retrieve,
   relatedNotes,
   fuseRanked,
   type RetrievalHit,
   type RetrieveOptions,
-} from '../embeddings/retrieve'
+} from '../embeddings/retrieve.ts'
 export {
   appErrorSchema,
   errorMessage,
@@ -95,7 +95,7 @@ export {
   toAppError,
   ReflectError,
   type AppError,
-} from '../errors'
+} from '../errors.ts'
 export {
   DAILY_DIR,
   NOTES_DIR,
@@ -120,18 +120,18 @@ export {
   foldGraphPath,
   isCalendarDate,
   type GraphPathKind,
-} from '../graph/paths'
+} from '../graph/paths.ts'
 export {
   wikiNoteReference,
   markdownNoteReference,
   noteBasenameKey,
   type NoteReference,
-} from '../graph/note-reference'
+} from '../graph/note-reference.ts'
 export {
   isValidReflectNoteId,
   isReflectManagedNotePath,
   isReflectManagedNote,
-} from '../graph/note-management'
+} from '../graph/note-management.ts'
 export {
   graphInfoSchema,
   recentGraphSchema,
@@ -147,7 +147,7 @@ export {
   type GraphImportProgress,
   type GraphImportSummary,
   type WindowBootstrap,
-} from '../graph/schemas'
+} from '../graph/schemas.ts'
 export {
   openGraph,
   openNoteWindow,
@@ -188,9 +188,9 @@ export {
   captureMetaFetch,
   captureSharedInboxRelay,
   promoteCaptureScreenshot,
-} from '../graph/commands'
-export { createAsset, importAsset } from '../graph/assets'
-export { assetFileName } from '../graph/asset-names'
+} from '../graph/commands.ts'
+export { createAsset, importAsset } from '../graph/assets.ts'
+export { assetFileName } from '../graph/asset-names.ts'
 export {
   newNoteId,
   newNoteSource,
@@ -200,12 +200,12 @@ export {
   createNoteWithTitle,
   resolveOrCreateNoteWithTitle,
   type ResolveOrCreateNoteResult,
-} from '../graph/create-note'
+} from '../graph/create-note.ts'
 export {
   resolveExistingMarkdownTarget,
   resolveExistingWikiTarget,
   type ExistingWikiTargetResolution,
-} from '../graph/resolve-existing-wiki-target'
+} from '../graph/resolve-existing-wiki-target.ts'
 export {
   settingsSchema,
   editorMarkdownSyntaxSchema,
@@ -270,8 +270,8 @@ export {
   type OpenAiCompatibleProviderConfig,
   type AiPrompt,
   type AiPromptMode,
-} from '../settings/schema'
-export { loadSettings, saveSettings } from '../settings/commands'
+} from '../settings/schema.ts'
+export { loadSettings, saveSettings } from '../settings/commands.ts'
 export {
   contactsAuthorizationSchema,
   contactMatchSchema,
@@ -282,19 +282,19 @@ export {
   isContactsReadable,
   type ContactsAuthorization,
   type ContactMatch,
-} from '../contacts/commands'
+} from '../contacts/commands.ts'
 export {
   contactLinkSuggestions,
   contactNamesEqual,
   matchContactForTitle,
   suggestContactForTitle,
-} from '../contacts/match'
+} from '../contacts/match.ts'
 export {
   contactDetailsMarkdown,
   appendContactDetails,
   noteHasContactDetails,
-} from '../contacts/markdown'
-export { pickContactForEmail, resolveAttendeeContact } from '../contacts/resolve'
+} from '../contacts/markdown.ts'
+export { pickContactForEmail, resolveAttendeeContact } from '../contacts/resolve.ts'
 export {
   ensurePersonNote,
   resolvePerson,
@@ -309,7 +309,7 @@ export {
   type NewPersonContactResolution,
   type PersonContactResolution,
   type PersonResolution,
-} from '../contacts/person'
+} from '../contacts/person.ts'
 export {
   IAP_PRODUCT_IDS,
   iapGetProducts,
@@ -317,9 +317,9 @@ export {
   iapIsOwned,
   subscribeIapPurchaseUpdated,
   type IapProduct,
-} from '../ipc/iap-plugin'
+} from '../ipc/iap-plugin.ts'
 export {
   getAppStoreEnvironment,
   presentOfferCodeRedeemSheet,
   syncAppStore,
-} from '../ipc/app-store-plugin'
+} from '../ipc/app-store-plugin.ts'

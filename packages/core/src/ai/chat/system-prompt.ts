@@ -1,5 +1,5 @@
-import type { CloudGraphContext, CloudSafe } from '../../privacy/checkers'
-import { normalizeChatSystemPrompt } from '../../settings/schema'
+import type { CloudGraphContext, CloudSafe } from '../../privacy/checkers.ts'
+import { normalizeChatSystemPrompt } from '../../settings/schema.ts'
 
 /**
  * The grounded chat system prompt (Plan 10). Reflect's chat is deliberately

@@ -3,8 +3,8 @@ import {
   getAppStoreEnvironment,
   presentOfferCodeRedeemSheet,
   syncAppStore,
-} from './app-store-plugin'
-import { setBridge } from './bridge'
+} from './app-store-plugin.ts'
+import { setBridge } from './bridge.ts'
 
 afterEach(() => {
   setBridge(null)

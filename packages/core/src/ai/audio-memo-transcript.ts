@@ -1,6 +1,6 @@
-import type { AudioMemoEnrichmentCredentials } from './audio-memo-title'
-import { generateAudioMemoTitle } from './audio-memo-title'
-import { formatAudioMemoTranscript } from './audio-memo-format'
+import type { AudioMemoEnrichmentCredentials } from './audio-memo-title.ts'
+import { generateAudioMemoTitle } from './audio-memo-title.ts'
+import { formatAudioMemoTranscript } from './audio-memo-format.ts'
 
 /**
  * Best-effort enrichment of one session's stitched transcript: an optional

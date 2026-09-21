@@ -1,14 +1,14 @@
 import { z } from 'zod'
-import { isAppError } from '../errors'
-import { readNote } from '../graph/commands'
-import { hashContent } from '../indexing/hash'
-import { wikiLinkSafe } from '../markdown/edit'
-import { upsertFrontmatter } from '../markdown/frontmatter'
-import type { Frontmatter } from '../markdown/model'
-import type { CaptureIdentity } from './capture-identity'
-import type { CaptureEnvelope } from './capture-envelope'
+import { isAppError } from '../errors.ts'
+import { readNote } from '../graph/commands.ts'
+import { hashContent } from '../indexing/hash.ts'
+import { wikiLinkSafe } from '../markdown/edit.ts'
+import { upsertFrontmatter } from '../markdown/frontmatter.ts'
+import type { Frontmatter } from '../markdown/model.ts'
+import type { CaptureIdentity } from './capture-identity.ts'
+import type { CaptureEnvelope } from './capture-envelope.ts'
 
-export { notePrivate } from '../privacy/checkers'
+export { notePrivate } from '../privacy/checkers.ts'
 
 /**
  * Enrichment lifecycle of a capture note, in its frontmatter. `skipped` means

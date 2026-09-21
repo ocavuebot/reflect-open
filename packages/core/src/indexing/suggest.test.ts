@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { parseNote } from '../markdown'
-import { foldKey } from '../markdown/keys'
+import { parseNote } from '../markdown/index.ts'
+import { foldKey } from '../markdown/keys.ts'
 import {
   aliasHint,
   isWikiLinkSafeText,
@@ -10,7 +10,7 @@ import {
   type AliasCandidate,
   type TitleCandidate,
   type WikiSuggestion,
-} from './suggest'
+} from './suggest.ts'
 
 function note(title: string, mtime = 0, extra?: Partial<TitleCandidate>): TitleCandidate {
   return {

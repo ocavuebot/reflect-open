@@ -1,8 +1,8 @@
-import { ReflectError } from '../errors'
-import { readNote } from '../graph/commands'
-import { resolveOrCreateNoteWithTitle } from '../graph/create-note'
-import { wikiLinkSafe } from '../markdown/edit'
-import { parseNote } from '../markdown/extract'
+import { ReflectError } from '../errors.ts'
+import { readNote } from '../graph/commands.ts'
+import { resolveOrCreateNoteWithTitle } from '../graph/create-note.ts'
+import { wikiLinkSafe } from '../markdown/edit.ts'
+import { parseNote } from '../markdown/extract.ts'
 
 /**
  * Resolve the note targeted by an automatic backlink, or create it safely.

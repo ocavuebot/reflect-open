@@ -1,5 +1,5 @@
 import type { z } from 'zod'
-import { ReflectError } from '../errors'
+import { ReflectError } from '../errors.ts'
 
 export type FetchFn = typeof fetch
 

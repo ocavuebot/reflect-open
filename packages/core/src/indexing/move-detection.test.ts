@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { pairMovesById } from './move-detection'
+import { pairMovesById } from './move-detection.ts'
 
 function entries(pairs: Array<[string, string | null]>): Map<string, string | null> {
   return new Map(pairs)

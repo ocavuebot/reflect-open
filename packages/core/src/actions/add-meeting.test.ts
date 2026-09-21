@@ -1,17 +1,17 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { ensurePersonNote } from '../contacts/person'
-import { noteExists, readNote, writeNote } from '../graph/commands'
-import { createNoteWithTitle } from '../graph/create-note'
-import { resolveWikiTarget } from '../indexing/queries'
-import { setBridge } from '../ipc/bridge'
-import { resolved, unresolved } from '../markdown/resolve'
+import { ensurePersonNote } from '../contacts/person.ts'
+import { noteExists, readNote, writeNote } from '../graph/commands.ts'
+import { createNoteWithTitle } from '../graph/create-note.ts'
+import { resolveWikiTarget } from '../indexing/queries.ts'
+import { setBridge } from '../ipc/bridge.ts'
+import { resolved, unresolved } from '../markdown/resolve.ts'
 import {
   addMeetingToDaily,
   meetingLine,
   type AddMeetingInput,
   type MeetingAttendee,
-} from './add-meeting'
-import { resolveMeetingAttendeeTargets } from './resolve-attendees'
+} from './add-meeting.ts'
+import { resolveMeetingAttendeeTargets } from './resolve-attendees.ts'
 
 vi.mock('../contacts/person', () => ({
   ensurePersonNote: vi.fn(),

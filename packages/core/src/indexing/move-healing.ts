@@ -1,7 +1,7 @@
-import { readNote } from '../graph/commands'
-import { parseNote } from '../markdown'
-import { pairMovesById, type DetectedMove } from './move-detection'
-import { getNoteIdsByPath } from './queries'
+import { readNote } from '../graph/commands.ts'
+import { parseNote } from '../markdown/index.ts'
+import { pairMovesById, type DetectedMove } from './move-detection.ts'
+import { getNoteIdsByPath } from './queries.ts'
 
 /**
  * External-move detection (Plan 17), shared by the open-time reconcile

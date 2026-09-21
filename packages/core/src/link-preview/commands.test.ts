@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { setBridge } from '../ipc/bridge'
-import { cloudSafeLinkHref } from '../privacy/checkers'
-import { linkPreviewFetchHtml, linkPreviewFetchIcon } from './commands'
+import { setBridge } from '../ipc/bridge.ts'
+import { cloudSafeLinkHref } from '../privacy/checkers.ts'
+import { linkPreviewFetchHtml, linkPreviewFetchIcon } from './commands.ts'
 
 function publicUrl(url: string) {
   return cloudSafeLinkHref({ path: 'notes/public.md', isPrivate: false }, url)

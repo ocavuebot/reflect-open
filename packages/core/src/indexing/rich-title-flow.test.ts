@@ -1,20 +1,20 @@
 import { describe, expect, it } from 'vitest'
-import { setBridge } from '../ipc/bridge'
+import { setBridge } from '../ipc/bridge.ts'
 import {
   applyProjection,
   connectIndex,
   expectSuggestionOpensItsPath,
   openMigratedIndex,
   project,
-} from './flow-test-harness'
+} from './flow-test-harness.ts'
 import {
   getBacklinks,
   getLinkSources,
   resolveWikiTarget,
   suggestWikiLinkTargets,
   suggestWikiTargets,
-} from './queries'
-import { rewriteLinksForTitleChange } from './rename'
+} from './queries.ts'
+import { rewriteLinksForTitleChange } from './rename.ts'
 
 /**
  * End-to-end flow for rich titles (titles that embed `[[wiki links]]`): the
