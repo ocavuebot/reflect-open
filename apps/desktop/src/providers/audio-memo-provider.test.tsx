@@ -9,7 +9,7 @@ import type {
   GraphInfo,
   Settings,
 } from '@reflect/core'
-import type { UseAudioRecorderOptions } from '@/hooks/use-audio-recorder'
+import type { UseAudioRecorderOptions } from '@/hooks/use-audio-recorder.ts'
 
 const captureAudioMemoPart = vi.hoisted(() =>
   vi.fn<(input: CaptureAudioMemoPartInput) => Promise<CaptureAudioMemoOutcome>>(),
@@ -82,11 +82,11 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   deleteAudioMemo,
 }))
 
-vi.mock('@/lib/transcription-reconciler', () => ({
+vi.mock('@/lib/transcription-reconciler.ts', () => ({
   createTranscriptionReconciler,
 }))
 
-vi.mock('@/hooks/use-audio-recorder', () => ({
+vi.mock('@/hooks/use-audio-recorder.ts', () => ({
   isRecordingSupported: () => recorderControls.supported,
   useAudioRecorder: (options: UseAudioRecorderOptions) => {
     recorderControls.options = options
@@ -139,20 +139,20 @@ const SETTINGS = vi.hoisted(() => ({
   },
 }))
 
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: SETTINGS.current as unknown as Settings }),
 }))
-vi.mock('@/providers/sidebar-provider', () => ({
+vi.mock('@/providers/sidebar-provider.tsx', () => ({
   useSidebar: () => ({ collapsed: sidebarState.collapsed, toggleSidebar }),
 }))
-vi.mock('@/lib/provider-fetch', () => ({
+vi.mock('@/lib/provider-fetch.ts', () => ({
   providerFetch: vi.fn(),
 }))
-vi.mock('@/lib/operations', () => ({
+vi.mock('@/lib/operations.ts', () => ({
   startOperation: () => ({ progress: vi.fn(), done: vi.fn(), fail: failOperation }),
 }))
 
-vi.mock('@/components/ui/toast', () => ({ toast }))
+vi.mock('@/components/ui/toast.tsx', () => ({ toast }))
 
 const { AudioMemoProvider, useAudioMemo } = await import('./audio-memo-provider.tsx')
 

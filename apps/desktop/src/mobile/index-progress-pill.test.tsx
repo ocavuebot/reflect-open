@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { setIndexProgress } from '@/lib/index-progress'
-import { publishKeyboardHeight } from '@/mobile/use-keyboard'
+import { setIndexProgress } from '@/lib/index-progress.ts'
+import { publishKeyboardHeight } from '@/mobile/use-keyboard.ts'
 import { IndexProgressPill } from './index-progress-pill.tsx'
 
 /**

@@ -21,9 +21,9 @@ vi.mock('@reflect/core', () => ({
   beginBackgroundTask: seams.beginBackgroundTask,
   endBackgroundTask: seams.endBackgroundTask,
 }))
-vi.mock('@/editor/open-documents', () => ({ flushOpenDocuments: seams.flushOpenDocuments }))
-vi.mock('@/lib/settings-flush', () => ({ flushSettings: seams.flushSettings }))
-vi.mock('@/lib/backup-flush', () => ({ flushBackup: seams.flushBackup }))
+vi.mock('@/editor/open-documents.ts', () => ({ flushOpenDocuments: seams.flushOpenDocuments }))
+vi.mock('@/lib/settings-flush.ts', () => ({ flushSettings: seams.flushSettings }))
+vi.mock('@/lib/backup-flush.ts', () => ({ flushBackup: seams.flushBackup }))
 
 let visibility: DocumentVisibilityState
 let dispose: (() => void) | null = null

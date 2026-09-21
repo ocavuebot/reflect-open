@@ -1,26 +1,26 @@
 import type { FilteredSearchHit, PinnedNote } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client'
+import { queryKeys } from '@/lib/query-client.ts'
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 import { useState, type ReactElement } from 'react'
 import { render } from 'vitest-browser-react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { pointer, swipe, translateX } from '@/test-utils/swipe'
+import { pointer, swipe, translateX } from '@/test-utils/swipe.ts'
 import { NoteRowList } from './note-row-list.tsx'
 import { SwipeableNoteRow, type NoteRowModel } from './swipeable-note-row.tsx'
 
 const commitNoteFrontmatter = vi.hoisted(() => vi.fn(async () => {}))
-vi.mock('@/lib/note-frontmatter', () => ({
+vi.mock('@/lib/note-frontmatter.ts', () => ({
   commitNoteFrontmatter,
   readNoteSource: async () => '# A\n',
 }))
 
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: { dateFormat: 'mdy', timeFormat: '12h' } }),
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
-vi.mock('@/mobile/use-reduced-motion', () => ({ usePrefersReducedMotion: () => true }))
+vi.mock('@/mobile/use-reduced-motion.ts', () => ({ usePrefersReducedMotion: () => true }))
 
 const onOpen = vi.fn()
 const onTogglePin = vi.fn()

@@ -4,14 +4,14 @@ import { page, userEvent } from 'vitest/browser'
 import type { Locator } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { setBridge, type EmbedStatus, type GraphInfo } from '@reflect/core'
-import { formatFullDate } from '@/lib/dates'
-import { resetOperations } from '@/lib/operations'
-import { NoteTemplatesProvider } from '@/providers/note-templates-provider'
-import { ShortcutsProvider } from '@/providers/shortcuts-provider'
-import { SettingsProvider } from '@/providers/settings-provider'
-import { UpdateProvider } from '@/providers/update-provider'
-import { RouterProvider } from '@/routing/router'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import { formatFullDate } from '@/lib/dates.ts'
+import { resetOperations } from '@/lib/operations.ts'
+import { NoteTemplatesProvider } from '@/providers/note-templates-provider.tsx'
+import { ShortcutsProvider } from '@/providers/shortcuts-provider.tsx'
+import { SettingsProvider } from '@/providers/settings-provider.tsx'
+import { UpdateProvider } from '@/providers/update-provider.tsx'
+import { RouterProvider } from '@/routing/router.tsx'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
 import { ShortcutsDialog } from './shortcuts-dialog.tsx'
 import { SettingsScreen } from './settings-screen.tsx'
 
@@ -24,7 +24,7 @@ const graph = vi.hoisted(() => ({
   forget: vi.fn<(root: string) => Promise<void>>(async () => {}),
   deleteGraph: vi.fn<() => Promise<void>>(async () => {}),
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: graph.current,
     indexGeneration: graph.indexGeneration,
@@ -32,7 +32,7 @@ vi.mock('@/providers/graph-provider', () => ({
     deleteGraph: graph.deleteGraph,
   }),
 }))
-vi.mock('@/providers/sync-provider', () => ({
+vi.mock('@/providers/sync-provider.tsx', () => ({
   useSync: () => ({
     backup: { phase: 'disconnected' },
     connectNewRepo: async () => {},
@@ -43,13 +43,13 @@ vi.mock('@/providers/sync-provider', () => ({
   }),
 }))
 // The update field gates on the native shell, which the test browser is not.
-vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform')>()),
+vi.mock('@/lib/platform.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
   isNativeShell: () => true,
 }))
 // The Import section only hands the picked zip to the workspace-level V1
 // import controller, which these screen tests don't mount.
-vi.mock('@/providers/v1-import-provider', () => ({
+vi.mock('@/providers/v1-import-provider.tsx', () => ({
   useV1Import: () => ({
     state: { phase: 'idle' },
     startImport: () => {},

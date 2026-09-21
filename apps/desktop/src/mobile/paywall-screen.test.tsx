@@ -3,8 +3,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { cleanup, render } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { IAP_PRODUCT_IDS, setBridge, type IapProduct, type IpcBridge } from '@reflect/core'
-import { mutationKeys, mutationScopeIds } from '@/lib/query-client'
-import { deferred } from '@/test-utils/deferred'
+import { mutationKeys, mutationScopeIds } from '@/lib/query-client.ts'
+import { deferred } from '@/test-utils/deferred.ts'
 import { PaywallScreen } from './paywall-screen.tsx'
 
 const mocks = vi.hoisted(() => ({
@@ -12,7 +12,7 @@ const mocks = vi.hoisted(() => ({
   refetch: vi.fn(),
 }))
 
-vi.mock('@/mobile/use-active-subscription', () => ({
+vi.mock('@/mobile/use-active-subscription.ts', () => ({
   useActiveSubscription: () => ({
     value: null,
     isLoading: false,

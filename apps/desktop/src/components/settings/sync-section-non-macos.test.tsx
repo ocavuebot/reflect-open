@@ -3,13 +3,13 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { describe, expect, it, vi } from 'vitest'
 import '@/test-utils/locator.ts'
-import { RouterProvider } from '@/routing/router'
+import { RouterProvider } from '@/routing/router.tsx'
 import { SyncSection } from './sync-section.tsx'
 
 // A browser-mode module mock materializes value exports once, so the
 // platform-hidden behavior needs its own file with the flag statically false
 // (see `sync-section.test.tsx` for the macOS suite).
-vi.mock('@/lib/platform', () => ({ isMacosDesktop: false, isNativeShell: () => true }))
+vi.mock('@/lib/platform.ts', () => ({ isMacosDesktop: false, isNativeShell: () => true }))
 
 vi.mock('@reflect/core', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@reflect/core')>()),
@@ -23,7 +23,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   getConflictedNotes: vi.fn(async () => []),
   getDuplicateNoteIds: vi.fn(async () => []),
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: {
       root: '/Users/alex/Library/Mobile Documents/iCloud~app/Documents/Notes',
@@ -33,7 +33,7 @@ vi.mock('@/providers/graph-provider', () => ({
     openRecent: vi.fn(async () => true),
   }),
 }))
-vi.mock('@/providers/sync-provider', () => ({
+vi.mock('@/providers/sync-provider.tsx', () => ({
   useSync: () => ({
     backup: { phase: 'disconnected' },
     disconnectGraph: vi.fn(async () => {}),

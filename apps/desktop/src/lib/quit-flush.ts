@@ -1,11 +1,11 @@
 import { getCurrentWindow } from '@tauri-apps/api/window'
 import { confirmQuit, subscribeQuitRequested } from '@reflect/core'
-import { flushOpenDocuments } from '@/editor/open-documents'
-import { flushBackup } from '@/lib/backup-flush'
-import { isMacosDesktop, isNativeShell } from '@/lib/platform'
-import { flushSettings } from '@/lib/settings-flush'
-import { trackSubscriptions } from '@/lib/subscriptions'
-import { isMainWindow } from '@/lib/windows/window-role'
+import { flushOpenDocuments } from '@/editor/open-documents.ts'
+import { flushBackup } from '@/lib/backup-flush.ts'
+import { isMacosDesktop, isNativeShell } from '@/lib/platform.ts'
+import { flushSettings } from '@/lib/settings-flush.ts'
+import { trackSubscriptions } from '@/lib/subscriptions.ts'
+import { isMainWindow } from '@/lib/windows/window-role.ts'
 
 /**
  * Quit-time persistence: the webview never dies with dirty note buffers still

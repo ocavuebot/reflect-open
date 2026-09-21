@@ -14,7 +14,7 @@ import '@/test-utils/locator.ts'
 
 // Keep the sheet content inline so this suite exercises its state flow
 // without depending on the drawer's drag and animation behavior.
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({ children }: { children?: ReactNode }) => <>{children}</>,
   DrawerContent: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   DrawerBody: ({ children }: { children?: ReactNode }) => <div>{children}</div>,

@@ -3,7 +3,7 @@ import { userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
 import { SimilarNotesSection } from './similar-notes-section.tsx'
 
 const relatedNotes = vi.hoisted(() => vi.fn())
@@ -15,15 +15,15 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   readNote,
   relatedNotes,
 }))
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
 const semanticSetting = vi.hoisted(() => ({ enabled: true }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: { semanticSearchEnabled: semanticSetting.enabled },
     updateSettings: () => {},

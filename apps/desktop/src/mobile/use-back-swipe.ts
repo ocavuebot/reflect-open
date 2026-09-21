@@ -6,7 +6,7 @@ import {
   type PointerEvent as ReactPointerEvent,
   type RefObject,
 } from 'react'
-import { PointerDrag, VelocitySampler } from '@/lib/pointer-drag'
+import { PointerDrag, VelocitySampler } from '@/lib/pointer-drag.ts'
 
 /** How far from the leading edge a touch may start and still arm the gesture. */
 const EDGE_WIDTH_PX = 32

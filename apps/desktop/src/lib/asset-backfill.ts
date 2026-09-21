@@ -4,9 +4,9 @@ import {
   type AiProvidersState,
   type ReconcileAssetDescriptionsOutcome,
 } from '@reflect/core'
-import { startOperation } from '@/lib/operations'
-import { providerFetch } from '@/lib/provider-fetch'
-import { invalidateIndexQueries } from '@/lib/query-client'
+import { startOperation } from '@/lib/operations.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
+import { invalidateIndexQueries } from '@/lib/query-client.ts'
 
 let inFlight: { generation: number; promise: Promise<ReconcileAssetDescriptionsOutcome> } | null =
   null

@@ -7,7 +7,7 @@ import {
   type ReactNode,
   type RefObject,
 } from 'react'
-import { toast } from '@/components/ui/toast'
+import { toast } from '@/components/ui/toast.tsx'
 import type {
   PendingReplacementResolveHandler,
   SelectionMenuContext,
@@ -26,13 +26,13 @@ import {
   type ChatModelOption,
   type CloudSafe,
 } from '@reflect/core'
-import { AiPreviewActions } from '@/editor/ai-menu/ai-preview-actions'
-import type { NoteEditorHandle } from '@/editor/note-editor'
-import { useAiPrompts } from '@/hooks/use-ai-prompts'
-import { useAiProviders } from '@/hooks/use-ai-providers'
-import { useNoteRow } from '@/hooks/use-note-row'
-import { providerFetch } from '@/lib/provider-fetch'
-import { useRouter } from '@/routing/router'
+import { AiPreviewActions } from '@/editor/ai-menu/ai-preview-actions.tsx'
+import type { NoteEditorHandle } from '@/editor/note-editor.tsx'
+import { useAiPrompts } from '@/hooks/use-ai-prompts.ts'
+import { useAiProviders } from '@/hooks/use-ai-providers.ts'
+import { useNoteRow } from '@/hooks/use-note-row.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 /**
  * The editor AI menu (the "run a prompt on the selection" flow): meowdown owns

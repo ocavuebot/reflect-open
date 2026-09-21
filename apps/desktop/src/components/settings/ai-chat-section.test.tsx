@@ -7,7 +7,7 @@ const settings = vi.hoisted(() => ({
   update: vi.fn(),
 }))
 
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: settings.current, updateSettings: settings.update }),
 }))
 

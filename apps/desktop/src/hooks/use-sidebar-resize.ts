@@ -13,7 +13,7 @@ import {
   type SidebarWidthRange,
 } from '@reflect/core'
 import { getIsComposing } from '@meowdown/core'
-import { useSettings } from '@/providers/settings-provider'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /** How far one arrow-key press moves the divider, in CSS pixels. */
 const KEYBOARD_STEP_PX = 16

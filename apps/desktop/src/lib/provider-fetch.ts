@@ -1,5 +1,5 @@
 import { fetch as tauriFetch } from '@tauri-apps/plugin-http'
-import { isNativeShell } from '@/lib/platform'
+import { isNativeShell } from '@/lib/platform.ts'
 
 /**
  * The transport for direct app → AI-provider calls (BYOK, Plan 10). Inside

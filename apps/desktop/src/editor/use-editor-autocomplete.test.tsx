@@ -22,10 +22,10 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   resolveOrCreateNoteWithTitle,
   resolvePersonContact,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { generation: 7 } }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: {
       ...settingsState,
@@ -34,10 +34,10 @@ vi.mock('@/providers/settings-provider', () => ({
     },
   }),
 }))
-vi.mock('@/hooks/use-contacts-authorization', () => ({
+vi.mock('@/hooks/use-contacts-authorization.ts', () => ({
   useContactsAuthorization: () => 'authorized',
 }))
-vi.mock('@/lib/operations', () => ({ startOperation }))
+vi.mock('@/lib/operations.ts', () => ({ startOperation }))
 
 beforeEach(() => {
   resolveOrCreateNoteWithTitle.mockReset()

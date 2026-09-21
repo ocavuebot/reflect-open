@@ -1,13 +1,13 @@
 import { useMutation } from '@tanstack/react-query'
 import type { OpenTask } from '@reflect/core'
-import { continueTaskInContext, type ContinuedTaskInContext } from '@/lib/note-task'
-import { mutationKeys } from '@/lib/query-client'
-import { relocateRecentlyCompleted } from '@/lib/tasks/recently-completed'
-import { withEditedTask, withoutTasks } from '@/lib/tasks/task-cache'
-import { insertedTaskRow } from '@/lib/tasks/task-insert-target'
-import { insertTargetForTask } from '@/lib/tasks/task-navigation'
-import { useTaskCacheWriter } from '@/lib/tasks/use-task-cache'
-import { useGraph } from '@/providers/graph-provider'
+import { continueTaskInContext, type ContinuedTaskInContext } from '@/lib/note-task.ts'
+import { mutationKeys } from '@/lib/query-client.ts'
+import { relocateRecentlyCompleted } from '@/lib/tasks/recently-completed.ts'
+import { withEditedTask, withoutTasks } from '@/lib/tasks/task-cache.ts'
+import { insertedTaskRow } from '@/lib/tasks/task-insert-target.ts'
+import { insertTargetForTask } from '@/lib/tasks/task-navigation.ts'
+import { useTaskCacheWriter } from '@/lib/tasks/use-task-cache.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 interface ContextInsertInput {
   readonly task: OpenTask

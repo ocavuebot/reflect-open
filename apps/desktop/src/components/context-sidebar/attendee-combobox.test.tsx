@@ -15,13 +15,13 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   suggestWikiTargets,
   contactLinkSuggestions,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: { contactsEnabled: true }, updateSettings: () => {} }),
 }))
-vi.mock('@/hooks/use-contacts-authorization', () => ({
+vi.mock('@/hooks/use-contacts-authorization.ts', () => ({
   useContactsAuthorization: () => 'authorized',
 }))
 

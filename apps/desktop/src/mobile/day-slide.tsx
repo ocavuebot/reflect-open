@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useRef, type ReactElement } from 'react'
 import { dailyPath } from '@reflect/core'
-import { NotePane } from '@/components/note-pane'
-import { formatDayLabel } from '@/lib/dates'
-import { cn } from '@/lib/utils'
-import { IncomingBacklinks } from '@/mobile/incoming-backlinks'
-import { MOBILE_CONTENT_GUTTER } from '@/mobile/mobile-content-gutter'
-import { useScrollRestore } from '@/mobile/use-scroll-restore'
-import { useSettings } from '@/providers/settings-provider'
+import { NotePane } from '@/components/note-pane.tsx'
+import { formatDayLabel } from '@/lib/dates.ts'
+import { cn } from '@/lib/utils.ts'
+import { IncomingBacklinks } from '@/mobile/incoming-backlinks.tsx'
+import { MOBILE_CONTENT_GUTTER } from '@/mobile/mobile-content-gutter.ts'
+import { useScrollRestore } from '@/mobile/use-scroll-restore.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 interface DaySlideProps {
   /** The slide's ISO day — its daily note path and scroll-memory key. */

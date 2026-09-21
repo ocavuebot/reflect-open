@@ -15,7 +15,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   resolveExistingWikiTarget: mocks.resolveExistingWikiTarget,
 }))
 
-vi.mock('@/lib/read-existing-note-source', () => ({
+vi.mock('@/lib/read-existing-note-source.ts', () => ({
   readExistingNoteSource: mocks.readExistingNoteSource,
 }))
 
@@ -25,7 +25,7 @@ interface MarkdownPreviewProps {
   resolveImageUrl: (src: string) => string | null
 }
 
-vi.mock('@/editor/markdown-preview', () => ({
+vi.mock('@/editor/markdown-preview.tsx', () => ({
   MarkdownPreview: (props: MarkdownPreviewProps) => {
     mocks.markdownPreview(props)
     return <div data-testid="markdown-preview">{props.content}</div>

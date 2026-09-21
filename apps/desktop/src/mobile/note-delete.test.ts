@@ -3,7 +3,7 @@ import {
   createNoteSession,
   type NoteSession,
   type NoteSessionSnapshot,
-} from '@/editor/note-session'
+} from '@/editor/note-session.ts'
 import { deleteOpenNote } from './note-delete.ts'
 
 /**
@@ -23,7 +23,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   deleteNote: (path: string, generation: number) => deleteNoteMock(path, generation),
   isDaily: (path: string) => isDailyMock(path),
 }))
-vi.mock('@/editor/open-documents', () => ({
+vi.mock('@/editor/open-documents.ts', () => ({
   openSession: (path: string) => openSessionMock(path),
 }))
 

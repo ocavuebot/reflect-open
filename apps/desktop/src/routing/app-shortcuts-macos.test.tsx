@@ -2,12 +2,12 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
 import { renderHook } from 'vitest-browser-react'
-import { PaletteProvider } from '@/components/command-palette/palette-provider'
-import { registerAppCommands } from '@/lib/commands/app-commands'
-import { dispatchMenuCommand } from '@/lib/native-menu/dispatch'
-import { NoteTemplatesProvider } from '@/providers/note-templates-provider'
-import { ShortcutsProvider } from '@/providers/shortcuts-provider'
-import { SidebarProvider, useSidebar } from '@/providers/sidebar-provider'
+import { PaletteProvider } from '@/components/command-palette/palette-provider.tsx'
+import { registerAppCommands } from '@/lib/commands/app-commands.ts'
+import { dispatchMenuCommand } from '@/lib/native-menu/dispatch.ts'
+import { NoteTemplatesProvider } from '@/providers/note-templates-provider.tsx'
+import { ShortcutsProvider } from '@/providers/shortcuts-provider.tsx'
+import { SidebarProvider, useSidebar } from '@/providers/sidebar-provider.tsx'
 import { useAppShortcuts } from './app-shortcuts.ts'
 import { RouterProvider } from './router.tsx'
 
@@ -20,8 +20,8 @@ const openNoteFindForPath = vi.hoisted(() => vi.fn(() => true))
 const findNextInNote = vi.hoisted(() => vi.fn())
 const findPreviousInNote = vi.hoisted(() => vi.fn())
 
-vi.mock('@/lib/platform', () => ({ isMacosDesktop: true, isNativeShell: () => false }))
-vi.mock('@/providers/note-find-provider', () => ({
+vi.mock('@/lib/platform.ts', () => ({ isMacosDesktop: true, isNativeShell: () => false }))
+vi.mock('@/providers/note-find-provider.tsx', () => ({
   useNoteFindActions: () => ({
     openForPath: openNoteFindForPath,
     next: findNextInNote,
@@ -29,30 +29,30 @@ vi.mock('@/providers/note-find-provider', () => ({
   }),
 }))
 
-vi.mock('@/lib/native-menu/menu', () => ({
+vi.mock('@/lib/native-menu/menu.ts', () => ({
   isNativeMenuInstalled: () => nativeMenu.installed,
 }))
 
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: { root: '/g', name: 'g', generation: 1 },
     recents: [],
     openRecent: vi.fn(),
   }),
 }))
-vi.mock('@/providers/theme-provider', () => ({
+vi.mock('@/providers/theme-provider.tsx', () => ({
   useTheme: () => ({ theme: 'light', resolvedTheme: 'light', setTheme: vi.fn() }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: { editorMarkdownSyntax: 'hide', semanticSearchEnabled: false, theme: 'system' },
     updateSettings: vi.fn(),
   }),
 }))
-vi.mock('@/providers/audio-memo-provider', () => ({
+vi.mock('@/providers/audio-memo-provider.tsx', () => ({
   useAudioMemo: () => ({ toggle: vi.fn() }),
 }))
-vi.mock('@/providers/chat-provider', () => ({
+vi.mock('@/providers/chat-provider.tsx', () => ({
   useChatSession: () => ({ newChat: vi.fn() }),
 }))
 

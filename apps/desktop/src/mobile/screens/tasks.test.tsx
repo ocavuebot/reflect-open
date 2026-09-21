@@ -4,11 +4,11 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent, type Locator } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { OpenTask } from '@reflect/core'
-import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture'
-import { resetRecentlyCompleted } from '@/lib/tasks/recently-completed'
-import { RouterProvider, useRouter } from '@/routing/router'
+import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture.ts'
+import { resetRecentlyCompleted } from '@/lib/tasks/recently-completed.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
 import '@/test-utils/locator.ts'
-import { swipe, translateX } from '@/test-utils/swipe'
+import { swipe, translateX } from '@/test-utils/swipe.ts'
 import { MobileTasks } from './tasks.tsx'
 
 /**
@@ -32,11 +32,11 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   getCompletedTasks,
   resolveOrCreateNoteWithTitle,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
-vi.mock('@/lib/use-today', () => ({ useToday: () => '2026-06-14' }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/lib/use-today.ts', () => ({ useToday: () => '2026-06-14' }))
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: {
       dateFormat: 'mdy',
@@ -47,7 +47,7 @@ vi.mock('@/providers/settings-provider', () => ({
   }),
 }))
 // TaskText rendering is covered separately, so this suite keeps a small preview stub.
-vi.mock('@/editor/markdown-preview', () => ({
+vi.mock('@/editor/markdown-preview.tsx', () => ({
   MarkdownPreview: ({ content, className }: { content: string; className?: string }) => (
     <span data-testid="markdown-preview" className={className}>
       {content}
@@ -56,17 +56,17 @@ vi.mock('@/editor/markdown-preview', () => ({
 }))
 // The autocomplete hook reads the contacts authorization over IPC; the menus
 // themselves live inside meowdown, which is stubbed out below anyway.
-vi.mock('@/editor/use-editor-autocomplete', () => ({
+vi.mock('@/editor/use-editor-autocomplete.ts', () => ({
   useEditorAutocomplete: () => ({
     onWikilinkSearch: async () => [],
     onTagSearch: async () => [],
   }),
 }))
-vi.mock('@/mobile/haptics', () => ({
+vi.mock('@/mobile/haptics.ts', () => ({
   hapticImpactLight,
 }))
 // Instant settle, so row transforms can be asserted synchronously.
-vi.mock('@/mobile/use-reduced-motion', () => ({ usePrefersReducedMotion: () => true }))
+vi.mock('@/mobile/use-reduced-motion.ts', () => ({ usePrefersReducedMotion: () => true }))
 
 const editorProbe = vi.hoisted(() => ({ focusCalls: 0 }))
 
@@ -77,7 +77,7 @@ const editorProbe = vi.hoisted(() => ({ focusCalls: 0 }))
 // (no onChange echo, matching meowdown), plus probes for focus and wiki-link
 // clicks. Children (the Enter keymap) need the ProseKit context, so they are
 // not rendered.
-vi.mock('@/editor/note-editor', async () => {
+vi.mock('@/editor/note-editor.tsx', async () => {
   const { useEffect, useRef } = await import('react')
   return {
     NoteEditor: ({
@@ -89,7 +89,7 @@ vi.mock('@/editor/note-editor', async () => {
       initialContent: string
       onChange?: (markdown: string) => void
       onWikiLinkClick?: (options: { target: string; openInNewWindow: boolean }) => void
-      handleRef?: (handle: import('@/editor/note-editor').NoteEditorHandle | null) => void
+      handleRef?: (handle: import('@/editor/note-editor.tsx').NoteEditorHandle | null) => void
     }) => {
       const areaRef = useRef<HTMLTextAreaElement | null>(null)
       useEffect(() => {
@@ -144,7 +144,7 @@ const editTask = vi.hoisted(() => vi.fn())
 const insertTask = vi.hoisted(() => vi.fn())
 const continueTaskInContext = vi.hoisted(() => vi.fn())
 const convertTaskToBullet = vi.hoisted(() => vi.fn())
-vi.mock('@/lib/note-task', () => ({
+vi.mock('@/lib/note-task.ts', () => ({
   toggleTask,
   deleteTask,
   editTask,
@@ -155,14 +155,14 @@ vi.mock('@/lib/note-task', () => ({
 
 const fail = vi.hoisted(() => vi.fn())
 const startOperation = vi.hoisted(() => vi.fn(() => ({ fail })))
-vi.mock('@/lib/operations', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/operations')>()),
+vi.mock('@/lib/operations.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/operations.ts')>()),
   startOperation,
 }))
 
 // Vaul's drag/animation is verified on-device. This passthrough honours `open` and
 // exposes the dismissal path as a button, so commit-on-dismiss is testable.
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({
     open,
     onOpenChange,

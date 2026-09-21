@@ -1,9 +1,9 @@
-import { useXPostResolver, X_MEDIA_URL_PROTOCOLS } from '@/editor/use-x-post-resolver'
+import { useXPostResolver, X_MEDIA_URL_PROTOCOLS } from '@/editor/use-x-post-resolver.ts'
 import { useCallback, useEffect, useRef, type ReactElement } from 'react'
 import { MarkdownView } from '@meowdown/react'
-import { useOpenExternalLink } from '@/editor/open-external-link'
-import { resolveWikilink } from '@/editor/resolve-wikilink'
-import { cn } from '@/lib/utils'
+import { useOpenExternalLink } from '@/editor/open-external-link.ts'
+import { resolveWikilink } from '@/editor/resolve-wikilink.ts'
+import { cn } from '@/lib/utils.ts'
 
 /**
  * A read-only rendering of note markdown via @meowdown/react's `<MarkdownView>`

@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useSyncExternalStore } from 'react'
 import type { OpenTask } from '@reflect/core'
-import type { TaskMarkerOffsetChange } from '@/lib/note-task'
-import { withCheckedMarker, withRelocatedTaskMarkers } from '@/lib/tasks/task-cache'
-import { taskKey } from '@/lib/tasks/task-identity'
+import type { TaskMarkerOffsetChange } from '@/lib/note-task.ts'
+import { withCheckedMarker, withRelocatedTaskMarkers } from '@/lib/tasks/task-cache.ts'
+import { taskKey } from '@/lib/tasks/task-identity.ts'
 
 /**
  * The "recently completed" set (Plan 18) — V1's middle state where a checked task

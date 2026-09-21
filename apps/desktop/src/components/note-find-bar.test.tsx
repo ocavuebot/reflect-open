@@ -5,19 +5,19 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   registerNoteEditorHandle,
   unregisterNoteEditorHandle,
-} from '@/editor/editor-handle-registry'
-import type { NoteEditorHandle } from '@/editor/note-editor'
-import { FocusedDailyProvider } from '@/providers/focused-daily-provider'
+} from '@/editor/editor-handle-registry.ts'
+import type { NoteEditorHandle } from '@/editor/note-editor.tsx'
+import { FocusedDailyProvider } from '@/providers/focused-daily-provider.tsx'
 import {
   NoteFindProvider,
   useNoteFindActions,
   useNoteSearchQuery,
   useNoteSearchReport,
-} from '@/providers/note-find-provider'
-import { RouterProvider } from '@/routing/router'
+} from '@/providers/note-find-provider.tsx'
+import { RouterProvider } from '@/routing/router.tsx'
 import { NoteFindBar } from './note-find-bar.tsx'
 
-vi.mock('@/lib/windows/window-role', () => ({ isMainWindow: () => true }))
+vi.mock('@/lib/windows/window-role.ts', () => ({ isMainWindow: () => true }))
 
 const NOTE_PATH = 'notes/find-me.md'
 

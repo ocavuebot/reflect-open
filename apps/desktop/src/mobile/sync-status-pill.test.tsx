@@ -3,8 +3,8 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { getConflictedNotes, type GraphInfo } from '@reflect/core'
-import type { BackupState } from '@/lib/backup-controller'
-import { publishKeyboardHeight } from '@/mobile/use-keyboard'
+import type { BackupState } from '@/lib/backup-controller.ts'
+import { publishKeyboardHeight } from '@/mobile/use-keyboard.ts'
 import { SyncStatusPill } from './sync-status-pill.tsx'
 
 /**
@@ -21,10 +21,10 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 const graphState = vi.hoisted(() => ({
   graph: { root: '/g', name: 'G', generation: 3 } as GraphInfo | null,
 }))
-vi.mock('@/providers/graph-provider', () => ({ useGraph: () => graphState }))
+vi.mock('@/providers/graph-provider.tsx', () => ({ useGraph: () => graphState }))
 
 const sync = vi.hoisted(() => ({ backup: { phase: 'loading' } as BackupState }))
-vi.mock('@/providers/sync-provider', () => ({
+vi.mock('@/providers/sync-provider.tsx', () => ({
   useSyncContext: () => ({ backup: sync.backup }),
 }))
 

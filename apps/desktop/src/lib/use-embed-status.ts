@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { embedStatus, subscribeEmbedStatus, type EmbedStatus } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
 
 /**
  * The embedding runtime's live status (Plan 09). Polls once on mount, then

@@ -1,7 +1,7 @@
 import { upsertFrontmatter, writeNote } from '@reflect/core'
-import { frontmatterPatchToYaml, type FrontmatterPatch } from '@/editor/note-session'
-import { openSession } from '@/editor/open-documents'
-import { readNoteOrEmpty } from '@/lib/note-read'
+import { frontmatterPatchToYaml, type FrontmatterPatch } from '@/editor/note-session.ts'
+import { openSession } from '@/editor/open-documents.ts'
+import { readNoteOrEmpty } from '@/lib/note-read.ts'
 
 /**
  * The single safe way to read and write a note's frontmatter from an in-app

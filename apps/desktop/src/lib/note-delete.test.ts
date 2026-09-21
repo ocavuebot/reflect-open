@@ -1,10 +1,10 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import type { NoteSession } from '@/editor/note-session'
-import { openSession } from '@/editor/open-documents'
+import type { NoteSession } from '@/editor/note-session.ts'
+import { openSession } from '@/editor/open-documents.ts'
 import { deleteOpenNote } from './note-delete.ts'
 
-vi.mock('@/editor/open-documents', () => ({ openSession: vi.fn() }))
+vi.mock('@/editor/open-documents.ts', () => ({ openSession: vi.fn() }))
 
 const mockInvoke = vi.fn<(command: string, args: Record<string, unknown>) => Promise<unknown>>()
 

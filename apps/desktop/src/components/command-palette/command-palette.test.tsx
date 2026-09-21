@@ -3,11 +3,11 @@ import { userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { useEffect, type ReactNode } from 'react'
-import type { CommandContext } from '@/lib/commands/types'
-import { formatBinding, isApplePlatform } from '@/lib/keybindings'
-import type { NoteRoute } from '@/routing/route'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import type { CommandContext } from '@/lib/commands/types.ts'
+import { formatBinding, isApplePlatform } from '@/lib/keybindings.ts'
+import type { NoteRoute } from '@/routing/route.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
 import { CommandPalette } from './command-palette.tsx'
 import { PaletteProvider, usePalette } from './palette-provider.tsx'
 
@@ -26,35 +26,35 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 }))
 // The preview keeps the stub from the route-content tests: hosting the real
 // ProseMirror editor is out of scope here; the preview's data path stays real.
-vi.mock('@/editor/markdown-preview', () => ({
+vi.mock('@/editor/markdown-preview.tsx', () => ({
   MarkdownPreview: ({ content }: { content: string }) => (
     <div data-testid="markdown-preview">{content}</div>
   ),
 }))
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 // The model is absent by default: the palette is exactly the lexical surface
 // it was before Plan 09 (hybrid mode is additive). The gating tests flip both
 // halves of the hybrid opt-in.
 const embedReady = vi.hoisted(() => ({ value: false }))
-vi.mock('@/lib/use-embed-status', () => ({
+vi.mock('@/lib/use-embed-status.ts', () => ({
   useEmbedStatus: () =>
     embedReady.value ? { status: 'ready', model: 'all-MiniLM-L6-v2' } : { status: 'uninitialized' },
 }))
 const semanticSetting = vi.hoisted(() => ({ enabled: false }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: { semanticSearchEnabled: semanticSetting.enabled, dateFormat: 'mdy' },
     updateSettings: () => {},
   }),
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
 // Register after the core mock is installed so commands see the mocked graph.
-const { registerAppCommands } = await import('@/lib/commands/app-commands')
+const { registerAppCommands } = await import('@/lib/commands/app-commands.ts')
 registerAppCommands()
 
 beforeEach(() => {

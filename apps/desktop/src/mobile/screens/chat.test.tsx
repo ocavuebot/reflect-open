@@ -10,9 +10,9 @@ import type {
   Settings,
   StreamChatOptions,
 } from '@reflect/core'
-import { ChatProvider } from '@/providers/chat-provider'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { fireEvent } from '@/test-utils/fire-event'
+import { ChatProvider } from '@/providers/chat-provider.tsx'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 
 /**
  * The Chat tab over a faked engine (the desktop chat-screen harness, mobile
@@ -40,7 +40,7 @@ const settingsState = vi.hoisted(() => ({
   models: [] as AiProviderConfig[],
   defaultId: null as string | null,
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: {
       aiProviders: settingsState.models,
@@ -53,14 +53,14 @@ vi.mock('@/providers/settings-provider', () => ({
 }))
 
 // No open index → persistence stays inert; chat-provider.test.tsx covers it.
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ indexGeneration: null, graph: null }),
 }))
 
-vi.mock('@/lib/provider-fetch', () => ({ providerFetch: vi.fn() }))
+vi.mock('@/lib/provider-fetch.ts', () => ({ providerFetch: vi.fn() }))
 
 // Keep sheet content inline so this suite isolates the chat flow.
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({ children }: { children?: ReactNode }) => <>{children}</>,
   DrawerContent: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   DrawerBody: ({ children }: { children?: ReactNode }) => <div>{children}</div>,

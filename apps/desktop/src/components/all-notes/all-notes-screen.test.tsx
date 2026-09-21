@@ -4,10 +4,10 @@ import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import type { ReactElement } from 'react'
 import { setBridge } from '@reflect/core'
-import { resetOperations, useOperations } from '@/lib/operations'
-import { queryKeys } from '@/lib/query-client'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import { resetOperations, useOperations } from '@/lib/operations.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
 import { AllNotesScreen } from './all-notes-screen.tsx'
 
 /**
@@ -21,13 +21,13 @@ const settingsState = vi.hoisted((): { dateFormat: 'mdy' | 'dmy' | 'iso' } => ({
 }))
 const openRouteInNewWindow = vi.hoisted(() => vi.fn<() => Promise<boolean>>())
 
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: { root: '/g', name: 'g', generation: 1 },
     indexing: false,
   }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: {
       editorMarkdownSyntax: 'hide',
@@ -39,8 +39,8 @@ vi.mock('@/providers/settings-provider', () => ({
     updateSettings: () => {},
   }),
 }))
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 

@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { z } from 'zod'
-import { createStorage } from '@/test-utils/storage'
+import { createStorage } from '@/test-utils/storage.ts'
 import { StorageStore } from './storage.ts'
 
 afterEach(() => {

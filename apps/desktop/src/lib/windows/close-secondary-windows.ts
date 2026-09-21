@@ -1,5 +1,5 @@
 import { closeNoteWindows, errorMessage, isMobilePlatform, type AppPlatform } from '@reflect/core'
-import { isNativeShell } from '@/lib/platform'
+import { isNativeShell } from '@/lib/platform.ts'
 
 /**
  * Close every note window before a graph switch or delete replaces the

@@ -42,11 +42,11 @@ vi.mock('@reflect/core', () => ({
   },
 }))
 
-vi.mock('@/editor/open-documents', () => ({ flushOpenDocuments }))
-vi.mock('@/lib/backup-flush', () => ({ flushBackup }))
-vi.mock('@/lib/settings-flush', () => ({ flushSettings }))
-vi.mock('@/lib/platform', () => ({ isMacosDesktop: false, isNativeShell: () => true }))
-vi.mock('@/lib/windows/window-role', () => ({
+vi.mock('@/editor/open-documents.ts', () => ({ flushOpenDocuments }))
+vi.mock('@/lib/backup-flush.ts', () => ({ flushBackup }))
+vi.mock('@/lib/settings-flush.ts', () => ({ flushSettings }))
+vi.mock('@/lib/platform.ts', () => ({ isMacosDesktop: false, isNativeShell: () => true }))
+vi.mock('@/lib/windows/window-role.ts', () => ({
   isMainWindow: () => true,
 }))
 

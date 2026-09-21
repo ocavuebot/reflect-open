@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import { foldTag, type NoteTagFacet } from '@reflect/core'
-import { useSettings } from '@/providers/settings-provider'
+import { useSettings } from '@/providers/settings-provider.tsx'
 import { CustomFilterMenu } from './custom-filter-menu.tsx'
 import { FilterTab } from './filter-tab.tsx'
 

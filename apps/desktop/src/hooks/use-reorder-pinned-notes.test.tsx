@@ -3,19 +3,19 @@ import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-quer
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { PinnedNote } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client'
-import { deferred } from '@/test-utils/deferred'
+import { queryKeys } from '@/lib/query-client.ts'
+import { deferred } from '@/test-utils/deferred.ts'
 import { useReorderPinnedNotes } from './use-reorder-pinned-notes.ts'
 
 const reorderPinnedNotes = vi.hoisted(() =>
   vi.fn<(notes: readonly PinnedNote[], generation: number) => Promise<void>>(),
 )
-vi.mock('@/lib/note-pin', () => ({ reorderPinnedNotes }))
+vi.mock('@/lib/note-pin.ts', () => ({ reorderPinnedNotes }))
 
 const graphState: {
   graph: { generation: number; root: string } | null
 } = vi.hoisted(() => ({ graph: { generation: 7, root: '/graphs/personal' } }))
-vi.mock('@/providers/graph-provider', () => ({ useGraph: () => graphState }))
+vi.mock('@/providers/graph-provider.tsx', () => ({ useGraph: () => graphState }))
 
 const NOTE_A = { dailyDate: null, path: 'a.md', title: 'A', pinnedOrder: 1024 } satisfies PinnedNote
 const NOTE_B = { dailyDate: null, path: 'b.md', title: 'B', pinnedOrder: 2048 } satisfies PinnedNote

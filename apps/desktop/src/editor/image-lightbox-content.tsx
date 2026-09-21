@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react'
 import { LightboxImage, type LightboxImageItem } from '@meowdown/react'
 import { ExternalLinkIcon, XIcon } from 'lucide-react'
-import { LightboxChromeButton } from '@/editor/lightbox-chrome-button'
-import { useImageDismissDrag } from '@/editor/use-image-dismiss-drag'
-import { cn } from '@/lib/utils'
+import { LightboxChromeButton } from '@/editor/lightbox-chrome-button.tsx'
+import { useImageDismissDrag } from '@/editor/use-image-dismiss-drag.ts'
+import { cn } from '@/lib/utils.ts'
 
 interface ImageLightboxContentProps {
   item: LightboxImageItem

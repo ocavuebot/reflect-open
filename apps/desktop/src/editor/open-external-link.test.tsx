@@ -3,8 +3,8 @@ import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { LinkClickHandler } from '@meowdown/core'
 import { openUrl } from '@tauri-apps/plugin-opener'
-import { dispatchDeepLink } from '@/lib/deep-links/intake'
-import { useOpenExternalLink } from '@/editor/open-external-link'
+import { dispatchDeepLink } from '@/lib/deep-links/intake.ts'
+import { useOpenExternalLink } from '@/editor/open-external-link.ts'
 
 const openDeepLinkInNewWindow = vi.hoisted(() => vi.fn<() => Promise<boolean>>())
 
@@ -12,11 +12,11 @@ vi.mock('@tauri-apps/plugin-opener', () => ({
   openUrl: vi.fn(async () => {}),
 }))
 
-vi.mock('@/lib/deep-links/intake', () => ({
+vi.mock('@/lib/deep-links/intake.ts', () => ({
   dispatchDeepLink: vi.fn(),
 }))
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openDeepLinkInNewWindow,
 }))
 

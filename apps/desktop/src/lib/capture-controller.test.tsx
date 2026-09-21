@@ -7,7 +7,7 @@ import type {
   ReconcileCaptureEnrichmentOutcome,
 } from '@reflect/core'
 import type { XPost } from '@post-embed/types'
-import { createXPostResolver, xPostQueryOptions } from '@/editor/use-x-post-resolver'
+import { createXPostResolver, xPostQueryOptions } from '@/editor/use-x-post-resolver.ts'
 import { createCaptureController, type CaptureController } from './capture-controller.ts'
 import { queryClient } from './query-client.ts'
 
@@ -29,10 +29,10 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   subscribeFileChanges,
   hasBridge: () => true,
 }))
-vi.mock('@/lib/provider-fetch', () => ({
+vi.mock('@/lib/provider-fetch.ts', () => ({
   providerFetch: vi.fn(),
 }))
-vi.mock('@/lib/operations', () => ({
+vi.mock('@/lib/operations.ts', () => ({
   startOperation: () => ({ progress: vi.fn(), done: vi.fn(), fail: failOperation }),
 }))
 

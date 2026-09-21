@@ -1,6 +1,6 @@
 import type { ComponentProps, CSSProperties, ReactElement } from 'react'
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button.tsx'
+import { cn } from '@/lib/utils.ts'
 
 interface LightboxChromeButtonProps extends ComponentProps<typeof Button> {
   side: 'left' | 'right'

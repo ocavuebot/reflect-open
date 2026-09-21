@@ -6,7 +6,7 @@ import { WeekRow } from './week-row.tsx'
 
 const hapticImpactLight = vi.hoisted(() => vi.fn())
 
-vi.mock('@/mobile/haptics', () => ({ hapticImpactLight }))
+vi.mock('@/mobile/haptics.ts', () => ({ hapticImpactLight }))
 
 afterEach(async () => {
   await cleanup()

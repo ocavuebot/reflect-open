@@ -11,7 +11,7 @@ vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl }))
 // A browser-mode module mock materializes value exports once, so this file
 // keeps the flag statically false; the macOS-specific test lives in
 // `integrations-section-macos.test.tsx`.
-vi.mock('@/lib/platform', () => ({ isMacosDesktop: false, isNativeShell: () => true }))
+vi.mock('@/lib/platform.ts', () => ({ isMacosDesktop: false, isNativeShell: () => true }))
 
 vi.mock('./calendar-integration-field', () => ({
   CalendarIntegrationField: () => <div>Calendar events</div>,
@@ -23,7 +23,7 @@ const settings = vi.hoisted(() => ({
     settings.current = { ...settings.current, ...patch } as typeof settings.current
   }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: settings.current, updateSettings: settings.update }),
 }))
 

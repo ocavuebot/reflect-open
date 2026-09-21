@@ -8,13 +8,13 @@ import {
   errorMessage,
   type AgentSkillStatus,
 } from '@reflect/core'
-import { SettingsField } from '@/components/settings/field'
-import { SettingsSection } from '@/components/settings/section'
-import { Button } from '@/components/ui/button'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { isMacosDesktop } from '@/lib/platform'
-import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+import { SettingsField } from '@/components/settings/field.tsx'
+import { SettingsSection } from '@/components/settings/section.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { isMacosDesktop } from '@/lib/platform.ts'
+import { mutationKeys, mutationScopeIds, queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 interface AgentSkillAction {
   action: 'install' | 'uninstall'

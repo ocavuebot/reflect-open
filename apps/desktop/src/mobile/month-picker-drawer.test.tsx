@@ -13,7 +13,7 @@ import { MonthPickerDrawer } from './month-picker-drawer.tsx'
 // The drawer needs browser APIs jsdom doesn't provide (matchMedia, pointer
 // capture); its drag/animation is verified on-device. This passthrough
 // honours `open` so open/close behavior stays testable.
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({ open, children }: { open?: boolean; children?: ReactNode }) =>
     open ? <div data-testid="drawer">{children}</div> : null,
   DrawerContent: ({ children }: { children?: ReactNode }) => <div>{children}</div>,

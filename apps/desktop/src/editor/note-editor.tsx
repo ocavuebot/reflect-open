@@ -1,5 +1,5 @@
-import { lightboxItemFromXPostMedia } from '@/editor/x-post-media-lightbox-item'
-import { useXPostResolver, X_MEDIA_URL_PROTOCOLS } from '@/editor/use-x-post-resolver'
+import { lightboxItemFromXPostMedia } from '@/editor/x-post-media-lightbox-item.ts'
+import { useXPostResolver, X_MEDIA_URL_PROTOCOLS } from '@/editor/use-x-post-resolver.ts'
 import {
   useCallback,
   useImperativeHandle,
@@ -36,16 +36,16 @@ import {
   type TagSearchHandler,
   type WikilinkSearchHandler,
 } from '@meowdown/react'
-import { EditorInputTraits } from '@/editor/editor-input-traits'
-import { FormattingToolbarBridge } from '@/editor/formatting-toolbar-bridge'
-import { MediaLightbox } from '@/editor/media-lightbox'
-import { isOpenableExternalUrl } from '@/editor/open-external-link'
-import { resolveWikilink } from '@/editor/resolve-wikilink'
-import { isTouchEditorSurface } from '@/lib/platform-surface'
-import { isDeepLinkUrl } from '@/lib/deep-links/parse'
-import { useFollowDeepLink } from '@/lib/deep-links/use-follow-deep-link'
-import { openUrlSync } from '@/lib/open-url'
-import { cn } from '@/lib/utils'
+import { EditorInputTraits } from '@/editor/editor-input-traits.tsx'
+import { FormattingToolbarBridge } from '@/editor/formatting-toolbar-bridge.tsx'
+import { MediaLightbox } from '@/editor/media-lightbox.tsx'
+import { isOpenableExternalUrl } from '@/editor/open-external-link.ts'
+import { resolveWikilink } from '@/editor/resolve-wikilink.ts'
+import { isTouchEditorSurface } from '@/lib/platform-surface.ts'
+import { isDeepLinkUrl } from '@/lib/deep-links/parse.ts'
+import { useFollowDeepLink } from '@/lib/deep-links/use-follow-deep-link.ts'
+import { openUrlSync } from '@/lib/open-url.ts'
+import { cn } from '@/lib/utils.ts'
 
 type WikilinkHoverRenderer = (hit: WikilinkHoverHit) => ReactNode | Promise<ReactNode>
 

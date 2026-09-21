@@ -3,8 +3,8 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { openUrl } from '@tauri-apps/plugin-opener'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { BackupState } from '@/lib/backup-controller'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import type { BackupState } from '@/lib/backup-controller.ts'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
 import '@/test-utils/locator.ts'
 import { BackupSettingsField } from './backup-section.tsx'
 
@@ -20,9 +20,9 @@ const sync = vi.hoisted(() => ({
 }))
 const github = vi.hoisted(() => ({ connected: false }))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn(async () => {}) }))
-vi.mock('@/providers/sync-provider', () => ({ useSync: () => sync }))
-vi.mock('@/providers/graph-provider', () => ({ useGraph: () => ({ graph: null }) }))
-vi.mock('@/hooks/use-github-connected', () => ({ useGithubConnected: () => github.connected }))
+vi.mock('@/providers/sync-provider.tsx', () => ({ useSync: () => sync }))
+vi.mock('@/providers/graph-provider.tsx', () => ({ useGraph: () => ({ graph: null }) }))
+vi.mock('@/hooks/use-github-connected.ts', () => ({ useGithubConnected: () => github.connected }))
 
 afterEach(async () => {
   await cleanup()

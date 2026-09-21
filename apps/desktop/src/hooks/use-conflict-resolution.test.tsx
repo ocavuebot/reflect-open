@@ -8,7 +8,7 @@ import {
   writeNote,
   type GraphInfo,
 } from '@reflect/core'
-import { invalidateIndexQueries } from '@/lib/query-client'
+import { invalidateIndexQueries } from '@/lib/query-client.ts'
 import { useConflictResolution } from './use-conflict-resolution.ts'
 
 vi.mock('@reflect/core', async (importOriginal) => ({
@@ -18,13 +18,13 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   indexNote: vi.fn(async () => {}),
   emitFileChanges: vi.fn(),
 }))
-vi.mock('@/lib/query-client', () => ({ invalidateIndexQueries: vi.fn() }))
+vi.mock('@/lib/query-client.ts', () => ({ invalidateIndexQueries: vi.fn() }))
 
 const graphState = vi.hoisted(() => ({
   graph: { root: '/g', name: 'G', generation: 3 } as GraphInfo | null,
   indexGeneration: 7 as number | null,
 }))
-vi.mock('@/providers/graph-provider', () => ({ useGraph: () => graphState }))
+vi.mock('@/providers/graph-provider.tsx', () => ({ useGraph: () => graphState }))
 
 const SOURCE = [
   '<<<<<<< this device',

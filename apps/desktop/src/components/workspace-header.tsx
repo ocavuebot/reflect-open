@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react'
 import { Settings } from 'lucide-react'
-import { ShortcutKeys } from '@/components/shortcut-keys'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
-import { keybindingFor } from '@/lib/commands/app-commands'
-import type { ResolvedTheme } from '@/providers/theme-provider'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip.tsx'
+import { keybindingFor } from '@/lib/commands/app-commands.ts'
+import type { ResolvedTheme } from '@/providers/theme-provider.tsx'
 
 const SETTINGS_BINDING = keybindingFor('settings.open')
 

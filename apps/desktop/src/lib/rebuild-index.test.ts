@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { EmbedStatus } from '@reflect/core'
-import { resetOperations } from '@/lib/operations'
+import { resetOperations } from '@/lib/operations.ts'
 
 const rebuildIndex = vi.hoisted(() =>
   vi.fn<

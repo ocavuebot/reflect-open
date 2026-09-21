@@ -1,6 +1,6 @@
 import { useSyncExternalStore, type ReactElement } from 'react'
-import { getIndexProgress, subscribeIndexProgress } from '@/lib/index-progress'
-import { useKeyboardVisible } from '@/mobile/use-keyboard'
+import { getIndexProgress, subscribeIndexProgress } from '@/lib/index-progress.ts'
+import { useKeyboardVisible } from '@/mobile/use-keyboard.ts'
 
 /**
  * Below this listing size the pass finishes before a pill is worth showing —

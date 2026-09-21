@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { describe, expect, it, vi } from 'vitest'
 import { isModEvent } from '@meowdown/core'
-import type { BacklinkSource } from '@/lib/group-backlinks'
+import type { BacklinkSource } from '@/lib/group-backlinks.ts'
 import { BacklinkSourceGroup } from './backlink-source-group.tsx'
 
 const SOURCE: BacklinkSource = {

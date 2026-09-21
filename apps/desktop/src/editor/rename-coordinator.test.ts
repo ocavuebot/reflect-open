@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { upsertFrontmatter } from '@reflect/core'
-import { onNoteMoved } from '@/lib/note-moves'
+import { onNoteMoved } from '@/lib/note-moves.ts'
 import type { NoteSession } from './note-session.ts'
 import { openSession, registerOpenDocument, retargetOpenDocument } from './open-documents.ts'
 
@@ -45,7 +45,7 @@ interface RecordedOperation {
   message: string | null
 }
 const operationLog = vi.hoisted(() => ({ records: [] as RecordedOperation[] }))
-vi.mock('@/lib/operations', () => ({
+vi.mock('@/lib/operations.ts', () => ({
   startOperation: (label: string) => {
     const record: RecordedOperation = { label, outcome: 'running', message: null }
     operationLog.records.push(record)

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useEditor } from '@meowdown/react'
-import { isTouchEditorSurface } from '@/lib/platform-surface'
+import { isTouchEditorSurface } from '@/lib/platform-surface.ts'
 import { whenEditorMounted } from './when-editor-mounted.ts'
 
 /**

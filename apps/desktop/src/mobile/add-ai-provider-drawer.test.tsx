@@ -3,7 +3,7 @@ import { page, type Locator } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
 import type { ApiKeyValidation, ApiKeyValidationInput } from '@reflect/core'
-import { fireEvent } from '@/test-utils/fire-event'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 
 /**
  * The mobile add-provider sheet over the shared submit flow: a verified key
@@ -19,12 +19,12 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@reflect/core')>()),
   validateApiKey,
 }))
-vi.mock('@/lib/provider-fetch', () => ({ providerFetch: vi.fn() }))
+vi.mock('@/lib/provider-fetch.ts', () => ({ providerFetch: vi.fn() }))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn(() => Promise.resolve()) }))
 
 // Keep the sheet content inline so this suite exercises its state flow
 // without depending on the drawer's drag and animation behavior.
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({ children }: { children?: ReactNode }) => <>{children}</>,
   DrawerContent: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   DrawerBody: ({ children }: { children?: ReactNode }) => <div>{children}</div>,

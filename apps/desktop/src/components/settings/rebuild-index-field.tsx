@@ -1,7 +1,7 @@
 import { useState, type ReactElement } from 'react'
-import { Button } from '@/components/ui/button'
-import { rebuildIndexVisibly } from '@/lib/rebuild-index'
-import { useGraph } from '@/providers/graph-provider'
+import { Button } from '@/components/ui/button.tsx'
+import { rebuildIndexVisibly } from '@/lib/rebuild-index.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 import { SettingsField } from './field.tsx'
 
 /**

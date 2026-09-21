@@ -1,15 +1,15 @@
 import { QueryClient } from '@tanstack/react-query'
 import type { FilteredSearchHit, NoteListEntry, PinnedNote } from '@reflect/core'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { queryKeys } from '@/lib/query-client'
-import { toggleNotePinned, unpinNote } from '@/lib/note-pin'
+import { queryKeys } from '@/lib/query-client.ts'
+import { toggleNotePinned, unpinNote } from '@/lib/note-pin.ts'
 
 const readNoteSource = vi.hoisted(() => vi.fn(async () => '# A\n'))
 const commitNoteFrontmatter = vi.hoisted(() => vi.fn<() => Promise<void>>())
 const fail = vi.hoisted(() => vi.fn())
 const startOperation = vi.hoisted(() => vi.fn(() => ({ fail })))
-vi.mock('@/lib/note-frontmatter', () => ({ readNoteSource, commitNoteFrontmatter }))
-vi.mock('@/lib/operations', () => ({ startOperation }))
+vi.mock('@/lib/note-frontmatter.ts', () => ({ readNoteSource, commitNoteFrontmatter }))
+vi.mock('@/lib/operations.ts', () => ({ startOperation }))
 
 beforeEach(() => {
   vi.clearAllMocks()

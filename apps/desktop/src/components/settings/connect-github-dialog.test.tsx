@@ -4,17 +4,17 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
 import { fetch as tauriFetch } from '@tauri-apps/plugin-http'
 import { openUrl } from '@tauri-apps/plugin-opener'
-import type { ConnectExistingResult } from '@/lib/backup-controller'
+import type { ConnectExistingResult } from '@/lib/backup-controller.ts'
 import { ConnectGithubDialog } from './connect-github-dialog.tsx'
 
 const sync = vi.hoisted(() => ({
   connectNewRepo: vi.fn(async (): Promise<'connected' | 'manualCreateNeeded'> => 'connected'),
   connectExistingRepo: vi.fn(async (): Promise<ConnectExistingResult> => 'connected'),
 }))
-vi.mock('@/providers/sync-provider', () => ({ useSync: () => sync }))
+vi.mock('@/providers/sync-provider.tsx', () => ({ useSync: () => sync }))
 vi.mock('@tauri-apps/plugin-http', () => ({ fetch: vi.fn() }))
-vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform')>()),
+vi.mock('@/lib/platform.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
   isNativeShell: () => true,
 }))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn() }))

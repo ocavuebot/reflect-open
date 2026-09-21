@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { gistBodyHash, upsertFrontmatter } from '@reflect/core'
-import type { NoteSession } from '@/editor/note-session'
-import { getNoteRowOverlay, resetNoteRowOverlays } from '@/hooks/note-row-overlay'
+import type { NoteSession } from '@/editor/note-session.ts'
+import { getNoteRowOverlay, resetNoteRowOverlays } from '@/hooks/note-row-overlay.ts'
 
 const readNote = vi.hoisted(() => vi.fn<(path: string) => Promise<string>>())
 const writeNote = vi.hoisted(() => vi.fn(async () => {}))
@@ -25,8 +25,8 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   updateGist,
   deleteGist,
 }))
-vi.mock('@/editor/open-documents', () => ({ openSession }))
-vi.mock('@/lib/operations', () => ({ startOperation }))
+vi.mock('@/editor/open-documents.ts', () => ({ openSession }))
+vi.mock('@/lib/operations.ts', () => ({ startOperation }))
 
 const { publishNoteToGist, runGistPublish, runGistUnpublish, unpublishNoteGist } =
   await import('./note-gist.ts')

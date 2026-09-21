@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { describe, expect, it, vi } from 'vitest'
-import { TooltipProvider } from '@/components/ui/tooltip'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
 import { WorkspaceHeader } from './workspace-header.tsx'
 
 async function renderHeader(overrides: Partial<Parameters<typeof WorkspaceHeader>[0]> = {}) {

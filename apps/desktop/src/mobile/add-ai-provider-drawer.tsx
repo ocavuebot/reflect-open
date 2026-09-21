@@ -8,10 +8,10 @@ import {
   isPlainHttpRemoteBaseUrl,
   type AiProviderId,
 } from '@reflect/core'
-import { InlineAlert } from '@/components/inline-alert'
-import { Button } from '@/components/ui/button'
-import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import { Input } from '@/components/ui/input'
+import { InlineAlert } from '@/components/inline-alert.tsx'
+import { Button } from '@/components/ui/button.tsx'
+import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import { Input } from '@/components/ui/input.tsx'
 import {
   Select,
   SelectContent,
@@ -19,10 +19,10 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
-import { useAddAiProviderSubmit } from '@/hooks/use-add-ai-provider-submit'
-import { AiProviderConsent } from '@/mobile/ai-provider-consent'
-import type { NewAiProvider } from '@/hooks/use-ai-providers'
+} from '@/components/ui/select.tsx'
+import { useAddAiProviderSubmit } from '@/hooks/use-add-ai-provider-submit.ts'
+import { AiProviderConsent } from '@/mobile/ai-provider-consent.tsx'
+import type { NewAiProvider } from '@/hooks/use-ai-providers.ts'
 
 interface AddAiProviderDrawerProps {
   open: boolean

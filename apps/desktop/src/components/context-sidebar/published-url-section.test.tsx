@@ -3,7 +3,7 @@ import { userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { NoteRow } from '@reflect/core'
 import { openUrl } from '@tauri-apps/plugin-opener'
-import { TooltipProvider } from '@/components/ui/tooltip'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
 import { PublishedUrlSection } from './published-url-section.tsx'
 
 const useNoteRow = vi.hoisted(() => vi.fn<(path: string) => NoteRow | null>(() => null))
@@ -19,10 +19,10 @@ const runGistPublish = vi.hoisted(() =>
 )
 
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn(async () => {}) }))
-vi.mock('@/hooks/use-note-row', () => ({ useNoteRow }))
-vi.mock('@/lib/note-gist', () => ({ runGistPublish }))
-vi.mock('@/lib/operations', () => ({ startOperation }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/hooks/use-note-row.ts', () => ({ useNoteRow }))
+vi.mock('@/lib/note-gist.ts', () => ({ runGistPublish }))
+vi.mock('@/lib/operations.ts', () => ({ startOperation }))
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 7 } }),
 }))
 

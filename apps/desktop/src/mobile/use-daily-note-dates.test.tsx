@@ -14,7 +14,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   hasBridge: () => true,
 }))
 
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g' } }),
 }))
 

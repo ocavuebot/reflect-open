@@ -4,9 +4,9 @@ import { page, type Locator } from 'vitest/browser'
 import type { ReactElement } from 'react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { GraphInfo } from '@reflect/core'
-import type { BackupState } from '@/lib/backup-controller'
+import type { BackupState } from '@/lib/backup-controller.ts'
 import '@/test-utils/locator.ts'
-import { RouterProvider, useRouter } from '@/routing/router'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
 import { SyncSection } from './sync-section.tsx'
 
 const core = vi.hoisted(() => ({
@@ -45,13 +45,13 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 // A browser-mode module mock materializes value exports once, so this file
 // keeps the flag statically true; the platform-hidden test lives in
 // `sync-section-non-macos.test.tsx`.
-vi.mock('@/lib/platform', () => ({ isMacosDesktop: true, isNativeShell: () => true }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/lib/platform.ts', () => ({ isMacosDesktop: true, isNativeShell: () => true }))
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: graph.current, openRecent: graph.openRecent }),
 }))
-vi.mock('@/providers/sync-provider', () => ({ useSync: () => sync }))
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/providers/sync-provider.tsx', () => ({ useSync: () => sync }))
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
 

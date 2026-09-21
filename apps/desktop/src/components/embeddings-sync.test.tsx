@@ -20,22 +20,22 @@ const semantic = vi.hoisted(() => ({
   consumeLegacySemanticOptIn: vi.fn(() => false),
   ensureEmbeddingsVisibly: vi.fn(async () => ({ status: 'ready', model: 'all-MiniLM-L6-v2' })),
 }))
-vi.mock('@/lib/semantic', () => semantic)
+vi.mock('@/lib/semantic.ts', () => semantic)
 
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: { root: '/g', name: 'g', generation: 1 },
     indexGeneration: 7,
   }),
 }))
 const semanticSetting = vi.hoisted(() => ({ enabled: true }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: { semanticSearchEnabled: semanticSetting.enabled },
     updateSettings: () => {},
   }),
 }))
-vi.mock('@/lib/use-embed-status', () => ({
+vi.mock('@/lib/use-embed-status.ts', () => ({
   useEmbedStatus: () => ({ status: 'ready', model: 'all-MiniLM-L6-v2' }),
 }))
 

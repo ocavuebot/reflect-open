@@ -3,7 +3,7 @@ import { page } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { useEffect, useRef, type ReactElement } from 'react'
 import { untitledNotePath } from '@reflect/core'
-import { RouterProvider, useRouter, type NavigateOptions } from '@/routing/router'
+import { RouterProvider, useRouter, type NavigateOptions } from '@/routing/router.tsx'
 import { MobileNote } from './note.tsx'
 
 const paneProps = vi.hoisted(() => ({
@@ -12,7 +12,7 @@ const paneProps = vi.hoisted(() => ({
   gutterClassName: null as string | null,
 }))
 
-vi.mock('@/components/note-pane', () => ({
+vi.mock('@/components/note-pane.tsx', () => ({
   NotePane: ({
     autoFocus,
     className,
@@ -29,13 +29,13 @@ vi.mock('@/components/note-pane', () => ({
   },
 }))
 
-vi.mock('@/mobile/note-actions-menu', () => ({
+vi.mock('@/mobile/note-actions-menu.tsx', () => ({
   NoteActionsMenu: () => null,
 }))
 
 // The backlinks section has its own suite (incoming-backlinks.test.tsx) and
 // needs the query/graph providers this focus-contract harness doesn't mount.
-vi.mock('@/mobile/incoming-backlinks', () => ({
+vi.mock('@/mobile/incoming-backlinks.tsx', () => ({
   IncomingBacklinks: () => null,
 }))
 

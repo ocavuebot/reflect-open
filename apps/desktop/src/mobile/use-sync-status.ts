@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { createConflictedNotesQueryOptions } from '@/lib/query-options'
-import { mobileSyncStatus, type MobileSyncStatus } from '@/mobile/sync-status'
-import { useGraph } from '@/providers/graph-provider'
-import { useSyncContext } from '@/providers/sync-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { createConflictedNotesQueryOptions } from '@/lib/query-options.ts'
+import { mobileSyncStatus, type MobileSyncStatus } from '@/mobile/sync-status.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSyncContext } from '@/providers/sync-provider.tsx'
 
 /**
  * The mobile sync status, ready to display — engine state joined with the

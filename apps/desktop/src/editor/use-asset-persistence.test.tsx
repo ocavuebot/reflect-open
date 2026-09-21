@@ -8,7 +8,7 @@ vi.mock('@tauri-apps/api/core', () => ({
   convertFileSrc: (filePath: string, protocol = 'asset') =>
     `${protocol}://localhost/${encodeURIComponent(filePath)}`,
 }))
-import { resetOperations, useOperations, type Operation } from '@/lib/operations'
+import { resetOperations, useOperations, type Operation } from '@/lib/operations.ts'
 import {
   LARGE_FILE_BYTES,
   resolveAssetFileLink,

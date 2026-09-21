@@ -16,8 +16,8 @@ const seams = vi.hoisted(() => ({
   invalidateIndexQueries: vi.fn(),
   throttledInvalidateIndexQueries: vi.fn(),
 }))
-vi.mock('@/editor/open-documents', () => ({ dirtyOpenPaths: seams.dirtyOpenPaths }))
-vi.mock('@/lib/query-client', () => ({
+vi.mock('@/editor/open-documents.ts', () => ({ dirtyOpenPaths: seams.dirtyOpenPaths }))
+vi.mock('@/lib/query-client.ts', () => ({
   invalidateIndexQueries: seams.invalidateIndexQueries,
   throttledInvalidateIndexQueries: seams.throttledInvalidateIndexQueries,
 }))

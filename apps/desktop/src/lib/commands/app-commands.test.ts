@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
 import type { EmbedStatus } from '@reflect/core'
-import { notePathForRoute, type Route } from '@/routing/route'
-import type { NavigateOptions } from '@/routing/router'
-import { resetOperations } from '@/lib/operations'
+import { notePathForRoute, type Route } from '@/routing/route.ts'
+import type { NavigateOptions } from '@/routing/router.tsx'
+import { resetOperations } from '@/lib/operations.ts'
 import type { CommandContext } from './types.ts'
 
 const TODAY = '2026-06-09'
@@ -22,19 +22,19 @@ const operationFail = vi.hoisted(() => vi.fn())
 const startOperation = vi.hoisted(() =>
   vi.fn(() => ({ progress: vi.fn(), done: vi.fn(), fail: operationFail })),
 )
-vi.mock('@/lib/semantic', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/semantic')>()),
+vi.mock('@/lib/semantic.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/semantic.ts')>()),
   backfillEmbeddingsVisibly,
 }))
-vi.mock('@/lib/note-deep-link', () => ({ runCopyDeepLink }))
-vi.mock('@/lib/note-copy-path', () => ({ runCopyNotePath }))
-vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform')>()),
+vi.mock('@/lib/note-deep-link.ts', () => ({ runCopyDeepLink }))
+vi.mock('@/lib/note-copy-path.ts', () => ({ runCopyNotePath }))
+vi.mock('@/lib/platform.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
   isNativeShell,
 }))
-vi.mock('@/lib/windows/open-in-new-window', () => ({ openRouteInNewWindow }))
-vi.mock('@/lib/operations', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/operations')>()),
+vi.mock('@/lib/windows/open-in-new-window.ts', () => ({ openRouteInNewWindow }))
+vi.mock('@/lib/operations.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/operations.ts')>()),
   startOperation,
 }))
 vi.mock('@reflect/core', async (importOriginal) => ({

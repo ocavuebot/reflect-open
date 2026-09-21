@@ -1,12 +1,12 @@
 import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { activeSidebarWidthDrags } from '@/hooks/use-sidebar-resize'
+import { activeSidebarWidthDrags } from '@/hooks/use-sidebar-resize.ts'
 import { SidebarWidthEffect } from './sidebar-width.tsx'
 
 const settingsState = vi.hoisted(() => ({ sidebarWidth: 260, contextSidebarWidth: 320 }))
 
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: settingsState }),
 }))
 

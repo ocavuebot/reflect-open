@@ -15,7 +15,7 @@ import { placeOldTitleAlias } from './alias-placement.ts'
 import { moveNoteCarryingSession } from './move-note.ts'
 import type { NoteContentOrigin } from './note-session.ts'
 import { composeRenameFailure, type RenamePhaseFailures } from './rename-failure.ts'
-import { startOperation } from '@/lib/operations'
+import { startOperation } from '@/lib/operations.ts'
 import { createTitleRenameTracker } from './title-rename.ts'
 import type { TitleRename } from './title-rename.ts'
 

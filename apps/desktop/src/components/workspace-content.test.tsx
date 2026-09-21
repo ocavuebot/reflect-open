@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { GraphInfo } from '@reflect/core'
-import type { ContextSidebarTarget } from '@/components/context-sidebar/sidebar-route'
+import type { ContextSidebarTarget } from '@/components/context-sidebar/sidebar-route.ts'
 
 interface WorkspaceState {
   collapsed: boolean
@@ -14,43 +14,43 @@ const workspaceState = vi.hoisted<WorkspaceState>(() => ({
   target: { kind: 'daily', date: '2026-07-11' },
 }))
 
-vi.mock('@/components/command-palette/command-palette', () => ({
+vi.mock('@/components/command-palette/command-palette.tsx', () => ({
   CommandPalette: () => null,
 }))
-vi.mock('@/components/context-sidebar/daily-context-sidebar', () => ({
+vi.mock('@/components/context-sidebar/daily-context-sidebar.tsx', () => ({
   DailyContextSidebar: ({ date }: { date: string }) => (
     <div data-testid="daily-context">{date}</div>
   ),
 }))
-vi.mock('@/components/context-sidebar/note-context-sidebar', () => ({
+vi.mock('@/components/context-sidebar/note-context-sidebar.tsx', () => ({
   NoteContextSidebar: ({ path }: { path: string }) => <div data-testid="note-context">{path}</div>,
 }))
-vi.mock('@/components/embeddings-sync', () => ({ EmbeddingsSync: () => null }))
-vi.mock('@/components/note-find-bar', () => ({ NoteFindBar: () => null }))
-vi.mock('@/components/route-content', () => ({ RouteContent: () => <div>Route content</div> }))
-vi.mock('@/components/shortcuts-dialog', () => ({ ShortcutsDialog: () => null }))
-vi.mock('@/components/sidebar/sidebar', () => ({
+vi.mock('@/components/embeddings-sync.tsx', () => ({ EmbeddingsSync: () => null }))
+vi.mock('@/components/note-find-bar.tsx', () => ({ NoteFindBar: () => null }))
+vi.mock('@/components/route-content.tsx', () => ({ RouteContent: () => <div>Route content</div> }))
+vi.mock('@/components/shortcuts-dialog.tsx', () => ({ ShortcutsDialog: () => null }))
+vi.mock('@/components/sidebar/sidebar.tsx', () => ({
   Sidebar: () => <div data-testid="workspace-sidebar" />,
 }))
-vi.mock('@/components/templates/template-create-dialog', () => ({
+vi.mock('@/components/templates/template-create-dialog.tsx', () => ({
   TemplateCreateDialog: () => null,
 }))
-vi.mock('@/components/templates/template-picker', () => ({ TemplatePicker: () => null }))
-vi.mock('@/providers/focused-daily-provider', () => ({
+vi.mock('@/components/templates/template-picker.tsx', () => ({ TemplatePicker: () => null }))
+vi.mock('@/providers/focused-daily-provider.tsx', () => ({
   useDailyContextTarget: () => workspaceState.target,
 }))
-vi.mock('@/providers/sidebar-provider', () => ({
+vi.mock('@/providers/sidebar-provider.tsx', () => ({
   useSidebar: () => ({ collapsed: workspaceState.collapsed, toggleSidebar: vi.fn() }),
 }))
 // The AppShell asides mount resize handles, which read the persisted widths.
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: { sidebarWidth: 260, contextSidebarWidth: 320 },
     updateSettings: vi.fn(),
     updateSettingsWith: vi.fn(),
   }),
 }))
-vi.mock('@/routing/app-shortcuts', () => ({ useAppShortcuts: () => ({}) }))
+vi.mock('@/routing/app-shortcuts.ts', () => ({ useAppShortcuts: () => ({}) }))
 
 const { WorkspaceContent } = await import('./workspace-content.tsx')
 

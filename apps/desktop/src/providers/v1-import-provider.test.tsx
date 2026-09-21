@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactElement } from 'react'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
 
 interface SummaryFixture {
   importedFiles: number
@@ -36,7 +36,7 @@ vi.mock('@reflect/core', () => ({
   },
   errorMessage: (error: unknown) => (error instanceof Error ? error.message : String(error)),
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ refreshIndex }),
 }))
 

@@ -7,14 +7,14 @@ import {
   type ReactElement,
   type ReactNode,
 } from 'react'
-import { attachUpdateToasts } from '@/components/update-toasts'
-import { useMainWindowEffect } from '@/hooks/use-main-window-effect'
-import { isNativeShell } from '@/lib/platform'
+import { attachUpdateToasts } from '@/components/update-toasts.ts'
+import { useMainWindowEffect } from '@/hooks/use-main-window-effect.ts'
+import { isNativeShell } from '@/lib/platform.ts'
 import {
   createUpdateController,
   type UpdateController,
   type UpdateState,
-} from '@/lib/update-controller'
+} from '@/lib/update-controller.ts'
 
 interface UpdateContextValue {
   state: UpdateState

@@ -1,10 +1,10 @@
 import { useState, type ReactElement } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { errorMessage, icloudAdoptGraph, icloudPendingCount, icloudStatus } from '@reflect/core'
-import { ConflictedNoteLinks } from '@/components/settings/conflicted-note-links'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { SettingsField } from '@/components/settings/field'
-import { Button } from '@/components/ui/button'
+import { ConflictedNoteLinks } from '@/components/settings/conflicted-note-links.tsx'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { SettingsField } from '@/components/settings/field.tsx'
+import { Button } from '@/components/ui/button.tsx'
 import {
   Dialog,
   DialogClose,
@@ -14,16 +14,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog'
-import { isICloudRoot } from '@/lib/icloud-controller'
-import { queryKeys } from '@/lib/query-client'
+} from '@/components/ui/dialog.tsx'
+import { isICloudRoot } from '@/lib/icloud-controller.ts'
+import { queryKeys } from '@/lib/query-client.ts'
 import {
   createConflictedNotesQueryOptions,
   createDuplicateNoteIdsQueryOptions,
-} from '@/lib/query-options'
-import { isMacosDesktop } from '@/lib/platform'
-import { useGraph } from '@/providers/graph-provider'
-import { useSync } from '@/providers/sync-provider'
+} from '@/lib/query-options.ts'
+import { isMacosDesktop } from '@/lib/platform.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSync } from '@/providers/sync-provider.tsx'
 
 const PENDING_NOTES_REFETCH_MS = 5_000
 

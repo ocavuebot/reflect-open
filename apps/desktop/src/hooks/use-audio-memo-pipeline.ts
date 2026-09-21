@@ -7,13 +7,13 @@ import {
   type AudioMemoSource,
   type GraphInfo,
 } from '@reflect/core'
-import { useMainWindowEffect } from '@/hooks/use-main-window-effect'
-import { startOperation } from '@/lib/operations'
+import { useMainWindowEffect } from '@/hooks/use-main-window-effect.ts'
+import { startOperation } from '@/lib/operations.ts'
 import {
   createTranscriptionReconciler,
   type TranscriptionReconciler,
-} from '@/lib/transcription-reconciler'
-import { useSettings } from '@/providers/settings-provider'
+} from '@/lib/transcription-reconciler.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /**
  * The platform-neutral half of the audio-memo surface: the serial capture

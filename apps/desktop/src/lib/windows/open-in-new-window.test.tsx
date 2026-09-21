@@ -8,11 +8,11 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@reflect/core')>()),
   openNoteWindow,
 }))
-vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform')>()),
+vi.mock('@/lib/platform.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
   isNativeShell,
 }))
-vi.mock('@/lib/platform-surface', () => ({ isMobileSurface }))
+vi.mock('@/lib/platform-surface.ts', () => ({ isMobileSurface }))
 
 import { openDeepLinkInNewWindow, openRouteInNewWindow } from './open-in-new-window.ts'
 

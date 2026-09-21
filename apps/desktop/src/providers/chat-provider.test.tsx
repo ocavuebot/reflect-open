@@ -12,8 +12,8 @@ import type {
   StreamChatOptions,
 } from '@reflect/core'
 import { NO_REPLY_NOTICE } from '@reflect/core'
-import { setPlatformSurface } from '@/lib/platform-surface'
-import { ChatProvider, useChatSession } from '@/providers/chat-provider'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
+import { ChatProvider, useChatSession } from '@/providers/chat-provider.tsx'
 
 /**
  * The provider's persistence lifecycle over a fully scripted store: resuming
@@ -49,7 +49,7 @@ const settingsState = vi.hoisted(() => ({
 const updateSettings = vi.hoisted(() => vi.fn<(patch: Partial<Settings>) => void>())
 // Stateful like the real provider: a chatModelSelection patch re-renders with
 // the new value, so selectModel applies instantly here too.
-vi.mock('@/providers/settings-provider', async () => {
+vi.mock('@/providers/settings-provider.tsx', async () => {
   const { useState } = await import('react')
   return {
     useSettings: () => {
@@ -73,11 +73,11 @@ vi.mock('@/providers/settings-provider', async () => {
   }
 })
 
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ indexGeneration: 7, graph: { root: '/g' } }),
 }))
 
-vi.mock('@/lib/provider-fetch', () => ({ providerFetch: vi.fn() }))
+vi.mock('@/lib/provider-fetch.ts', () => ({ providerFetch: vi.fn() }))
 
 const MODEL: AiProviderConfig = { id: 'm1', provider: 'openai', model: 'gpt-5.4', keyHint: '12345' }
 

@@ -8,7 +8,7 @@
  * without breaking the shape.
  */
 import { dailyPath, dateFromDailyPath, isDaily } from '@reflect/core'
-import { isIsoDate } from '@/lib/dates'
+import { isIsoDate } from '@/lib/dates.ts'
 
 export type Route =
   | { kind: 'today' }

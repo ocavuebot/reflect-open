@@ -7,8 +7,8 @@ import {
   type GithubAuth,
   type GithubUser,
 } from '@reflect/core'
-import { invalidateGithubAuth } from '@/lib/github-auth-state'
-import { providerFetch } from '@/lib/provider-fetch'
+import { invalidateGithubAuth } from '@/lib/github-auth-state.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
 
 /** The token a stored credential would supply right now (no refresh). */
 function usableToken(auth: GithubAuth): string {

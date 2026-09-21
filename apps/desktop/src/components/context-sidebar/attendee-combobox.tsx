@@ -11,18 +11,18 @@ import {
   type MeetingAttendee,
 } from '@reflect/core'
 import { getIsComposing } from '@meowdown/core'
-import { CommandItem, CommandList } from '@/components/ui/command'
-import { INPUT_CLASS_NAME } from '@/components/ui/input'
-import { Popover, PopoverContent } from '@/components/ui/popover'
+import { CommandItem, CommandList } from '@/components/ui/command.tsx'
+import { INPUT_CLASS_NAME } from '@/components/ui/input.tsx'
+import { Popover, PopoverContent } from '@/components/ui/popover.tsx'
 import {
   buildAutocompleteEntries,
   type AutocompleteEntry,
-} from '@/editor/wiki-autocomplete-entries'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { useContactsAuthorization } from '@/hooks/use-contacts-authorization'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
+} from '@/editor/wiki-autocomplete-entries.ts'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { useContactsAuthorization } from '@/hooks/use-contacts-authorization.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 const SUGGESTION_LIMIT = 6
 

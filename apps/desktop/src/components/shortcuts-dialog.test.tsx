@@ -3,11 +3,11 @@ import { page, userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import '@/test-utils/locator.ts'
 import { ShortcutsDialog } from './shortcuts-dialog.tsx'
-import { ShortcutsProvider, useShortcuts } from '@/providers/shortcuts-provider'
+import { ShortcutsProvider, useShortcuts } from '@/providers/shortcuts-provider.tsx'
 
 const isApplePlatform = vi.hoisted(() => vi.fn(() => false))
-vi.mock('@/lib/keybindings', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/keybindings')>()),
+vi.mock('@/lib/keybindings.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/keybindings.ts')>()),
   isApplePlatform,
 }))
 

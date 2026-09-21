@@ -10,10 +10,10 @@ import {
   upsertFrontmatter,
   writeNote,
 } from '@reflect/core'
-import { moveNoteCarryingSession } from '@/editor/move-note'
-import type { NoteEditorHandle } from '@/editor/note-editor'
-import { openSession } from '@/editor/open-documents'
-import { startOperation } from '@/lib/operations'
+import { moveNoteCarryingSession } from '@/editor/move-note.ts'
+import type { NoteEditorHandle } from '@/editor/note-editor.tsx'
+import { openSession } from '@/editor/open-documents.ts'
+import { startOperation } from '@/lib/operations.ts'
 
 /**
  * Note templates (docs/porting/note-templates.md): markdown files under

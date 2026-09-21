@@ -25,19 +25,19 @@ import {
   type GraphInfo,
   type RecentGraph,
 } from '@reflect/core'
-import { followHealedMove } from '@/editor/move-note'
-import { reloadOpenDocuments } from '@/editor/open-documents'
-import { resetNoteRowOverlays } from '@/hooks/note-row-overlay'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { setIndexProgress } from '@/lib/index-progress'
+import { followHealedMove } from '@/editor/move-note.ts'
+import { reloadOpenDocuments } from '@/editor/open-documents.ts'
+import { resetNoteRowOverlays } from '@/hooks/note-row-overlay.ts'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { setIndexProgress } from '@/lib/index-progress.ts'
 import {
   dropIcloudStatusQuery,
   dropSimilarNotesQueries,
   throttledInvalidateIndexQueries,
-} from '@/lib/query-client'
-import { ensureWelcomeNote } from '@/lib/welcome-note'
-import { closeSecondaryWindows } from '@/lib/windows/close-secondary-windows'
-import { isMainWindow, requireMainWindow } from '@/lib/windows/window-role'
+} from '@/lib/query-client.ts'
+import { ensureWelcomeNote } from '@/lib/welcome-note.ts'
+import { closeSecondaryWindows } from '@/lib/windows/close-secondary-windows.ts'
+import { isMainWindow, requireMainWindow } from '@/lib/windows/window-role.ts'
 import { createGraphIndex } from './graph-index.ts'
 import { useDesktopGraphBoot } from './use-desktop-graph-boot.ts'
 import { useMobileGraphBoot, type MobileGraphBoot } from './use-mobile-graph-boot.ts'

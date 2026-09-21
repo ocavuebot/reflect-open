@@ -10,11 +10,11 @@ import {
   type AiProvidersState,
   type ReconcileStop,
 } from '@reflect/core'
-import { commitXPost } from '@/lib/bookmark-capture'
-import { createBackgroundReconciler } from '@/lib/background-reconciler'
-import { startOperation } from '@/lib/operations'
-import { providerFetch } from '@/lib/provider-fetch'
-import { invalidateXPostQueries } from '@/lib/query-client'
+import { commitXPost } from '@/lib/bookmark-capture.ts'
+import { createBackgroundReconciler } from '@/lib/background-reconciler.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
+import { invalidateXPostQueries } from '@/lib/query-client.ts'
 
 /**
  * The link-capture lifecycle for one graph session. Built on

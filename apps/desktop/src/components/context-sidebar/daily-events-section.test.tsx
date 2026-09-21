@@ -3,16 +3,16 @@ import { page, userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { SettingsProvider } from '@/providers/settings-provider'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import { SettingsProvider } from '@/providers/settings-provider.tsx'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
 import { DailyEventsSection } from './daily-events-section.tsx'
 
 // The calendar queries only run in the macOS desktop webview; the test
 // browser is not it either, so the platform check is mocked on.
-vi.mock('@/lib/platform', () => ({ isMacosDesktop: true, isNativeShell: () => true }))
+vi.mock('@/lib/platform.ts', () => ({ isMacosDesktop: true, isNativeShell: () => true }))
 
 // The add-meeting dialog reads the write generation from the graph provider.
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/graph', generation: 3 } }),
 }))
 

@@ -3,8 +3,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { ShortcutKeys } from './shortcut-keys.tsx'
 
 const isApplePlatform = vi.hoisted(() => vi.fn(() => false))
-vi.mock('@/lib/keybindings', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/keybindings')>()),
+vi.mock('@/lib/keybindings.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/keybindings.ts')>()),
   isApplePlatform,
 }))
 

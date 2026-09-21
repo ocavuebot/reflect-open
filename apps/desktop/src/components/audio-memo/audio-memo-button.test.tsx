@@ -1,7 +1,7 @@
 import { render, type RenderResult } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { TooltipProvider } from '@/components/ui/tooltip'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
 
 const memo = vi.hoisted(() => ({
   phase: 'idle' as 'idle' | 'requesting' | 'recording' | 'transcribing' | 'error',
@@ -17,7 +17,7 @@ const memo = vi.hoisted(() => ({
   discard: vi.fn(),
 }))
 
-vi.mock('@/providers/audio-memo-provider', () => ({
+vi.mock('@/providers/audio-memo-provider.tsx', () => ({
   useAudioMemo: () => ({ ...memo }),
 }))
 

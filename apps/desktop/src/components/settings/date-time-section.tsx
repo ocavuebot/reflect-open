@@ -14,9 +14,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select'
-import { formatFullDate } from '@/lib/dates'
-import { useSettings } from '@/providers/settings-provider'
+} from '@/components/ui/select.tsx'
+import { formatFullDate } from '@/lib/dates.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 import { SettingsField } from './field.tsx'
 import { SettingsSection } from './section.tsx'
 

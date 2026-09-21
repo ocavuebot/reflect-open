@@ -3,7 +3,7 @@ import { page } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import type { LightboxController } from '@meowdown/react'
 import { MediaLightbox } from './media-lightbox.tsx'
-import { setPlatformSurface } from '@/lib/platform-surface'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
 
 // The Playwright context pins prefers-reduced-motion to reduce, so the
 // reduced-motion query stays stubbed to exercise both settings.

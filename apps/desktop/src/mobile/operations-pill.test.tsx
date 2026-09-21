@@ -2,8 +2,8 @@ import { act } from 'react'
 import { cleanup, render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { resetOperations, startOperation, type OperationHandle } from '@/lib/operations'
-import { publishKeyboardHeight } from '@/mobile/use-keyboard'
+import { resetOperations, startOperation, type OperationHandle } from '@/lib/operations.ts'
+import { publishKeyboardHeight } from '@/mobile/use-keyboard.ts'
 import { MobileOperationsPills } from './operations-pill.tsx'
 import { MobileStatusLayer } from './status-layer.tsx'
 
@@ -15,7 +15,7 @@ import { MobileStatusLayer } from './status-layer.tsx'
 
 // The layer renders the sync pill too; keep it quiet so these tests only see
 // operation pills (its own behavior is covered in sync-status-pill.test.tsx).
-vi.mock('@/mobile/use-sync-status', () => ({ useMobileSyncStatus: () => null }))
+vi.mock('@/mobile/use-sync-status.ts', () => ({ useMobileSyncStatus: () => null }))
 
 beforeEach(() => {
   vi.useFakeTimers()

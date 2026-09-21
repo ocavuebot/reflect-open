@@ -1,8 +1,8 @@
 import { useLayoutEffect, useState, type ReactElement } from 'react'
 import { dateFromDailyPath, type DateFormat } from '@reflect/core'
-import { MarkdownPreview } from '@/editor/markdown-preview'
-import { formatDayLabel } from '@/lib/dates'
-import { cn } from '@/lib/utils'
+import { MarkdownPreview } from '@/editor/markdown-preview.tsx'
+import { formatDayLabel } from '@/lib/dates.ts'
+import { cn } from '@/lib/utils.ts'
 
 interface WikiLinkHoverPreviewProps {
   path: string

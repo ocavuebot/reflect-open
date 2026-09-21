@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { UpdateState } from '@/lib/update-controller'
+import type { UpdateState } from '@/lib/update-controller.ts'
 import { UpdateField } from './update-field.tsx'
 
 const update = vi.hoisted(() => ({
@@ -11,7 +11,7 @@ const update = vi.hoisted(() => ({
   install: vi.fn(async () => {}),
   restart: vi.fn(async () => {}),
 }))
-vi.mock('@/providers/update-provider', () => ({ useUpdate: () => update }))
+vi.mock('@/providers/update-provider.tsx', () => ({ useUpdate: () => update }))
 
 afterEach(() => {
   update.checkNow.mockClear()

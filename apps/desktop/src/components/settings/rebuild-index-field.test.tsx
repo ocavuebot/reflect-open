@@ -4,8 +4,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 const rebuildIndexVisibly = vi.hoisted(() => vi.fn(async () => undefined))
 const graph = vi.hoisted(() => ({ indexGeneration: 7 as number | null }))
-vi.mock('@/lib/rebuild-index', () => ({ rebuildIndexVisibly }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/lib/rebuild-index.ts', () => ({ rebuildIndexVisibly }))
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ indexGeneration: graph.indexGeneration }),
 }))
 

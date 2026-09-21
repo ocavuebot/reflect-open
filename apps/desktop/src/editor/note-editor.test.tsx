@@ -3,12 +3,12 @@ import { openUrl } from '@tauri-apps/plugin-opener'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import { dispatchDeepLink } from '@/lib/deep-links/intake'
-import { setPlatformSurface } from '@/lib/platform-surface'
-import { expectLocatorToHaveCount } from '@/test-utils/expect'
-import { pasteFiles } from '@/test-utils/file-events'
+import { dispatchDeepLink } from '@/lib/deep-links/intake.ts'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
+import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { pasteFiles } from '@/test-utils/file-events.ts'
 import '@/test-utils/locator.ts'
-import { hover, unhover } from '@/test-utils/mouse'
+import { hover, unhover } from '@/test-utils/mouse.ts'
 import type { XPost } from '@post-embed/types'
 import { NoteEditor, type NoteEditorHandle } from './note-editor.tsx'
 
@@ -16,13 +16,13 @@ vi.mock('@tauri-apps/plugin-opener', () => ({
   openUrl: vi.fn(async () => {}),
 }))
 
-vi.mock('@/lib/deep-links/intake', () => ({
+vi.mock('@/lib/deep-links/intake.ts', () => ({
   dispatchDeepLink: vi.fn(),
 }))
 
 const openDeepLinkInNewWindow = vi.hoisted(() => vi.fn<() => Promise<boolean>>())
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openDeepLinkInNewWindow,
 }))
 
@@ -31,7 +31,7 @@ const X_PHOTO_URL =
   "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='100'/%3E"
 const X_VIDEO_URL = 'data:video/mp4;base64,'
 
-vi.mock('@/editor/use-x-post-resolver', () => ({
+vi.mock('@/editor/use-x-post-resolver.ts', () => ({
   X_MEDIA_URL_PROTOCOLS: ['data:'],
   useXPostResolver: () => (): XPost => ({
     id: '20',

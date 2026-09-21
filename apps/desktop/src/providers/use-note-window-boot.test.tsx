@@ -19,14 +19,14 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   subscribeIndexWritten,
   subscribeWindowNavigate,
 }))
-vi.mock('@/lib/windows/window-role', () => ({ isMainWindow }))
-vi.mock('@/lib/deep-links/intake', () => ({ dispatchDeepLink }))
-vi.mock('@/lib/query-client', () => ({ throttledInvalidateIndexQueries }))
+vi.mock('@/lib/windows/window-role.ts', () => ({ isMainWindow }))
+vi.mock('@/lib/deep-links/intake.ts', () => ({ dispatchDeepLink }))
+vi.mock('@/lib/query-client.ts', () => ({ throttledInvalidateIndexQueries }))
 
 import {
   getInitialWindowRoute,
   resetInitialWindowRouteForTests,
-} from '@/lib/windows/initial-window-route'
+} from '@/lib/windows/initial-window-route.ts'
 import { useNoteWindowBoot } from './use-note-window-boot.ts'
 
 const BOOT: WindowBootstrap = {

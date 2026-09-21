@@ -6,12 +6,12 @@ import {
   type CSSProperties,
   type ReactElement,
 } from 'react'
-import { MobileScreen } from '@/mobile/mobile-screen'
-import type { AllNotesFilters } from '@/mobile/search-filters/filter-state'
-import { BACK_SWIPE_SETTLE_MS, useBackSwipe, type BackSwipeState } from '@/mobile/use-back-swipe'
-import { usePrefersReducedMotion } from '@/mobile/use-reduced-motion'
-import type { Route } from '@/routing/route'
-import { RouterFreeze, useRouter } from '@/routing/router'
+import { MobileScreen } from '@/mobile/mobile-screen.tsx'
+import type { AllNotesFilters } from '@/mobile/search-filters/filter-state.ts'
+import { BACK_SWIPE_SETTLE_MS, useBackSwipe, type BackSwipeState } from '@/mobile/use-back-swipe.ts'
+import { usePrefersReducedMotion } from '@/mobile/use-reduced-motion.ts'
+import type { Route } from '@/routing/route.ts'
+import { RouterFreeze, useRouter } from '@/routing/router.tsx'
 import './mobile-stack.css'
 
 /** Mirrors the animation durations in mobile-stack.css. */

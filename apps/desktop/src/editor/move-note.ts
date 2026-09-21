@@ -1,5 +1,5 @@
 import { moveNoteIndexed } from '@reflect/core'
-import { emitNoteMoved } from '@/lib/note-moves'
+import { emitNoteMoved } from '@/lib/note-moves.ts'
 import { openSession, retargetOpenDocument } from './open-documents.ts'
 
 /**

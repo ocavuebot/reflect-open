@@ -2,8 +2,8 @@ import { render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { NoteRow } from '@reflect/core'
-import { resetNoteRowOverlays, setNoteRowOverlay } from '@/hooks/note-row-overlay'
-import { TooltipProvider } from '@/components/ui/tooltip'
+import { resetNoteRowOverlays, setNoteRowOverlay } from '@/hooks/note-row-overlay.ts'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
 import { NoteGistAction } from './note-gist-action.tsx'
 
 const useGithubConnected = vi.hoisted(() => vi.fn(() => true))
@@ -17,10 +17,10 @@ const runGistUnpublish = vi.hoisted(() =>
   vi.fn<(path: string, generation: number) => Promise<boolean>>(async () => true),
 )
 
-vi.mock('@/hooks/use-github-connected', () => ({ useGithubConnected }))
-vi.mock('@/hooks/use-note-row', () => ({ useNoteRow }))
-vi.mock('@/lib/note-gist', () => ({ runGistPublish, runGistUnpublish }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/hooks/use-github-connected.ts', () => ({ useGithubConnected }))
+vi.mock('@/hooks/use-note-row.ts', () => ({ useNoteRow }))
+vi.mock('@/lib/note-gist.ts', () => ({ runGistPublish, runGistUnpublish }))
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 7 } }),
 }))
 

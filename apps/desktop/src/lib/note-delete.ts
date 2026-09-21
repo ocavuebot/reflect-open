@@ -1,5 +1,5 @@
 import { deleteNote, isDaily } from '@reflect/core'
-import { openSession } from '@/editor/open-documents'
+import { openSession } from '@/editor/open-documents.ts'
 
 /**
  * Delete an open regular note and detach its editor session without flushing.

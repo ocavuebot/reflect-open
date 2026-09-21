@@ -4,11 +4,11 @@ import { page } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { act, useEffect, useState, type ReactElement, type ReactNode } from 'react'
 import { setBridge } from '@reflect/core'
-import { FocusedDailyProvider, useFocusedDailyDate } from '@/providers/focused-daily-provider'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { formatDayLabel, todayIso } from '@/lib/dates'
-import { createDayWindow, dateAtIndex, indexOfDate } from '@/lib/day-window'
-import { fireEvent } from '@/test-utils/fire-event'
+import { FocusedDailyProvider, useFocusedDailyDate } from '@/providers/focused-daily-provider.tsx'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { formatDayLabel, todayIso } from '@/lib/dates.ts'
+import { createDayWindow, dateAtIndex, indexOfDate } from '@/lib/day-window.ts'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 import '@/test-utils/locator.ts'
 import { DailyStream, ESTIMATED_DAY_HEIGHT } from './daily-stream.tsx'
 
@@ -21,16 +21,16 @@ import { DailyStream, ESTIMATED_DAY_HEIGHT } from './daily-stream.tsx'
  * cover the loading-placeholder contract (reserved editor space, delayed hint).
  */
 
-vi.mock('@/editor/note-editor', () => ({
+vi.mock('@/editor/note-editor.tsx', () => ({
   NoteEditor: () => <div data-testid="fake-editor" />,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: { root: '/g', name: 'g', generation: 1 },
     indexing: false,
   }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: {
       dateFormat: 'mdy',

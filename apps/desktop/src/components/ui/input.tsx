@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils.ts'
 
 // Shared with inputs that must render the same field without this wrapper
 // (e.g. a cmdk-driven combobox input, which has to be `CommandPrimitive.Input`).

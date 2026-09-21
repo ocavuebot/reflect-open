@@ -29,16 +29,16 @@ import {
   type ChatTurn,
   type GraphInfo,
 } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { toChatAttachment, type ChatAttachment } from '@/lib/chat-attachments'
-import { todayIso } from '@/lib/dates'
-import { isMobileSurface } from '@/lib/platform-surface'
-import { providerFetch } from '@/lib/provider-fetch'
-import { invalidateChatQueries } from '@/lib/query-client'
-import { ChatContext, type ChatContextValue, type ChatStatus } from '@/providers/chat-context'
-import { conversationTitle } from '@/providers/chat-title'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { toChatAttachment, type ChatAttachment } from '@/lib/chat-attachments.ts'
+import { todayIso } from '@/lib/dates.ts'
+import { isMobileSurface } from '@/lib/platform-surface.ts'
+import { providerFetch } from '@/lib/provider-fetch.ts'
+import { invalidateChatQueries } from '@/lib/query-client.ts'
+import { ChatContext, type ChatContextValue, type ChatStatus } from '@/providers/chat-context.tsx'
+import { conversationTitle } from '@/providers/chat-title.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /**
  * One chat session per open graph (Plan 10): the conversation lives here, not
@@ -56,7 +56,7 @@ import { useSettings } from '@/providers/settings-provider'
  * in-memory conversation carries on.
  */
 
-export { useChatSession, type ChatStatus } from '@/providers/chat-context'
+export { useChatSession, type ChatStatus } from '@/providers/chat-context.tsx'
 
 /** Resume the latest conversation within this window; otherwise start fresh. */
 const CHAT_IDLE_CUTOFF_MS = 6 * 60 * 60 * 1000

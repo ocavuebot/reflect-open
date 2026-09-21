@@ -4,11 +4,11 @@ import {
   backfillEmbeddingsVisibly,
   consumeLegacySemanticOptIn,
   ensureEmbeddingsVisibly,
-} from '@/lib/semantic'
-import { useEmbedStatus } from '@/lib/use-embed-status'
-import { isMainWindow } from '@/lib/windows/window-role'
-import { useGraph } from '@/providers/graph-provider'
-import { useSettings } from '@/providers/settings-provider'
+} from '@/lib/semantic.ts'
+import { useEmbedStatus } from '@/lib/use-embed-status.ts'
+import { isMainWindow } from '@/lib/windows/window-role.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /**
  * Keeps embeddings in sync with the graph (Plan 09). Renders nothing; mounted

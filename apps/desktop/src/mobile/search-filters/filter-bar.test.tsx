@@ -16,7 +16,7 @@ import { EMPTY_ALL_NOTES_FILTERS, type AllNotesFilters } from './filter-state.ts
  * are always rendered and the state flow is what's exercised.
  */
 
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({ children, open }: { children?: ReactNode; open?: boolean }) =>
     open ? <>{children}</> : null,
   DrawerContent: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
@@ -24,7 +24,7 @@ vi.mock('@/components/ui/drawer', () => ({
   DrawerTitle: ({ children }: { children?: ReactNode }) => <h2>{children}</h2>,
 }))
 
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
 

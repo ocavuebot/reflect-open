@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { resetOperations, startOperation } from '@/lib/operations'
-import type { MockToastAddOptions } from '@/test-utils/toast'
+import { resetOperations, startOperation } from '@/lib/operations.ts'
+import type { MockToastAddOptions } from '@/test-utils/toast.ts'
 import { attachOperationToasts } from './operation-toasts.ts'
 
 const toast = vi.hoisted(() => ({
@@ -8,7 +8,7 @@ const toast = vi.hoisted(() => ({
   close: vi.fn(),
 }))
 
-vi.mock('@/components/ui/toast', () => ({ toast }))
+vi.mock('@/components/ui/toast.tsx', () => ({ toast }))
 
 let detach: () => void = () => {}
 

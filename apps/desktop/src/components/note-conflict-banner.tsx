@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
-import { InlineAlert } from '@/components/inline-alert'
-import { Button } from '@/components/ui/button'
+import { InlineAlert } from '@/components/inline-alert.tsx'
+import { Button } from '@/components/ui/button.tsx'
 
 interface NoteConflictBannerProps {
   /** Resolve by keeping the editor buffer (rewrites the file). */

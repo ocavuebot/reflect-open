@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import type { TaskFilters } from '@/lib/tasks/task-filters'
-import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture'
-import { composeVisibleTaskGroups, visibleGroups } from '@/lib/tasks/task-visibility'
+import type { TaskFilters } from '@/lib/tasks/task-filters.ts'
+import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture.ts'
+import { composeVisibleTaskGroups, visibleGroups } from '@/lib/tasks/task-visibility.ts'
 
 const TODAY = '2026-06-14'
 

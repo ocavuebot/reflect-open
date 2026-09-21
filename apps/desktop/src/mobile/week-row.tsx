@@ -1,8 +1,8 @@
 import { memo, type ReactElement } from 'react'
 import { format } from 'date-fns'
-import { addDaysIso, parseIsoDate } from '@/lib/dates'
-import { cn } from '@/lib/utils'
-import { hapticImpactLight } from '@/mobile/haptics'
+import { addDaysIso, parseIsoDate } from '@/lib/dates.ts'
+import { cn } from '@/lib/utils.ts'
+import { hapticImpactLight } from '@/mobile/haptics.ts'
 
 interface WeekRowProps {
   /** The ISO date of this week's first day (per the week-start setting). */

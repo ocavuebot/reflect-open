@@ -9,29 +9,29 @@ import {
   type FilteredSearchHit,
   type NoteTagFacet,
 } from '@reflect/core'
-import { Spinner } from '@/components/ui/spinner'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { queryKeys } from '@/lib/query-client'
-import { FilterBar } from '@/mobile/search-filters/filter-bar'
+import { Spinner } from '@/components/ui/spinner.tsx'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { FilterBar } from '@/mobile/search-filters/filter-bar.tsx'
 import {
   buildAllNotesSearch,
   pendingTagToken,
   searchPlanFor,
   type AllNotesFilters,
-} from '@/mobile/search-filters/filter-state'
-import { NoteRowList } from '@/mobile/note-row-list'
-import { SearchInput } from '@/mobile/search-input'
-import type { NoteRowModel } from '@/mobile/swipeable-note-row'
+} from '@/mobile/search-filters/filter-state.ts'
+import { NoteRowList } from '@/mobile/note-row-list.tsx'
+import { SearchInput } from '@/mobile/search-input.tsx'
+import type { NoteRowModel } from '@/mobile/swipeable-note-row.tsx'
 import {
   MobileTopBar,
   MobileTopBarIconButton,
   MobileTopBarRow,
   MobileTopBarScrollableRow,
-} from '@/mobile/top-bar'
-import { useArrivalFocus } from '@/mobile/use-arrival-focus'
-import { useGraph } from '@/providers/graph-provider'
-import { routeForPath } from '@/routing/route'
-import { useRouter } from '@/routing/router'
+} from '@/mobile/top-bar.tsx'
+import { useArrivalFocus } from '@/mobile/use-arrival-focus.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { routeForPath } from '@/routing/route.ts'
+import { useRouter } from '@/routing/router.tsx'
 
 /** A search hit resolved into the shared row shape. */
 export function rowForHit(hit: FilteredSearchHit): NoteRowModel {

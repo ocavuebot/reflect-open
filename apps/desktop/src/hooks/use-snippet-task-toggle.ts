@@ -2,10 +2,10 @@ import { useCallback } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { errorMessage, type SnippetTask } from '@reflect/core'
 import type { TaskClickHandler, TaskClickPayload } from '@meowdown/react'
-import { toggleTask } from '@/lib/note-task'
-import { startOperation } from '@/lib/operations'
-import { mutationKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+import { toggleTask } from '@/lib/note-task.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { mutationKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 interface SnippetToggleInput {
   notePath: string

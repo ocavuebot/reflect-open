@@ -1,11 +1,11 @@
 import { useCallback } from 'react'
 import type { WikilinkClickHandler } from '@meowdown/core'
-import { useAssetPersistence } from '@/editor/use-asset-persistence'
-import { useWikiLinkNavigation } from '@/editor/use-wiki-link-navigation'
-import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation'
-import type { ModClickEvent } from '@/lib/windows/open-in-new-window'
-import { useGraph } from '@/providers/graph-provider'
-import { routeForPath } from '@/routing/route'
+import { useAssetPersistence } from '@/editor/use-asset-persistence.ts'
+import { useWikiLinkNavigation } from '@/editor/use-wiki-link-navigation.ts'
+import { useNoteLinkNavigation } from '@/hooks/use-note-link-navigation.ts'
+import type { ModClickEvent } from '@/lib/windows/open-in-new-window.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
+import { routeForPath } from '@/routing/route.ts'
 import { isModEvent } from '@meowdown/core'
 
 /** The click plumbing a backlinks surface wires into its rows and snippets. */

@@ -4,8 +4,8 @@ import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
 import { fetch as tauriFetch } from '@tauri-apps/plugin-http'
-import type { ConnectExistingResult } from '@/lib/backup-controller'
-import { fireEvent } from '@/test-utils/fire-event'
+import type { ConnectExistingResult } from '@/lib/backup-controller.ts'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 import { ConnectGithubDrawer } from './connect-github-drawer.tsx'
 
 /**
@@ -17,7 +17,7 @@ import { ConnectGithubDrawer } from './connect-github-drawer.tsx'
  */
 
 // Keep the sheet content inline so this suite can focus on the wizard state.
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({ children }: { children?: ReactNode }) => <>{children}</>,
   DrawerContent: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
   DrawerBody: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
@@ -28,10 +28,10 @@ const sync = vi.hoisted(() => ({
   connectNewRepo: vi.fn(async (): Promise<'connected' | 'manualCreateNeeded'> => 'connected'),
   connectExistingRepo: vi.fn(async (): Promise<ConnectExistingResult> => 'connected'),
 }))
-vi.mock('@/providers/sync-provider', () => ({ useSync: () => sync }))
+vi.mock('@/providers/sync-provider.tsx', () => ({ useSync: () => sync }))
 vi.mock('@tauri-apps/plugin-http', () => ({ fetch: vi.fn() }))
-vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform')>()),
+vi.mock('@/lib/platform.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
   isNativeShell: () => true,
 }))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn() }))

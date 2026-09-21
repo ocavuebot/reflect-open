@@ -3,9 +3,9 @@ import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { setPlatformSurface } from '@/lib/platform-surface'
-import { MobileNote } from '@/mobile/screens/note'
-import { RouterProvider } from '@/routing/router'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
+import { MobileNote } from '@/mobile/screens/note.tsx'
+import { RouterProvider } from '@/routing/router.tsx'
 
 /**
  * Conflict containment on the mobile note screen (Plan 19, step 10): a note
@@ -16,11 +16,11 @@ import { RouterProvider } from '@/routing/router'
  * host contenteditable).
  */
 
-vi.mock('@/editor/note-editor', () => ({
+vi.mock('@/editor/note-editor.tsx', () => ({
   NoteEditor: () => <div data-testid="fake-editor" />,
 }))
 
-vi.mock('@/mobile/note-actions-menu', () => ({
+vi.mock('@/mobile/note-actions-menu.tsx', () => ({
   NoteActionsMenu: () => null,
 }))
 
@@ -55,10 +55,10 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   })),
 }))
 
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: {
       editorMarkdownSyntax: 'hide',

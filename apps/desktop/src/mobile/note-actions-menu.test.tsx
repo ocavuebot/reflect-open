@@ -1,7 +1,7 @@
 import { upsertFrontmatter, type GraphInfo, type PinnedNote } from '@reflect/core'
-import { frontmatterPatchToYaml, type FrontmatterPatch } from '@/editor/note-session'
+import { frontmatterPatchToYaml, type FrontmatterPatch } from '@/editor/note-session.ts'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { queryKeys } from '@/lib/query-client'
+import { queryKeys } from '@/lib/query-client.ts'
 import { act, type ReactElement, type ReactNode } from 'react'
 import { cleanup, render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
@@ -13,7 +13,7 @@ const readNoteSource = vi.hoisted(() => vi.fn(async () => noteSource.value))
 const commitNoteFrontmatter = vi.hoisted(() =>
   vi.fn<(path: string, patch: FrontmatterPatch, generation: number) => Promise<void>>(),
 )
-vi.mock('@/lib/note-frontmatter', () => ({ readNoteSource, commitNoteFrontmatter }))
+vi.mock('@/lib/note-frontmatter.ts', () => ({ readNoteSource, commitNoteFrontmatter }))
 const deleteOpenNote = vi.hoisted(() => vi.fn(async () => {}))
 const shareNote = vi.hoisted(() => vi.fn(async () => {}))
 const operationFail = vi.hoisted(() => vi.fn())
@@ -38,7 +38,7 @@ const startOperation = vi.hoisted(() =>
  * mock honours `open` and the trigger contract so the tests can verify that
  * actions close the sheet and that reopened content reflects bridged state.
  */
-vi.mock('@/components/ui/drawer', async () => {
+vi.mock('@/components/ui/drawer.tsx', async () => {
   const React = await import('react')
   const DrawerContext = React.createContext<{
     open: boolean
@@ -113,7 +113,7 @@ const graphStore = vi.hoisted(() => {
     },
   }
 })
-vi.mock('@/providers/graph-provider', async () => {
+vi.mock('@/providers/graph-provider.tsx', async () => {
   const { useSyncExternalStore } = await import('react')
   return {
     useGraph: () => ({
@@ -127,9 +127,9 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   getPinnedNotes: async () => [],
   getNote,
 }))
-vi.mock('@/lib/note-delete', () => ({ deleteOpenNote }))
-vi.mock('@/mobile/share', () => ({ shareNote }))
-vi.mock('@/lib/operations', () => ({ startOperation }))
+vi.mock('@/lib/note-delete.ts', () => ({ deleteOpenNote }))
+vi.mock('@/mobile/share.ts', () => ({ shareNote }))
+vi.mock('@/lib/operations.ts', () => ({ startOperation }))
 
 const { NoteActionsMenu } = await import('./note-actions-menu.tsx')
 

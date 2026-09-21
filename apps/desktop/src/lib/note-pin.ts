@@ -7,9 +7,9 @@ import {
   type NoteRow,
   type PinnedNote,
 } from '@reflect/core'
-import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter'
-import { startOperation } from '@/lib/operations'
-import { queryKeys } from '@/lib/query-client'
+import { commitNoteFrontmatter, readNoteSource } from '@/lib/note-frontmatter.ts'
+import { startOperation } from '@/lib/operations.ts'
+import { queryKeys } from '@/lib/query-client.ts'
 import {
   insertPinnedNote,
   invalidatePinnedNotesCache,

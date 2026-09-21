@@ -13,7 +13,7 @@ const graphState = vi.hoisted<{
 }>(() => ({
   current: { graph: null, mobileStorageKind: null, refreshIndex: () => {} },
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => graphState.current,
 }))
 

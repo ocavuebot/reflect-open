@@ -14,11 +14,11 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   readNote,
   relatedNotes,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
 const semanticSetting = vi.hoisted(() => ({ enabled: true }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: { semanticSearchEnabled: semanticSetting.enabled },
     updateSettings: () => {},

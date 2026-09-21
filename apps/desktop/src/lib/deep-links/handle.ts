@@ -4,9 +4,9 @@ import {
   resolveNoteTarget,
   textCaptureEnvelopeSchema,
 } from '@reflect/core'
-import { startOperation } from '@/lib/operations'
-import { routeForPath, type Route } from '@/routing/route'
-import { parseDeepLink } from '@/lib/deep-links/parse'
+import { startOperation } from '@/lib/operations.ts'
+import { routeForPath, type Route } from '@/routing/route.ts'
+import { parseDeepLink } from '@/lib/deep-links/parse.ts'
 
 /** What acting on a deep link needs from the open graph session. */
 export interface DeepLinkIo {

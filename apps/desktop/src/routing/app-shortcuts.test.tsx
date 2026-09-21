@@ -1,16 +1,16 @@
 import type { GraphInfo, NoteRow, PinnedNote } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client'
-import { FocusedDailyProvider, useSetFocusedDailyDate } from '@/providers/focused-daily-provider'
+import { queryKeys } from '@/lib/query-client.ts'
+import { FocusedDailyProvider, useSetFocusedDailyDate } from '@/providers/focused-daily-provider.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
 import { renderHook } from 'vitest-browser-react'
-import { PaletteProvider, usePalette } from '@/components/command-palette/palette-provider'
-import { listRegisteredBindings } from '@/editor/keymap'
-import { registerAppCommands } from '@/lib/commands/app-commands'
-import { NoteTemplatesProvider } from '@/providers/note-templates-provider'
-import { ShortcutsProvider, useShortcuts } from '@/providers/shortcuts-provider'
-import { SidebarProvider, useSidebar } from '@/providers/sidebar-provider'
+import { PaletteProvider, usePalette } from '@/components/command-palette/palette-provider.tsx'
+import { listRegisteredBindings } from '@/editor/keymap.ts'
+import { registerAppCommands } from '@/lib/commands/app-commands.ts'
+import { NoteTemplatesProvider } from '@/providers/note-templates-provider.tsx'
+import { ShortcutsProvider, useShortcuts } from '@/providers/shortcuts-provider.tsx'
+import { SidebarProvider, useSidebar } from '@/providers/sidebar-provider.tsx'
 import { useAppShortcuts } from './app-shortcuts.ts'
 import { RouterProvider, useRouter } from './router.tsx'
 
@@ -18,7 +18,7 @@ const commitNoteFrontmatter = vi.hoisted(() => vi.fn(async () => {}))
 const graphState = vi.hoisted((): { graph: GraphInfo | null } => ({
   graph: { root: '/g', name: 'g', generation: 1 },
 }))
-vi.mock('@/lib/note-frontmatter', () => ({
+vi.mock('@/lib/note-frontmatter.ts', () => ({
   commitNoteFrontmatter,
   readNoteSource: async () => '# A\n',
 }))
@@ -31,8 +31,8 @@ const openNoteFindForPath = vi.hoisted(() => vi.fn(() => true))
 const findNextInNote = vi.hoisted(() => vi.fn())
 const findPreviousInNote = vi.hoisted(() => vi.fn())
 
-vi.mock('@/lib/windows/open-in-new-window', () => ({ openRouteInNewWindow }))
-vi.mock('@/providers/note-find-provider', () => ({
+vi.mock('@/lib/windows/open-in-new-window.ts', () => ({ openRouteInNewWindow }))
+vi.mock('@/providers/note-find-provider.tsx', () => ({
   useNoteFindActions: () => ({
     openForPath: openNoteFindForPath,
     next: findNextInNote,
@@ -40,15 +40,15 @@ vi.mock('@/providers/note-find-provider', () => ({
   }),
 }))
 
-vi.mock('@/lib/native-menu/menu', () => ({
+vi.mock('@/lib/native-menu/menu.ts', () => ({
   isNativeMenuInstalled: () => false,
 }))
 // macOS-only shortcut behavior lives in app-shortcuts-macos.test.tsx: a
 // browser-mode module mock materializes value exports once, so the flag
 // cannot flip per test.
-vi.mock('@/lib/platform', () => ({ isMacosDesktop: false, isNativeShell: () => false }))
+vi.mock('@/lib/platform.ts', () => ({ isMacosDesktop: false, isNativeShell: () => false }))
 
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: graphState.graph,
     recents: [
@@ -59,19 +59,19 @@ vi.mock('@/providers/graph-provider', () => ({
     openRecent,
   }),
 }))
-vi.mock('@/providers/theme-provider', () => ({
+vi.mock('@/providers/theme-provider.tsx', () => ({
   useTheme: () => ({ theme: 'light', resolvedTheme: 'light', setTheme: vi.fn() }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: { editorMarkdownSyntax: 'hide', semanticSearchEnabled: false, theme: 'system' },
     updateSettings: vi.fn(),
   }),
 }))
-vi.mock('@/providers/audio-memo-provider', () => ({
+vi.mock('@/providers/audio-memo-provider.tsx', () => ({
   useAudioMemo: () => ({ toggle: vi.fn() }),
 }))
-vi.mock('@/providers/chat-provider', () => ({
+vi.mock('@/providers/chat-provider.tsx', () => ({
   useChatSession: () => ({ newChat }),
 }))
 

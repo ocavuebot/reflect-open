@@ -24,10 +24,10 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   subscribeFileChanges,
   hasBridge: () => true,
 }))
-vi.mock('@/lib/provider-fetch', () => ({
+vi.mock('@/lib/provider-fetch.ts', () => ({
   providerFetch: vi.fn(),
 }))
-vi.mock('@/lib/operations', () => ({
+vi.mock('@/lib/operations.ts', () => ({
   startOperation: () => ({ progress: vi.fn(), done: vi.fn(), fail: failOperation }),
 }))
 

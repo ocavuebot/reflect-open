@@ -1,8 +1,8 @@
 import { useCallback, type CSSProperties, type ReactElement } from 'react'
 import { LightboxRoot, type LightboxController } from '@meowdown/react'
-import { ImageLightboxContent } from '@/editor/image-lightbox-content'
-import { VideoLightboxContent } from '@/editor/video-lightbox-content'
-import { isMobileSurface } from '@/lib/platform-surface'
+import { ImageLightboxContent } from '@/editor/image-lightbox-content.tsx'
+import { VideoLightboxContent } from '@/editor/video-lightbox-content.tsx'
+import { isMobileSurface } from '@/lib/platform-surface.ts'
 
 // The mobile lightbox owns its background: drag-to-dismiss fades it to reveal
 // the note behind.

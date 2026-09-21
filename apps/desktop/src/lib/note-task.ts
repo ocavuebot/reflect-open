@@ -11,8 +11,8 @@ import {
   writeNote,
   type TaskMarker,
 } from '@reflect/core'
-import type { NoteSession } from '@/editor/note-session'
-import { openSession } from '@/editor/open-documents'
+import type { NoteSession } from '@/editor/note-session.ts'
+import { openSession } from '@/editor/open-documents.ts'
 
 /** The marker coordinates ({@link TaskMarker}) plus the note they live in. */
 export interface TaskRef extends TaskMarker {

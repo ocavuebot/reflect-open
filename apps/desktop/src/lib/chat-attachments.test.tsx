@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { toChatAttachment } from '@/lib/chat-attachments'
+import { toChatAttachment } from '@/lib/chat-attachments.ts'
 
 /**
  * The downscale gate over a stubbed decoder (jsdom has neither

@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 const shareMock = vi.fn<(data: ShareData) => Promise<void>>()
 const openSessionMock = vi.fn<(path: string) => { liveContent: () => string | null } | null>()
 
-vi.mock('@/editor/open-documents', () => ({
+vi.mock('@/editor/open-documents.ts', () => ({
   openSession: (path: string) => openSessionMock(path),
 }))
 

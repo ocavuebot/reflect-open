@@ -10,7 +10,7 @@ import type {
   GraphInfo,
   Settings,
 } from '@reflect/core'
-import type { NativeRecordingPart } from '@/mobile/use-native-audio-recorder'
+import type { NativeRecordingPart } from '@/mobile/use-native-audio-recorder.ts'
 
 const captureAudioMemoPart = vi.hoisted(() =>
   vi.fn<(input: CaptureAudioMemoPartInput) => Promise<CaptureAudioMemoOutcome>>(),
@@ -85,13 +85,13 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   deleteAudioMemo,
 }))
 
-vi.mock('@/lib/platform', () => ({ isMacosDesktop: false, isNativeShell: () => true }))
+vi.mock('@/lib/platform.ts', () => ({ isMacosDesktop: false, isNativeShell: () => true }))
 
-vi.mock('@/lib/transcription-reconciler', () => ({
+vi.mock('@/lib/transcription-reconciler.ts', () => ({
   createTranscriptionReconciler,
 }))
 
-vi.mock('@/lib/operations', () => ({
+vi.mock('@/lib/operations.ts', () => ({
   startOperation: () => ({
     progress: vi.fn(),
     done: vi.fn(),
@@ -99,11 +99,11 @@ vi.mock('@/lib/operations', () => ({
   }),
 }))
 
-vi.mock('@/mobile/haptics', () => ({
+vi.mock('@/mobile/haptics.ts', () => ({
   hapticImpactLight: vi.fn(),
 }))
 
-vi.mock('@/mobile/use-native-audio-recorder', () => ({
+vi.mock('@/mobile/use-native-audio-recorder.ts', () => ({
   NATIVE_RECORDING_MIME: 'audio/mp4',
   isMicDeniedError: (cause: unknown) => typeof cause === 'string' && cause.includes('denied'),
   deleteStagedRecording: stagedControls.deleteStaged,
@@ -161,7 +161,7 @@ const SETTINGS = vi.hoisted(() => ({
   },
 }))
 
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: SETTINGS.current as unknown as Settings }),
 }))
 

@@ -5,10 +5,10 @@ import {
   applyNoteRowOverlay,
   reconcileNoteRowOverlay,
   useNoteRowOverlay,
-} from '@/hooks/note-row-overlay'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+} from '@/hooks/note-row-overlay.ts'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 export interface NoteRowState {
   /** The overlay-bridged row, `null` while loading or when no row exists. */

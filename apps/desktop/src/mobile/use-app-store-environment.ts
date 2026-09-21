@@ -2,10 +2,10 @@ import { useCallback } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { getAppStoreEnvironment } from '@reflect/core'
 import { z } from 'zod'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { getLocalStorageStore } from '@/lib/local-storage'
-import { queryKeys } from '@/lib/query-client'
-import { useGraph } from '@/providers/graph-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { getLocalStorageStore } from '@/lib/local-storage.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 const appStoreEnvironmentSchema = z.enum(['Production', 'Sandbox', 'Xcode']).nullable()
 export type AppStoreEnvironment = z.infer<typeof appStoreEnvironmentSchema>

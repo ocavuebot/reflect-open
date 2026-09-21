@@ -1,8 +1,8 @@
 import type { ReactElement, ReactNode } from 'react'
 import { Check, ChevronRight, type LucideIcon } from 'lucide-react'
-import { Spinner } from '@/components/ui/spinner'
-import { Switch } from '@/components/ui/switch'
-import { cn } from '@/lib/utils'
+import { Spinner } from '@/components/ui/spinner.tsx'
+import { Switch } from '@/components/ui/switch.tsx'
+import { cn } from '@/lib/utils.ts'
 
 /**
  * iOS-style inset-grouped list primitives for the mobile settings screens:

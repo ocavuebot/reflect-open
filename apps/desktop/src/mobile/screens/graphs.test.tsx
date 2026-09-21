@@ -14,7 +14,7 @@ import { MobileGraphs } from './graphs.tsx'
  */
 
 // Keep the sheet content inline so this suite focuses on graph switching.
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({
     children,
     onOpenChange,
@@ -47,7 +47,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 
 const completeOnboarding = vi.hoisted(() => vi.fn(async (_kind: string, _root?: string) => {}))
 const graphState = vi.hoisted(() => ({ root: '/iCloud/Documents/Notes' }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: { root: graphState.root, name: 'Notes', generation: 1 } as GraphInfo,
     completeOnboarding,
@@ -56,7 +56,7 @@ vi.mock('@/providers/graph-provider', () => ({
 
 const navigate = vi.hoisted(() => vi.fn())
 const back = vi.hoisted(() => vi.fn())
-vi.mock('@/routing/router', () => ({
+vi.mock('@/routing/router.tsx', () => ({
   useRouter: () => ({ navigate, back, canBack: true }),
 }))
 

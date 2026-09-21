@@ -4,12 +4,12 @@ import { page, userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, type ReactNode } from 'react'
 import type { NoteRow } from '@reflect/core'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import { formatDayLabel } from '@/lib/dates'
-import { monthLabel, monthOf } from '@/lib/month-grid'
-import type { NoteRoute } from '@/routing/route'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { fireEvent } from '@/test-utils/fire-event'
+import { TooltipProvider } from '@/components/ui/tooltip.tsx'
+import { formatDayLabel } from '@/lib/dates.ts'
+import { monthLabel, monthOf } from '@/lib/month-grid.ts'
+import type { NoteRoute } from '@/routing/route.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 import '@/test-utils/locator.ts'
 import { DailyContextSidebar } from './daily-context-sidebar.tsx'
 
@@ -25,15 +25,15 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   readNote,
   relatedNotes,
 }))
-vi.mock('@/hooks/use-note-row', () => ({ useNoteRow }))
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/hooks/use-note-row.ts', () => ({ useNoteRow }))
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({
     settings: { semanticSearchEnabled: true, dateFormat: 'mdy', weekStartDay: 'monday' },
     updateSettings: () => {},

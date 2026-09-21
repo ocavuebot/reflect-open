@@ -1,9 +1,9 @@
 import type { ReactElement } from 'react'
 import { Check } from 'lucide-react'
-import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
-import type { TaskFilters } from '@/lib/tasks/task-filters'
-import { cn } from '@/lib/utils'
-import { hapticImpactLight } from '@/mobile/haptics'
+import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
+import type { TaskFilters } from '@/lib/tasks/task-filters.ts'
+import { cn } from '@/lib/utils.ts'
+import { hapticImpactLight } from '@/mobile/haptics.ts'
 
 interface TaskFiltersDrawerProps {
   open: boolean

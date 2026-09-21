@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { errorMessage, icloudDownloadPending, icloudPendingCount } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { useGraph } from '@/providers/graph-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /**
  * A resume transition fires `visibilitychange` and `focus` together in

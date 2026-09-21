@@ -1,7 +1,7 @@
 import { render, renderHook } from 'vitest-browser-react'
 import { describe, expect, it } from 'vitest'
 import type { ReactElement, ReactNode } from 'react'
-import { emitNoteMoved } from '@/lib/note-moves'
+import { emitNoteMoved } from '@/lib/note-moves.ts'
 import type { Route } from './route.ts'
 import { RouterFreeze, RouterProvider, useRouter } from './router.tsx'
 

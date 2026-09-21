@@ -3,10 +3,10 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import type { ReactNode } from 'react'
 import { setBridge, type AppPlatform } from '@reflect/core'
-import { usePaywallRequested } from '@/hooks/use-paywall-requested'
-import { resetLocalStorageStores } from '@/lib/local-storage'
-import { queryKeys } from '@/lib/query-client'
-import { SettingsProvider } from '@/providers/settings-provider'
+import { usePaywallRequested } from '@/hooks/use-paywall-requested.ts'
+import { resetLocalStorageStores } from '@/lib/local-storage.ts'
+import { queryKeys } from '@/lib/query-client.ts'
+import { SettingsProvider } from '@/providers/settings-provider.tsx'
 import { usePaywallGate, type PaywallGate } from './use-paywall-gate.ts'
 
 /**
@@ -20,9 +20,9 @@ import { usePaywallGate, type PaywallGate } from './use-paywall-gate.ts'
 // Hoisted above the imports, as every other graph-provider mock in this suite
 // is: the factory runs before the module body assigns anything.
 const graphState = vi.hoisted(() => ({ platform: 'ios' as AppPlatform }))
-vi.mock('@/providers/graph-provider', () => ({ useGraph: () => graphState }))
+vi.mock('@/providers/graph-provider.tsx', () => ({ useGraph: () => graphState }))
 const bridgeState = vi.hoisted(() => ({ ready: true }))
-vi.mock('@/hooks/use-bridge-ready', () => ({ useBridgeReady: () => bridgeState.ready }))
+vi.mock('@/hooks/use-bridge-ready.ts', () => ({ useBridgeReady: () => bridgeState.ready }))
 
 /** What the install-channel probe answers, or how it fails to. */
 let environment: () => Promise<string>

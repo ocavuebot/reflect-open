@@ -1,14 +1,14 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { captureInboxSpool, resolveNoteTarget, textCaptureEnvelopeSchema } from '@reflect/core'
-import { handleDeepLink } from '@/lib/deep-links/handle'
-import { startOperation } from '@/lib/operations'
+import { handleDeepLink } from '@/lib/deep-links/handle.ts'
+import { startOperation } from '@/lib/operations.ts'
 
 vi.mock('@reflect/core', async (importOriginal) => ({
   ...(await importOriginal<typeof import('@reflect/core')>()),
   captureInboxSpool: vi.fn(),
   resolveNoteTarget: vi.fn(),
 }))
-vi.mock('@/lib/operations', () => ({
+vi.mock('@/lib/operations.ts', () => ({
   startOperation: vi.fn(),
 }))
 

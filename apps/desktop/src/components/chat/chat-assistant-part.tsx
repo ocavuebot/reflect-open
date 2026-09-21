@@ -1,9 +1,9 @@
 import { useDeferredValue, type ReactElement } from 'react'
 import type { AssistantPart } from '@reflect/core'
-import { Bubble, BubbleContent } from '@/components/ui/bubble'
-import { Marker, MarkerContent } from '@/components/ui/marker'
-import { MarkdownPreview } from '@/editor/markdown-preview'
-import { cn } from '@/lib/utils'
+import { Bubble, BubbleContent } from '@/components/ui/bubble.tsx'
+import { Marker, MarkerContent } from '@/components/ui/marker.tsx'
+import { MarkdownPreview } from '@/editor/markdown-preview.tsx'
+import { cn } from '@/lib/utils.ts'
 import { ChatToolChip } from './chat-tool-chip.tsx'
 
 interface ChatAssistantPartProps {

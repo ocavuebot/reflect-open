@@ -3,7 +3,7 @@ import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { getNote, readNote, type GraphInfo } from '@reflect/core'
-import { setPlatformSurface } from '@/lib/platform-surface'
+import { setPlatformSurface } from '@/lib/platform-surface.ts'
 import { SyncConflictNotice } from './sync-conflict-notice.tsx'
 
 vi.mock('@reflect/core', async (importOriginal) => ({
@@ -17,14 +17,14 @@ const graphState = vi.hoisted(() => ({
   graph: { root: '/g', name: 'G', generation: 3 } as GraphInfo | null,
   indexGeneration: 7 as number | null,
 }))
-vi.mock('@/providers/graph-provider', () => ({ useGraph: () => graphState }))
+vi.mock('@/providers/graph-provider.tsx', () => ({ useGraph: () => graphState }))
 
 const resolution = vi.hoisted(() => ({
   busy: false,
   error: null as string | null,
   resolve: vi.fn(async () => {}),
 }))
-vi.mock('@/hooks/use-conflict-resolution', () => ({
+vi.mock('@/hooks/use-conflict-resolution.ts', () => ({
   useConflictResolution: () => resolution,
 }))
 

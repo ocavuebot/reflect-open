@@ -1,7 +1,7 @@
 import { QueryClient } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import type { NoteSession } from '@/editor/note-session'
-import { queryKeys } from '@/lib/query-client'
+import type { NoteSession } from '@/editor/note-session.ts'
+import { queryKeys } from '@/lib/query-client.ts'
 
 const readNote = vi.hoisted(() => vi.fn<(path: string) => Promise<string>>())
 const writeNote = vi.hoisted(() => vi.fn(async () => {}))
@@ -12,13 +12,13 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   readNote,
   writeNote,
 }))
-vi.mock('@/editor/open-documents', () => ({ openSession }))
+vi.mock('@/editor/open-documents.ts', () => ({ openSession }))
 
 const { reorderPinnedNotes, toggleNotePinned, unpinNote } = await import('./note-pin.ts')
 
 let client: QueryClient
 const operationFail = vi.hoisted(() => vi.fn())
-vi.mock('@/lib/operations', () => ({ startOperation: () => ({ fail: operationFail }) }))
+vi.mock('@/lib/operations.ts', () => ({ startOperation: () => ({ fail: operationFail }) }))
 
 function input(path = 'notes/a.md') {
   return { queryClient: client, root: '/g', generation: 3, path }

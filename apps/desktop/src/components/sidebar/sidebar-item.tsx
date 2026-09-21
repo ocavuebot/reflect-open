@@ -1,6 +1,6 @@
 import type { ReactElement, ReactNode } from 'react'
-import { ShortcutKeys } from '@/components/shortcut-keys'
-import { cn } from '@/lib/utils'
+import { ShortcutKeys } from '@/components/shortcut-keys.tsx'
+import { cn } from '@/lib/utils.ts'
 
 interface SidebarItemProps {
   /** A 24px icon node — the V1 custom glyphs, or a Lucide icon in a 24px box. */

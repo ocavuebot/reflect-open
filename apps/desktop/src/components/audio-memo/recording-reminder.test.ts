@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { MockToastAddOptions } from '@/test-utils/toast'
+import type { MockToastAddOptions } from '@/test-utils/toast.ts'
 import { showRecordingReminder } from './recording-reminder.ts'
 
 const toast = vi.hoisted(() => ({
@@ -7,7 +7,7 @@ const toast = vi.hoisted(() => ({
   close: vi.fn(),
 }))
 
-vi.mock('@/components/ui/toast', () => ({ toast }))
+vi.mock('@/components/ui/toast.tsx', () => ({ toast }))
 
 afterEach(() => {
   toast.add.mockClear()

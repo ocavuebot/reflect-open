@@ -15,8 +15,8 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   listTemplates,
   hasBridge,
 }))
-vi.mock('@/lib/note-templates', () => ({ insertTemplate }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/lib/note-templates.ts', () => ({ insertTemplate }))
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', generation: 1 } }),
 }))
 

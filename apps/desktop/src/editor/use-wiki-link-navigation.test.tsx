@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { render } from 'vitest-browser-react'
 import type { ReactNode } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
 import { useWikiLinkNavigation } from './use-wiki-link-navigation.ts'
 
 const resolveWikiTarget = vi.hoisted(() => vi.fn())
@@ -16,11 +16,11 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   resolveExistingWikiTarget,
   resolveOrCreateNoteWithTitle,
 }))
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
-vi.mock('@/lib/operations', () => ({ startOperation }))
+vi.mock('@/lib/operations.ts', () => ({ startOperation }))
 
 let lastHandler: ((options: { target: string; openInNewWindow: boolean }) => void) | null = null
 let navigate: ReturnType<typeof useRouter>['navigate'] | null = null

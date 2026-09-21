@@ -22,15 +22,15 @@ const memo = vi.hoisted(() => ({
   discard: vi.fn(),
 }))
 
-vi.mock('@/routing/router', () => ({
+vi.mock('@/routing/router.tsx', () => ({
   useRouter: () => ({ navigate }),
 }))
 
-vi.mock('@/mobile/audio-memo-provider', () => ({
+vi.mock('@/mobile/audio-memo-provider.tsx', () => ({
   useMobileAudioMemo: () => ({ ...memo }),
 }))
 
-vi.mock('@/mobile/haptics', () => ({
+vi.mock('@/mobile/haptics.ts', () => ({
   hapticImpactLight,
 }))
 

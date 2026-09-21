@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { page, type Locator } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import type { V1ImportState } from '@/providers/v1-import-provider'
+import type { V1ImportState } from '@/providers/v1-import-provider.tsx'
 
 const open = vi.hoisted(() => vi.fn<() => Promise<string | null>>())
 const startImport = vi.hoisted(() => vi.fn())
@@ -10,7 +10,7 @@ const importState = vi.hoisted((): { state: V1ImportState } => ({
 }))
 
 vi.mock('@tauri-apps/plugin-dialog', () => ({ open }))
-vi.mock('@/providers/v1-import-provider', () => ({
+vi.mock('@/providers/v1-import-provider.tsx', () => ({
   useV1Import: () => ({
     state: importState.state,
     startImport,

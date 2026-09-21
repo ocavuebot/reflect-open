@@ -4,11 +4,11 @@ import { userEvent, type Locator } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { OpenTask } from '@reflect/core'
 import { act, useEffect, useState, type MutableRefObject, type ReactNode } from 'react'
-import { queryKeys } from '@/lib/query-client'
-import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture'
-import { resetRecentlyCompleted } from '@/lib/tasks/recently-completed'
-import { RouterProvider, useRouter } from '@/routing/router'
-import { fireEvent } from '@/test-utils/fire-event'
+import { queryKeys } from '@/lib/query-client.ts'
+import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture.ts'
+import { resetRecentlyCompleted } from '@/lib/tasks/recently-completed.ts'
+import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 import '@/test-utils/locator.ts'
 import { TasksScreen } from './tasks-screen.tsx'
 
@@ -21,18 +21,18 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   getOpenTasks,
   getCompletedTasks,
 }))
-vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
+vi.mock('@/lib/windows/open-in-new-window.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
   openRouteInNewWindow,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
-vi.mock('@/lib/use-today', () => ({ useToday: () => '2026-06-14' }))
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/lib/use-today.ts', () => ({ useToday: () => '2026-06-14' }))
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: { dateFormat: 'mdy' } }),
 }))
-vi.mock('@/editor/markdown-preview', () => ({
+vi.mock('@/editor/markdown-preview.tsx', () => ({
   MarkdownPreview: ({ content, className }: { content: string; className?: string }) => {
     const strong = /^(.*)\*\*([^*]+)\*\*(.*)$/u.exec(content)
     const before = strong?.[1] ?? ''
@@ -60,7 +60,7 @@ const editTask = vi.hoisted(() => vi.fn())
 const insertTask = vi.hoisted(() => vi.fn())
 const continueTaskInContext = vi.hoisted(() => vi.fn())
 const convertTaskToBullet = vi.hoisted(() => vi.fn())
-vi.mock('@/lib/note-task', () => ({
+vi.mock('@/lib/note-task.ts', () => ({
   toggleTask,
   deleteTask,
   editTask,
@@ -178,8 +178,8 @@ vi.mock('./task-editor', () => ({
 
 const fail = vi.hoisted(() => vi.fn())
 const startOperation = vi.hoisted(() => vi.fn(() => ({ fail })))
-vi.mock('@/lib/operations', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/operations')>()),
+vi.mock('@/lib/operations.ts', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('@/lib/operations.ts')>()),
   startOperation,
 }))
 

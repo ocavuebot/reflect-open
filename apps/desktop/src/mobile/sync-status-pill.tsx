@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
-import { cn } from '@/lib/utils'
-import { useKeyboardVisible } from '@/mobile/use-keyboard'
-import { useMobileSyncStatus } from '@/mobile/use-sync-status'
+import { cn } from '@/lib/utils.ts'
+import { useKeyboardVisible } from '@/mobile/use-keyboard.ts'
+import { useMobileSyncStatus } from '@/mobile/use-sync-status.ts'
 
 /**
  * The sync-status pill (Plan 19, step 10): a small chip that appears only

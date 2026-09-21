@@ -2,7 +2,7 @@ import { act, type ReactNode } from 'react'
 import { cleanup, render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { fireEvent } from '@/test-utils/fire-event'
+import { fireEvent } from '@/test-utils/fire-event.ts'
 
 const memo = vi.hoisted(() => ({
   phase: 'recording' as 'idle' | 'requesting' | 'recording' | 'transcribing' | 'error',
@@ -22,7 +22,7 @@ const memo = vi.hoisted(() => ({
   discard: vi.fn(),
 }))
 
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({ open, children }: { open?: boolean; children?: ReactNode }) =>
     open ? <div data-testid="drawer">{children}</div> : null,
   DrawerContent: ({ children }: { children?: ReactNode }) => <div>{children}</div>,
@@ -30,13 +30,13 @@ vi.mock('@/components/ui/drawer', () => ({
   DrawerTitle: ({ children }: { children?: ReactNode }) => <h2>{children}</h2>,
 }))
 
-vi.mock('@/mobile/audio-memo-provider', () => ({
+vi.mock('@/mobile/audio-memo-provider.tsx', () => ({
   useMobileAudioMemo: () => ({ ...memo }),
 }))
 
 const navigate = vi.hoisted(() => vi.fn())
 
-vi.mock('@/routing/router', () => ({
+vi.mock('@/routing/router.tsx', () => ({
   useRouter: () => ({ navigate }),
 }))
 

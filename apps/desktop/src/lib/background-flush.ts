@@ -1,7 +1,7 @@
 import { beginBackgroundTask, endBackgroundTask, type BackgroundTaskToken } from '@reflect/core'
-import { flushOpenDocuments } from '@/editor/open-documents'
-import { flushBackup } from '@/lib/backup-flush'
-import { flushSettings } from '@/lib/settings-flush'
+import { flushOpenDocuments } from '@/editor/open-documents.ts'
+import { flushBackup } from '@/lib/backup-flush.ts'
+import { flushSettings } from '@/lib/settings-flush.ts'
 
 /**
  * The mobile leg of quit-time persistence (Plan 19, decision 6). Desktop's

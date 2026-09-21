@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
-import { useBridgeReady } from '@/hooks/use-bridge-ready'
-import { createDailyDatesQueryOptions } from '@/lib/query-options'
-import { useGraph } from '@/providers/graph-provider'
+import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
+import { createDailyDatesQueryOptions } from '@/lib/query-options.ts'
+import { useGraph } from '@/providers/graph-provider.tsx'
 
 /** Indexed daily-note dates in an inclusive range, ready for calendar lookup. */
 export function useDailyNoteDates(start: string, end: string): ReadonlySet<string> {

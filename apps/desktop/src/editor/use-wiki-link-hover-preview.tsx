@@ -1,8 +1,8 @@
 import { useCallback, type ReactNode } from 'react'
 import type { WikilinkHoverHit } from '@meowdown/core'
 import { resolveExistingWikiTarget, splitFrontmatter, type DateFormat } from '@reflect/core'
-import { WikiLinkHoverPreview } from '@/components/wiki-link-hover-preview'
-import { readExistingNoteSource } from '@/lib/read-existing-note-source'
+import { WikiLinkHoverPreview } from '@/components/wiki-link-hover-preview.tsx'
+import { readExistingNoteSource } from '@/lib/read-existing-note-source.ts'
 
 interface WikiLinkHoverPreviewOptions {
   generation: number | null

@@ -1,8 +1,8 @@
 import { useEffect, useRef, type ReactElement, type ReactNode } from 'react'
 import type { AiProvidersState, GraphInfo } from '@reflect/core'
-import { createAssetDescribeController } from '@/lib/asset-describe-controller'
-import { useMainWindowEffect } from '@/hooks/use-main-window-effect'
-import { useSettings } from '@/providers/settings-provider'
+import { createAssetDescribeController } from '@/lib/asset-describe-controller.ts'
+import { useMainWindowEffect } from '@/hooks/use-main-window-effect.ts'
+import { useSettings } from '@/providers/settings-provider.tsx'
 
 /**
  * Mounts the asset-description lifecycle for the open graph (Plan 20): runs the

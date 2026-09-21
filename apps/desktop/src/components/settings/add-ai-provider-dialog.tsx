@@ -5,8 +5,8 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
-import type { NewAiProvider } from '@/hooks/use-ai-providers'
+} from '@/components/ui/dialog.tsx'
+import type { NewAiProvider } from '@/hooks/use-ai-providers.ts'
 
 interface AddAiProviderDialogProps {
   /** Persists the new provider (keychain + settings); rejects on failure. */
@@ -15,7 +15,7 @@ interface AddAiProviderDialogProps {
 }
 
 const AddAiProviderForm = lazy(async () => {
-  const { AddAiProviderForm } = await import('@/components/settings/add-ai-provider-form')
+  const { AddAiProviderForm } = await import('@/components/settings/add-ai-provider-form.tsx')
   return { default: AddAiProviderForm }
 })
 

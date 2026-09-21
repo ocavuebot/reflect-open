@@ -3,7 +3,7 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { DEFAULT_SETTINGS, getConflictedNotes, type GraphInfo, type Settings } from '@reflect/core'
-import type { BackupState } from '@/lib/backup-controller'
+import type { BackupState } from '@/lib/backup-controller.ts'
 import '@/test-utils/locator.ts'
 import { MobileSettings } from './settings.tsx'
 
@@ -25,13 +25,13 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 const graphState = vi.hoisted(() => ({
   mobileStorageKind: 'icloud' as 'icloud' | 'local' | null,
 }))
-vi.mock('@/providers/graph-provider', () => ({
+vi.mock('@/providers/graph-provider.tsx', () => ({
   useGraph: () => ({
     graph: { root: '/g', name: 'Field Notes', generation: 1 } as GraphInfo,
     mobileStorageKind: graphState.mobileStorageKind,
   }),
 }))
-vi.mock('@/hooks/use-app-version', () => ({ useAppVersion: () => '1.2.3-beta.4' }))
+vi.mock('@/hooks/use-app-version.ts', () => ({ useAppVersion: () => '1.2.3-beta.4' }))
 
 const openUrl = vi.hoisted(() => vi.fn(() => Promise.resolve()))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl }))
@@ -41,13 +41,13 @@ const updateSettings = vi.hoisted(() => vi.fn())
 // Routed through the `updateSettings` spy (see beforeEach) so prompt-list
 // edits assert on the patch their functional update produces.
 const updateSettingsWith = vi.hoisted(() => vi.fn())
-vi.mock('@/providers/settings-provider', () => ({
+vi.mock('@/providers/settings-provider.tsx', () => ({
   useSettings: () => ({ settings: settingsState.current, updateSettings, updateSettingsWith }),
 }))
 
 const navigate = vi.hoisted(() => vi.fn())
 const back = vi.hoisted(() => vi.fn())
-vi.mock('@/routing/router', () => ({
+vi.mock('@/routing/router.tsx', () => ({
   useRouter: () => ({ navigate, back, canBack: true }),
 }))
 
@@ -58,12 +58,12 @@ const sync = vi.hoisted(() => ({
     signOut: () => Promise<void>
   } | null,
 }))
-vi.mock('@/providers/sync-provider', () => ({
+vi.mock('@/providers/sync-provider.tsx', () => ({
   useSyncContext: () => sync.value,
 }))
 
 // The prompt editor's state and save wiring render through this open-state shell.
-vi.mock('@/components/ui/drawer', () => ({
+vi.mock('@/components/ui/drawer.tsx', () => ({
   Drawer: ({ open, children }: { open?: boolean; children?: import('react').ReactNode }) =>
     open ? <div data-testid="drawer">{children}</div> : null,
   DrawerContent: ({ children }: { children?: import('react').ReactNode }) => <div>{children}</div>,
@@ -73,7 +73,7 @@ vi.mock('@/components/ui/drawer', () => ({
 
 // The sheet itself is covered by connect-github-drawer.test.tsx; the screen
 // test only cares that Settings opens it.
-vi.mock('@/mobile/connect-github-drawer', () => ({
+vi.mock('@/mobile/connect-github-drawer.tsx', () => ({
   ConnectGithubDrawer: ({ open }: { open: boolean }) =>
     open ? <div>connect-github-sheet</div> : null,
 }))
