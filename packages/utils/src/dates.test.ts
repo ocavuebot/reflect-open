@@ -6,7 +6,7 @@ import {
   isIsoDate,
   isoFromParts,
   weekdayIso,
-} from './dates'
+} from './dates.ts'
 
 describe('addDaysIso', () => {
   it('adds and subtracts calendar days across month and year boundaries', () => {
