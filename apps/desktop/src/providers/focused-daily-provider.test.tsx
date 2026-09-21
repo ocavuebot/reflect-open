@@ -1,7 +1,7 @@
 import { renderHook } from 'vitest-browser-react'
 import { describe, expect, it } from 'vitest'
 import type { ReactNode } from 'react'
-import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { RouterProvider, useRouter } from '@/routing/router'
 import {
   FocusedDailyProvider,
   useDailyContextTarget,

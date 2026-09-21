@@ -6,8 +6,8 @@ import {
   MessageScrollerItem,
   MessageScrollerProvider,
   MessageScrollerViewport,
-} from '@/components/ui/message-scroller.tsx'
-import { useChatSession } from '@/providers/chat-provider.tsx'
+} from '@/components/ui/message-scroller'
+import { useChatSession } from '@/providers/chat-provider'
 import { ChatTurn } from './chat-turn.tsx'
 
 /**

@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { hasMacosTitleBarOverlay } from '@/lib/window-chrome.ts'
+import { hasMacosTitleBarOverlay } from '@/lib/window-chrome'
 
 /**
  * Invisible strip standing in for the macOS title bar when it's overlaid

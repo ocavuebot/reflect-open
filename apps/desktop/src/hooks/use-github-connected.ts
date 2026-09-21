@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { loadGithubAuth } from '@reflect/core'
-import { useBridgeReady } from '@/hooks/use-bridge-ready.ts'
-import { queryKeys } from '@/lib/query-client.ts'
+import { useBridgeReady } from '@/hooks/use-bridge-ready'
+import { queryKeys } from '@/lib/query-client'
 
 /**
  * Whether a GitHub credential is stored on this machine (keychain presence,

@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { GraphInfo } from '@reflect/core'
-import { dispatchDeepLink, resetDeepLinkIntakeForTests } from '@/lib/deep-links/intake.ts'
+import { dispatchDeepLink, resetDeepLinkIntakeForTests } from '@/lib/deep-links/intake'
 
 const resolveNoteTarget = vi.hoisted(() => vi.fn())
 const captureInboxSpool = vi.hoisted(() => vi.fn(async () => {}))

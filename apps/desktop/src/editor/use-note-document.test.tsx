@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { renderHook } from 'vitest-browser-react'
 import { setBridge, upsertFrontmatter } from '@reflect/core'
-import { onNoteMoved } from '@/lib/note-moves.ts'
+import { onNoteMoved } from '@/lib/note-moves'
 import { flushOpenDocuments } from './open-documents.ts'
 import type { NoteEditorHandle } from './note-editor.tsx'
 import { useNoteDocument } from './use-note-document.ts'

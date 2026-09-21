@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useSyncExternalStore } from 'react'
-import { focusedEditorCommands } from '@/editor/formatting-toolbar-store.ts'
+import { focusedEditorCommands } from '@/editor/formatting-toolbar-store'
 
 let currentKeyboardHeight = 0
 const keyboardListeners = new Set<() => void>()

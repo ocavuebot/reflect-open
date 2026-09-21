@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import type { AiPrompt, AiPromptMode } from '@reflect/core'
-import { useSettings } from '@/providers/settings-provider.tsx'
+import { useSettings } from '@/providers/settings-provider'
 
 /**
  * The saved-AI-prompts surface (the editor AI menu's user library): CRUD over

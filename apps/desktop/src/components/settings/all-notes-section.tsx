@@ -1,7 +1,7 @@
 import { useState, type ReactElement } from 'react'
 import { foldTag, isTagName } from '@reflect/core'
 import { X } from 'lucide-react'
-import { useSettings } from '@/providers/settings-provider.tsx'
+import { useSettings } from '@/providers/settings-provider'
 import { SettingsField } from './field.tsx'
 import { SettingsSection } from './section.tsx'
 

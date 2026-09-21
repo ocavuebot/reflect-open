@@ -1,5 +1,5 @@
-import { EDITOR_BINDING_DESCRIPTIONS } from '@/editor/keymap.ts'
-import { APP_COMMANDS } from '@/lib/commands/app-commands.ts'
+import { EDITOR_BINDING_DESCRIPTIONS } from '@/editor/keymap'
+import { APP_COMMANDS } from '@/lib/commands/app-commands'
 
 /** One row of a shortcuts listing: a binding and what it does. */
 export interface Shortcut {

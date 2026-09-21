@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { readNote, writeNote, type FileChange } from '@reflect/core'
-import { useFileChanges } from '@/lib/use-file-changes.ts'
+import { useFileChanges } from '@/lib/use-file-changes'
 import { createDocumentBinding, type DocumentBinding } from './document-binding.ts'
 import type { NoteEditorHandle } from './note-editor.tsx'
 import { createRenameCoordinator } from './rename-coordinator.ts'

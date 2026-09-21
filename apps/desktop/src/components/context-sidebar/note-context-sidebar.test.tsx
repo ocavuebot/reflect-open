@@ -3,8 +3,8 @@ import { userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
-import { TooltipProvider } from '@/components/ui/tooltip.tsx'
-import { RouterProvider, useRouter } from '@/routing/router.tsx'
+import { TooltipProvider } from '@/components/ui/tooltip'
+import { RouterProvider, useRouter } from '@/routing/router'
 import { NoteContextSidebar } from './note-context-sidebar.tsx'
 
 const relatedNotes = vi.hoisted(() => vi.fn())

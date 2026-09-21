@@ -10,7 +10,7 @@ import type {
   GraphInfo,
   Settings,
 } from '@reflect/core'
-import type { NativeRecordingPart } from '@/mobile/use-native-audio-recorder.ts'
+import type { NativeRecordingPart } from '@/mobile/use-native-audio-recorder'
 
 const captureAudioMemoPart = vi.hoisted(() =>
   vi.fn<(input: CaptureAudioMemoPartInput) => Promise<CaptureAudioMemoOutcome>>(),

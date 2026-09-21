@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactElement } from 'react'
-import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { expectLocatorToHaveCount } from '@/test-utils/expect'
 
 interface SummaryFixture {
   importedFiles: number

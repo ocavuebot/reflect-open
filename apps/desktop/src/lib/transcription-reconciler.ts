@@ -8,9 +8,9 @@ import {
   type AiProvidersState,
   type ReconcileStop,
 } from '@reflect/core'
-import { createBackgroundReconciler } from '@/lib/background-reconciler.ts'
-import { startOperation } from '@/lib/operations.ts'
-import { providerFetch } from '@/lib/provider-fetch.ts'
+import { createBackgroundReconciler } from '@/lib/background-reconciler'
+import { startOperation } from '@/lib/operations'
+import { providerFetch } from '@/lib/provider-fetch'
 
 /**
  * The background-transcription lifecycle for one graph session. Built on

@@ -1,10 +1,10 @@
 import type { FilteredSearchHit, PinnedNote } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client.ts'
+import { queryKeys } from '@/lib/query-client'
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 import { useState, type ReactElement } from 'react'
 import { render } from 'vitest-browser-react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { pointer, swipe, translateX } from '@/test-utils/swipe.ts'
+import { pointer, swipe, translateX } from '@/test-utils/swipe'
 import { NoteRowList } from './note-row-list.tsx'
 import { SwipeableNoteRow, type NoteRowModel } from './swipeable-note-row.tsx'
 

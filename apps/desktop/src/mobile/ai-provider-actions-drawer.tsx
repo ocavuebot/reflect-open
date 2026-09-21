@@ -6,8 +6,8 @@ import {
   errorMessage,
   type AiProviderConfig,
 } from '@reflect/core'
-import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
-import { SettingsActionRow, SettingsGroup, SettingsSelectRow } from '@/mobile/settings-list.tsx'
+import { Drawer, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
+import { SettingsActionRow, SettingsGroup, SettingsSelectRow } from '@/mobile/settings-list'
 
 interface AiProviderActionsDrawerProps {
   /** The provider the sheet manages; null renders nothing (exit animation). */

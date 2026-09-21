@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
-import { cn } from '@/lib/utils.ts'
+import { cn } from '@/lib/utils'
 
 interface SettingsOptionCardProps {
   /** Whether this card's radio input is the chosen value. */

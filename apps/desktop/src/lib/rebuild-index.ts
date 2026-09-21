@@ -1,7 +1,7 @@
 import { embedStatus, errorMessage, rebuildIndex } from '@reflect/core'
-import { startOperation } from '@/lib/operations.ts'
-import { invalidateIndexQueries } from '@/lib/query-client.ts'
-import { backfillEmbeddingsVisibly } from '@/lib/semantic.ts'
+import { startOperation } from '@/lib/operations'
+import { invalidateIndexQueries } from '@/lib/query-client'
+import { backfillEmbeddingsVisibly } from '@/lib/semantic'
 
 let inFlight: { generation: number; promise: Promise<void> } | null = null
 

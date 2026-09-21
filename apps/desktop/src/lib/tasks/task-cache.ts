@@ -1,6 +1,6 @@
 import { parseNote, type OpenTask } from '@reflect/core'
-import type { TaskMarkerOffsetChange } from '@/lib/note-task.ts'
-import { sameTask, taskKey } from '@/lib/tasks/task-identity.ts'
+import type { TaskMarkerOffsetChange } from '@/lib/note-task'
+import { sameTask, taskKey } from '@/lib/tasks/task-identity'
 
 /**
  * Pure transforms over a cached task list ({@link OpenTask}[]), the optimistic

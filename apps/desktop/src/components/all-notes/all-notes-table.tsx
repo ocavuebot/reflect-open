@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useRef, type MouseEvent, type ReactElement } from 'react'
 import { Virtualizer, type VirtualizerHandle } from 'virtua'
 import type { NoteListEntry } from '@reflect/core'
-import type { ListSelection } from '@/lib/selection/use-list-selection.ts'
-import { cn } from '@/lib/utils.ts'
-import type { ModClickEvent } from '@/lib/windows/open-in-new-window.ts'
+import type { ListSelection } from '@/lib/selection/use-list-selection'
+import { cn } from '@/lib/utils'
+import type { ModClickEvent } from '@/lib/windows/open-in-new-window'
 import { ALL_NOTES_GRID, AllNotesRow } from './all-notes-row.tsx'
 
 interface AllNotesTableProps {

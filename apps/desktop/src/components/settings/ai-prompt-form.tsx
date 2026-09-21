@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
 import { useForm, useWatch } from 'react-hook-form'
 import type { AiPrompt, AiPromptMode } from '@reflect/core'
-import { Button } from '@/components/ui/button.tsx'
-import { Input } from '@/components/ui/input.tsx'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import {
   Select,
   SelectContent,
@@ -10,9 +10,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select.tsx'
-import { Textarea } from '@/components/ui/textarea.tsx'
-import type { AiPromptDraft } from '@/hooks/use-ai-prompts.ts'
+} from '@/components/ui/select'
+import { Textarea } from '@/components/ui/textarea'
+import type { AiPromptDraft } from '@/hooks/use-ai-prompts'
 
 interface AiPromptFormProps {
   /** The prompt being edited, or null when adding a new one. */

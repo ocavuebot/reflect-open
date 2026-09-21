@@ -1,4 +1,4 @@
-import { StorageStore } from '@/lib/storage.ts'
+import { StorageStore } from '@/lib/storage'
 
 const sessionStorageStores = new Map<string, StorageStore>()
 

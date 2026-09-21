@@ -3,7 +3,7 @@ import { page, type Locator } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { ReactNode } from 'react'
 import type { ApiKeyValidation, ApiKeyValidationInput } from '@reflect/core'
-import { fireEvent } from '@/test-utils/fire-event.ts'
+import { fireEvent } from '@/test-utils/fire-event'
 
 /**
  * The mobile add-provider sheet over the shared submit flow: a verified key

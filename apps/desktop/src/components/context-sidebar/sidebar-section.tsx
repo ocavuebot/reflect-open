@@ -1,6 +1,6 @@
 import { useState, type ReactElement, type ReactNode } from 'react'
 import { ChevronDown, ChevronRight } from 'lucide-react'
-import { cn } from '@/lib/utils.ts'
+import { cn } from '@/lib/utils'
 
 interface SidebarSectionProps {
   /** Session-storage key suffix persisting this section's open state. */

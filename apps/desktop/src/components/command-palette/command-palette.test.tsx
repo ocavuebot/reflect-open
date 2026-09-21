@@ -3,11 +3,11 @@ import { userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { useEffect, type ReactNode } from 'react'
-import type { CommandContext } from '@/lib/commands/types.ts'
-import { formatBinding, isApplePlatform } from '@/lib/keybindings.ts'
-import type { NoteRoute } from '@/routing/route.ts'
-import { RouterProvider, useRouter } from '@/routing/router.tsx'
-import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import type { CommandContext } from '@/lib/commands/types'
+import { formatBinding, isApplePlatform } from '@/lib/keybindings'
+import type { NoteRoute } from '@/routing/route'
+import { RouterProvider, useRouter } from '@/routing/router'
+import { expectLocatorToHaveCount } from '@/test-utils/expect'
 import { CommandPalette } from './command-palette.tsx'
 import { PaletteProvider, usePalette } from './palette-provider.tsx'
 
@@ -32,7 +32,7 @@ vi.mock('@/editor/markdown-preview', () => ({
   ),
 }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
   openRouteInNewWindow,
 }))
 // The model is absent by default: the palette is exactly the lexical surface
@@ -54,7 +54,7 @@ vi.mock('@/providers/graph-provider', () => ({
   useGraph: () => ({ graph: { root: '/g', name: 'g', generation: 1 } }),
 }))
 // Register after the core mock is installed so commands see the mocked graph.
-const { registerAppCommands } = await import('@/lib/commands/app-commands.ts')
+const { registerAppCommands } = await import('@/lib/commands/app-commands')
 registerAppCommands()
 
 beforeEach(() => {

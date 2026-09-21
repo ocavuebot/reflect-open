@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { todayIso } from '@/lib/dates.ts'
-import { useRouter } from '@/routing/router.tsx'
+import { todayIso } from '@/lib/dates'
+import { useRouter } from '@/routing/router'
 
 /**
  * V1's wake-to-today: when the app returns to the foreground on a later

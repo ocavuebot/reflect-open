@@ -2,7 +2,7 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { GraphInfo } from '@reflect/core'
-import type { ContextSidebarTarget } from '@/components/context-sidebar/sidebar-route.ts'
+import type { ContextSidebarTarget } from '@/components/context-sidebar/sidebar-route'
 
 interface WorkspaceState {
   collapsed: boolean

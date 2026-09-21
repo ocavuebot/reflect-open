@@ -1,7 +1,7 @@
 import { act } from 'react'
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { createDayWindow, dateAtIndex } from '@/lib/day-window.ts'
+import { createDayWindow, dateAtIndex } from '@/lib/day-window'
 import {
   CAROUSEL_RADIUS,
   reconcileCarousel,

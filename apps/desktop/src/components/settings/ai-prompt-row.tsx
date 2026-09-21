@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import { Pencil, Trash2 } from 'lucide-react'
 import type { AiPrompt } from '@reflect/core'
-import { Button } from '@/components/ui/button.tsx'
+import { Button } from '@/components/ui/button'
 
 interface AiPromptRowProps {
   prompt: AiPrompt

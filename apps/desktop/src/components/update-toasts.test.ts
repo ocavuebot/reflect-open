@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { UpdateController, UpdateState } from '@/lib/update-controller.ts'
-import type { MockToastAddOptions } from '@/test-utils/toast.ts'
+import type { UpdateController, UpdateState } from '@/lib/update-controller'
+import type { MockToastAddOptions } from '@/test-utils/toast'
 import { attachUpdateToasts } from './update-toasts.ts'
 
 const toast = vi.hoisted(() => ({

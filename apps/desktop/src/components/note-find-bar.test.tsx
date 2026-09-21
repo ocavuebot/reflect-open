@@ -5,16 +5,16 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import {
   registerNoteEditorHandle,
   unregisterNoteEditorHandle,
-} from '@/editor/editor-handle-registry.ts'
-import type { NoteEditorHandle } from '@/editor/note-editor.tsx'
-import { FocusedDailyProvider } from '@/providers/focused-daily-provider.tsx'
+} from '@/editor/editor-handle-registry'
+import type { NoteEditorHandle } from '@/editor/note-editor'
+import { FocusedDailyProvider } from '@/providers/focused-daily-provider'
 import {
   NoteFindProvider,
   useNoteFindActions,
   useNoteSearchQuery,
   useNoteSearchReport,
-} from '@/providers/note-find-provider.tsx'
-import { RouterProvider } from '@/routing/router.tsx'
+} from '@/providers/note-find-provider'
+import { RouterProvider } from '@/routing/router'
 import { NoteFindBar } from './note-find-bar.tsx'
 
 vi.mock('@/lib/windows/window-role', () => ({ isMainWindow: () => true }))

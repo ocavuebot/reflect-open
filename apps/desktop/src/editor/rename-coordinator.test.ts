@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { upsertFrontmatter } from '@reflect/core'
-import { onNoteMoved } from '@/lib/note-moves.ts'
+import { onNoteMoved } from '@/lib/note-moves'
 import type { NoteSession } from './note-session.ts'
 import { openSession, registerOpenDocument, retargetOpenDocument } from './open-documents.ts'
 

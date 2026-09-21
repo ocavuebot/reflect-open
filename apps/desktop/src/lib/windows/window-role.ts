@@ -1,5 +1,5 @@
 import { getCurrentWindow } from '@tauri-apps/api/window'
-import { isNativeShell } from '@/lib/platform.ts'
+import { isNativeShell } from '@/lib/platform'
 
 /**
  * Which window this webview is: the main window (the config-declared `main`

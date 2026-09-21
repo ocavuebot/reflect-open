@@ -2,8 +2,8 @@ import { StrictMode } from 'react'
 import { render } from 'vitest-browser-react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { GraphInfo } from '@reflect/core'
-import type { DeepLinkIo } from '@/lib/deep-links/handle.ts'
-import { beginLinkNavigationIntent } from '@/lib/windows/link-navigation-intent.ts'
+import type { DeepLinkIo } from '@/lib/deep-links/handle'
+import { beginLinkNavigationIntent } from '@/lib/windows/link-navigation-intent'
 
 const setDeepLinkHandler = vi.hoisted(() =>
   vi.fn<(handler: ((url: string) => void) | null) => void>(),

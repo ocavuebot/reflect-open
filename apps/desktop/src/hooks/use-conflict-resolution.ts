@@ -8,8 +8,8 @@ import {
   writeNote,
   type ConflictResolution,
 } from '@reflect/core'
-import { invalidateIndexQueries } from '@/lib/query-client.ts'
-import { useGraph } from '@/providers/graph-provider.tsx'
+import { invalidateIndexQueries } from '@/lib/query-client'
+import { useGraph } from '@/providers/graph-provider'
 
 export interface ConflictResolutionState {
   busy: boolean

@@ -1,1 +1,1 @@
-export { deleteOpenNote } from '@/lib/note-delete.ts'
+export { deleteOpenNote } from '@/lib/note-delete'

@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
 import { fetch as tauriFetch } from '@tauri-apps/plugin-http'
 import { openUrl } from '@tauri-apps/plugin-opener'
-import type { ConnectExistingResult } from '@/lib/backup-controller.ts'
+import type { ConnectExistingResult } from '@/lib/backup-controller'
 import { ConnectGithubDialog } from './connect-github-dialog.tsx'
 
 const sync = vi.hoisted(() => ({
@@ -14,7 +14,7 @@ const sync = vi.hoisted(() => ({
 vi.mock('@/providers/sync-provider', () => ({ useSync: () => sync }))
 vi.mock('@tauri-apps/plugin-http', () => ({ fetch: vi.fn() }))
 vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/platform')>()),
   isNativeShell: () => true,
 }))
 vi.mock('@tauri-apps/plugin-opener', () => ({ openUrl: vi.fn() }))

@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
 import type { resolveArchivedPost } from '@reflect/core/x-archive'
-import { invalidateXPostQueries, queryClient } from '@/lib/query-client.ts'
+import { invalidateXPostQueries, queryClient } from '@/lib/query-client'
 import { createXPostResolver, getXPostResolver } from './use-x-post-resolver.ts'
 
 vi.mock('@tauri-apps/api/core', () => ({

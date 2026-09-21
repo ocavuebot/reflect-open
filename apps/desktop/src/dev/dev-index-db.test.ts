@@ -12,12 +12,12 @@ import {
   suggestWikiLinkTargets,
   type IndexedNote,
 } from '@reflect/core'
-import { createDevIndexDb, type DevIndexDb } from '@/dev/dev-index-db.ts'
+import { createDevIndexDb, type DevIndexDb } from '@/dev/dev-index-db'
 import {
   buildAllNotesSearch,
   EMPTY_ALL_NOTES_FILTERS,
   searchPlanFor,
-} from '@/mobile/search-filters/filter-state.ts'
+} from '@/mobile/search-filters/filter-state'
 
 function sampleNote(overrides: Partial<IndexedNote> = {}): IndexedNote {
   return {

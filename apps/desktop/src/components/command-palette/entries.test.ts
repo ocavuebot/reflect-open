@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { AppCommand } from '@/lib/commands/types.ts'
+import type { AppCommand } from '@/lib/commands/types'
 import type { WikiSuggestion } from '@reflect/core'
 import { buildPaletteSections, type PaletteHit } from './entries.ts'
 

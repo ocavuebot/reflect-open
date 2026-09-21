@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import type { GraphColor } from '@reflect/core'
-import { useSettings } from '@/providers/settings-provider.tsx'
+import { useSettings } from '@/providers/settings-provider'
 
 interface GraphColorsValue {
   /** The color chosen for `root`, or `undefined` if it's on the default. */

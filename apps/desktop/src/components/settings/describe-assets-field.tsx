@@ -1,6 +1,6 @@
 import { useState, type ReactElement } from 'react'
 import type { AiProvidersState } from '@reflect/core'
-import { Button } from '@/components/ui/button.tsx'
+import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogContent,
@@ -8,11 +8,11 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog.tsx'
-import { Switch } from '@/components/ui/switch.tsx'
-import { backfillAssetDescriptionsVisibly } from '@/lib/asset-backfill.ts'
-import { useGraph } from '@/providers/graph-provider.tsx'
-import { useSettings } from '@/providers/settings-provider.tsx'
+} from '@/components/ui/dialog'
+import { Switch } from '@/components/ui/switch'
+import { backfillAssetDescriptionsVisibly } from '@/lib/asset-backfill'
+import { useGraph } from '@/providers/graph-provider'
+import { useSettings } from '@/providers/settings-provider'
 import { SettingsField } from './field.tsx'
 
 /**

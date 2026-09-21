@@ -1,5 +1,5 @@
 import type { ChatAttachment } from '@reflect/core'
-import { base64Of } from '@/lib/base64.ts'
+import { base64Of } from '@/lib/base64'
 
 /**
  * Image attachments for the chat composer. A dropped, pasted, or picked photo

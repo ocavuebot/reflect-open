@@ -2,11 +2,11 @@ import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { act, useEffect } from 'react'
-import { todayIso } from '@/lib/dates.ts'
-import { createDayWindow, neighborDate } from '@/lib/day-window.ts'
-import { RouterProvider, useRouter, type NavigateOptions } from '@/routing/router.tsx'
-import type { Route } from '@/routing/route.ts'
-import { fireEvent } from '@/test-utils/fire-event.ts'
+import { todayIso } from '@/lib/dates'
+import { createDayWindow, neighborDate } from '@/lib/day-window'
+import { RouterProvider, useRouter, type NavigateOptions } from '@/routing/router'
+import type { Route } from '@/routing/route'
+import { fireEvent } from '@/test-utils/fire-event'
 import '@/test-utils/locator.ts'
 import { DailyStream } from './daily-stream.tsx'
 
@@ -43,7 +43,7 @@ vi.mock('@/components/note-pane', () => ({
     autoFocusSelection?: 'start' | 'end'
     registerHandle?: (
       date: string,
-      handle: import('@/editor/note-editor.tsx').NoteEditorHandle | null,
+      handle: import('@/editor/note-editor').NoteEditorHandle | null,
     ) => void
   }) => {
     // Register a recording handle like the real pane's mounted editor would,

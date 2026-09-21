@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { isMobilePlatform, type AppPlatform, type RecentGraph } from '@reflect/core'
-import { isMainWindow } from '@/lib/windows/window-role.ts'
+import { isMainWindow } from '@/lib/windows/window-role'
 
 /** The graph provider's channels for the desktop main-window boot leg. */
 export interface DesktopGraphBootOptions {

@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import { ListFilter } from 'lucide-react'
-import { Button } from '@/components/ui/button.tsx'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -9,8 +9,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu.tsx'
-import type { TaskFilters, TaskFiltersControl } from '@/lib/tasks/task-filters.ts'
+} from '@/components/ui/dropdown-menu'
+import type { TaskFilters, TaskFiltersControl } from '@/lib/tasks/task-filters'
 
 const BUCKET_FILTERS: ReadonlyArray<{ key: keyof TaskFilters; label: string }> = [
   { key: 'pinned', label: 'Pinned tasks' },

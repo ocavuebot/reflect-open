@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { InlineAlert } from '@/components/inline-alert.tsx'
+import { InlineAlert } from '@/components/inline-alert'
 
 interface ProtectedNoteViewProps {
   /** The full file content (frontmatter included — honest display). */

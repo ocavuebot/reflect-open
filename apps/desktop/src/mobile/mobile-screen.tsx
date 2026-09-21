@@ -1,28 +1,28 @@
 import { lazy, type ReactElement } from 'react'
-import { useToday } from '@/lib/use-today.ts'
-import { MobileDaily } from '@/mobile/screens/daily.tsx'
-import { MobileNote } from '@/mobile/screens/note.tsx'
-import type { AllNotesFilters } from '@/mobile/search-filters/filter-state.ts'
-import type { Route } from '@/routing/route.ts'
+import { useToday } from '@/lib/use-today'
+import { MobileDaily } from '@/mobile/screens/daily'
+import { MobileNote } from '@/mobile/screens/note'
+import type { AllNotesFilters } from '@/mobile/search-filters/filter-state'
+import type { Route } from '@/routing/route'
 
 const MobileAllNotes = lazy(async () => {
-  const { MobileAllNotes } = await import('@/mobile/screens/all-notes.tsx')
+  const { MobileAllNotes } = await import('@/mobile/screens/all-notes')
   return { default: MobileAllNotes }
 })
 const MobileChat = lazy(async () => {
-  const { MobileChat } = await import('@/mobile/screens/chat.tsx')
+  const { MobileChat } = await import('@/mobile/screens/chat')
   return { default: MobileChat }
 })
 const MobileGraphs = lazy(async () => {
-  const { MobileGraphs } = await import('@/mobile/screens/graphs.tsx')
+  const { MobileGraphs } = await import('@/mobile/screens/graphs')
   return { default: MobileGraphs }
 })
 const MobileSettings = lazy(async () => {
-  const { MobileSettings } = await import('@/mobile/screens/settings.tsx')
+  const { MobileSettings } = await import('@/mobile/screens/settings')
   return { default: MobileSettings }
 })
 const MobileTasks = lazy(async () => {
-  const { MobileTasks } = await import('@/mobile/screens/tasks.tsx')
+  const { MobileTasks } = await import('@/mobile/screens/tasks')
   return { default: MobileTasks }
 })
 

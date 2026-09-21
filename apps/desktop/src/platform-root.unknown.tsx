@@ -1,10 +1,10 @@
 import { hasBridge, setBridge, type AppPlatform } from '@reflect/core'
 
-import { createDevBridge } from '@/dev/dev-bridge.ts'
-import { createDevFileStore } from '@/dev/dev-file-store.ts'
-import { createDevIndexDb } from '@/dev/dev-index-db.ts'
-import { seedGraphFiles } from '@/dev/seed-graph.ts'
-import { parseEnvPlatform } from '@/lib/env.ts'
+import { createDevBridge } from '@/dev/dev-bridge'
+import { createDevFileStore } from '@/dev/dev-file-store'
+import { createDevIndexDb } from '@/dev/dev-index-db'
+import { seedGraphFiles } from '@/dev/seed-graph'
+import { parseEnvPlatform } from '@/lib/env'
 
 const appPlatform: AppPlatform = (() => {
   if (import.meta.env.DEV && typeof window !== 'undefined') {
@@ -34,10 +34,10 @@ if (!hasBridge()) {
 
 const { PlatformRoot, warmPlatformRoot } = await (async () => {
   if (appPlatform === 'desktop') {
-    const { warmPlatformRoot, PlatformRoot } = await import('@/platform-root.desktop.tsx')
+    const { warmPlatformRoot, PlatformRoot } = await import('@/platform-root.desktop')
     return { PlatformRoot, warmPlatformRoot }
   } else {
-    const { warmPlatformRoot, PlatformRoot } = await import('@/platform-root.mobile.tsx')
+    const { warmPlatformRoot, PlatformRoot } = await import('@/platform-root.mobile')
     return { PlatformRoot, warmPlatformRoot }
   }
 })()

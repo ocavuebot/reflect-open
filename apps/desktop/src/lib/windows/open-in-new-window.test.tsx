@@ -9,7 +9,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   openNoteWindow,
 }))
 vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/platform')>()),
   isNativeShell,
 }))
 vi.mock('@/lib/platform-surface', () => ({ isMobileSurface }))

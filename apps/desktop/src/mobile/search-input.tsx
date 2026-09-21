@@ -1,9 +1,9 @@
 import type { ComponentProps, ReactElement } from 'react'
 import { CircleX } from 'lucide-react'
 import { getIsComposing } from '@meowdown/core'
-import { Button } from '@/components/ui/button.tsx'
-import { Input } from '@/components/ui/input.tsx'
-import { cn } from '@/lib/utils.ts'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { cn } from '@/lib/utils'
 
 type SearchInputProps = Omit<
   ComponentProps<'input'>,

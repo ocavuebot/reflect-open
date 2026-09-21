@@ -3,8 +3,8 @@ import { page } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge, type AgentSkillStatus } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client.ts'
-import { deferred } from '@/test-utils/deferred.ts'
+import { queryKeys } from '@/lib/query-client'
+import { deferred } from '@/test-utils/deferred'
 import { AgentsSection } from './agents-section.tsx'
 
 // A browser-mode module mock materializes value exports once, so this file

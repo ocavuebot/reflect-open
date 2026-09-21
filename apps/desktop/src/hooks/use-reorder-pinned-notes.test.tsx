@@ -3,8 +3,8 @@ import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-quer
 import { cleanup, renderHook } from 'vitest-browser-react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { PinnedNote } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client.ts'
-import { deferred } from '@/test-utils/deferred.ts'
+import { queryKeys } from '@/lib/query-client'
+import { deferred } from '@/test-utils/deferred'
 import { useReorderPinnedNotes } from './use-reorder-pinned-notes.ts'
 
 const reorderPinnedNotes = vi.hoisted(() =>

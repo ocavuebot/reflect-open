@@ -2,8 +2,8 @@ import { useCallback, useEffect, useRef } from 'react'
 import {
   beginLinkNavigationIntent,
   isCurrentLinkNavigationIntent,
-} from '@/lib/windows/link-navigation-intent.ts'
-import { useNavigationRevision } from '@/routing/router.tsx'
+} from '@/lib/windows/link-navigation-intent'
+import { useNavigationRevision } from '@/routing/router'
 
 /** Start one link activation; the returned probe answers "did it go stale?". */
 export type BeginLinkIntent = () => () => boolean

@@ -13,7 +13,7 @@ import {
   type AiProviderId,
   type AppError,
 } from '@reflect/core'
-import { useSettings } from '@/providers/settings-provider.tsx'
+import { useSettings } from '@/providers/settings-provider'
 
 /**
  * The configured-AI-providers surface (Plan 10): one hook owning the pairing

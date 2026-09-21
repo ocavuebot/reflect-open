@@ -4,11 +4,11 @@ import { userEvent, type Locator } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import type { OpenTask } from '@reflect/core'
 import { act, useEffect, useState, type MutableRefObject, type ReactNode } from 'react'
-import { queryKeys } from '@/lib/query-client.ts'
-import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture.ts'
-import { resetRecentlyCompleted } from '@/lib/tasks/recently-completed.ts'
-import { RouterProvider, useRouter } from '@/routing/router.tsx'
-import { fireEvent } from '@/test-utils/fire-event.ts'
+import { queryKeys } from '@/lib/query-client'
+import { makeOpenTask as task } from '@/lib/tasks/open-task-fixture'
+import { resetRecentlyCompleted } from '@/lib/tasks/recently-completed'
+import { RouterProvider, useRouter } from '@/routing/router'
+import { fireEvent } from '@/test-utils/fire-event'
 import '@/test-utils/locator.ts'
 import { TasksScreen } from './tasks-screen.tsx'
 
@@ -22,7 +22,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
   getCompletedTasks,
 }))
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
   openRouteInNewWindow,
 }))
 vi.mock('@/providers/graph-provider', () => ({
@@ -179,7 +179,7 @@ vi.mock('./task-editor', () => ({
 const fail = vi.hoisted(() => vi.fn())
 const startOperation = vi.hoisted(() => vi.fn(() => ({ fail })))
 vi.mock('@/lib/operations', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/operations.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/operations')>()),
   startOperation,
 }))
 

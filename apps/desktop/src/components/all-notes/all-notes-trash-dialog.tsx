@@ -1,5 +1,5 @@
 import { useRef, type ReactElement } from 'react'
-import { Button } from '@/components/ui/button.tsx'
+import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogClose,
@@ -7,8 +7,8 @@ import {
   DialogDescription,
   DialogFooter,
   DialogTitle,
-} from '@/components/ui/dialog.tsx'
-import { useNoteTrash } from '@/lib/notes/use-note-trash.ts'
+} from '@/components/ui/dialog'
+import { useNoteTrash } from '@/lib/notes/use-note-trash'
 
 interface AllNotesTrashDialogProps {
   /** Whether the confirm is shown. */

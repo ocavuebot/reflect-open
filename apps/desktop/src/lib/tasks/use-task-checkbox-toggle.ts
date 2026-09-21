@@ -1,5 +1,5 @@
 import type { OpenTask } from '@reflect/core'
-import { useTaskCheckboxAction } from '@/lib/tasks/use-task-checkbox-action.ts'
+import { useTaskCheckboxAction } from '@/lib/tasks/use-task-checkbox-action'
 
 /**
  * Toggle one task from the Tasks view checkbox (Plan 18), optimistically. Open

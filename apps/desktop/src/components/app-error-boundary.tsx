@@ -1,6 +1,6 @@
 import type { ReactElement, ReactNode } from 'react'
 import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
-import { Button } from '@/components/ui/button.tsx'
+import { Button } from '@/components/ui/button'
 
 /**
  * Catches render-phase crashes on both surfaces. Without a boundary React

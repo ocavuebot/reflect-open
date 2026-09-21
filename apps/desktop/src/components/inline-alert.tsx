@@ -1,5 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
-import { cn } from '@/lib/utils.ts'
+import { cn } from '@/lib/utils'
 
 /** Visual severity of an {@link InlineAlert}. */
 export type InlineAlertTone = 'warning' | 'error'

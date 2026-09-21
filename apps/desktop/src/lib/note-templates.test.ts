@@ -24,7 +24,7 @@ vi.mock('@reflect/core', async (importOriginal) => ({
 vi.mock('@/editor/move-note', () => ({ moveNoteCarryingSession }))
 vi.mock('@/editor/open-documents', () => ({ openSession }))
 vi.mock('@/lib/operations', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/operations.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/operations')>()),
   startOperation,
 }))
 

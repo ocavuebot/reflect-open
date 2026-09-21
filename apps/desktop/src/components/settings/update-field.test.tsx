@@ -1,7 +1,7 @@
 import { render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import type { UpdateState } from '@/lib/update-controller.ts'
+import type { UpdateState } from '@/lib/update-controller'
 import { UpdateField } from './update-field.tsx'
 
 const update = vi.hoisted(() => ({

@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { gistBodyHash, upsertFrontmatter } from '@reflect/core'
-import type { NoteSession } from '@/editor/note-session.ts'
-import { getNoteRowOverlay, resetNoteRowOverlays } from '@/hooks/note-row-overlay.ts'
+import type { NoteSession } from '@/editor/note-session'
+import { getNoteRowOverlay, resetNoteRowOverlays } from '@/hooks/note-row-overlay'
 
 const readNote = vi.hoisted(() => vi.fn<(path: string) => Promise<string>>())
 const writeNote = vi.hoisted(() => vi.fn(async () => {}))

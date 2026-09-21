@@ -1,7 +1,7 @@
 import { QueryClient } from '@tanstack/react-query'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import type { NoteSession } from '@/editor/note-session.ts'
-import { queryKeys } from '@/lib/query-client.ts'
+import type { NoteSession } from '@/editor/note-session'
+import { queryKeys } from '@/lib/query-client'
 
 const readNote = vi.hoisted(() => vi.fn<(path: string) => Promise<string>>())
 const writeNote = vi.hoisted(() => vi.fn(async () => {}))

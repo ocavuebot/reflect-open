@@ -3,7 +3,7 @@ import {
   createNoteSession,
   type NoteSession,
   type NoteSessionSnapshot,
-} from '@/editor/note-session.ts'
+} from '@/editor/note-session'
 import { deleteOpenNote } from './note-delete.ts'
 
 /**

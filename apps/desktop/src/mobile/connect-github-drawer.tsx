@@ -1,15 +1,15 @@
 import { useId, type ReactElement } from 'react'
 import { getIsComposing } from '@meowdown/core'
-import { InlineAlert } from '@/components/inline-alert.tsx'
-import { ConnectGithubFinishStep } from '@/components/settings/connect-github-finish-step.tsx'
-import { GithubAuthStep } from '@/components/settings/github-auth-step.tsx'
-import { Button } from '@/components/ui/button.tsx'
-import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer.tsx'
-import { Input } from '@/components/ui/input.tsx'
+import { InlineAlert } from '@/components/inline-alert'
+import { ConnectGithubFinishStep } from '@/components/settings/connect-github-finish-step'
+import { GithubAuthStep } from '@/components/settings/github-auth-step'
+import { Button } from '@/components/ui/button'
+import { Drawer, DrawerBody, DrawerContent, DrawerTitle } from '@/components/ui/drawer'
+import { Input } from '@/components/ui/input'
 import {
   useConnectGithubWizard,
   type ConnectWizardStep,
-} from '@/hooks/use-connect-github-wizard.ts'
+} from '@/hooks/use-connect-github-wizard'
 
 interface ConnectGithubDrawerProps {
   open: boolean

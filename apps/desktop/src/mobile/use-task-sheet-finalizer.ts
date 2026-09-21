@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type Dispatch, type SetStateAction } from 'react'
 import type { OpenTask } from '@reflect/core'
-import { resolveTaskEdit, taskContent, type TaskEditResult } from '@/lib/tasks/task-content.ts'
+import { resolveTaskEdit, taskContent, type TaskEditResult } from '@/lib/tasks/task-content'
 
 /** The two writes the finalizer itself performs; {@link TaskActions} satisfies it. */
 export interface TaskSheetWriteActions {

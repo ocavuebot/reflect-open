@@ -5,8 +5,8 @@ import { convertFileSrc } from '@tauri-apps/api/core'
 import { mapXPostMediaUrls, parseXPostId } from '@post-embed/schema'
 import type { XPost } from '@post-embed/types'
 import { resolveArchivedPost } from '@reflect/core/x-archive'
-import { queryClient, queryKeys } from '@/lib/query-client.ts'
-import { useGraph } from '@/providers/graph-provider.tsx'
+import { queryClient, queryKeys } from '@/lib/query-client'
+import { useGraph } from '@/providers/graph-provider'
 
 export const X_MEDIA_URL_PROTOCOLS = ['reflect-asset:']
 

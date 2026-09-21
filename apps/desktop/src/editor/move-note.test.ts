@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { onNoteMoved } from '@/lib/note-moves.ts'
+import { onNoteMoved } from '@/lib/note-moves'
 import { followHealedMove, moveNoteCarryingSession } from './move-note.ts'
 import type { NoteSession } from './note-session.ts'
 import { openSession, registerOpenDocument } from './open-documents.ts'

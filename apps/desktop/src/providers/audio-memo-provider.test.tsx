@@ -9,7 +9,7 @@ import type {
   GraphInfo,
   Settings,
 } from '@reflect/core'
-import type { UseAudioRecorderOptions } from '@/hooks/use-audio-recorder.ts'
+import type { UseAudioRecorderOptions } from '@/hooks/use-audio-recorder'
 
 const captureAudioMemoPart = vi.hoisted(() =>
   vi.fn<(input: CaptureAudioMemoPartInput) => Promise<CaptureAudioMemoOutcome>>(),

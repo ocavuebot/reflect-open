@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
-import { dismissOperation, useOperations } from '@/lib/operations.ts'
-import { cn } from '@/lib/utils.ts'
+import { dismissOperation, useOperations } from '@/lib/operations'
+import { cn } from '@/lib/utils'
 
 /**
  * Failed and warning background operations as tappable pills (Plan 19

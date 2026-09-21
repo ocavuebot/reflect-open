@@ -3,12 +3,12 @@ import { openUrl } from '@tauri-apps/plugin-opener'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { page, userEvent } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
-import { dispatchDeepLink } from '@/lib/deep-links/intake.ts'
-import { setPlatformSurface } from '@/lib/platform-surface.ts'
-import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
-import { pasteFiles } from '@/test-utils/file-events.ts'
+import { dispatchDeepLink } from '@/lib/deep-links/intake'
+import { setPlatformSurface } from '@/lib/platform-surface'
+import { expectLocatorToHaveCount } from '@/test-utils/expect'
+import { pasteFiles } from '@/test-utils/file-events'
 import '@/test-utils/locator.ts'
-import { hover, unhover } from '@/test-utils/mouse.ts'
+import { hover, unhover } from '@/test-utils/mouse'
 import type { XPost } from '@post-embed/types'
 import { NoteEditor, type NoteEditorHandle } from './note-editor.tsx'
 
@@ -22,7 +22,7 @@ vi.mock('@/lib/deep-links/intake', () => ({
 
 const openDeepLinkInNewWindow = vi.hoisted(() => vi.fn<() => Promise<boolean>>())
 vi.mock('@/lib/windows/open-in-new-window', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/windows/open-in-new-window')>()),
   openDeepLinkInNewWindow,
 }))
 

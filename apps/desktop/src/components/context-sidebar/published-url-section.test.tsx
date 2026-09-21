@@ -3,7 +3,7 @@ import { userEvent } from 'vitest/browser'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import type { NoteRow } from '@reflect/core'
 import { openUrl } from '@tauri-apps/plugin-opener'
-import { TooltipProvider } from '@/components/ui/tooltip.tsx'
+import { TooltipProvider } from '@/components/ui/tooltip'
 import { PublishedUrlSection } from './published-url-section.tsx'
 
 const useNoteRow = vi.hoisted(() => vi.fn<(path: string) => NoteRow | null>(() => null))

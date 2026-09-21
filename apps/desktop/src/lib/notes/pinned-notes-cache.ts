@@ -1,6 +1,6 @@
 import type { QueryClient } from '@tanstack/react-query'
 import { dateFromDailyPath, type NoteRow, type PinnedNote } from '@reflect/core'
-import { queryKeys } from '@/lib/query-client.ts'
+import { queryKeys } from '@/lib/query-client'
 import { isValidPinOrder } from './pin-order.ts'
 
 /**

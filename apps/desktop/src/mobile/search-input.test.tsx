@@ -2,7 +2,7 @@ import { useState, type ReactElement } from 'react'
 import { render } from 'vitest-browser-react'
 import { userEvent } from 'vitest/browser'
 import { describe, expect, it, vi } from 'vitest'
-import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { expectLocatorToHaveCount } from '@/test-utils/expect'
 import { SearchInput } from './search-input.tsx'
 
 describe('SearchInput', () => {

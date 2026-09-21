@@ -1,4 +1,4 @@
-import { startOperation } from '@/lib/operations.ts'
+import { startOperation } from '@/lib/operations'
 
 /**
  * The one user-visible refusal for an `ambiguous` title resolution

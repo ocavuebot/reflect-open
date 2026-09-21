@@ -10,7 +10,7 @@ import {
   type ReactElement,
   type ReactNode,
 } from 'react'
-import { onNoteMoved } from '@/lib/note-moves.ts'
+import { onNoteMoved } from '@/lib/note-moves'
 import { normalizeRoute, routesEqual, type Route } from './route.ts'
 
 /**

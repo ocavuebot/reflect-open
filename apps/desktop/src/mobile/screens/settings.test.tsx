@@ -3,7 +3,7 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page, userEvent } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { DEFAULT_SETTINGS, getConflictedNotes, type GraphInfo, type Settings } from '@reflect/core'
-import type { BackupState } from '@/lib/backup-controller.ts'
+import type { BackupState } from '@/lib/backup-controller'
 import '@/test-utils/locator.ts'
 import { MobileSettings } from './settings.tsx'
 

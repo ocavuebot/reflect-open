@@ -1,5 +1,5 @@
-import { toast } from '@/components/ui/toast.tsx'
-import { formatRecordingElapsed } from '@/lib/recording-time.ts'
+import { toast } from '@/components/ui/toast'
+import { formatRecordingElapsed } from '@/lib/recording-time'
 
 const REMINDER_TOAST_ID = 'audio-memo-reminder'
 

@@ -4,14 +4,14 @@ import { page, userEvent } from 'vitest/browser'
 import type { Locator } from 'vitest/browser'
 import { render } from 'vitest-browser-react'
 import { setBridge, type EmbedStatus, type GraphInfo } from '@reflect/core'
-import { formatFullDate } from '@/lib/dates.ts'
-import { resetOperations } from '@/lib/operations.ts'
-import { NoteTemplatesProvider } from '@/providers/note-templates-provider.tsx'
-import { ShortcutsProvider } from '@/providers/shortcuts-provider.tsx'
-import { SettingsProvider } from '@/providers/settings-provider.tsx'
-import { UpdateProvider } from '@/providers/update-provider.tsx'
-import { RouterProvider } from '@/routing/router.tsx'
-import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { formatFullDate } from '@/lib/dates'
+import { resetOperations } from '@/lib/operations'
+import { NoteTemplatesProvider } from '@/providers/note-templates-provider'
+import { ShortcutsProvider } from '@/providers/shortcuts-provider'
+import { SettingsProvider } from '@/providers/settings-provider'
+import { UpdateProvider } from '@/providers/update-provider'
+import { RouterProvider } from '@/routing/router'
+import { expectLocatorToHaveCount } from '@/test-utils/expect'
 import { ShortcutsDialog } from './shortcuts-dialog.tsx'
 import { SettingsScreen } from './settings-screen.tsx'
 
@@ -44,7 +44,7 @@ vi.mock('@/providers/sync-provider', () => ({
 }))
 // The update field gates on the native shell, which the test browser is not.
 vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/platform')>()),
   isNativeShell: () => true,
 }))
 // The Import section only hands the picked zip to the workspace-level V1

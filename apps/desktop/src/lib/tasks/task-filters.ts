@@ -1,4 +1,4 @@
-import { useSessionFlag } from '@/lib/use-session-flag.ts'
+import { useSessionFlag } from '@/lib/use-session-flag'
 
 /**
  * Which task groups the Tasks view shows (V1's task filter store). The five date

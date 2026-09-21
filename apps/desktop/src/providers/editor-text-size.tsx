@@ -1,5 +1,5 @@
 import { useEffect, type ReactElement } from 'react'
-import { useSettings } from '@/providers/settings-provider.tsx'
+import { useSettings } from '@/providers/settings-provider'
 
 /**
  * Applies the editor reading size to the document root.

@@ -5,7 +5,7 @@ import { fetchSignedInUser } from './github-account.ts'
 
 vi.mock('@tauri-apps/plugin-http', () => ({ fetch: vi.fn() }))
 vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/platform')>()),
   isNativeShell: () => true,
 }))
 const httpFetch = vi.mocked(tauriFetch)

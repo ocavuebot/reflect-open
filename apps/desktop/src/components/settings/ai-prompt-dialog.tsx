@@ -6,8 +6,8 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog.tsx'
-import type { AiPromptDraft } from '@/hooks/use-ai-prompts.ts'
+} from '@/components/ui/dialog'
+import type { AiPromptDraft } from '@/hooks/use-ai-prompts'
 
 interface AiPromptDialogProps {
   /** The prompt being edited, or null when adding a new one. */
@@ -18,7 +18,7 @@ interface AiPromptDialogProps {
 }
 
 const AiPromptForm = lazy(async () => {
-  const { AiPromptForm } = await import('@/components/settings/ai-prompt-form.tsx')
+  const { AiPromptForm } = await import('@/components/settings/ai-prompt-form')
   return { default: AiPromptForm }
 })
 

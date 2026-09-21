@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import { ArrowDownToLine, RefreshCw, RotateCw } from 'lucide-react'
-import { Button } from '@/components/ui/button.tsx'
-import { useUpdate } from '@/providers/update-provider.tsx'
+import { Button } from '@/components/ui/button'
+import { useUpdate } from '@/providers/update-provider'
 import { SettingsField } from './field.tsx'
 
 /**

@@ -7,7 +7,7 @@ import type {
   ReconcileCaptureEnrichmentOutcome,
 } from '@reflect/core'
 import type { XPost } from '@post-embed/types'
-import { createXPostResolver, xPostQueryOptions } from '@/editor/use-x-post-resolver.ts'
+import { createXPostResolver, xPostQueryOptions } from '@/editor/use-x-post-resolver'
 import { createCaptureController, type CaptureController } from './capture-controller.ts'
 import { queryClient } from './query-client.ts'
 

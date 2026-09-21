@@ -3,7 +3,7 @@ import { page } from 'vitest/browser'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { useEffect, useRef, type ReactElement } from 'react'
 import { untitledNotePath } from '@reflect/core'
-import { RouterProvider, useRouter, type NavigateOptions } from '@/routing/router.tsx'
+import { RouterProvider, useRouter, type NavigateOptions } from '@/routing/router'
 import { MobileNote } from './note.tsx'
 
 const paneProps = vi.hoisted(() => ({

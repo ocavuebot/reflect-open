@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { readNote } from '@reflect/core'
-import { openSession } from '@/editor/open-documents.ts'
+import { openSession } from '@/editor/open-documents'
 import { readExistingNoteSource } from './read-existing-note-source.ts'
 
 vi.mock('@reflect/core', () => ({

@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { createStorage } from '@/test-utils/storage.ts'
+import { createStorage } from '@/test-utils/storage'
 import { getSessionStorageStore, resetSessionStorageStores } from './session-storage.ts'
 
 beforeEach(() => {

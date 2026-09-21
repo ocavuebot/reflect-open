@@ -4,6 +4,5 @@ import { ALLOWED_CONSOLE_PATTERNS } from './allowed-console.ts'
 failOnConsole({
   shouldFailOnWarn: true,
   shouldFailOnError: true,
-  silenceMessage: (message: string) =>
-    ALLOWED_CONSOLE_PATTERNS.some((pattern) => pattern.test(message)),
+  silenceMessage: (message) => ALLOWED_CONSOLE_PATTERNS.some((pattern) => pattern.test(message)),
 })

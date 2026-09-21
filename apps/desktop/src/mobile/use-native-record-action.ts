@@ -5,12 +5,12 @@ import {
   subscribeRecordingNativeAction,
   type PluginSubscription,
 } from '@reflect/core'
-import { isNativeShell } from '@/lib/platform.ts'
+import { isNativeShell } from '@/lib/platform'
 import {
   nativeRecordingStatus,
   stopActiveRecording,
   type NativeRecordingPart,
-} from '@/mobile/use-native-audio-recorder.ts'
+} from '@/mobile/use-native-audio-recorder'
 
 /**
  * The webview side of the native-action handshake (audio-memos wave 3), plus

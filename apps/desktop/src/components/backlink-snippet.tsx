@@ -1,11 +1,11 @@
-import { useXPostResolver, X_MEDIA_URL_PROTOCOLS } from '@/editor/use-x-post-resolver.ts'
+import { useXPostResolver, X_MEDIA_URL_PROTOCOLS } from '@/editor/use-x-post-resolver'
 import type { ReactElement } from 'react'
 import { MarkdownView } from '@meowdown/react'
 import type { WikilinkClickHandler } from '@meowdown/core'
 import type { SnippetTask } from '@reflect/core'
-import { useOpenExternalLink } from '@/editor/open-external-link.ts'
-import { resolveWikilink } from '@/editor/resolve-wikilink.ts'
-import { useSnippetTaskToggle } from '@/hooks/use-snippet-task-toggle.ts'
+import { useOpenExternalLink } from '@/editor/open-external-link'
+import { resolveWikilink } from '@/editor/resolve-wikilink'
+import { useSnippetTaskToggle } from '@/hooks/use-snippet-task-toggle'
 
 interface BacklinkSnippetProps {
   /** The referencing block context's Markdown source (may span several lines). */

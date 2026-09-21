@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { Badge } from '@/components/ui/badge.tsx'
+import { Badge } from '@/components/ui/badge'
 
 interface TaskToolbarCountBadgeProps {
   /** Number of tasks affected by the adjacent toolbar action. */

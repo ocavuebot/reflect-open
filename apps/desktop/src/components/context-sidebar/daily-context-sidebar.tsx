@@ -5,9 +5,9 @@ import { DayCalendar } from './day-calendar.tsx'
 import { NoteActionsSection } from './note-actions-section.tsx'
 import { PublishedUrlSection } from './published-url-section.tsx'
 import { SimilarNotesSection } from './similar-notes-section.tsx'
-import { useToday } from '@/lib/use-today.ts'
-import { cn } from '@/lib/utils.ts'
-import { hasMacosTitleBarOverlay } from '@/lib/window-chrome.ts'
+import { useToday } from '@/lib/use-today'
+import { cn } from '@/lib/utils'
+import { hasMacosTitleBarOverlay } from '@/lib/window-chrome'
 
 interface DailyContextSidebarProps {
   /** The day the sidebar describes — a validated ISO date from the route. */

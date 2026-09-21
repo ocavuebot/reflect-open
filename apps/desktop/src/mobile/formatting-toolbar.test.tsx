@@ -6,9 +6,9 @@ import {
   clearFormattingToolbar,
   publishFormattingToolbar,
   type FormattingToolbar,
-} from '@/editor/formatting-toolbar-store.ts'
-import { pickFiles } from '@/lib/pick-files.ts'
-import { fireEvent } from '@/test-utils/fire-event.ts'
+} from '@/editor/formatting-toolbar-store'
+import { pickFiles } from '@/lib/pick-files'
+import { fireEvent } from '@/test-utils/fire-event'
 import { MobileFormattingToolbar } from './formatting-toolbar.tsx'
 
 vi.mock('@/mobile/haptics', () => ({ hapticImpactLight: vi.fn() }))

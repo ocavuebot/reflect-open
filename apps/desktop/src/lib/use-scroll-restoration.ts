@@ -1,5 +1,5 @@
 import { useEffect, type UIEvent } from 'react'
-import { useRouter } from '@/routing/router.tsx'
+import { useRouter } from '@/routing/router'
 
 /**
  * Per-entry scroll memory for a route that owns its own scroll container — the

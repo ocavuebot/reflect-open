@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import { CHAT_SYSTEM_PROMPT_MAX_LENGTH, normalizeChatSystemPrompt } from '@reflect/core'
-import { useSettings } from '@/providers/settings-provider.tsx'
+import { useSettings } from '@/providers/settings-provider'
 import { SettingsSection } from './section.tsx'
 import { SettingsTextareaField } from './textarea-field.tsx'
 

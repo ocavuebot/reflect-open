@@ -1,20 +1,20 @@
 import type { ReactElement } from 'react'
-import { InlineAlert } from '@/components/inline-alert.tsx'
-import { ConnectGithubFinishStep } from '@/components/settings/connect-github-finish-step.tsx'
-import { GithubAuthStep } from '@/components/settings/github-auth-step.tsx'
-import { Button } from '@/components/ui/button.tsx'
+import { InlineAlert } from '@/components/inline-alert'
+import { ConnectGithubFinishStep } from '@/components/settings/connect-github-finish-step'
+import { GithubAuthStep } from '@/components/settings/github-auth-step'
+import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog.tsx'
-import { Input } from '@/components/ui/input.tsx'
+} from '@/components/ui/dialog'
+import { Input } from '@/components/ui/input'
 import {
   useConnectGithubWizard,
   type ConnectWizardStep,
-} from '@/hooks/use-connect-github-wizard.ts'
+} from '@/hooks/use-connect-github-wizard'
 
 interface ConnectGithubDialogProps {
   /** A suggested name for a newly created backup repo (from the graph name). */

@@ -3,8 +3,8 @@ import { page, userEvent } from 'vitest/browser'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { setBridge } from '@reflect/core'
-import { SettingsProvider } from '@/providers/settings-provider.tsx'
-import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { SettingsProvider } from '@/providers/settings-provider'
+import { expectLocatorToHaveCount } from '@/test-utils/expect'
 import { DailyEventsSection } from './daily-events-section.tsx'
 
 // The calendar queries only run in the macOS desktop webview; the test

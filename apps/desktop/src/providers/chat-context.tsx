@@ -1,6 +1,6 @@
 import { createContext, use } from 'react'
 import type { AiProviderConfig, ChatModelOption, ChatModelSelection, ChatTurn } from '@reflect/core'
-import type { ChatAttachment } from '@/lib/chat-attachments.ts'
+import type { ChatAttachment } from '@/lib/chat-attachments'
 
 /**
  * The chat session's public surface — the context `ChatProvider` fills and

@@ -49,7 +49,7 @@ vi.mock('@tauri-apps/api/menu', () => ({
 }))
 vi.mock('@/lib/windows/window-role', () => ({ isMainWindow }))
 
-const { APP_COMMANDS, keybindingFor } = await import('@/lib/commands/app-commands.ts')
+const { APP_COMMANDS, keybindingFor } = await import('@/lib/commands/app-commands')
 const { dispatchMenuCommand, listenForFocusedNoteMenuCommands, setMenuCommandDispatch } =
   await import('./dispatch.ts')
 const { appMenuLayout, installNativeMenu, isNativeMenuInstalled } = await import('./menu.ts')

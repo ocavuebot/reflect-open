@@ -1,6 +1,6 @@
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
-import { Button } from '@/components/ui/button.tsx'
-import { cn } from '@/lib/utils.ts'
+import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 export function MobileTopBar({ children }: { children: ReactNode }): ReactElement {
   return <header className="shrink-0 border-b border-border">{children}</header>

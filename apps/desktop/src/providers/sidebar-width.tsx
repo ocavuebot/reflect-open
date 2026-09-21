@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactElement } from 'react'
-import { activeSidebarWidthDrags, effectiveSidebarWidths } from '@/hooks/use-sidebar-resize.ts'
-import { useSettings } from '@/providers/settings-provider.tsx'
+import { activeSidebarWidthDrags, effectiveSidebarWidths } from '@/hooks/use-sidebar-resize'
+import { useSettings } from '@/providers/settings-provider'
 
 /**
  * Applies the sidebar widths to the document root.

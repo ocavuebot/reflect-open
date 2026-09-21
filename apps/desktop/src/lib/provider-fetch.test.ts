@@ -5,7 +5,7 @@ import { providerFetch } from './provider-fetch.ts'
 vi.mock('@tauri-apps/plugin-http', () => ({ fetch: vi.fn() }))
 const isNativeShell = vi.hoisted(() => vi.fn(() => false))
 vi.mock('@/lib/platform', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('@/lib/platform.ts')>()),
+  ...(await importOriginal<typeof import('@/lib/platform')>()),
   isNativeShell,
 }))
 const httpFetch = vi.mocked(tauriFetch)

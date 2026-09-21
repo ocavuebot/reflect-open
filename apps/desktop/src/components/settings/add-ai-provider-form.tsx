@@ -10,8 +10,8 @@ import {
   isPlainHttpRemoteBaseUrl,
   type AiProviderId,
 } from '@reflect/core'
-import { Button } from '@/components/ui/button.tsx'
-import { Input } from '@/components/ui/input.tsx'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import {
   Select,
   SelectContent,
@@ -19,10 +19,10 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select.tsx'
-import { InlineAlert } from '@/components/inline-alert.tsx'
-import { useAddAiProviderSubmit } from '@/hooks/use-add-ai-provider-submit.ts'
-import type { NewAiProvider } from '@/hooks/use-ai-providers.ts'
+} from '@/components/ui/select'
+import { InlineAlert } from '@/components/inline-alert'
+import { useAddAiProviderSubmit } from '@/hooks/use-add-ai-provider-submit'
+import type { NewAiProvider } from '@/hooks/use-ai-providers'
 import { ModelCombobox } from './model-combobox.tsx'
 
 interface AddAiProviderFormProps {

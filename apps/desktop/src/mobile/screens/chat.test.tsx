@@ -10,9 +10,9 @@ import type {
   Settings,
   StreamChatOptions,
 } from '@reflect/core'
-import { ChatProvider } from '@/providers/chat-provider.tsx'
-import { RouterProvider, useRouter } from '@/routing/router.tsx'
-import { fireEvent } from '@/test-utils/fire-event.ts'
+import { ChatProvider } from '@/providers/chat-provider'
+import { RouterProvider, useRouter } from '@/routing/router'
+import { fireEvent } from '@/test-utils/fire-event'
 
 /**
  * The Chat tab over a faked engine (the desktop chat-screen harness, mobile

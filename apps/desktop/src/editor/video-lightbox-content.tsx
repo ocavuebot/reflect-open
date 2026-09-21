@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
 import { LightboxVideo, type LightboxVideoItem } from '@meowdown/react'
 import { XIcon } from 'lucide-react'
-import { LightboxChromeButton } from '@/editor/lightbox-chrome-button.tsx'
-import { cn } from '@/lib/utils.ts'
+import { LightboxChromeButton } from '@/editor/lightbox-chrome-button'
+import { cn } from '@/lib/utils'
 
 interface VideoLightboxContentProps {
   item: LightboxVideoItem

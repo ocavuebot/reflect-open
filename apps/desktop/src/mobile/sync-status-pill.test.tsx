@@ -3,8 +3,8 @@ import { cleanup, render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { getConflictedNotes, type GraphInfo } from '@reflect/core'
-import type { BackupState } from '@/lib/backup-controller.ts'
-import { publishKeyboardHeight } from '@/mobile/use-keyboard.ts'
+import type { BackupState } from '@/lib/backup-controller'
+import { publishKeyboardHeight } from '@/mobile/use-keyboard'
 import { SyncStatusPill } from './sync-status-pill.tsx'
 
 /**

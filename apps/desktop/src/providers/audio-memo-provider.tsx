@@ -23,14 +23,14 @@ import {
   isRecordingSupported,
   useAudioRecorder,
   type RecorderSegment,
-} from '@/hooks/use-audio-recorder.ts'
+} from '@/hooks/use-audio-recorder'
 import {
   dismissRecordingReminder,
   showRecordingReminder,
-} from '@/components/audio-memo/recording-reminder.ts'
-import { useAudioMemoPipeline } from '@/hooks/use-audio-memo-pipeline.ts'
-import { useSettings } from '@/providers/settings-provider.tsx'
-import { useSidebar } from '@/providers/sidebar-provider.tsx'
+} from '@/components/audio-memo/recording-reminder'
+import { useAudioMemoPipeline } from '@/hooks/use-audio-memo-pipeline'
+import { useSettings } from '@/providers/settings-provider'
+import { useSidebar } from '@/providers/sidebar-provider'
 
 /**
  * The desktop React surface for audio memos: MediaRecorder recording state +

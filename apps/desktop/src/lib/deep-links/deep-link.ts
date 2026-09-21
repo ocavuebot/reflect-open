@@ -1,5 +1,5 @@
 import { TEXT_CAPTURE_MAX_LENGTH, type TextCaptureKind } from '@reflect/core'
-import type { Route } from '@/routing/route.ts'
+import type { Route } from '@/routing/route'
 
 /**
  * The `reflect://` deep-link vocabulary (docs/deep-links.md). URLs are a codec

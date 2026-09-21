@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { cn } from '@/lib/utils.ts'
+import { cn } from '@/lib/utils'
 
 interface FilterTabProps {
   label: string

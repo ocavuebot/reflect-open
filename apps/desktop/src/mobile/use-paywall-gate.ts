@@ -1,10 +1,10 @@
-import { usePaywallRequested } from '@/hooks/use-paywall-requested.ts'
-import { useActiveSubscription } from '@/mobile/use-active-subscription.ts'
+import { usePaywallRequested } from '@/hooks/use-paywall-requested'
+import { useActiveSubscription } from '@/mobile/use-active-subscription'
 import {
   useAppStoreEnvironment,
   type AppStoreEnvironment,
-} from '@/mobile/use-app-store-environment.ts'
-import { useGraph } from '@/providers/graph-provider.tsx'
+} from '@/mobile/use-app-store-environment'
+import { useGraph } from '@/providers/graph-provider'
 
 /** Paywall visibility: `show` replaces the app; `hide` leaves the app visible. */
 export type PaywallGate = 'show' | 'hide'

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { DEEP_LINK_TEXT_MAX_LENGTH } from '@/lib/deep-links/deep-link.ts'
-import { isDeepLinkUrl, parseDeepLink } from '@/lib/deep-links/parse.ts'
+import { DEEP_LINK_TEXT_MAX_LENGTH } from '@/lib/deep-links/deep-link'
+import { isDeepLinkUrl, parseDeepLink } from '@/lib/deep-links/parse'
 
 describe('parseDeepLink', () => {
   it('parses the bare navigation verbs', () => {

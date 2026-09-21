@@ -8,9 +8,9 @@ import {
   type HostedAiProviderConfig,
   type Settings,
 } from '@reflect/core'
-import { SettingsProvider } from '@/providers/settings-provider.tsx'
-import { resetOperations } from '@/lib/operations.ts'
-import { expectLocatorToHaveCount } from '@/test-utils/expect.ts'
+import { SettingsProvider } from '@/providers/settings-provider'
+import { resetOperations } from '@/lib/operations'
+import { expectLocatorToHaveCount } from '@/test-utils/expect'
 import { AiProvidersSection } from './ai-providers-section.tsx'
 
 // The dialog verifies keys against the provider through this transport; the

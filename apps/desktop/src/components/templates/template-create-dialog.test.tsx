@@ -2,8 +2,8 @@ import type { ReactElement } from 'react'
 import { render } from 'vitest-browser-react'
 import { page } from 'vitest/browser'
 import { beforeEach, expect, it, vi } from 'vitest'
-import type { CommandContext } from '@/lib/commands/types.ts'
-import { NoteTemplatesProvider, useNoteTemplates } from '@/providers/note-templates-provider.tsx'
+import type { CommandContext } from '@/lib/commands/types'
+import { NoteTemplatesProvider, useNoteTemplates } from '@/providers/note-templates-provider'
 import { TemplateCreateDialog } from './template-create-dialog.tsx'
 
 const { createTemplateMock } = vi.hoisted(() => ({ createTemplateMock: vi.fn() }))

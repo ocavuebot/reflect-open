@@ -1,6 +1,6 @@
 import { join } from '@tauri-apps/api/path'
 import { errorMessage } from '@reflect/core'
-import { startOperation } from '@/lib/operations.ts'
+import { startOperation } from '@/lib/operations'
 
 /**
  * "Copy note path" as keyboard surfaces run it (⌥⌘C and the ⌘K command):

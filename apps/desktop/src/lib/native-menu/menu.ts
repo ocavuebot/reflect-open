@@ -5,8 +5,8 @@ import {
   type MenuItemOptions,
   type PredefinedMenuItemOptions,
 } from '@tauri-apps/api/menu'
-import { APP_COMMANDS } from '@/lib/commands/app-commands.ts'
-import { isMainWindow } from '@/lib/windows/window-role.ts'
+import { APP_COMMANDS } from '@/lib/commands/app-commands'
+import { isMainWindow } from '@/lib/windows/window-role'
 import { bindingToAccelerator } from './accelerator.ts'
 import { dispatchMenuCommand } from './dispatch.ts'
 

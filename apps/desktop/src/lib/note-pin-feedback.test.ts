@@ -1,8 +1,8 @@
 import { QueryClient } from '@tanstack/react-query'
 import type { FilteredSearchHit, NoteListEntry, PinnedNote } from '@reflect/core'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { queryKeys } from '@/lib/query-client.ts'
-import { toggleNotePinned, unpinNote } from '@/lib/note-pin.ts'
+import { queryKeys } from '@/lib/query-client'
+import { toggleNotePinned, unpinNote } from '@/lib/note-pin'
 
 const readNoteSource = vi.hoisted(() => vi.fn(async () => '# A\n'))
 const commitNoteFrontmatter = vi.hoisted(() => vi.fn<() => Promise<void>>())

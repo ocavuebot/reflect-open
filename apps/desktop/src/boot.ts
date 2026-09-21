@@ -1,5 +1,5 @@
-import { initializeExceptionTelemetry } from '@/lib/exception-telemetry.ts'
-import { tauriBridge } from '@/lib/tauri-bridge.ts'
+import { initializeExceptionTelemetry } from '@/lib/exception-telemetry'
+import { tauriBridge } from '@/lib/tauri-bridge'
 import { setBridge } from '@reflect/core'
 
 import { isTauri } from '@tauri-apps/api/core'
