@@ -50,7 +50,6 @@ permissions:
 jobs:
   testflight:
     name: Build and upload iOS
-    # Match release-browser-extension.yml: never publish from a fork.
     if: github.repository == 'team-reflect/reflect-open'
     runs-on: macos-26
     timeout-minutes: 120

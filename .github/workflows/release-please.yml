@@ -24,8 +24,6 @@ concurrency:
 jobs:
   release-please:
     name: Maintain the Release PRs
-    # Forks inherit these workflows; only the canonical repo should maintain
-    # Release PRs or publish.
     if: github.repository == 'team-reflect/reflect-open'
     runs-on: ubuntu-latest
     # The desktop package lives at the repo root ("."), so its outputs have
