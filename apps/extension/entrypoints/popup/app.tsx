@@ -3,13 +3,13 @@ import { z } from 'zod'
 import { useEffect, useRef, useState, type FormEvent, type ReactElement } from 'react'
 import { PopupHeader } from './header.tsx'
 import { browser } from 'wxt/browser'
-import { readQueue } from '@/lib/flush.ts'
-import type { FlushResult } from '@/lib/messages.ts'
-import { saveCapture } from '@/lib/save-capture.ts'
+import { readQueue } from '@/lib/flush'
+import type { FlushResult } from '@/lib/messages'
+import { saveCapture } from '@/lib/save-capture'
 import {
   readIncludePageTextPreference,
   writeIncludePageTextPreference,
-} from '@/lib/popup-preferences.ts'
+} from '@/lib/popup-preferences'
 import { tryExtractPageText } from './extract-page-text.ts'
 import { useCapturedPage } from './use-captured-page.ts'
 

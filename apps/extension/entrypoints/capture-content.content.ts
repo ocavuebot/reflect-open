@@ -1,17 +1,4 @@
-import DefuddleCtor from 'defuddle'
-
-/** Defuddle ships CJS; under NodeNext the default export is not typed as constructable. */
-type DefuddleParser = { parse: () => { content?: string | null } }
-type DefuddleConstructable = new (
-  doc: Document,
-  options?: {
-    url?: string
-    useAsync?: boolean
-    includeReplies?: boolean
-    removeImages?: boolean
-  },
-) => DefuddleParser
-const Defuddle = DefuddleCtor as unknown as DefuddleConstructable
+import Defuddle from 'defuddle'
 import { browser } from 'wxt/browser'
 import {
   extractPageTextRequestSchema,
@@ -19,7 +6,7 @@ import {
   normalizeParagraphText,
   samePageUrl,
   type ExtractPageTextResponse,
-} from '@/lib/page-text.ts'
+} from '@/lib/page-text'
 
 type PageTextListener = (message: unknown) => Promise<ExtractPageTextResponse> | undefined
 

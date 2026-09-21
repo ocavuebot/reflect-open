@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import {
   snapshotActiveTab,
   type CapturedPageState as SnapshotCapturedPageState,
-} from '@/lib/snapshot-active-tab.ts'
+} from '@/lib/snapshot-active-tab'
 
 /**
  * Snapshot the active tab the moment the popup opens. The action invocation
