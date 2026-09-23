@@ -51,8 +51,11 @@ type GoogleModelId = KnownId<Parameters<GoogleProvider>[0]>
 type OpenAIModelId = KnownId<Parameters<OpenAIProvider>[0]>
 
 // https://github.com/vercel/ai/blob/ai@7.0.93/packages/openai/src/responses/openai-responses-language-model-options.ts#L88
+// @ts-expect-error gpt-6-sol / gpt-6-luna not in @ai-sdk/openai yet — https://github.com/vercel/ai/pull/21305 https://github.com/vercel/ai/pull/21308
 const OPENAI_MODELS: NonEmptyArray<AiModelOption<OpenAIModelId>> = [
   { id: 'gpt-6-astra', label: 'GPT-6 Astra', contextWindow: 1_000_000 },
+  { id: 'gpt-6-sol', label: 'GPT-6 Sol', contextWindow: 1_000_000 },
+  { id: 'gpt-6-luna', label: 'GPT-6 Luna', contextWindow: 1_000_000 },
   { id: 'gpt-5.6-sol', label: 'GPT-5.6 Sol', contextWindow: 1_000_000 },
   { id: 'gpt-5.6-terra', label: 'GPT-5.6 Terra', contextWindow: 1_000_000 },
   { id: 'gpt-5.6-luna', label: 'GPT-5.6 Luna', contextWindow: 1_000_000 },
@@ -121,6 +124,9 @@ export const AI_PROVIDERS: NonEmptyArray<AiProviderInfo> = [
         label: 'Claude Sonnet Latest',
         contextWindow: 1_000_000,
       },
+      { id: 'openai/gpt-6-astra', label: 'GPT-6 Astra', contextWindow: 1_000_000 },
+      { id: 'openai/gpt-6-sol', label: 'GPT-6 Sol', contextWindow: 1_000_000 },
+      { id: 'openai/gpt-6-luna', label: 'GPT-6 Luna', contextWindow: 1_000_000 },
       { id: 'openai/gpt-5.6-sol', label: 'GPT-5.6 Sol', contextWindow: 1_000_000 },
     ],
   },
