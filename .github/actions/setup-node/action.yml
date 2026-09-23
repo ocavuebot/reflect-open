@@ -1,5 +1,4 @@
 name: Set up Node.js and pnpm
-description: Installs Node.js 24, pnpm, and workspace dependencies with a frozen lockfile.
 
 runs:
   using: composite
