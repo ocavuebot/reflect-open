@@ -319,8 +319,9 @@ the changelog body, appends the Mac download chooser that maps Apple Silicon to
 `Reflect_aarch64.dmg` and Universal to `Reflect_universal.dmg` (with `Reflect.Beta` names for
 beta releases), and undrafts the release. For a beta it then copies the DMGs and the
 manifest from the tagged release to `updater-beta`. Both workflows normally run via
-`workflow_call` from `.github/workflows/release.yml` when a Release PR merges, and both
-can be started by hand to retry.
+`workflow_call` from `.github/workflows/publish-desktop.yml`, which
+`.github/workflows/release.yml` calls when a Release PR merges, and both can be started
+by hand to retry.
 
 The script reads all signing material from environment variables (exporting them
 works for local releases too); the workflow wires them from repository Actions secrets of the same names. Create these

@@ -1,0 +1,81 @@
+name: Publish desktop release
+
+# Builds, uploads, and publishes one desktop release (macOS, Windows, Linux,
+# and TestFlight) for a tag created by release-please. Called once per channel
+# by release.yml; the called workflows derive stable vs. beta from the tag's
+# prerelease suffix, so this workflow is channel-agnostic.
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        description: The release tag (v<version>) created by release-please
+        type: string
+        required: true
+      commit:
+        description: Immutable commit targeted by the release tag
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  # The caller resolved the tag to its immutable commit once; the called
+  # workflows check out that SHA rather than resolving the tag name again. The
+  # builds upload into the draft release, and the finalize job at the end
+  # publishes it.
+  macos:
+    name: Build the macOS release
+    uses: ./.github/workflows/publish-macos.yml
+    with:
+      tag: ${{ inputs.tag }}
+      commit: ${{ inputs.commit }}
+    secrets: inherit
+
+  # Every release also ships to TestFlight. iOS needs no version bump of its
+  # own: the marketing version follows apps/desktop/package.json with the
+  # prerelease suffix stripped, so beta and stable builds stack under the same
+  # version, told apart by the UTC-timestamp build number.
+  testflight:
+    name: Upload the release to TestFlight
+    uses: ./.github/workflows/publish-testflight.yml
+    with:
+      commit: ${{ inputs.commit }}
+    secrets: inherit
+
+  # The experimental Windows build rides every release too: x64 and arm64
+  # installers plus their updater signatures go into the draft release. The
+  # installers are not code-signed; the secrets are only for the updater
+  # signature.
+  windows:
+    name: Build the Windows installer
+    uses: ./.github/workflows/publish-windows.yml
+    with:
+      tag: ${{ inputs.tag }}
+      commit: ${{ inputs.commit }}
+    secrets: inherit
+
+  # The experimental Linux build rides every release too: x64 and arm64
+  # AppImages and `.deb` packages plus their updater signatures go into the
+  # draft release. The packages are not code-signed; the secrets are only for
+  # the updater signature.
+  linux:
+    name: Build the Linux packages
+    uses: ./.github/workflows/publish-linux.yml
+    with:
+      tag: ${{ inputs.tag }}
+      commit: ${{ inputs.commit }}
+    secrets: inherit
+
+  # The builds only fill the draft release. Publishing waits for both macOS
+  # and Windows to succeed. It also waits for Linux to finish, but a Linux
+  # failure does not block it: the release then ships without the missing
+  # Linux packages.
+  finalize:
+    name: Finalize the release
+    needs: [macos, windows, linux]
+    if: ${{ !cancelled() && needs.macos.result == 'success' && needs.windows.result == 'success' }}
+    uses: ./.github/workflows/publish-finalize.yml
+    with:
+      tag: ${{ inputs.tag }}

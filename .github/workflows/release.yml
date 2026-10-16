@@ -85,116 +85,25 @@ jobs:
       CHROME_SERVICE_ACCOUNT_PRIVATE_KEY: ${{ secrets.CHROME_SERVICE_ACCOUNT_PRIVATE_KEY }}
 
   # Merging a Release PR makes its channel's pass above create a draft release
-  # and output its tag. Chain straight into the builds with the tag resolved to
-  # its immutable commit once; the called workflows check out that SHA rather
-  # than resolving the tag name again. The builds upload into the draft, and
-  # the finalize jobs at the end publish it.
-  publish-macos-stable:
-    name: Build the stable macOS release
+  # and output its tag. Chain straight into the desktop pipeline with the tag
+  # resolved to its immutable commit once; publish-desktop.yml builds every
+  # platform into the draft and then publishes it.
+  publish-desktop-stable:
+    name: Publish the stable desktop release
     needs: release-please
     if: needs.release-please.outputs.stable_created == 'true'
-    uses: ./.github/workflows/publish-macos.yml
+    uses: ./.github/workflows/publish-desktop.yml
     with:
       tag: ${{ needs.release-please.outputs.stable_tag }}
       commit: ${{ needs.release-please.outputs.stable_commit }}
     secrets: inherit
 
-  publish-macos-beta:
-    name: Build the beta macOS release
+  publish-desktop-beta:
+    name: Publish the beta desktop release
     needs: release-please
     if: needs.release-please.outputs.beta_created == 'true'
-    uses: ./.github/workflows/publish-macos.yml
+    uses: ./.github/workflows/publish-desktop.yml
     with:
       tag: ${{ needs.release-please.outputs.beta_tag }}
       commit: ${{ needs.release-please.outputs.beta_commit }}
     secrets: inherit
-
-  # Every release also ships to TestFlight. iOS needs no version bump of its
-  # own: the marketing version follows apps/desktop/package.json with the
-  # prerelease suffix stripped, so beta and stable builds stack under the same
-  # version, told apart by the UTC-timestamp build number.
-  publish-testflight-stable:
-    name: Upload the stable release to TestFlight
-    needs: release-please
-    if: needs.release-please.outputs.stable_created == 'true'
-    uses: ./.github/workflows/publish-testflight.yml
-    with:
-      commit: ${{ needs.release-please.outputs.stable_commit }}
-    secrets: inherit
-
-  publish-testflight-beta:
-    name: Upload the beta release to TestFlight
-    needs: release-please
-    if: needs.release-please.outputs.beta_created == 'true'
-    uses: ./.github/workflows/publish-testflight.yml
-    with:
-      commit: ${{ needs.release-please.outputs.beta_commit }}
-    secrets: inherit
-
-  # The experimental Windows build rides every release too: x64 and arm64
-  # installers plus their updater signatures go into the draft release. The
-  # installers are not code-signed; the secrets are only for the updater
-  # signature.
-  publish-windows-stable:
-    name: Build the Windows installer (stable)
-    needs: release-please
-    if: needs.release-please.outputs.stable_created == 'true'
-    uses: ./.github/workflows/publish-windows.yml
-    with:
-      tag: ${{ needs.release-please.outputs.stable_tag }}
-      commit: ${{ needs.release-please.outputs.stable_commit }}
-    secrets: inherit
-
-  publish-windows-beta:
-    name: Build the Windows installer (beta)
-    needs: release-please
-    if: needs.release-please.outputs.beta_created == 'true'
-    uses: ./.github/workflows/publish-windows.yml
-    with:
-      tag: ${{ needs.release-please.outputs.beta_tag }}
-      commit: ${{ needs.release-please.outputs.beta_commit }}
-    secrets: inherit
-
-  # The experimental Linux build rides every release too: x64 and arm64
-  # AppImages and `.deb` packages plus their updater signatures go into the
-  # draft release. The packages are not code-signed; the secrets are only for
-  # the updater signature.
-  publish-linux-stable:
-    name: Build the Linux packages (stable)
-    needs: release-please
-    if: needs.release-please.outputs.stable_created == 'true'
-    uses: ./.github/workflows/publish-linux.yml
-    with:
-      tag: ${{ needs.release-please.outputs.stable_tag }}
-      commit: ${{ needs.release-please.outputs.stable_commit }}
-    secrets: inherit
-
-  publish-linux-beta:
-    name: Build the Linux packages (beta)
-    needs: release-please
-    if: needs.release-please.outputs.beta_created == 'true'
-    uses: ./.github/workflows/publish-linux.yml
-    with:
-      tag: ${{ needs.release-please.outputs.beta_tag }}
-      commit: ${{ needs.release-please.outputs.beta_commit }}
-    secrets: inherit
-
-  # The builds only fill the draft release. Publishing waits for both macOS
-  # and Windows to succeed. It also waits for Linux to finish, but a Linux
-  # failure does not block it: the release then ships without the missing
-  # Linux packages.
-  publish-finalize-stable:
-    name: Finalize the stable release
-    needs: [release-please, publish-macos-stable, publish-windows-stable, publish-linux-stable]
-    if: ${{ !cancelled() && needs.publish-macos-stable.result == 'success' && needs.publish-windows-stable.result == 'success' }}
-    uses: ./.github/workflows/publish-finalize.yml
-    with:
-      tag: ${{ needs.release-please.outputs.stable_tag }}
-
-  publish-finalize-beta:
-    name: Finalize the beta release
-    needs: [release-please, publish-macos-beta, publish-windows-beta, publish-linux-beta]
-    if: ${{ !cancelled() && needs.publish-macos-beta.result == 'success' && needs.publish-windows-beta.result == 'success' }}
-    uses: ./.github/workflows/publish-finalize.yml
-    with:
-      tag: ${{ needs.release-please.outputs.beta_tag }}
