@@ -18,8 +18,9 @@ export default defineDesktopProject({
     setupFiles: ['./src/test-utils/setup-console.ts', './src/test-utils/setup-browser.ts'],
     // Real keyboard focus is a per-page global; parallel test files
     // would steal it from each other.
-    fileParallelism: false,
+    fileParallelism: process.env.EXP_PAR === '1',
     maxConcurrency: 1,
+    ...(process.env.EXP_ISO === '0' ? { isolate: false } : {}),
     browser: {
       enabled: true,
       // Vitest 5 defaults locators.exact to true; keep v4 substring matching.

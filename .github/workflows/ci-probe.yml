@@ -1,0 +1,50 @@
+name: CI probe
+
+on:
+  push:
+    branches: ['ci-probe/**']
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    name: ${{ matrix.cfg.os }} ${{ matrix.cfg.browser }} ${{ matrix.cfg.variant }} #${{ matrix.attempt }}
+    runs-on: ${{ matrix.cfg.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        attempt: [1, 2]
+        cfg:
+          - { os: macos-latest, browser: webkit, variant: serial-full, par: '0', workers: '', args: '' }
+          - { os: macos-latest, browser: webkit, variant: par2-browser, par: '1', workers: '2', args: '--project browser' }
+          - { os: macos-latest, browser: webkit, variant: par3-browser, par: '1', workers: '3', args: '--project browser' }
+          - { os: ubuntu-latest, browser: chromium, variant: serial-full, par: '0', workers: '', args: '' }
+          - { os: ubuntu-latest, browser: chromium, variant: par2-full, par: '1', workers: '2', args: '' }
+          - { os: ubuntu-latest, browser: chromium, variant: par4-full, par: '1', workers: '4', args: '' }
+          - { os: ubuntu-latest, browser: webkit, variant: serial-browser, par: '0', workers: '', args: '--project browser' }
+          - { os: ubuntu-latest, browser: webkit, variant: par4-browser, par: '1', workers: '4', args: '--project browser' }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup-node
+      - name: Install Playwright
+        run: pnpm --filter @reflect/desktop exec playwright install ${{ runner.os == 'Linux' && matrix.cfg.browser == 'webkit' && '--with-deps' || '' }} ${{ matrix.cfg.browser }}
+      - name: Machine
+        run: node -e "const os=require('os');console.log(os.cpus().length, os.cpus()[0].model, Math.round(os.totalmem()/2**30)+'GB')"
+      - name: Test
+        run: |
+          start=$(date +%s)
+          pnpm exec vitest run --retry 0 ${{ matrix.cfg.args }} --reporter=default --reporter=json --outputFile.json=report.json
+          echo "wall=$(( $(date +%s) - start ))s"
+        env:
+          REFLECT_TEST_BROWSER: ${{ matrix.cfg.browser }}
+          EXP_PAR: ${{ matrix.cfg.par }}
+          VITEST_MAX_WORKERS: ${{ matrix.cfg.workers }}
+          VITEST_CHROMIUM_GC_DISK_THRESHOLD_GB: '100000'
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: always()
+        with:
+          name: report-${{ matrix.cfg.os }}-${{ matrix.cfg.browser }}-${{ matrix.cfg.variant }}-${{ matrix.attempt }}
+          path: report.json
