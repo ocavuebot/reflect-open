@@ -1,5 +1,6 @@
 name: Linux watcher review
 on:
+  workflow_dispatch:
   push:
     branches: [review-1742-linux]
 permissions:
