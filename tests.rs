@@ -98,6 +98,23 @@ fn moved_root_same_id_probe() {
     fs::write(renamed.join("new.md"), "new").unwrap();
     let paths = drain(&rx);
     println!("moved graph retains ID; events={paths:?}; expected={:?}", renamed.join("new.md"));
-    assert!(paths.contains(&renamed.join("new.md")), "reused watcher reports obsolete graph path");
+    let effects = collect_changes(&paths, &root);
+    println!("production collect_changes emitted {effects:?}");
+    assert_eq!(effects.changes.len(), 1);
+    assert_eq!(effects.changes[0].kind, ChangeKind::Upsert, "existing file was reported as deleted after graph move");
     drop(watcher);
+}
+
+#[test]
+fn moved_root_reinstall_control() {
+    let parent = tempfile::tempdir().unwrap(); let root = parent.path().join("graph");
+    let renamed = parent.path().join("renamed"); fs::create_dir(&root).unwrap();
+    let (tx, rx) = mpsc::channel(); let watcher = watch_graph(&root, tx.clone()).unwrap();
+    fs::rename(&root, &renamed).unwrap(); drain(&rx);
+    drop(watcher);
+    let _watcher = watch_graph(&renamed, tx).unwrap();
+    fs::write(renamed.join("new.md"), "new").unwrap();
+    let effects = collect_changes(&drain(&rx), &renamed);
+    assert_eq!(effects.changes.len(), 1);
+    assert_eq!(effects.changes[0].kind, ChangeKind::Upsert);
 }

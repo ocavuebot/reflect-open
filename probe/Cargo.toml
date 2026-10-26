@@ -9,3 +9,4 @@ file-id = "=0.2.3"
 walkdir = "2"
 tempfile = "3"
 reflect-graph-paths = { path = "../source/crates/graph-paths" }
+reflect-types = { path = "../source/crates/types" }
