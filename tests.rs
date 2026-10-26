@@ -53,10 +53,11 @@ fn resource_counts() -> (usize, usize, usize) {
 fn hidden_churn_and_repeated_reuse_stay_bounded() {
     let (dir, watcher, rx) = setup(); let root = dir.path();
     let id = get_file_id(root).unwrap();
-    let active = Some((id, watcher));
+    let mut active = Some((root.to_path_buf(), id, watcher));
+    let (tx, _unused_rx) = mpsc::channel();
     let before = resource_counts();
     for iteration in 0..1000 {
-        assert!(active.as_ref().is_some_and(|(id, _)| *id == get_file_id(root).unwrap()));
+        start(root.to_path_buf(), &mut active, tx.clone()).unwrap();
         fs::write(root.join(".git/objects/aa/object"), format!("{iteration}")).unwrap();
         for entry in WalkDir::new(root) {
             let entry = entry.unwrap(); if entry.file_type().is_file() { fs::read(entry.path()).unwrap(); }
@@ -91,18 +92,20 @@ fn replacement_root_is_rewatched() {
 fn moved_root_same_id_probe() {
     let parent = tempfile::tempdir().unwrap(); let root = parent.path().join("graph");
     let renamed = parent.path().join("renamed"); fs::create_dir(&root).unwrap();
-    let (tx, rx) = mpsc::channel(); let watcher = watch_graph(&root, tx).unwrap();
+    let (tx, rx) = mpsc::channel(); let mut active = None;
+    start(root.clone(), &mut active, tx.clone()).unwrap();
     let id = get_file_id(&root).unwrap();
     fs::rename(&root, &renamed).unwrap(); drain(&rx);
     assert_eq!(id, get_file_id(&renamed).unwrap());
+    start(renamed.clone(), &mut active, tx).unwrap();
     fs::write(renamed.join("new.md"), "new").unwrap();
     let paths = drain(&rx);
     println!("moved graph retains ID; events={paths:?}; expected={:?}", renamed.join("new.md"));
-    let effects = collect_changes(&paths, &root);
+    let effects = collect_changes(&paths, &active.as_ref().unwrap().0);
     println!("production collect_changes emitted {effects:?}");
     assert_eq!(effects.changes.len(), 1);
     assert_eq!(effects.changes[0].kind, ChangeKind::Upsert, "existing file was reported as deleted after graph move");
-    drop(watcher);
+    drop(active);
 }
 
 #[test]
@@ -117,4 +120,21 @@ fn moved_root_reinstall_control() {
     let effects = collect_changes(&drain(&rx), &renamed);
     assert_eq!(effects.changes.len(), 1);
     assert_eq!(effects.changes[0].kind, ChangeKind::Upsert);
+}
+
+#[test]
+fn switch_graph_and_failed_start() {
+    let parent = tempfile::tempdir().unwrap();
+    let first = parent.path().join("first"); let second = parent.path().join("second");
+    fs::create_dir(&first).unwrap(); fs::create_dir(&second).unwrap();
+    let (tx, rx) = mpsc::channel(); let mut active = None;
+    start(first.clone(), &mut active, tx.clone()).unwrap();
+    start(second.clone(), &mut active, tx.clone()).unwrap(); drain(&rx);
+    fs::write(first.join("old.md"), "old").unwrap();
+    fs::write(second.join("new.md"), "new").unwrap();
+    let paths = drain(&rx);
+    assert!(paths.contains(&second.join("new.md")));
+    assert!(!paths.contains(&first.join("old.md")));
+    assert!(start(parent.path().join("missing"), &mut active, tx).is_err());
+    assert!(active.is_none());
 }

@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: team-reflect/reflect-open
-          ref: b06c7fe071580b0bbfdf531736efb841c3ae8f5f
+          ref: b010353e72d28b8faa0b3cb49c7aac5ff695ffda
           path: source
           persist-credentials: false
       - run: python3 extract.py

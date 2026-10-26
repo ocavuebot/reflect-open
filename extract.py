@@ -15,6 +15,9 @@ io = Path('source/crates/graph-io/src/io.rs').read_text()
 modified = io[io.index('pub fn modified_ms('):io.index('pub fn modified_ms(')+io[io.index('pub fn modified_ms('):].index('\n}')+2]
 shim = '\nmod fs { use std::{fs, time::UNIX_EPOCH}; pub use reflect_graph_paths::is_dataless; ' + modified + '\n}\n'
 watch = s[s.index('fn watch_graph('):s.index('/// Start (or restart)')]
+decision = s[s.index('    let root_id = get_file_id(&root);'):s.index('    let started = std::time::Instant::now();')]
+decision = decision.replace('AppError::io', 'std::io::Error::other')
+restart = '\nfn start(root: PathBuf, active: &mut Option<(PathBuf, FileId, GraphDebouncer)>, sender: std::sync::mpsc::Sender<DebounceEventResult>) -> std::io::Result<()> {\n' + decision + '\nlet debouncer = watch_graph(&root, sender).map_err(std::io::Error::other)?; *active = Some((root, root_id, debouncer)); Ok(()) }\n'
 original_test = s[s.index('    #[cfg(target_os = "linux")]'):s.index('    #[test]\n    fn hidden_churn')]
 Path('probe/src').mkdir(parents=True, exist_ok=True)
-Path('probe/src/lib.rs').write_text(imports + cache + effects + shim + watch + '\n#[cfg(test)] mod tests { use super::*;\n' + original_test + Path('tests.rs').read_text() + '\n}')
+Path('probe/src/lib.rs').write_text(imports + cache + effects + shim + watch + restart + '\n#[cfg(test)] mod tests { use super::*;\n' + original_test + Path('tests.rs').read_text() + '\n}')
