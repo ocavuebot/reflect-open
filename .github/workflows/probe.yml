@@ -1,0 +1,22 @@
+name: Linux watcher review
+on:
+  push:
+    branches: [review-1742-linux]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: team-reflect/reflect-open
+          ref: b06c7fe071580b0bbfdf531736efb841c3ae8f5f
+          path: source
+          persist-credentials: false
+      - run: python3 extract.py
+      - run: cargo test --manifest-path probe/Cargo.toml -- --nocapture --test-threads=1

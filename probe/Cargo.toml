@@ -1,0 +1,11 @@
+[package]
+name = "watcher-review-probe"
+version = "0.1.0"
+edition = "2024"
+[dependencies]
+notify = "=9.0.0-rc.6"
+notify-debouncer-full = "=0.8.0-rc.2"
+file-id = "=0.2.3"
+walkdir = "2"
+tempfile = "3"
+reflect-graph-paths = { path = "../source/crates/graph-paths" }
