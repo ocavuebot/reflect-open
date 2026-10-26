@@ -55,7 +55,7 @@ fn hidden_churn_and_repeated_reuse_stay_bounded() {
     let id = get_file_id(root).unwrap();
     let active = Some((id, watcher));
     let before = resource_counts();
-    for iteration in 0..300 {
+    for iteration in 0..1000 {
         assert!(active.as_ref().is_some_and(|(id, _)| *id == get_file_id(root).unwrap()));
         fs::write(root.join(".git/objects/aa/object"), format!("{iteration}")).unwrap();
         for entry in WalkDir::new(root) {
@@ -98,5 +98,6 @@ fn moved_root_same_id_probe() {
     fs::write(renamed.join("new.md"), "new").unwrap();
     let paths = drain(&rx);
     println!("moved graph retains ID; events={paths:?}; expected={:?}", renamed.join("new.md"));
+    assert!(paths.contains(&renamed.join("new.md")), "reused watcher reports obsolete graph path");
     drop(watcher);
 }
