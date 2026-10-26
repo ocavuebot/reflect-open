@@ -16,4 +16,5 @@ modified = io[io.index('pub fn modified_ms('):io.index('pub fn modified_ms(')+io
 shim = '\nmod fs { use std::{fs, time::UNIX_EPOCH}; pub use reflect_graph_paths::is_dataless; ' + modified + '\n}\n'
 watch = s[s.index('fn watch_graph('):s.index('/// Start (or restart)')]
 original_test = s[s.index('    #[cfg(target_os = "linux")]'):s.index('    #[test]\n    fn hidden_churn')]
+Path('probe/src').mkdir(parents=True, exist_ok=True)
 Path('probe/src/lib.rs').write_text(imports + cache + effects + shim + watch + '\n#[cfg(test)] mod tests { use super::*;\n' + original_test + Path('tests.rs').read_text() + '\n}')
